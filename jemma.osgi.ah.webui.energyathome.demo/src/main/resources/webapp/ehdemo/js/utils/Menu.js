@@ -14,6 +14,7 @@ var Menu = {
 	timercheckObjService: null
 }
 
+
 /**
  * Inizializza il menu principale e i sottomenu I sottomenu vengono creati tutti
  * all'inizio e poi ne viene visualizzato uno solo per volta
@@ -24,7 +25,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 	
 	var dim;
 	var num = Menu.MainMenu.length;
-
+	
 	Menu.MainW = $("#" + mainDiv).width();
 	Menu.MainH = $("#" + mainDiv).height();
 
@@ -56,21 +57,52 @@ Menu.Init = function(mainDiv, contentDiv) {
 	leftOffset = Math.round((Menu.MainW - MainMenuW) / 2) - (dim * 0.015); 
 
 	Menu.MainHtml = "";
+	/*var mq = window.matchMedia('screen and (max-width: 500px)');
+	if(mq.matches) {
+    // the width of browser is more then 1024px
+	//inserire la parte che sta sotto
+		for (i = 0; i < num; i++) {
+			Menu.MainHtml = Menu.MainHtml + 
+							//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+ (topOffset + extraTopOffset)
+							"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
+							"  <img id='MainImg" + i+ "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>" +
+							"  <p id='NomeMain" + i+ "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
+							"</div>";
+	
+			topOffset = topOffset + dim + dist;
+		}
+	}
+	/*else {
+		/*alert('meno');
+	    // the width of browser is less then 1024px
+		for (i = 0; i < num; i++) {
+			Menu.MainHtml = Menu.MainHtml + 
+							//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+ 
+							"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")' width='" + 150 + "px' height='" + 180+ "px' style='margin-left:25px;margin-right:25px;'>" + 
+							"  <img id='MainImg" + i+ "' class='MainMenuImg' width='" + 150 + "px' height='"+ 150 + "px' src='" + Menu.MainMenu[i].Image+ "'/>" +
+							"  <p id='NomeMain" + i+ "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
+							"</div>";
+
+			topOffset = topOffset + dim + dist;
+		}
+	}*/
+	//else{
 	for (i = 0; i < num; i++) {
 		Menu.MainHtml = Menu.MainHtml + 
-						"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+ 
-						"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu(" + i+ ")' width='" + dim + "px' height='" + hDiv+ "px' style='position:absolute;top:"+ (topOffset + extraTopOffset) + "px;left:" + leftOffset+ "px' >" + 
-						"  <img id='MainImg" + i+ "' class='MainMenuImg' width='" + dimImage + "px' height='"+ dimImage + "px' src='" + Menu.MainMenu[i].Image+ "' style='position:absolute;top:" + imgTopOffset + "px;left:"+ imgLeftOffset + "px'>" +
+						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+ (topOffset + extraTopOffset)
+						"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
+						"  <img id='MainImg" + i+ "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>" +
 						"  <p id='NomeMain" + i+ "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
 						"</div>";
 
 		topOffset = topOffset + dim + dist;
 	}
+	//}
 	$("#" + mainDiv).html(Menu.MainHtml);
 
 	// forzo dimensioni da css altrimenti il titolo ha dimensioni 0
-	$(".MainMenuEl").css("width", dim + "px");
-	$(".MainMenuEl").css("height", hDiv + "px");
+	//$(".MainMenuEl").css("width", dim + "px");
+	//$(".MainMenuEl").css("height", hDiv + "px");
 
 	Menu.InitContentMenu(contentDiv);
 	//Menu.OnClickMainMenu(0);
@@ -155,15 +187,15 @@ Menu.InitContentMenu = function(contentDiv) {
 		// calcolo distanza tra gli elementi
 		for (j = 0; j < num; j++) {
 			Menu.SubMenuHtml = Menu.SubMenuHtml
-					+ "<div tabindex='0'style='position:absolute;left:"
+					+ "<div tabindex='0'style='float:left;left:"
 					+ leftOffset
 					+ "px;top:1%' onClick='Menu.OnClickContentMenu(" + i + ", "
 					+ j + ")' class='ContentMenuEl' id='el" + i + "Content" + j
-					+ "' height='" + hDiv + "px' width='" + wDiv
-					+ "px'><img  id='img" + i + "Content" + j
+					+ "' height='" + 40 + "px' width='" + 40
+					+ "px'><div><img  id='img" + i + "Content" + j
 					+ "' class='ContentMenuImg' src='"
 					+ Menu.MainMenu[i].SubMenu[j].Image
-					+ "'><div id='NomeContent" + i + "_" + j
+					+ "'></div><div id='NomeContent" + i + "_" + j
 					+ "' class='ContentMenuTitle'>"
 					+ Menu.MainMenu[i].SubMenu[j].Nome + "</div></div>";
 			leftOffset += wDiv + 2;
@@ -176,13 +208,13 @@ Menu.InitContentMenu = function(contentDiv) {
 	// tengo conto della lunghezza dei campi nome per la dimensione del div le icone restano a distanza costante
 
 	maxW = 0;
-	for (i = 0; i < nMain; i++) {
+	/*for (i = 0; i < nMain; i++) {
 		num = Menu.MainMenu[i].SubMenu.length;
 		for (j = 0; j < num; j++) {
 			w = $("#img" + i + "Content" + j).width();
 			$("#img" + i + "Content" + j).height(w);
 		}
-	}
+	}*/
 	// rendo visibile il primo sottomenu
 	$("#ContentMenu0").addClass("visibleDiv");
 	for (i = 1; i < Menu.MainMenu.length; i++)
