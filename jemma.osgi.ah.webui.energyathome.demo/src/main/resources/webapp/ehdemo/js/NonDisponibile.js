@@ -15,7 +15,7 @@ NonDisponibile.GestND = function() {
 	Log.alert(80, NonDisponibile.MODULE, "NonDisponibile.GestND");
 	var divNonDisp = $("#NonDisponibileContainer");
 	if (divNonDisp.length == 0){
-	$("#Container").append(NonDisponibile .htmlContent);}
+	$("#ContentMain").append(NonDisponibile.htmlContent);}
 	$("#NonDisponibileContainer").show();
 }
 

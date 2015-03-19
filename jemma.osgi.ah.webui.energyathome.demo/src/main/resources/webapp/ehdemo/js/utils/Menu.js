@@ -187,12 +187,9 @@ Menu.InitContentMenu = function(contentDiv) {
 		// calcolo distanza tra gli elementi
 		for (j = 0; j < num; j++) {
 			Menu.SubMenuHtml = Menu.SubMenuHtml
-					+ "<div tabindex='0'style='float:left;left:"
-					+ leftOffset
-					+ "px;top:1%' onClick='Menu.OnClickContentMenu(" + i + ", "
+					+ "<div tabindex='0' onClick='Menu.OnClickContentMenu(" + i + ", "
 					+ j + ")' class='ContentMenuEl' id='el" + i + "Content" + j
-					+ "' height='" + 40 + "px' width='" + 40
-					+ "px'><div><img  id='img" + i + "Content" + j
+					+ "'><div id='contImg' style='float:left;'><img  id='img" + i + "Content" + j
 					+ "' class='ContentMenuImg' src='"
 					+ Menu.MainMenu[i].SubMenu[j].Image
 					+ "'></div><div id='NomeContent" + i + "_" + j
@@ -201,6 +198,7 @@ Menu.InitContentMenu = function(contentDiv) {
 			leftOffset += wDiv + 2;
 		}
 		Menu.SubMenuHtml = Menu.SubMenuHtml + "</div>";
+		
 	}
 
 	$("#" + contentDiv).html(Menu.SubMenuHtml);

@@ -261,7 +261,7 @@ Main.onLoad = function() {
 
 	$(document).ready(function() {
 		Main.userAgent = navigator.userAgent;
-
+		
 		// Parse the current page's querystring
 		var qs = new Querystring();
 

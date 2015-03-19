@@ -1,6 +1,6 @@
 body,html {
 	background-color: #202020;
-
+	position: relative;
 	margin : 0px;
 	font-family: Arial, Arial, sans-serif;
 	/*G
@@ -8,7 +8,8 @@ body,html {
 	min-width : 250px;*/
 	width:100%;
 	height:100%;
-	font-size: 95%;
+	font-size: 90%;
+	
 }
 
 img {
@@ -33,7 +34,7 @@ span {
 }
 
 #Container{
-	top:10px; width:95%; height:100%; margin-left: auto; margin-right: auto;
+	top:10px; width:95%; height:100%; margin-left: auto; margin-right: auto; max-height:720px;
 }
 
 #Header {
@@ -71,7 +72,7 @@ span {
 
 #logo{float:left; height:91px; width:50%}
 
-#dataANDuser{float:right; height:91px; width:50%}
+#dataANDuser{float:right; height:91px; width:30%}
 
 #PartnerImg {
 	position: absolute;
@@ -88,13 +89,22 @@ span {
 }
 
 /* serve solo per colorare una parte dello schermo */
+#wrapper{
+	/*position:relative;*/
+	height:auto;width:100%;
+	/*overflow:auto;*/
+}
+
 #ContentMain {
 	/*position: absolute;*/
-	float:left;
+	float: left;
+	left: 192px;
 	width: calc(100% - 192px);
-	height: 80%;
+	height: 730px;
 	background-color: #333333;
 	overflow:hidden;
+	max-height:1080px;
+	
 }
 
 
@@ -112,14 +122,14 @@ span {
 #ContainerMenu{
 	float:left;
 	width: 192px;
-	height: 80%;
+	height: 730px;
 	overflow:hidden;
 	background-color:#333333;
 }
 
 #MainMenu {
 	width: 100%;
-	height: 100%;
+	height: auto;
 	margin:auto;
 	overflow:hidden;
 	background-color:#333333;
@@ -206,6 +216,7 @@ span {
 	/*left: 1%;*/
 	/*top: 10%;*/
 	/*width: 100%;*/
+	margin-left:20px;
 	height: 100%;
 	overflow: hidden;
 	color: #202020;
@@ -223,7 +234,7 @@ span {
 
 #Timestamp {
 	/*position: absolute;*/
-	margin-top:10px;
+	margin-top: 5px;
 	margin-right: 10px;
 	float:right;
 	text-align:right;
@@ -273,7 +284,6 @@ span {
 	font-size: 1.0em;
 	font-weight: bold;
 	color: rgb(124, 124, 124);
-	z-index: 1000;
 }
 
 #TitoloAutenticazione {
@@ -459,7 +469,12 @@ Media Queries
 
 /*WIDTH MANAGEMENT*/
 
+
+
 @media screen and (min-width:880px) and (max-width: 1275px){
+	
+	
+	
 	#Content {
 position: absolute;
 left: 10%;
@@ -470,6 +485,10 @@ overflow: hidden;
 color: #202020;
 background-color: #333;
 }
+
+
+
+
 	
 	#Container{
 		width:100%;		
@@ -490,7 +509,7 @@ background-color: #333;
 	/*min-width:851px;*/
 	
 	width: 100%;
-	height: 200px;
+	height: auto;
 	padding-top:10px;
 	overflow:hidden;
 	background-color:#333333;
@@ -499,7 +518,7 @@ background-color: #333;
 	#MainMenu {
 		width: 100%;		
 		/*min-width:851px;*/
-		margin-left:75px;
+		margin-left:10px;
 		height: 100%;
 		overflow:hidden;
 		z-index:1;
@@ -508,10 +527,11 @@ background-color: #333;
 	
 	 #ContentMain {
 	 	/*min-width:851px;*/
-		/*position: absolute;*/
-		float:left;
+		position: relative;
+		left: 0;
+		/* float: left; */
 		width: 100%;
-		height: 100%;
+		height: 1200px;
 		background-color: #333333;
 		overflow:hidden;	
 	}
@@ -548,7 +568,7 @@ color: #202020;
 
 }
 
-@media screen and (min-width:780px) and (max-width:879px){
+@media screen and (min-width:830px) and (max-width:879px){
 	#Container{
 		width:100%;		
 	}
@@ -577,7 +597,7 @@ background-color: #333;
 	float:left;
 	
 	width: 100%;
-	height: 200px;
+	height: auto;
 	padding-top:10px;
 	overflow:hidden;
 	background-color:#333333;
@@ -586,7 +606,7 @@ background-color: #333;
 	#MainMenu {
 		width: 100%;		
 		/*min-width:851px;*/
-		margin-left:5px;
+		margin-left:10px;
 		height: 100%;
 		overflow:hidden;
 		z-index:1;
@@ -595,13 +615,15 @@ background-color: #333;
 	
 	 #ContentMain {
 	 	/*min-width:851px;*/
-		/*position: absolute;*/
-		float:left;
+		position: relative;
+		left: 0;
+		/* float: left; */
 		width: 100%;
-		height: 100%;
+		height: 1200px;
 		background-color: #333333;
 		overflow:hidden;	
-	}
+	}	
+	
 	
 	#ErrorMsgDIV {
 	
@@ -623,7 +645,7 @@ background-color: #333;
 }
 }
 
-@media screen and (min-width:606px) and (max-width: 789px){
+@media screen and (min-width:606px) and (max-width: 829px){
 	#Container{
 	margin-right:0px;
 	width:100%;		
@@ -652,7 +674,7 @@ background-color: #333;
 	#MainMenu {
 		width: 100%;		
 		/*min-width:900px;*/
-		margin-left:45px;
+		margin-left:10px;
 		height: 100%;
 		overflow:hidden;
 		z-index:1;
@@ -660,11 +682,12 @@ background-color: #333;
 	}
 	
 	#ContentMain {
-	 	/*min-width:851px;*/
-		/*position: absolute;*/
-		float:left;
+	 		/*min-width:851px;*/
+		position: relative;
+		left: 0;
+		/* float: left; */
 		width: 100%;
-		height: 100%;
+		height: 1200px;
 		background-color: #333333;
 		overflow:hidden;	
 	}
@@ -674,7 +697,6 @@ background-color: #333;
 	background-color:#333333;
 	/*position: relative;*/
 	
-	height:130px;
 	/* left: 10%; */
 	/*top: 25px;*/
 	width: 100%;
@@ -688,7 +710,7 @@ background-color: #333;
 
 
 
-@media screen and (min-width:412px) and (max-width: 605px){
+@media screen and (min-width:450px) and (max-width: 605px){
 	#Container{
 	margin-right:0px;
 	width:100%;		
@@ -726,7 +748,7 @@ background-color: #333;
 	#MainMenu {
 		width: 100%;		
 		/*min-width:900px;*/
-		min-width: 600px;
+		margin-left:10px;
 		height: 100%;
 		overflow:hidden;
 		z-index:1;
@@ -734,11 +756,12 @@ background-color: #333;
 	}
 	
 	#ContentMain {
-	 	/*min-width:851px;
-		/*position: absolute;*/
-		float:left;
+		/*min-width:851px;*/
+		position: relative;
+		left: 0;
+		/* float: left; */
 		width: 100%;
-		height: 100%;
+		height: 1200px;
 		background-color: #333333;
 		overflow:hidden;	
 	}
@@ -790,15 +813,12 @@ width: 100%;
 	
 }
 
-@media screen and (min-width:100px) and (max-width:411px){
+@media screen and (min-width:100px) and (max-width:449px){
 		#Container{
 	margin-right:0px;
 	width:100%;		
 	}
 	
-	#Header{
-		
-	}
 	
 		#Content {
 position: absolute;
@@ -817,69 +837,88 @@ background-color: #333;
 	}
 	
 	#ContainerMenu{
-	float:left;
-	width: 100%;
-	height: auto;
-	padding-top:10px;
-	overflow:hidden;
-	background-color:#333333;
+	float: left;
+width: 100%;
+height: auto;
+margin-top: 145px;
+padding-top: 20px;
+overflow: hidden;
+background-color: #333333;
 	}
 	
 	#MainMenu {
-		width: 90%;		
-		/*min-width:900px;*/
-		margin-left:45px;
-		height: 100%;
-		overflow:hidden;
-		z-index:1;
-		background-color:#333333;
+	width: auto;
+/* min-width: 900px; */
+height: 100%;
+overflow: hidden;
+z-index: 1;
+background-color: #333333;
 	}
 	
 	#ContentMain {
-	 	/*min-width:851px;*/
-		/*position: absolute;*/
-		float:left;
-		width: 100%;
-		height: 100%;
-		background-color: #333333;
-		overflow:hidden;	
+  /* min-width: 851px; */
+  position: relative;
+  left: 0;
+  float: left;
+  width: 100%;
+  height: 1080px;
+  background-color: #333333;
+  overflow: hidden;	
+  max-height:1080px;
 	}
 	
 
 	#ContentMenu {
-	background-color:#333333;
-	/*position: relative;*/
-	
-	height:auto;
-	/* left: 10%; */
-	/*top: 25px;*/
-	width: 100%;
-	/*min-width:477px;*/
+/* padding-top: 20px; */
+background-color: #333333;
+/* position: relative; */
+/* height: auto; */
+/* left: 10%; */
+/* top: 25px; */
+width: 100%;
+/* min-width: 477px; */
 }
 
 #Header{
-		/*min-width:426px;*/		
+		/*min-width:426px;*/
+		position: fixed;
+  		z-index: 11;		
 	}
 	
-	#LogoImg {
-height: auto;
-width: 100%;
+#ContainerError{
+	  position: fixed;
+	  bottom:0;
+	   z-index: 100;
+	  
+}
 
+#wrapper{
+	top: 144px;
+}
+	
+#LogoImg {
+position: relative;
+height: auto;
+width: 80%;
 }
 
 
 	
 #logo{
+	  float: none;
 	width:auto;
 	height:auto;
+	position: relative;
+  top: 0px;
 }
 
-#dataANDuser{
-	width:100%;
-	height:auto;
-	padding-bottom:5px;
+#dataANDuser {
+position: relative;
+left: 2%;
+width: 98%;
+height: auto;
+padding-bottom: 5px;
 }
-
 #userID{
 	font-size:12px;
 	text-align:center;
@@ -888,66 +927,21 @@ width: 100%;
 #Timestamp{
 	text-align:center;
 }
-	
+
+.Content {
+  margin-left: 10px;
 }
 
 
-
-/************************************************************/
-/*HEIGHT MANAGEMENT*/
-@media screen and (min-height:0px) and (max-height: 700px){
-		#Container{
 	
-	}
-	
-	#HeaderSepImg{
-		/*min-width:900px;*/
-		margin-right:0px;		
-	}
-	
-	#ContainerMenu{
-	float:left;
-	/*min-width:900px;*/
-	width: 100%;
-	height: 180px;
-	padding-top:10px;
-	overflow:hidden;
-	background-color:#333333;
-	}
-	
-	#MainMenu {
-		width: 100%;
-				
-		/*min-width:900px;*/
-		height: 100%;
-		overflow:hidden;
-		z-index:1;
-		background-color:#333333;
-	}
-	
-	 #ContentMain {
-	 /*min-width:900px;*/
-		/*position: absolute;*/
-		float:left;
-		width: 100%;
-		height: 100%;
-		background-color: #333333;
-		overflow:hidden;	
-	}
-	
-	#ErrorMsgDIV {
-		min-width:875px;
-	}
-	
-	
-	#ContentMenu {
-	background-color:#333333;
-	/*position: relative;*/
-	float:left;
-	/* left: 10%; */
-	/*top: 25px;*/
-	width: 100%;
-	/*min-width:900px;*/
 }
-}*/
+
+@media screen and (max-width: 400px){
+#LogoImg {
+  position: relative;
+  height: auto;
+  width: 80%;
+}
+}
+
 

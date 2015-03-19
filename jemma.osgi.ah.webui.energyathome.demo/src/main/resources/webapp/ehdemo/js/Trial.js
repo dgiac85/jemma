@@ -44,7 +44,7 @@ Trial.GestTariffa = function() {
 	
 	if (divTariffa.length == 0){
 	
-	$("#Container").append('<div id="Tariffa" class="Content"></div>');
+	$("#ContentMain").append('<div id="Tariffa" class="Content"></div>');
 	$("#Tariffa").html(Trial.htmlTariffa);
 	
 }
@@ -69,7 +69,7 @@ Trial.GestInformazioni = function() {
 	
 	if (divInfo.length == 0){
 	
-	$("#Container").append('<div id="Info" class="Content"></div>');
+	$("#ContentMain").append('<div id="Info" class="Content"></div>');
 	$("#Info").html(Trial.htmlInformazioni);
 	
 }
