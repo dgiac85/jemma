@@ -1219,6 +1219,11 @@ CostiConsumi.caricafeed = function() {
 
 	$("#PrimaNews").css("height", altezza_news);
 	$("#SecondaNews").css("height", altezza_news);
+	
+	if ($(window).width()<450){
+		$("#PrimaNews").css("height","46px");
+		$("#SecondaNews").css("height","46px");
+	}
 
 	$("#PrimaNews .titoloNews .ellipsis_text").html(CostiConsumi.notizie[CostiConsumi.notizieid]["title"]);
 	$("#PrimaNews a").attr("href", CostiConsumi.notizie[CostiConsumi.notizieid]["link"]);

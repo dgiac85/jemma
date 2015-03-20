@@ -7,7 +7,7 @@ var Define = {
 	headerSep: "header_sep.png",
 	
 	// path images for menu
-	menu: {	"sfondoButton": DefinePath.imgMenuPath + "sfondo_main_el.png",
+	menu: {	"sfondoButton": DefinePath.imgMenuPath + "sfondo_main_el_2.png",
 	       	"home": DefinePath.imgMenuPath + "home_bianco.png",
 	       	"homeSel": DefinePath.imgMenuPath + "home_verde.png",
 	       	"config": DefinePath.imgMenuPath + "configurazioni_bianco.png",

@@ -75,7 +75,10 @@
 		<script language="javascript" type="text/javascript" src="js/plot/highcharts.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/plot/highstock.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/utils/Utils.js?201305315125"></script>
-		<script language="javascript" type="text/javascript" src="js/utils/Tools.js?20150312"></script>
+		<script language="javascript" type="text/javascript" src="js/utils/Tools.js?201305315125"></script>
+		
+		<script language="javascript" type="text/javascript" src="js/utils/ToggleMenu.js"></script>
+		
 		<script language="javascript" type="text/javascript" src="js/Main.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/tinycolor/tinycolor-min.js"></script>
 		<script language="javascript" type="text/javascript" src="js/farbtastic/farbtastic.js"></script>
@@ -109,8 +112,8 @@
 			w = Math.floor(w);
 			h = Math.floor(h);
 		
-			document.write("<style type='text/css'> #Container {position:relative;background: transparent;width: "
-							+ w + "px;height: "	+ h	+ "px;margin-left: auto;margin-right: auto;text-align: center;}<\/style>");
+			/*document.write("<style type='text/css'> #Container {background: transparent;width: "
+							+ w + "px;height: "	+ h	+ "px;margin-left: auto;margin-right: auto;text-align: center;}<\/style>");*/
 		
 			Main.screenW = w;
 			Main.screenH = h;
@@ -134,14 +137,41 @@
 	<body onLoad="Main.onLoad()" onUnload="Main.onUnload()">
 		<div id="Container">
 			<div id="Header">
-				<img id="LogoImg" src="./Resources/Images/E@HLogo.png">
-				<div id="userID"></div>
-			</div>
+				<div class="toggleMobile">	
+					<!-- <span style="color:white; font-size:0.5em">Options</span>	 -->			
+					<span class="menu1"></span>
+					<span class="menu2"></span>
+					<span class="menu3"></span>
+					
+				</div>
+				
+				<div id="mobileMenu">
+					
+				</div>
+			
+				<div id="logo">
+					<!--div id="ContainerLogo" style="width:300px; height:91px; float:left;"-->
+					<img id="LogoImg" src="./Resources/Images/E@HLogo.png" s>
+					<!--/div-->
+				</div>
+				<div id="dataANDuser">
+					<div id="Timestamp">
+						<span id="Data"></span>	
+						<img id="ClockImg" src="./Resources/Images/orologio.png"/>
+						<span id="Ora"> </span>											
+					</div>	
+					<div id="userID"></div>
+				</div>		
 			<div id="HeaderSep">
 				<img id="HeaderSepImg" src="./Resources/Images/header_sep.png">
 			</div>
-			<div id="ContentMain"></div>
-			<div id="CostiConsumi" class="Content"  style="font-size: 1vw">
+		<!--div style="float:left;margin-top:92px">  -->
+		<div id="ContainerError" style="float:left;width:100%;padding-bottom:5px;background-color:#333333;"><div style="width:80%; padding-left:5px;" id="ErrorMsgDIV"></div></div>
+		<!-- <div id="wrapper"> -->
+			<div id="ContainerMenu"><div id="MainMenu"></div></div>
+			<div id="ContentMain">
+			
+			<div id="CostiConsumi" class="Content">
 				<div id='TitoloCostiConsumi' class='ContentTitle'></div>
 				<div id='CostoConsumoSintesi' class='box'>
 					<div id='CostoConsumoAttuale' class='pvSingleBox'>
@@ -255,19 +285,23 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div id="Registra" style="display: none;"></div>
-			<div id="iframeReport" style="display: none;"></div>
-			<div id="iframeForum" style="display: none;"></div>
-			<div id="iframeOverload" style="display: none;"></div>
-			<div id="MainMenu"></div>
-			<div id="ContentMenu"></div>
-			<div id="Timestamp">
-				<span id="Ora"></span> <img id="ClockImg"
-					src="./Resources/Images/orologio.png"> <span id="Data"></span>
-			</div>
-			<div id="ErrorMsgDIV"></div>
-		</div>
+				</div> <!-- chiusura costo consumo info -->
+				
+				
+				</div> <!-- chiusura costi consumi -->
+				
+				<div id="Registra" style="display: none;"></div>
+				<div id="iframeReport" style="display: none;"></div>
+				<div id="iframeForum" style="display: none;"></div>
+				<div id="iframeOverload" style="display: none;"></div>
+				
+				</div>  <!-- chiusura content main -->
+					
+			<!-- </div> --> <!-- chiusura wrapper -->
+			<div id="ContainerContentMenu" style="float:left;width:100%;height:auto;"> 
+				<div id="ContentMenu"></div>
+			 </div>
+			
+		</div> <!-- chiusura container -->
 	</body>
 </html>

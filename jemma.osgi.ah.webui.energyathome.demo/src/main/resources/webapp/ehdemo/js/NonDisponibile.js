@@ -16,7 +16,7 @@ NonDisponibile.GestND = function() {
 	Log.alert(80, NonDisponibile.MODULE, "NonDisponibile.GestND");
 	var divNonDisp = $("#NonDisponibileContainer");
 	if (divNonDisp.length == 0){
-	$("#Container").append(NonDisponibile .htmlContentND);}
+	$("#ContentMain").append(NonDisponibile.htmlContent);}
 	$("#NonDisponibileContainer").show();
 }
 
@@ -24,7 +24,7 @@ NonDisponibile.GestNDUser = function() {
 	Log.alert(80, NonDisponibile.MODULE, "NonDisponibile.GestNDUser");
 	var divNonDisp = $("#NonDisponibileContainer");
 	if (divNonDisp.length == 0){
-	$("#Container").append(NonDisponibile .htmlContentNDUser );}
+	$("#ContentMain").append(NonDisponibile .htmlContentNDUser );}
 	$("#NonDisponibileContainer").show();
 }
 

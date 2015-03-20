@@ -1,15 +1,15 @@
 .TrialTitolo {
-	position: absolute;
-	top: 3%;
-	left: 2%;
-	width: 50%;
-	height: 8%;
-	text-align: left;
-	valign: middle;
-	background-color: transparent;
-	font-size: 1.4em;
-	font-weight: bold;
-	color: #f0f0f0;
+  position: relative;
+  top: 3%;
+  left: 2%;
+  width: 50%;
+  height: 8%;
+  text-align: left;
+  valign: middle;
+  background-color: transparent;
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #f0f0f0;
 }
 
 #TariffaTrial {
@@ -22,7 +22,7 @@
 }
 
 #TariffaTrialBackground,#InfoTrialBackground,#ContattiTrialBackground {
-	position: absolute;
+	position: relative;
 	top: 0%;
 	left: 0%;
 	width: 100%;
@@ -155,13 +155,13 @@
 	width: 10%;
 }
 
-#Informazioni,#Contatti {
-	position: absolute;
-	top: 13%;
-	left: 2%;
-	width: 80%;
-	height: 80%;
-	background-color: transparent;
+#Informazioni, #Contatti {
+  position: relative;
+  top: 1%;
+  left: 2%;
+  width: 90%;
+  height: 90%;
+  background-color: transparent;
 }
 
 #InformazioniTestoTitolo, #ContattiTestoTitolo {
@@ -189,8 +189,8 @@
 #InformazioniTesto {
 	position: absolute;
 	top: 25%;
-	left: 20%;
-	width: 50%;
+	left: 5%;
+	width: 90%;
 	height: 75%;
 	text-align: justify;
 	font-size: 0.9em;
