@@ -4,7 +4,7 @@
  */
 width=1240;
 height=900;
-widthSmartPort=320;
+widthSmartPort=360;
 
 function goMobile(){
 	
