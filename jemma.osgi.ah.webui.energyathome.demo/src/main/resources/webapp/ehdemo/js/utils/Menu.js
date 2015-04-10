@@ -14,6 +14,9 @@ var Menu = {
 	timercheckObjService: null
 }
 
+var ctrl=false; //controllo per il primo accesso
+var theWidth=1240;
+
 /**
  * Inizializza il menu principale e i sottomenu I sottomenu vengono creati tutti
  * all'inizio e poi ne viene visualizzato uno solo per volta
@@ -58,7 +61,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 	Menu.MainHtml = "";
 	for (i = 0; i < num; i++) {
 		Menu.MainHtml = Menu.MainHtml + 
-						"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+
+						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'/>"+
 						"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
 						"  <img id='MainImg" + i+ "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>" +
 						"  <p id='NomeMain" + i+ "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
@@ -78,25 +81,32 @@ Menu.Init = function(mainDiv, contentDiv) {
 	CostiConsumi.Init();  
 }
 
+
+
 Menu.OnClickMainMenu = function(val) {
 	// richiamo funzione di Exit per l'elemento che lascio
 	oldContent = $(".ContentMenuElSelected").attr("id");
-	
+	//$("#mobileMenu").animate({"left":"-1000px"}, 500);
 	if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu oldContent = " + oldContent);
-
+	
 	if (oldContent != undefined) {
 		j = 2; // numero main dopo 'el', numero content dopo 'Content'
 		k = oldContent.indexOf('Content');
+		console.log("oldContent="+oldContent);
 		iMain = parseInt(oldContent.substring(j, k));
 		iContent = parseInt(oldContent.substring(k + 7));
-		exitFunc = Menu.MainMenu[iMain].SubMenu[iContent].FuncExit;
-		if ((exitFunc != undefined) && (exitFunc != null)) {
-			Tracing.Trace(Menu.MainMenu[iMain].SubMenu[iContent].Section,Tracing.OUT, null, null);
-			eval(exitFunc);
+		  
+		if ($(window).width()>theWidth){
+			exitFunc = Menu.MainMenu[iMain].SubMenu[iContent].FuncExit;
+			if ((exitFunc != undefined) && (exitFunc != null)) {
+				Tracing.Trace(Menu.MainMenu[iMain].SubMenu[iContent].Section,Tracing.OUT, null, null);
+				eval(exitFunc);
+			}
+			$("#img" + iMain + "Content" + iContent).attr("src",Menu.MainMenu[iMain].SubMenu[iContent].Image);
+			$("#el" + iMain + "Content" + iContent).removeClass("ContentMenuElSelected");
 		}
 		// tolgo selezione a elemento content menu: cambio icona a immagine, cambio classe al div
-		$("#img" + iMain + "Content" + iContent).attr("src",Menu.MainMenu[iMain].SubMenu[iContent].Image);
-		$("#el" + iMain + "Content" + iContent).removeClass("ContentMenuElSelected");
+		
 	}
 	// tolgo selezione a elemento main menu: cambio icona a immagine, cambio classe al div
 	mainElId = $(".MainMenuElSelected").attr("id");
@@ -118,19 +128,44 @@ Menu.OnClickMainMenu = function(val) {
 	$("#ContentMenu" + val).addClass("visibleDiv");
 	$("#ContentMenu" + val).removeClass("invisibleDiv");
 	// seleziono primo elemento del menu
-	$("#el" + val + "Content0").addClass("ContentMenuElSelected");
-	$("#img" + val + "Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);
-	var func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
-
-	if ((func != undefined) && (func != null)) {
-		
-		if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter = " + func);
-		Tracing.Trace(Menu.MainMenu[val].SubMenu[0].Section, Tracing.IN, null, null);
-		eval(func);
-	} else {
-		
-		if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter undefined");
+	if($(window).width()>theWidth){
+		$("#el" + val + "Content0").addClass("ContentMenuElSelected");
+		$("#img" + val + "Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);		
 	}
+//	else{
+//		$("#el0Content0").addClass("ContentMenuElSelected");
+//		$("#img0Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);	
+//	}
+	var func;
+	
+	
+	if (!ctrl){		
+			func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
+			ctrl=true;	
+			$("#el0Content0").addClass("ContentMenuElSelected");
+			$("#img0Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);	
+	}
+	
+	if($(window).width()>theWidth){
+			func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
+			console.log("entra");		
+	}
+	
+		if ((func != undefined) && (func != null)) {
+			
+			if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter = " + func);
+			Tracing.Trace(Menu.MainMenu[val].SubMenu[0].Section, Tracing.IN, null, null);
+			if (val>=0) {
+		    	$("#ContentMain").css("display","block");
+		    }
+			eval(func);
+			document.body.scrollTop = document.documentElement.scrollTop = 0;
+			
+		} else {
+			if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter undefined");
+			}
+	//}
+	
 }
 
 /**
@@ -157,7 +192,7 @@ Menu.InitContentMenu = function(contentDiv) {
 			Menu.SubMenuHtml = Menu.SubMenuHtml
 					+ "<div tabindex='0' onClick='Menu.OnClickContentMenu(" + i + ", "
 					+ j + ")' class='ContentMenuEl' id='el" + i + "Content" + j
-					+ "'><div id='contImg' style='float:left;'><img  id='img" + i + "Content" + j
+					+ "'><div id='contImg'><img  id='img" + i + "Content" + j
 					+ "' class='ContentMenuImg' src='"
 					+ Menu.MainMenu[i].SubMenu[j].Image
 					+ "'></div><div id='NomeContent" + i + "_" + j
@@ -189,9 +224,17 @@ Menu.InitContentMenu = function(contentDiv) {
 
 Menu.OnClickContentMenu = function(valMain, valContent) {
 	// richiamo funzione di Exit per l'elemento che lascio
+	
 	oldContent = $(".ContentMenuElSelected").attr("id");
 	if (Main.env == 0) console.log(80, "Menu", "OnClickContentMenu oldContent = " + oldContent);
-
+	
+	if($(window).width()<=theWidth){
+	
+		if ($(".toggleMobile").hasClass("active")){
+			$(".toggleMobile").toggleClass("active");
+			$("#mobileMenu").animate({"left":"-200%"}, 600);
+		}
+	}
 	if (oldContent != undefined) {
 		j = 2; // numero main dopo 'el', numero content dopo 'Content'
 		k = oldContent.indexOf('Content');
@@ -211,8 +254,26 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 	$("#el" + valMain + "Content" + valContent).addClass("ContentMenuElSelected");
 	$("#img" + valMain + "Content" + valContent).attr("src",Menu.MainMenu[valMain].SubMenu[valContent].ImageSelected);
 
-	func = Menu.MainMenu[valMain].SubMenu[valContent].FuncEnter;
+    func = Menu.MainMenu[valMain].SubMenu[valContent].FuncEnter;
 	
+    if ((valMain==0) && (valContent==1)){
+		$("#Consigli").css("display","none");
+		$("#CostoConsumoSintesi").css("height","98%");
+    }	
+	else{
+		$("#Consigli").css("display","block");
+		$("#CostoConsumoSintesi").css("height","70%");
+    }
+    
+    if ((valMain==0) && (valContent==3)){
+    	$("#ContentMain").css("display","none");
+    }
+    else{
+    	$("#ContentMain").css("display","block");
+    }
+    
+  
+			
 	if (Main.env == 0) console.log(80, "Menu", "valMain = " + valMain);
 	if (Main.env == 0) console.log(80, "Menu", "valContent = " + valContent);
 	if (Main.env == 0) console.log(80, "Menu", "Menu = ");
@@ -224,8 +285,11 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 		
 		Tracing.Trace(Menu.MainMenu[valMain].SubMenu[valContent].Section, Tracing.IN, null, null);
 		eval(func);
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
 	} else {
 		
 		if (Main.env == 0) console.log(80, "Menu", "OnClickContentMenu func undefined");
 	}
 }
+
+

@@ -95,7 +95,7 @@ function setDefineMenu(){
 											 "Image" : Define.menu["tariffa"],
 											 "ImageSelected" : Define.menu["tariffaSel"],
 											 "Section": Tracing.TARIFF,
-											 "FuncEnter" : "Trial.GestTariffa()",
+											 "FuncEnter" : "LazyScript.load('js/Trial.js?201305315125',function(){Trial.GestTariffa();})",
 											 "FuncExit" : "Trial.ExitTariffa()"}]}];
 	} else if (Main.enablePV === false){
 		DefineMenu = [ {"Nome" : Msg.menu["home"],

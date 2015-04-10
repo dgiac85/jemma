@@ -31,6 +31,8 @@ var chartConsumi = null;
 var chartVenduto = null;
 var chartPie = null;
 
+
+
 Main.aggiornaTimestamp = function() {
 	Main.dataAttuale = GestDate.GetActualDate();
 	// se data inferiore 1-1-2010 segnalo errore
@@ -260,8 +262,18 @@ Main.onLoad = function() {
 	Log.setLevel(parseInt(level));
 
 	$(document).ready(function() {
+		
 		Main.userAgent = navigator.userAgent;
-
+		var theWidth=640;
+		if($(window).width()<=theWidth){
+			//grab an element
+			var myElement = document.getElementById("Header");
+			// construct an instance of Headroom, passing the element
+			var headroom  = new Headroom(myElement);
+			// initialise
+			headroom.init(); 
+		}
+		
 		// Parse the current page's querystring
 		var qs = new Querystring();
 
@@ -324,6 +336,7 @@ Main.onUnload = function() {
 	// faccio out da sezione attuale
 	Tracing.Trace(null, Tracing.OUT, null, null);
 	Tracing.Trace(Tracing.HOME, Tracing.OUT, null, null);
+
 }
 
 MostraCostiConsumi = function() {
