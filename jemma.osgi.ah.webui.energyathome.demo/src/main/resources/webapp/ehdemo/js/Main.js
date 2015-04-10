@@ -261,18 +261,38 @@ Main.onLoad = function() {
 	var level = qs.get("level", "20");
 	Log.setLevel(parseInt(level));
 
+	function hideAddressBar(){
+		  if(document.documentElement.scrollHeight<window.outerHeight/window.devicePixelRatio)
+		    document.documentElement.style.height=(window.outerHeight/window.devicePixelRatio)+'px';
+		  setTimeout(window.scrollTo(1,1),0);
+		}
+		window.addEventListener("load",function(){hideAddressBar();});
+		window.addEventListener("orientationchange",function(){hideAddressBar();});
+	
+	
 	$(document).ready(function() {
 		
 		Main.userAgent = navigator.userAgent;
-		var theWidth=640;
-		if($(window).width()<=theWidth){
-			//grab an element
-			var myElement = document.getElementById("Header");
-			// construct an instance of Headroom, passing the element
-			var headroom  = new Headroom(myElement);
-			// initialise
-			headroom.init(); 
-		}
+		var theWidth=540;
+//		if($(window).width()<=theWidth){
+//			//hideAddressBar();
+//			if ((navigator.userAgent.match(/Android/i)) || (navigator.userAgent.indexof('Chrome')>-1)) {
+//			    window.scrollTo(0,0); // reset in case prev not scrolled  
+//			    var nPageH = $(document).height();
+//			    var nViewH = window.outerHeight;
+//			    if (nViewH > nPageH) {
+//			      nViewH -= 250;
+//			      $('body').css('height',nViewH + 'px');
+//			    }
+//			    window.scrollTo(0,1);
+//			  }
+//			//grab an element
+//			var myElement = document.getElementById("Header");
+//			// construct an instance of Headroom, passing the element
+//			var headroom  = new Headroom(myElement);
+//			// initialise
+//			headroom.init(); 
+//		}
 		
 		// Parse the current page's querystring
 		var qs = new Querystring();

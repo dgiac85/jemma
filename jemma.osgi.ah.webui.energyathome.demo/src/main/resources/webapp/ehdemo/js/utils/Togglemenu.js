@@ -2,9 +2,9 @@
  *The script manages the appearence of toggle menu and the relative content menu in the mobile visualization version.
   Moreover, if the resolution width of screen is greater than 1224px and the height is > than 900px, the toggle menu disappears and return the normal Content Menu  
  */
-width=1240;
-height=900;
-widthSmartPort=360;
+var width=1240;
+var height=900;
+var widthSmartPort=540;
 
 function goMobile(){
 	
@@ -41,8 +41,7 @@ function goMobile(){
 function goMobileSmart(){
 	
 	$("#ContentMain").css("height","1080px");
-	$("#ContentMain").css("top","65px");
-	
+	$("#ContentMain").css("top","65px");	
 	
 	$("#datausercontent").css("top","-100%");
 	$('#toggleUser').css('display','block');
@@ -77,7 +76,8 @@ function exitMobileSmart(){
 	$('#datausersmartphoneToggle').css('display','none');
 }
 
-$(document).ready(function() {
+$(document).ready(function() {	
+	
 	heightMenu=$("#ContainerMenu").height();
 	
 	$("#ContentMain").css("height",heightMenu);
@@ -113,6 +113,7 @@ $(document).ready(function() {
 	
 	//successive ctrl of the screen resolution that can change in real-time
 	//funzione anonima per il controllo degli eventi sui bottoni e sul body
+	
 	$(function ()
 	{	    
 	    $('html').click(function() {
@@ -130,18 +131,23 @@ $(document).ready(function() {
 	  			event.stopPropagation(); //fermo la propagazione dell'evento relativo al click o a qualche altro evento
     	    
     	});
-	    	
+	  	
+	  
 	    	
 	    $("#toggleMenu").click(function(){
+	    			
 	    			$(this).effect("highlight", {}, 500);
 	    	    	$(this).toggleClass("active");
-	    	    	if ($("#mobileMenu").css("left")==="0px"){
+	    	    	var hasClass = this.classList.contains('active');
+	    	    	if (!hasClass){
 	    	    		$("#mobileMenu").animate({"left":"-200%"}, 600);
 	    	    	}
 	    	    	else{	    	
 	    	    		$("#mobileMenu").animate({"left":"0px"}, 600);
 	    	    	}
-	    	    	event.stopPropagation();   	    	
+	    	    	
+	    	    	event.stopPropagation();   
+	    	    	
 	
 	    });
 	    

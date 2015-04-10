@@ -159,7 +159,7 @@ Menu.OnClickMainMenu = function(val) {
 		    	$("#ContentMain").css("display","block");
 		    }
 			eval(func);
-			document.body.scrollTop = document.documentElement.scrollTop = 0;
+			
 			
 		} else {
 			if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter undefined");
