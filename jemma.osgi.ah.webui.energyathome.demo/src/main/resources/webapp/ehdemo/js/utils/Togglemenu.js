@@ -4,13 +4,19 @@
  */
 var width=1240;
 var height=900;
-var widthSmartPort=540;
+var widthSmartPort=640;
+var heightSmartThreshold=1024;
 
 function goMobile(){
 	
 	$('#datausersmartphoneToggle').css('display','none');
-	$('#datausercontent').css('display','none');
+	//$('#datausercontent').css('display','none');
 	$('#toggleUser').css('display','none');
+	
+	height=$("#Header").height();
+	$('#mobileMenu').css('top',height);
+	$('#ContentMain').css('top',height);
+	
 	
 	if($(window).width()<=widthSmartPort){
 		goMobileSmart();
@@ -41,15 +47,20 @@ function goMobile(){
 function goMobileSmart(){
 	
 	$("#ContentMain").css("height","1080px");
-	$("#ContentMain").css("top","65px");	
 	
-	$("#datausercontent").css("top","-100%");
+	$("#dataANDuser").css("top","-100%");
 	$('#toggleUser').css('display','block');
+	$('#dataANDuser').css('display','none');
 	$('#datausersmartphoneToggle').css('display','block');
-	$('#datausercontent').css('display','block');
+	//$('#datausercontent').css('display','block');
 	
 	element=$('#dataANDuser').detach();
-	$('#datausercontent').append(element);
+	$('#logo').append(element);
+	
+	heightHeader=$("#Header").height();
+	$('#mobileMenu').css('top',heightHeader);
+	$('#ContentMain').css('top',heightHeader);
+
 }
 
 function exitMobile(){
@@ -71,16 +82,17 @@ function exitMobile(){
 
 function exitMobileSmart(){
 	element=$('#dataANDuser').detach();
-	$('#datausercontent').append(element);
-	
+	$('#logo').append(element);	
 	$('#datausersmartphoneToggle').css('display','none');
 }
 
 $(document).ready(function() {	
 	
-	heightMenu=$("#ContainerMenu").height();
-	
+	heightMenu=$("#ContainerMenu").height();	
 	$("#ContentMain").css("height",heightMenu);
+	var whatbro=client.engine;
+	console.log(whatbro);		
+
 	//initial ctrl about the situation of screen resolution at the moment in which document is ready
 	//$('#ContentMenu').css('display','none');
 	$("#mobileMenu").css("display","block");
@@ -90,13 +102,12 @@ $(document).ready(function() {
 
 	$("#mobileMenu").css("left","-200%");
 	if($(window).width()<=width){
-		$("#ContentMain").css("height","calc(100% - 70px)");
-		$("#ContentMain").css("height","-moz-calc(100% - 70px)");
-		$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
-	
-		
-			goMobile();	
-		
+		if ($(window).width()>widthSmartPort){
+			$("#ContentMain").css("height","calc(100% - 70px)");
+			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
+			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
+		}		
+		goMobile();			
 	}
 	else{
 //		if  ($(window).height()<height){
@@ -115,28 +126,24 @@ $(document).ready(function() {
 	//funzione anonima per il controllo degli eventi sui bottoni e sul body
 	
 	$(function ()
-	{	    
-	    $('html').click(function() {
-	    	//alert("punto toccato="+event.target.className);
-	    	if ($("#mobileMenu").css("left")==="0px"){
-	    		
-		       	$("#toggleMenu").toggleClass("active");
-		    	$("#mobileMenu").animate({"left":"-200%"}, 600);
-	    	}
-	    });
-	    
-	    
-	  	$('#mobileMenu').click(function(){
-	  		//if($(window).width()>widthSmartPort)
-	  			event.stopPropagation(); //fermo la propagazione dell'evento relativo al click o a qualche altro evento
-    	    
-    	});
-	  	
+	{	  
+		
+		if($(window).width()>widthSmartPort){
+		    $(document).click(function(event) {		    	
+		    	if ((event.target.id!=="toggleMenu")&&(event.target.id!=="mobileMenu")&&(event.target.className!=="toggleMobile")&&(event.target.className!=="toggleMobile active")){
+			    	if ($("#mobileMenu").css("left")==="0px"){    		
+				       	$("#toggleMenu").toggleClass("active");
+				    	$("#mobileMenu").animate({"left":"-200%"}, 600);
+			    	}
+		    	}
+		    });
+		}
+	    	
 	  
 	    	
 	    $("#toggleMenu").click(function(){
 	    			
-	    			$(this).effect("highlight", {}, 500);
+	    			//$(this).effect("highlight", {}, 500);
 	    	    	$(this).toggleClass("active");
 	    	    	var hasClass = this.classList.contains('active');
 	    	    	if (!hasClass){
@@ -144,26 +151,31 @@ $(document).ready(function() {
 	    	    	}
 	    	    	else{	    	
 	    	    		$("#mobileMenu").animate({"left":"0px"}, 600);
-	    	    	}
-	    	    	
-	    	    	event.stopPropagation();   
-	    	    	
+	    	    	} 
+	    	      	  	
 	
 	    });
 	    
 	    $("#toggleUser").click(function(){
-	    	$(this).effect("highlight", {}, 500);
+	    	
 	    	height=$("#Header").height();
-	    	if ($("#datausercontent").css("top")==="0px"){		    		
-	    		$("#datausercontent").animate({"top":height*(-1)}, 500);
+	    	if ($("#dataANDuser").css("top")==="0px"){		    		
+	    		$("#dataANDuser").animate({"top":height*(-1)}, 500);
+	    		$("#ContainerLogo").animate({"top":"0px"}, 500);
+	    		$("#dataANDuser").css("display","none");
+	    		$("#ContainerLogo").css("display","block");
 	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_bianco.png");	    		
 	    	}
-	    	else{	    	
-	    		$("#datausercontent").animate({"top":"0px"}, 200);	    		
+	    	else{
+	    		
+	    		$("#dataANDuser").animate({"top":"0px"}, 500);
+	    		$("#ContainerLogo").animate({"top":height*(-1)}, 500);
+	    		$("#dataANDuser").css("display","block");	    		
+	    		$("#ContainerLogo").css("display","none");
 	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_verde.png");	
-	    		$("#datausercontent").effect("highlight", {}, 500);
+//	    		$("#Timestamp").effect("highlight", {}, 500);
+//				$("#userID").effect("highlight", {}, 500);
 	    	}
-	    	event.stopPropagation(); 
 	    	
 	    });
 	    
@@ -172,6 +184,11 @@ $(document).ready(function() {
 	//funzione per il controllo dell'on resize
 	$(window).on("resize", function()
 	{
+		//controllo per alzare il form di inserimento credenziali DA RIVEDERE
+		if($(this).height()<=393){
+			$('form').animate({"top":"10px"}, 600);
+			
+		}
 		
 		//da valutare
 		if($(window).width()>widthSmartPort){
@@ -180,6 +197,12 @@ $(document).ready(function() {
 			$('#Header').append(element);
 			$('#Header').append(element1);
 			$('#datausersmartphoneToggle').css('display','none');
+			$('#dataANDuser').css('display','block');	
+			
+			$("#ContentMain").css("height","calc(100% - 70px)");
+			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
+			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
+
 		}
 		
 		var misura=$(this).width();
@@ -190,16 +213,8 @@ $(document).ready(function() {
 				$("#mobileMenu").animate({"left":"-200%"}, 600);
 			}
 			
-			$("#mobileMenu").css("display","block");		
-			$("#ContentMain").css("height","calc(100% - 70px)");
-			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
-			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
-			
-			
-				goMobile();	
-		
-			
-			
+			$("#mobileMenu").css("display","block");			
+			goMobile();		
 		}
 		else{
 			exitMobile();

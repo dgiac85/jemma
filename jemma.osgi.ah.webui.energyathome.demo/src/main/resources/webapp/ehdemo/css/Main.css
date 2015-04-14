@@ -898,11 +898,11 @@ color: #202020;
 }
 
 /* iPhone 5 and other Main Smartphones----------- */
-@media screen and (max-width: 540px) and (max-height: 960px) and (orientation : portrait), (max-width: 540px) and (min-height:0px) and (orientation : landscape), (max-device-width: 540px) and (max-device-height: 960px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1), (max-device-width: 540px) and (min-device-height:0px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {
+@media screen and (max-width: 640px) and (max-height: 960px) and (orientation : portrait), (max-width: 640px) and (min-height:0px) and (orientation : landscape), (max-device-width: 640px) and (max-device-height: 960px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1), (max-device-width: 640px) and (min-device-height:0px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {
 /* Styles */
 
 #Container{
-background: #333333;
+background: #202020;
 max-height:960px;
 }
 
@@ -924,6 +924,7 @@ max-height:960px;
 }
 
 #ContainerLogo{
+	position:relative;
 	width:180px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -957,10 +958,12 @@ background-color: #333;
 }
 	
 	#MainMenu {
-	width: auto;
-overflow: hidden;
-z-index: 1;
-background-color: #333333;
+  width: 50%;
+  margin: 0px;
+  height: 94%;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #333333;
 	}
 	
 	#ContentMain {
@@ -974,25 +977,36 @@ background-color: #333333;
   max-height:1080px;
 	}
 	
+	
+	#Timestamp{
+		margin:5px auto;
+	}
+	
+	#userID{
+		margin:5px auto;
+	}
 
 	#ContentMenu {
-padding-top: 20px;
-background-color: #333333;
-position: relative;
-height: 100px;
-left: 10%;
-top: 25px;
-width: 100%;
-
+  background-color: #202020;
+  position: absolute;
+  left: 50%;
+  top: 25px;
+  width: 50%;
+  height: 80%;
 }
 
 #Header{
 		  /* min-width: 426px; */
   z-index: 11;	
-  height: 65px;
+  height: auto;
   width: 100%;
   position:fixed;
 	}
+	
+	#HeaderSep {
+  margin-bottom: 0px;
+  clear: both;
+  }
 	
 #ContainerError{
 	  position: fixed;
@@ -1008,26 +1022,28 @@ width: 100%;
 #LogoImg {
   /* position: relative; */
   margin: 0px auto;
-  margin-left: 5px;
   height: auto;
   width: 180px;
 }
 
 	
 #logo{
-  width: 64%;
+  width: 68%;
   margin: 0px auto;
-  height: auto;
+  height: 57px;
   position: relative;
   top: 0px;
 }
 
 #dataANDuser {
-position: relative;
-left: 5%;
-width: 98%;
-height: auto;
-padding-bottom: 5px;
+  position: relative;
+  /* left: 5%; */
+  margin: 0 auto;
+  width: 200px;
+  height: 58px;
+  margin: 0 auto;
+  float: none;
+  /* padding-bottom: 5px; */
 }
 #userID{
 	font-size:12px;
