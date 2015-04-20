@@ -1,24 +1,20 @@
-/**
- *The script manages the appearence of toggle menu and the relative content menu in the mobile visualization version.
-  Moreover, if the resolution width of screen is greater than 1224px and the height is > than 900px, the toggle menu disappears and return the normal Content Menu  
- */
-var width=1240;
-var height=900;
-var widthSmartPort=640;
-var heightSmartThreshold=1024;
+
+var width=1200;
+var widthSmart=765;
 
 function goMobile(){
 	
 	$('#datausersmartphoneToggle').css('display','none');
-	//$('#datausercontent').css('display','none');
+
 	$('#toggleUser').css('display','none');
 	
 	height=$("#Header").height();
+
 	$('#mobileMenu').css('top',height);
 	$('#ContentMain').css('top',height);
 	
 	
-	if($(window).width()<=widthSmartPort){
+	if($(window).width()<=widthSmart){
 		goMobileSmart();
 	}
 	
@@ -38,28 +34,25 @@ function goMobile(){
 	
 	element=$('#MobSep2').detach();
 	$('#mobileMenu').append(element);
-	
-	
-
 
 }
 
 function goMobileSmart(){
 	
-	$("#ContentMain").css("height","1080px");
+		$("#ContentMain").css("height","1080px");
 	
-	$("#dataANDuser").css("top","-100%");
-	$('#toggleUser').css('display','block');
-	$('#dataANDuser').css('display','none');
-	$('#datausersmartphoneToggle').css('display','block');
-	//$('#datausercontent').css('display','block');
-	
-	element=$('#dataANDuser').detach();
-	$('#logo').append(element);
-	
-	heightHeader=$("#Header").height();
-	$('#mobileMenu').css('top',heightHeader);
-	$('#ContentMain').css('top',heightHeader);
+		$("#dataANDuser").css("top","-100%");
+		$('#toggleUser').css('display','block');
+		$('#dataANDuser').css('display','none');
+		$('#datausersmartphoneToggle').css('display','block');
+		//$('#datausercontent').css('display','block');
+		
+		element=$('#dataANDuser').detach();
+		$('#logo').append(element);
+		
+		heightHeader=$("#Header").height();
+		$('#mobileMenu').css('top',heightHeader);
+		$('#ContentMain').css('top',heightHeader);
 
 }
 
@@ -67,14 +60,12 @@ function exitMobile(){
 	$('#ContainerMenu').css('display','block');
 	$('#ContentMenu').css('display','block');
 	
-	element2=$('#MainMenu').detach();
+	element=$('#MainMenu').detach();
+	$('#ContainerMenu').append(element);
 	$('#toggleMenu').css('display','none');
 	$('.Separators').css('display','none');		
-	element=$('#ContentMenu').detach();
-	
-	
-	$('#ContainerContentMenu').append(element);	
-	$('#ContainerMenu').append(element2);
+	element2=$('#ContentMenu').detach();	
+	$('#ContainerContentMenu').append(element2);	
 	
 			
 
@@ -87,35 +78,20 @@ function exitMobileSmart(){
 }
 
 $(document).ready(function() {	
+	heightContainerMenu=$("#ContainerMenu").height();	
+	$("#ContentMain").css("height",heightContainerMenu);
 	
-	heightMenu=$("#ContainerMenu").height();	
-	$("#ContentMain").css("height",heightMenu);
-	var whatbro=client.engine;
-	console.log(whatbro);		
-
-	//initial ctrl about the situation of screen resolution at the moment in which document is ready
-	//$('#ContentMenu').css('display','none');
 	$("#mobileMenu").css("display","block");
 
-
-	//$(".MainMenuEl").css("width", dim + "px");
-
 	$("#mobileMenu").css("left","-200%");
-	if($(window).width()<=width){
-		if ($(window).width()>widthSmartPort){
+	if($(window).width()<width){
+			$("#ContentMain").css("width","100%");
 			$("#ContentMain").css("height","calc(100% - 70px)");
 			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
 			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
-		}		
 		goMobile();			
 	}
 	else{
-//		if  ($(window).height()<height){
-//			goMobile();
-//		}
-//		else{;
-//			exitMobile();
-//		}
 		exitMobile();
 	}
 	
@@ -128,22 +104,20 @@ $(document).ready(function() {
 	$(function ()
 	{	  
 		
-		if($(window).width()>widthSmartPort){
-		    $(document).click(function(event) {		    	
+
+		    $("#ContentMain").click(function(event) {		    	
 		    	if ((event.target.id!=="toggleMenu")&&(event.target.id!=="mobileMenu")&&(event.target.className!=="toggleMobile")&&(event.target.className!=="toggleMobile active")){
 			    	if ($("#mobileMenu").css("left")==="0px"){    		
 				       	$("#toggleMenu").toggleClass("active");
 				    	$("#mobileMenu").animate({"left":"-200%"}, 600);
 			    	}
 		    	}
-		    });
-		}
+
 	    	
-	  
+			});
 	    	
 	    $("#toggleMenu").click(function(){
 	    			
-	    			//$(this).effect("highlight", {}, 500);
 	    	    	$(this).toggleClass("active");
 	    	    	var hasClass = this.classList.contains('active');
 	    	    	if (!hasClass){
@@ -173,69 +147,58 @@ $(document).ready(function() {
 	    		$("#dataANDuser").css("display","block");	    		
 	    		$("#ContainerLogo").css("display","none");
 	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_verde.png");	
-//	    		$("#Timestamp").effect("highlight", {}, 500);
-//				$("#userID").effect("highlight", {}, 500);
+
 	    	}
 	    	
 	    });
 	    
-	});
+	
 	
 	//funzione per il controllo dell'on resize
 	$(window).on("resize", function()
 	{
-		//controllo per alzare il form di inserimento credenziali DA RIVEDERE
-		if($(this).height()<=393){
-			$('form').animate({"top":"10px"}, 600);
-			
-		}
+
+		//per la gestione dei bordini del menu una volta che si fa il resize
+		$(".Cover").css("height",$(".MainMenuEl").height());
+		$(".CoverBis").css("height",$(".MainMenuEl").height()+4);
 		
-		//da valutare
-		if($(window).width()>widthSmartPort){
+	
 			element=$('#dataANDuser').detach();
 			element1=$('#HeaderSep').detach();
 			$('#Header').append(element);
 			$('#Header').append(element1);
 			$('#datausersmartphoneToggle').css('display','none');
 			$('#dataANDuser').css('display','block');	
-			
+			$("#ContentMain").css("width","100%");
 			$("#ContentMain").css("height","calc(100% - 70px)");
 			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
 			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
 
-		}
-		
-		var misura=$(this).width();
+
 		if($(this).width() <= width)
 		{	
 			if ($("#mobileMenu").css("left")==="0px"){
 				$("#toggleMenu").toggleClass("active");
 				$("#mobileMenu").animate({"left":"-200%"}, 600);
-			}
-			
+			}			
 			$("#mobileMenu").css("display","block");			
 			goMobile();		
 		}
-		else{
+		if($(this).width() > width){
 			exitMobile();
 			heightMenu=$("#ContainerMenu").css("height");
 			$("#ContentMain").css("height",heightMenu);
+			$("#ContentMain").css("width","-webkit-calc(100% - 192px)");
+			$("#ContentMain").css("width","-moz-calc(100% - 192px)");
+			$("#ContentMain").css("width","calc(100% - 192px)");			
 			$('#MobSep1').css('display','none');
 			$("#mobileMenu").css("display","none");
-			
-//			if ($(this).height() > height){
-//				exitMobile();
-//			}
-//			else{
-//				goMobile();
-//			}		
-		}		
+				
+		}	
 		
-			
-			
-		
-		
-	});		
+		});		
+	
+	});
 	
 });
 

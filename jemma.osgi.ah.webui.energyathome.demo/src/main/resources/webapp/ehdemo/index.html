@@ -139,50 +139,50 @@
 		<script language="javascript" type="text/javascript" src="js/utils/Menu.js?201305315125"></script>
 	</head>
 	<body onLoad="Main.onLoad()" onUnload="Main.onUnload()">
-		<div id="Container">
-			<div id="mobileMenu" class="mMenu">
-				
+		
+	<div id="Container">
+		<div id="mobileMenu" class="mMenu"></div>			
+		<div id="Header">
+			<div id="containerToggle" class="cToggle">
+				<div class="toggleMobile" id="toggleMenu">	
+					<!-- <span style="color:white; font-size:0.5em">Options</span>	 -->			
+					<span class="menu1"></span>
+					<span class="menu2"></span>
+					<span class="menu3"></span>	
+					<div id="menulabel" style="margin-top:3px;margin-left:55px; color:#3A9948; font-size:2em; font-style: italic;"><p>Menù</p></div>				
+				</div>
+			</div>	
+			<div id="logo">
+				<div id="ContainerLogo">
+					<img id="LogoImg" src="./Resources/Images/E@HLogo.png">
+				</div>
+			</div>				
+			<div id="datausersmartphoneToggle">
+				<div class="toggleMobile" id="toggleUser">
+					<div id="ContainerUser">	
+						<img id="LogoImgUser" src="./Resources/Images/menu/utente_bianco.png">
+					</div>
+				</div>
 			</div>
-			
-			<div id="Header">
-				<div id="containerToggle" class="cToggle">
-					<div class="toggleMobile" id="toggleMenu">	
-						<!-- <span style="color:white; font-size:0.5em">Options</span>	 -->			
-						<span class="menu1"></span>
-						<span class="menu2"></span>
-						<span class="menu3"></span>	
-						<div id="menulabel" style="margin-top:3px;margin-left:55px; color:#3A9948; font-size:2em; font-style: italic;"><p>Menù</p></div>				
-					</div>
+			<div id="dataANDuser">
+				<div id="Timestamp">
+					<span id="Data"></span>	
+					<img id="ClockImg" src="./Resources/Images/orologio.png"/>
+					<span id="Ora"> </span>											
 				</div>	
-				<div id="logo">
-					<div id="ContainerLogo">
-						<img id="LogoImg" src="./Resources/Images/E@HLogo.png">
-					</div>
-				</div>				
-				<div id="datausersmartphoneToggle">
-					<div class="toggleMobile" id="toggleUser">
-						<div id="ContainerUser">	
-							<img id="LogoImgUser" src="./Resources/Images/menu/utente_bianco.png">
-						</div>
-					</div>
-				</div>
-				<div id="dataANDuser">
-					<div id="Timestamp">
-						<span id="Data"></span>	
-						<img id="ClockImg" src="./Resources/Images/orologio.png"/>
-						<span id="Ora"> </span>											
-					</div>	
-					<div id="userID"></div>
-				</div>
-				<div id="HeaderSep" style="background-color:#9ec200">					
-				</div>
-						
+				<div id="userID"></div>
+			</div>
+			<div id="HeaderSep" style="background-color:#9ec200">					
+			</div>						
 		</div>
 		<!--div style="float:left;margin-top:92px">  -->
 		<div id="ContainerError" style="float:left;width:100%;padding-bottom:5px;background-color:#333333;"><div style="width:80%; padding-left:5px;" id="ErrorMsgDIV"></div></div>
 		<!-- <div id="wrapper"> -->
-			<div id="ContainerMenu"><div id="MainMenu"></div></div>
-			
+			<div id="ContainerMenu">
+				<div id="MainMenu">
+				 	
+				</div>
+				</div>
 				<div id="ContentMain">
 				<!-- <div id="ContainerPerScala"> -->
 					
@@ -315,8 +315,6 @@
 				<div id="iframeOverload" style="display: none;"></div>
 				
 				</div>  <!-- chiusura content main -->
-				<!-- </div>	 chiusura containerscala -->
-			<!-- </div> --> <!-- chiusura wrapper -->
 			<div id="ContainerContentMenu" style="float:left;width:100%;height:auto;"> 
 				<div id="ContentMenu"></div>
 			 </div>

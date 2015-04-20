@@ -1,4 +1,8 @@
+/*GLOBAL*/
 
+.Cover{
+	display:none;
+}
 
 
 #MainMenuTable {
@@ -14,6 +18,8 @@
 
 .MainMenuEl{
 		width:150px;height:180px;float:left;margin-left:25px;margin-right:25px;
+		float:left;
+	color: white;
 		
 	}
 
@@ -33,16 +39,16 @@
 	border: none;
 }
 
-.MainMenuEl {
-	
-	/*position: absolute;*/
-	float:left;
-	color: white;
-}
 
 .MainMenuEl:focus {
 	outline:none;
 	}
+
+#MainEl0{top:4%; left:5%;}
+#MainEl1{top: 25%;left: 5%;}
+#MainEl2{
+top:50%;left:5%;  }
+#MainEl3{top:75%;left:5%;}
 
 .MainMenuEl:hover {
 	border: solid 2px #9ec200;
@@ -135,12 +141,6 @@ overflow: hidden;
 	outline: none;
 }
 
-
-/********************************************************************/
-/*Menu For Smaller Resolutions*/
-
-
-
 #mobileMenu ul li
 {
 display:block;
@@ -152,146 +152,51 @@ text-align: center;
 text-transform: uppercase;
 border-bottom: 1px solid #CC5836;}
 
-.toggleMobile
-{
-display:none;}
 
 #mobileMenu {
-  display: block;
-    background: #202020;
-  position: absolute;
-  top: 55px;
-  width: 60%;
-  height: 250px;
-  z-index: 20;
-    border: 4px solid rgb(158, 194, 0);
-  /* border-top-left-radius: 0px; */
-  border-radius: 15px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
-  -moz-border-radius: 15px;
-  -moz-border-top-left-radius: 0px;
-  -moz-border-bottom-right-radius: 0px;
-  -moz-border-bottom-left-radius: 0px;
-  padding: 10px 10px 0px;
-  display: block;
-  left: 0px;
+display: block;
+background: #202020;
+position: absolute;
+top: 55px;
+width: 60%;
+height: 250px;
+z-index: 20;
+border: 4px solid rgb(158, 194, 0);
+/* border-top-left-radius: 0px; */
+border-radius: 15px;
+border-top-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
+-moz-border-radius: 15px;
+-moz-border-top-left-radius: 0px;
+-moz-border-bottom-right-radius: 0px;
+-moz-border-bottom-left-radius: 0px;
+padding: 10px 10px 0px;
+display: block;
+left: 0px;
 }
-
-
-/**********************************************************************
-Media Queries
-***********************************************************************/
-/*For Normal Screen*/
-
-
-
-
-
-@media only screen and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 1) {
-
-	#some-element{ display: none; }
-	
-#datausercontent{
-	  float: left;
-  width: 16%;
-}
-	
-	.ContentMenuRow {
- margin-left:0px;
- width: 100%;
-   margin-bottom: 10px;	
-   background: #202020;
-	}
-	
-.MainMenuEl:hover {
-	border-bottom:none;
-	 background: #202020;
-	   border-radius: 0px;
-	   -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-	   border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  -webkit-border-top-left-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-   -moz-border-top-left-radius: 4px;
-  -moz-border-top-right-radius: 4px;
-}
-
-#mobileMenu{
-	height:260px;
-	width: 70%;
-}
-
-
-#containerToggle {
-  background: #202020;
-  float: left;
-  width: 30%;
-  height: 51px;
-  cursor: pointer;
-  z-index: 999;
-}	
-	
-
-.MainMenuElSelected {
-	border:2px solid #9ec200;
-	border-top-left-radius: 4px;
-  	border-top-right-radius: 4px;
-  	-webkit-border-top-left-radius: 4px;
-  	-webkit-border-top-right-radius: 4px;
-	border-bottom:none;
-	background: #202020;
-	}	
-
-
-#contImg{
-	height:50px;
-	width:50px;
-	margin: 0px auto;
-}
-
-.ContentMenuEl {
- height: 100%;
-  width: 20%;
-  margin:0px;
-}
-
-.ContentMenuTitle {
-  text-align: center;
-}
-
-.ContentMenuImg{
-	margin:0px auto;
-	width: 100%;
-  height: 100%;
-}
-
 
 .toggleMobile {
-  float: left;
-  width: 75%;
-  height: 45px;
-  margin-top:5px;
-  cursor: pointer;
- background:#333333;
+display:none;
+float: left;
+width: auto;
+height: 45px;
+margin-top:5px;
+cursor: pointer;
+background:#333333;
 border-radius: 15px;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 4px solid #9ec200;
-  z-index: 999;
+border: 4px solid #9ec200;
+z-index: 999;
 }
 
 .toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
 {
 display: block;
 position: absolute;
-  width: 41px;
-  height: 7px;
-  margin-left: 5px;
-  margin-top: 13px;
+width: 41px;
+height: 7px;
+margin-left: 5px;
+margin-top: 13px;
 background: #3A8848;
 -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
 transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
@@ -299,371 +204,7 @@ transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
 
 .toggleMobile span.menu2
 {
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;}
-.toggleMobile span.menu2
-{
-top: 14px;}
-.toggleMobile span.menu3
-{
-top: 28px;}	
-
-.toggleMobile.active span.menu1
-{
-top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-	
-	
-
-.ContentMenuElSelected {
-	  color: #9ec200;
-  /* width: 90%; */
-  height: auto;
-  margin: 0 auto;
-}
-
-.ContentMenuTitle {
- 
-  width: 100%;
-  margin: 0 auto;
-  }
-
-.MainMenuElSelected {
-	
-	color: #9ec200;
-}
-
-.MainMenuEl {
-   width: 110px;
-  height: 130px;
-      position: absolute;
-  top: 7.25%;
-  margin-top: 0px;
-  border-bottom: none;
-  z-index: 5;
-}
-
-#MainEl0{left:0%}
-#MainEl1{left:23%}
-#MainEl2{left:48%}
-#MainEl3{left:73%}
-
-}
-
-
-@media only screen and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 1) {
-
-	#some-element{ display: none; }
-	
-
-	
-	.ContentMenuRow {
- margin-left:0px;
- width: 100%;
-   margin-bottom: 10px;	
-   background: #202020;
-	}
-	
-.MainMenuEl:hover {
-	border-bottom:none;
-	 background: #202020;
-	   border-radius: 0px;
-  -webkit-border-radius: 0px;
-	   border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  -webkit-border-top-left-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-}
-
-#mobileMenu{
-	height:260px;
-}
-
-
-#containerToggle {
-  background: #202020;
-  float: left;
-  width: 30%;
-  height: 51px;
-  cursor: pointer;
-  z-index: 999;
-}	
-	
-
-.MainMenuElSelected {
-	border:2px solid #9ec200;
-	border-top-left-radius: 4px;
-  	border-top-right-radius: 4px;
-  	-webkit-border-top-left-radius: 4px;
-  	-webkit-border-top-right-radius: 4px;
-	border-bottom:none;
-	background: #202020;
-	}	
-
-
-#contImg{
-	height:50px;
-	width:50px;
-	margin: 0px auto;
-}
-
-.ContentMenuEl {
- height: 100%;
-  width: 20%;
-  margin:0px;
-}
-
-.ContentMenuTitle {
-  text-align: center;
-}
-
-.ContentMenuImg{
-	margin:0px auto;
-	width: 100%;
-  height: 100%;
-}
-
-
-.toggleMobile {
-  float: left;
-  width: 45%;
-  height: 45px;
-  margin-top:5px;
-  cursor: pointer;
- background:#333333;
-border-radius: 15px;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 4px solid #9ec200;
-  z-index: 999;
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-display: block;
-position: absolute;
- width: 41px;
-  height: 7px;
-  margin-left: 5px;
-  margin-top: 13px;
-background: #3A8848;
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;}
-.toggleMobile span.menu2
-{
-top: 14px;}
-.toggleMobile span.menu3
-{
-top: 28px;}	
-
-.toggleMobile.active span.menu1
-{
-top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-	
-	
-
-.ContentMenuElSelected {
-	  color: #9ec200;
-  /* width: 90%; */
-  height: auto;
-  margin: 0 auto;
-}
-
-.ContentMenuTitle {
- 
-  width: 100%;
-  margin: 0 auto;
-  }
-
-.MainMenuElSelected {
-	
-	color: #9ec200;
-}
-
-.MainMenuEl {
-   width: 110px;
-  height: 130px;
-      position: absolute;
-  top: 7.25%;
-  margin-top: 0px;
-  border-bottom: none;
-  z-index: 5;
-}
-
-#MainEl0{left:0%}
-#MainEl1{left:23%}
-#MainEl2{left:48%}
-#MainEl3{left:73%}
-
-}
-
-@media only screen and (max-device-height : 1920px) and (min-device-width : 1200px) and (orientation : landscape)  and (-webkit-min-device-pixel-ratio : 1) {
-.ContentMenuRow {
-
-   margin-left: 150px;
-  width: calc(100% - 150px);
-  width:-moz-calc(100% - 150px);
-   width:-webkit-calc(100% - 150px);
-    margin-bottom: 10px;
-   background: #333333;	
-	}
-	
-
-	}
-	
-	
-
-@media only screen and (max-device-height : 1920px) and (min-device-width : 1200px) and (orientation : portrait)  and (-webkit-min-device-pixel-ratio : 1) {
-
-.ContentMenuRow {
- margin-left:0px;
- width: 100%;
-   margin-bottom: 10px;
-   background: #202020;	
-	}
-	
-#containerToggle {
-  background: #202020;
-  float: left;
-  width: 30%;
-  height: 51px;
-  cursor: pointer;
-  z-index: 999;
-}	
-
-#mobileMenu{
-	height: 450px;
-	  width: 70%;
-}
-	
-#ContainerLogo {
-  margin: 0px auto;
-  width:20%;
-}	
-
-.MainMenuEl:hover {
-	border-bottom:none;
-	 background: #202020;
-	  background: #202020;
-}
-
-.MainMenuElSelected {
-	border:2px solid #9ec200;
-	border-radius:4px;
-	border-bottom:none;
-	}
-
-#contImg{
-	  height: 90px;
-  width: 90px;
-  margin: 0px auto;
-  padding-top: 25px;
-}
-
-.ContentMenuEl {
- height: 100%;
-  width: 20%;
-  margin:0px;
-}
-
-.ContentMenuTitle {
-  text-align: center;
-}
-
-.ContentMenuImg{
-	margin:0px auto;
-	width: 100%;
-  height: 100%;
-}
-
-
-.toggleMobile {
-  float: left;
-  width: 60%;
-  height: 45px;
-  margin-top:5px;
-  cursor: pointer;
- background:#333333;
-border-radius: 15px;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 4px solid #9ec200;
-  z-index: 999;
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-display: block;
-position: absolute;
- width: 41px;
-  height: 7px;
-  margin-left: 5px;
-  margin-top: 13px;
-background: #3A8848;
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
+background: #ABD037;
 }
 
 .toggleMobile span.menu1
@@ -702,826 +243,321 @@ opacity: 0;
 -webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
 -moz-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
 transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-	
-
-.ContentMenuElSelected {
-	  color: #9ec200;
-  /* width: 90%; */
-  height: auto;
-  margin: 0 auto;
-}
-
-.MainMenuTitle {
-	font-size: 1.5em;
-	}
-
-.ContentMenuTitle {
- 
-  width: 100%;
-  margin: 0 auto;
-  font-size: 1.5em;
-  }
-
-.MainMenuElSelected {
-	
-	color: #9ec200;
-	 background: #202020;
-}
-
-.MainMenuEl {
-   width: 155px;
-  height: 250px;
-    margin-top: 0px;
-   
-}
-
-}
 
 
-@media screen and (max-height : 767px) {
-.MainMenuEl {
-  width: 100px;
-  height: 130px;
-}
+/**********************************************************************
+Media Queries
+***********************************************************************/
 
-.ContentMenuEl {
-  width: 20%;
-  padding:0px;
-  margin:0px;
-}
+@media (max-width: 1200px){
 
-.ContentMenuRow {
-  margin-left: 150px;
-    width: calc(100% - 150px);
-}
-}
-
-
-
-
-@media screen and (max-width: 640px) and (max-height: 960px) and (orientation : portrait), (max-width: 640px) and (min-height:0px) and (orientation : landscape), (max-device-width: 640px) and (max-device-height: 960px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1), (max-device-width: 640px) and (min-device-height:0px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) {
-#datausersmartphoneToggle{
-	  width: 16%;
-  float: left;
-  height: auto;
-}
-
-#ContainerUser{
-	width:80%;
-	margin:0px auto;
-}
-
-#LogoImgUser{
-  width: 100%;
-  height: auto;
-}
-
-#datausercontent {
-  width: 190px;
-  margin: 0 auto;
-  position: fixed;
-  left: 20%;
-  font-size: 1em;
-  z-index: 40;
-  background: #202020;
-}
-
-#mobileMenu {
-    height: 90%;
-  position: fixed;
-  border: 0px;
-  padding-left: 0px;
-  padding-right: 0px;
-  /* border-radius: 15px; */
-  /* border-top-left-radius: 0px; */
-  /* border-top-right-radius: 0px; */
-  /* border-bottom-right-radius: 0px; */
-  /* border-bottom-left-radius: 0px; */
-  width: 100%;
-  /* border-bottom-right-radius: 0px; */
-  /* border-bottom-left-radius: 0px; */
-}
- 
- #containerToggle {
-  width: 16%;
-  float: left;  
-  background: #202020;
-  height:51px;
-}
- 
-
-
-
-	
-.ContentMenuImg {
-  border: none;
-  outline: none;
-}
-
-.ContentMenuTitle {
-position: absolute;
-text-align: center;
-position: relative;
-left: 15%;
+#datausercontent{
 float: left;
-font-size: 0.9em;
-font-weight: bold;
-text-align: left;
-}
-
-
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.ContentMenuEl {
-   left: 5%;
-  /* float: none; */
-  width: 80%;
-  height: 100%;
-  /* top: 20%; */
-}
-
-#contImg {
-  float: left;
-  height: 50px;
-  width: 50px;
-  margin: 0px auto;
-}
-
-.toggleMobile {
-  border: 4px solid #9ec200;
-}
-
-
-
-.MainMenuElSelected {
-	position: absolute;
-	color: #9ec200;
-}
-	
-	.MainMenuImg{
-width: 98%;
-height: 25%;
-height: 40%;
-}
-	
-.ContentMenuRow {
-background-color: transparent;
-width: auto;
-margin-top: 15px;
-margin-left: 15px;
-padding-left: 15px;
-padding-bottom: 15px;
-margin: 0;
-}
-
-	.MainMenuTitle {
-left: 0%;
-text-align: center;
-width: 20%;
-font-size: 0.6em;
-font-weight: bold;
-padding-top: 2px;
-border: none;
-outline: none;
-}
-
-
-
-
-.ContentMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; 
-	-webkit-border-radius: 2px; 
-}
-
-.ContentMenuElSelected:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; 
-	-webkit-border-radius: 2px; 
-}
-
-.toggleMobile {
-  width: 85%;
-  border-radius: 15px;
-  width: 100%;
-position:relative;
-  
-}
-
-#toggleMenu{
-	border-bottom-left-radius: 0px;
-	
-}
-
-#toggleUser{
-	border-bottom-right-radius: 0px;
-	right:8px;	
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-  display: block;
-  position:absolute;
-  width: 80%;
-  height: 7px;
-  margin-left: 3px;
-  margin-top: 14px;
-  background: #3A8848;
-  -webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-  transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;
-margin-top:5px;
-	margin-left:5px;
-}
-.toggleMobile span.menu2
-{
-	margin-top:5px;
-	margin-left:5px;
-top: 14px;}
-.toggleMobile span.menu3
-{
-	margin-top:5px;
-	margin-left:5px;
-top: 28px;}	
-
-.toggleMobile span{
-	
-}
-
-.toggleMobile.active span.menu1
-{
-	top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-	
-	
-
-.ContentMenuElSelected {
-	  color: #9ec200;
-  /* width: 90%; */
-  height: auto;
-  margin: 0 auto;
-}
-
-.ContentMenuTitle {
-  float: left;
-  width: 100px;
-  margin: 0 auto;
-}
-
-.MainMenuElSelected {
-	
-	color: #9ec200;
-}
-
-.MainMenuEl {
-   width: 110px;
-  height: 130px;
-      position: absolute;
-  top: 7.25%;
-  margin-top: 0px;
-  border-bottom: #9ec200;
-  border-right:none;
-  z-index: 5;
-}
-
-#MainEl0{top:0%; left:0;}
-#MainEl1{  
-  position: relative;
-  /* margin: 0px; */
-  top: 23%;
-  left: 0;
-  width: 21%;
-  height: auto;}
-#MainEl2{top:48%;left:0;}
-#MainEl3{top:73%;left:0;}
-	
-
-}
-
-@media only screen and (device-width: 360px) and (min-device-height:100px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 1){
-#datausercontent {
-  left: 22%;
-}
-}
-
-
-@media only screen and (max-device-height : 800px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 1){
-#some-element{ display: none; }
-	
-
-}
-
-@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-/* Styles */
-
-
-}
-
-/* @media only screen and (min-width : 450px) and (max-width : 1250px) {
-
-.ContentMenuEl {
-  width: 18%;
-}
-
-.toggleMobile {
-  float: left;
-  width: 20%;
-  height: 91px;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-display: block;
-position: absolute;
-width: 40px;
-height: 8px;
-left: 0;
-background: #3A8848;
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;}
-.toggleMobile span.menu2
-{
-top: 14px;}
-.toggleMobile span.menu3
-{
-top: 28px;}	
-
-.toggleMobile.active span.menu1
-{
-top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-	
-
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.MainMenuElSelected {
-  color: #9ec200;
-  background-color: #202020;
-}
-
-.MainMenuEl {
-  width: 85px;
-  height: 110px;
-  margin-top: 5px;
-}
-
-.MainMenuTitle {
-  font-size: 0.8em;
+width: 16%;
 }
 
 .ContentMenuRow {
-background-color: #202020;
-position: relative;
-margin-left: 20px;
-margin-bottom: 30px;
+margin-left:0px;
+width: 100%;
+margin-bottom: 10px;
+background: #202020;	
+}
+
+#containerToggle {
+background: #202020;
 float: left;
-width: calc(100% - 192px);
-width: -moz-calc(100% - 192px);
-width: -webkit-calc(100% - 192px);
-overflow: hidden;
-	}
-	
+width: 30%;
+height: 51px;
+cursor: pointer;
+z-index: 999;
+}	
 
-	
-} */
+#mobileMenu{
+height: 450px;
+width: 70%;
+}
 
 
-/* @media only screen and (max-device-width : 1920px) and (max-device-height : 1200px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 1) {
-
-	#some-element{ display: none; }
-
-	.ContentMenuRow {
- margin-left:0px;
- width: 100%;
-   margin-bottom: 10px;	
-	}
-	
 .MainMenuEl:hover {
-	border-bottom:none;
+border-bottom:none;
+background: #202020;
+background: #202020;
+}
+
+.MainMenuElSelected {
+border:2px solid #9ec200;
+border-radius:4px;
+border-bottom:none;
+}
+
+#contImg{
+height: 90px;
+width: 90px;
+margin: 0px auto;
+padding-top: 25px;
+}
+
+.ContentMenuEl {
+height: 100%;
+width: 20%;
+margin:0px;
+}
+
+.ContentMenuTitle {
+text-align: center;
+}
+
+.ContentMenuImg{
+margin:0px auto;
+width: 100%;
+height: 100%;
+}
+
+.ContentMenuElSelected {
+color: #9ec200;
+/* width: 90%; */
+height: auto;
+margin: 0 auto;
+}
+
+.MainMenuTitle {
+font-size: 1.5em;
+}
+
+.ContentMenuTitle {
+
+width: 100%;
+margin: 0 auto;
+font-size: 1.5em;
+}
+
+.MainMenuElSelected {
+
+color: #9ec200;
+background: #202020;
+}
+
+
+#MainEl0{left:0%}
+#MainEl1{left:23%}
+#MainEl2{left:48%}
+#MainEl3{left:73%}
+
+
+
+#datausercontent{
+float: left;
+width: 16%;
+}
+
+.ContentMenuRow {
+margin-left:0px;
+width: 100%;
+margin-bottom: 10px;	
+background: #202020;
+}
+
+.MainMenuEl:hover {
+border-bottom:none;
+background: #202020;
+border-radius: 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+-moz-border-top-left-radius: 4px;
+-moz-border-top-right-radius: 4px;
+}
+
+#mobileMenu{
+height:260px;
+width: 70%;
 }
 
 
 #containerToggle {
-  background: #202020;
-  float: left;
-  width: 30%;
-  height: 51px;
-  cursor: pointer;
-  z-index: 999;
+background: #202020;
+float: left;
+width: 30%;
+height: 51px;
+cursor: pointer;
+z-index: 999;
 }	
-	
+
 
 .MainMenuElSelected {
-	border:2px solid #9ec200;
-	border-radius:4px;
-	border-bottom:none;
-	}	
+border:2px solid #9ec200;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+-webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+border-bottom:none;
+background: #202020;
+}	
 
 
 #contImg{
-	height:50px;
-	width:50px;
-	margin: 0px auto;
+height:50px;
+width:50px;
+margin: 0px auto;
 }
 
 .ContentMenuEl {
- height: 100%;
-  width: 20%;
-  margin:0px;
+height: 100%;
+width: 20%;
+margin:0px;
 }
 
 .ContentMenuTitle {
-  text-align: center;
+text-align: center;
 }
 
 .ContentMenuImg{
-	margin:0px auto;
-	width: 100%;
-  height: 100%;
+margin:0px auto;
+width: 100%;
+height: 100%;
 }
 
 
-.toggleMobile {
-  float: left;
-  width: 45%;
-  height: 45px;
-  margin-top:5px;
-  cursor: pointer;
- background:#333333;
-border-radius: 15px;
-  border-bottom-left-radius: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border: 4px solid #9ec200;
-  z-index: 999;
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-display: block;
-position: absolute;
-width: 40px;
-height: 8px;
- margin-left: 5px;
-   margin-top: 12px;
-background: #3A8848;
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;}
-.toggleMobile span.menu2
-{
-top: 14px;}
-.toggleMobile span.menu3
-{
-top: 28px;}	
-
-.toggleMobile.active span.menu1
-{
-top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-	
-	
 
 .ContentMenuElSelected {
-	  color: #9ec200;
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
+color: #9ec200;
+/* width: 90%; */
+height: auto;
+margin: 0 auto;
 }
 
 .ContentMenuTitle {
- 
-  width: 100%;
-  margin: 0 auto;
-  }
+
+width: 100%;
+margin: 0 auto;
+}
 
 .MainMenuElSelected {
+color: #9ec200;
+}
+
+.MainMenuEl {
+width: 110px;
+height: 130px;
+position: absolute;
+top: 7.25%;
+margin-top: 0px;
+border-bottom: none;
+z-index: 5;
+}
+
+}
+
+
+@media (max-width: 765px){
 	
-	color: #9ec200;
+#Cover0{top: calc(4% + 2px);top: -moz-calc(4% + 2px);top: -webkit-calc(4% + 2px);}
+#CoverBis0{top:4%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}	
+
+#Cover1{top:calc(25% + 2px);top: -moz-calc(25% + 2px);top: -webkit-calc(25% + 2px);}
+#CoverBis1{top:25%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+
+#Cover2{top:calc(50% + 2px);top: -moz-calc(50% + 2px);top: -webkit-calc(50% + 2px);}
+#CoverBis2{top: 50%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+
+#Cover3{top:calc(75% + 2px);top: -moz-calc(75% + 2px);top: -webkit-calc(75% + 2px);}
+#CoverBis3{top:75%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+
+
+#datausersmartphoneToggle{
+width: 55px;
+float: left;
+height: auto;
 }
 
-.MainMenuEl {
-  width: 100px;
-  height: 120px;
-    margin-top: 0px;
+#ContainerUser{
+width: 100%;
+height: 100%;
+margin: 0px auto;
 }
 
-@media screen and (max-height : 800px) {
-.MainMenuEl {
-  width: 100px;
-  height: 130px;
+#LogoImgUser{
+width: 100%;
+height: 100%;
+}
+
+#datausercontent {
+width: 190px;
+margin: 0 auto;
+position: fixed;
+left: 20%;
+font-size: 1em;
+z-index: 40;
+background: #202020;
+}
+
+#mobileMenu {
+height: 100%;
+position: fixed;
+border: 0px;
+padding-left: 0px;
+padding-right: 0px;
+/* border-radius: 15px; */
+/* border-top-left-radius: 0px; */
+/* border-top-right-radius: 0px; */
+/* border-bottom-right-radius: 0px; */
+/* border-bottom-left-radius: 0px; */
+width: 100%;
+/* border-bottom-right-radius: 0px; */
+/* border-bottom-left-radius: 0px; */
+}
+
+#containerToggle {
+width: 55px;
+float: left;  
+background: #202020;
+height: auto;
+}
+
+.ContentMenuImg {
+border: none;
+outline: none;
+}
+
+.ContentMenuTitle {
+position: absolute;
+text-align: center;
+position: relative;
+left: 15%;
+float: left;
+font-size: 0.9em;
+font-weight: bold;
+text-align: left;
+}
+
+
+.ContentMenuElSelected {
+color: #9ec200;
 }
 
 .ContentMenuEl {
-  width: 20%;
-  padding:0px;
-  margin:0px;
-}
-
-.ContentMenuRow {
-  margin-left: 150px;
-    width: calc(100% - 150px);
-}
-} */
-
-
-
-
-	
-	
-
-
-/********************************************************************************************************************************
-/**************************
-Good for iPad 3 and Nexus 7
-***************************/
-
-
-/* 
-@media screen and (min-width:880px) and (max-width: 1224px){
-.MainMenuEl{
-		width: 15%;
-height: 80%;float:left;margin-left:25px;margin-right:25px;
-		
-	}
-
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.MainMenuElSelected {
-	position: absolute;
-	color: #9ec200;
-}
-
-.MainMenuImg{
-	width:100%;
-	height:80%;
-}
-
-.ContentMenuRow {
-background-color: #333333;
-position: absolute;
-margin-left: 20px;
-margin-bottom: 30px;
-float: left;
-width: calc(100% - 192px);
-overflow: hidden;
-}
-
-
-@media screen and (min-width:700px) and (max-width:768px){
-.MainMenuEl{
-		width:15%;height:80%;float:left;margin-left:25px;margin-right:25px;
-		
-	}
-
-
-.MainMenuImg{
-	width:100%;
-	height:80%;
-}
-	
-	.ContentMenuRow{		
-		background-color:transparent;	
-		width: 880px;
-		padding-left: 15px;
-		padding-bottom:25px;
-		margin:0;	
-	}
-	
-		.MainMenuImg{
-		width:100%;
-		height:80%;
-	}
-}
-
-@media screen and (min-width:606px) and (max-width: 699px){
-
-	.MainMenuEl{
-		width:90px;height:120px;float:left;
-		
-	}
-
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.MainMenuElSelected {
-	position: absolute;
-	color: #9ec200;
-}
-
-.MainMenuImg{
-	width:100%;
-	height:80%;
-}
-	
-	.ContentMenuRow{		
-	background-color: transparent;
+left: 5%;
+/* float: none; */
 width: 80%;
-padding-left: 15px;
-padding-bottom: 25px;
-margin-left: 55px;
-margin-top: 20px;
-	}
-	
-		
-	.ContentMenuEl{
-	width: 21%;
-margin-top: 20px;}
-	
+/* top: 20%; */
 }
 
-@media screen and (min-width:450px) and (max-width:605px){
-	.MainMenuEl{
-		width: 15%;
-height: 80%;
-margin: 20px;
+#contImg {
 float: left;
-	}
-.ContentMenuElSelected {
-	color: #9ec200;
-}	
-
-.MainMenuElSelected {
-	position: absolute;
-	color: #9ec200;
+height: 50px;
+width: 50px;
+margin: 0px auto;
 }
 
-		.ContentMenuRow{		
-		background-color:transparent;	
-		width: 100%;
-		padding-left: 15px;
-		padding-bottom:25px;
-		margin:0;	
-	}
-	
-	.ContentMenuEl{
-	  width: 18%;
-	padding-bottom:25px;}
-	
-}
-*/
-/*
-@media screen and (min-width:100px) and (max-width:449px){
-	
-.MainMenuEl{
-		width: 21%;
+
+.MainMenuImg{
+width: 45%;
 height: auto;
-margin:0px 5px 0px 5px;
-float: left;
-	}
-	
-.ContentMenuImg {
-position: absolute;
-position: relative;
-left: 30%;
-float: left;
-margin-left: 20px;
-border: none;
-outline: none;
 }
 
-.ContentMenuTitle {
-position: absolute;
-text-align: center;
-position: relative;
-left: 15%;
-float: left;
-font-size: 0.9em;
-font-weight: bold;
-text-align: left;
-}
-
-	
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.ContentMenuEl {
-  position: relative;
-  width: 45%;
-  left: 25%;
-  top: 10%;
-  margin-right: 20px;
-  height: auto;
-}
-
-
-
-.MainMenuElSelected {
-	position: absolute;
-	color: #9ec200;
-}
-	
-	.MainMenuImg{
-width: 98%;
-height: 25%;
-height: 40%;
-}
-	
 .ContentMenuRow {
 background-color: transparent;
 width: auto;
@@ -1532,468 +568,96 @@ padding-bottom: 15px;
 margin: 0;
 }
 
-	.MainMenuTitle {
+.MainMenuTitle {
 left: 0%;
-text-align: center;
-width: 20%;
-font-size: 0.6em;
+/* text-align: center; */
+/* width: 20%; */
+/* font-size: 0.6em; */
 font-weight: bold;
 padding-top: 2px;
 border: none;
 outline: none;
 }
 
-.MainMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; 
-	-webkit-border-radius: 2px; 
+
+#toggleMenu{
+border-bottom-left-radius: 0px;
+width:55px;
+}
+
+#toggleUser{
+border-bottom-right-radius: 0px;
 }
 
 
-.ContentMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; 
-	-webkit-border-radius: 2px; 
-}
-
-.ContentMenuElSelected:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; 
-	-webkit-border-radius: 2px; 
-}
-}
-/*
-@media screen and (min-width:100px) and (max-width:1274px){
-
-#mobileMenu
-{
-display: block;
-z-index: 99;
-}
-
-.toggleMobile {
-  position: relative;
-  top: 10px;
-  left: 10px;
-  display: block;
-  float: right;
-  width: 40px;
-  height: 36px;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-display: block;
-position: absolute;
-width: 40px;
-height: 8px;
-left: 0;
-background: #3A8848;
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;}
-.toggleMobile span.menu2
-{
-top: 14px;}
-.toggleMobile span.menu3
-{
-top: 28px;}	
-
-.toggleMobile.active span.menu1
-{
-top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-	
-}
-
-
-@media only screen and (max-width : 320px) {
-	.MainMenuEl{
-		width: 21%;
+.ContentMenuElSelected {
+color: #9ec200;
+/* width: 90%; */
 height: auto;
-margin:0px 5px 0px 5px;
-float: left;
-	}
-	
-.ContentMenuImg {
-position: absolute;
-position: relative;
-left: 30%;
-float: left;
-margin-left: 20px;
-border: none;
-outline: none;
+margin: 0 auto;
 }
 
 .ContentMenuTitle {
-position: absolute;
-text-align: center;
-position: relative;
-left: 15%;
 float: left;
-font-size: 0.9em;
-font-weight: bold;
-text-align: left;
-}
-
-	
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.ContentMenuEl {
-  position: relative;
-  width: 45%;
-  left: 25%;
-  top: 10%;
-  margin-right: 20px;
-  height: auto;
+width: 100px;
+margin: 0 auto;
 }
 
 
 
-.MainMenuElSelected {
-	position: absolute;
-	color: #9ec200;
-}
-	
-	.MainMenuImg{
-width: 98%;
-height: 25%;
-height: 40%;
-}
-	
-.ContentMenuRow {
-background-color: transparent;
-width: auto;
-margin-top: 15px;
-margin-left: 15px;
-padding-left: 15px;
-padding-bottom: 15px;
-margin: 0;
-}
-
-	.MainMenuTitle {
-left: 0%;
-text-align: center;
-width: 20%;
-font-size: 0.6em;
-font-weight: bold;
-padding-top: 2px;
-border: none;
-outline: none;
-}
-
-.MainMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; firefox
-	-webkit-border-radius: 2px; safari, chrome
-}
-
-
-.ContentMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; firefox
-	-webkit-border-radius: 2px; safari, chrome
-}
-
-.ContentMenuElSelected:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; firefox
-	-webkit-border-radius: 2px; safari, chrome
-}
-}
-
-@media screen and (min-width:100px) and (max-width:1274px){
-
-#mobileMenu
-{
-display: block;
-z-index: 99;
-}
-
-.toggleMobile {
-  position: relative;
-  top: 10px;
-  left: 10px;
-  display: block;
-  float: right;
-  width: 40px;
-  height: 36px;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-display: block;
-position: absolute;
-width: 40px;
-height: 8px;
-left: 0;
-background: #3A8848;
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;}
-.toggleMobile span.menu2
-{
-top: 14px;}
-.toggleMobile span.menu3
-{
-top: 28px;}	
-
-.toggleMobile.active span.menu1
-{
-top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-}
-
-/* iPhone 5 -----------
-@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-	.MainMenuEl{
-		width: 21%;
+.MainMenuEl {
+width: 43%;
 height: auto;
-margin:0px 5px 0px 5px;
-float: left;
-	}
-	
-.ContentMenuImg {
 position: absolute;
-position: relative;
-left: 30%;
-float: left;
-margin-left: 20px;
-border: none;
-outline: none;
+top: 7.25%;
+margin-top: 0px;
+border-right:none;
+z-index: 5;
 }
-
-.ContentMenuTitle {
-position: absolute;
-text-align: center;
-position: relative;
-left: 15%;
-float: left;
-font-size: 0.9em;
-font-weight: bold;
-text-align: left;
-}
-
-	
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.ContentMenuEl {
-  position: relative;
-  width: 45%;
-  left: 25%;
-  top: 10%;
-  margin-right: 20px;
-  height: auto;
-}
-
 
 
 .MainMenuElSelected {
-	position: absolute;
-	color: #9ec200;
-}
-	
-	.MainMenuImg{
-width: 98%;
-height: 25%;
-height: 40%;
-}
-	
-.ContentMenuRow {
-background-color: transparent;
-width: auto;
-margin-top: 15px;
-margin-left: 15px;
-padding-left: 15px;
-padding-bottom: 15px;
-margin: 0;
+
+border: 2px solid #9ec200;
+border-top-left-radius: 4px;
+border-bottom-left-radius:4px;
+
+/* border-bottom: none; */
+/* border-right:none;*/
+width: 43%;
+z-index: 5;
+background: #202020;
+
 }
 
-	.MainMenuTitle {
-left: 0%;
-text-align: center;
-width: 20%;
-font-size: 0.6em;
-font-weight: bold;
-padding-top: 2px;
-border: none;
-outline: none;
+#MainEl0{top:4%; left:5%;}
+#MainEl1{top: 25%;left: 5%;}
+#MainEl2{
+top:50%;left:5%;  }
+#MainEl3{top:75%;left:5%;}
+
+} 
+
+/*Dispositivi piccolissimi come ad esempio LG Optimus One*/
+@media (max-width: 213px){
+#containerToggle {
+  width: 30px;
 }
 
-.MainMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; firefox
-	-webkit-border-radius: 2px; safari, chrome
+#toggleMenu {
+  width: 30px;
 }
 
-
-.ContentMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; firefox
-	-webkit-border-radius: 2px; safari, chrome
+.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3 {
+  width: 20px;
 }
 
-.ContentMenuElSelected:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; firefox
-	-webkit-border-radius: 2px; safari, chrome
-}
+#datausersmartphoneToggle {
+  width: 30px;
 }
 
-@media screen and (min-width:100px) and (max-width:1274px){
+#LogoImgUser {
+  width: 100%;
+  height: 80%;
 
-#mobileMenu
-{
-display: block;
-z-index: 99;
 }
-
-.toggleMobile {
-  position: relative;
-  top: 10px;
-  left: 10px;
-  display: block;
-  float: right;
-  width: 40px;
-  height: 36px;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-display: block;
-position: absolute;
-width: 40px;
-height: 8px;
-left: 0;
-background: #3A8848;
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;}
-.toggleMobile span.menu2
-{
-top: 14px;}
-.toggleMobile span.menu3
-{
-top: 28px;}	
-
-.toggleMobile.active span.menu1
-{
-top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-} */
-
-
-
-
-
-
-	
-
-	
- 
