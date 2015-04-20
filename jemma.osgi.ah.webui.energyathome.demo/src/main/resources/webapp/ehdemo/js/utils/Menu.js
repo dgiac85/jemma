@@ -62,6 +62,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 	leftOffset = Math.round((Menu.MainW - MainMenuW) / 2) - (dim * 0.015); 
 
 	Menu.MainHtml = "";
+	
 	for (i = 0; i < num; i++) {
 		Menu.MainHtml = Menu.MainHtml + 
 						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'/>"+
@@ -76,11 +77,15 @@ Menu.Init = function(mainDiv, contentDiv) {
 	}
 	
 	$("#" + mainDiv).html(Menu.MainHtml);
+	heightMenuButton=$(".MainMenuEl").height();
+	widthMenuButton=$(".MainMenuEl").width();
+	$(".Cover").css("height",heightMenuButton);
+	$(".CoverBis").css("height",heightMenuButton+5);
 	
 	//Per mostrare il contorno illuminato per l'elemento selezionato
 	
 	
-	if($(window).height()<=480){
+	/*if($(window).height()<=480){
 		$(".MainMenuImg").css("width","35%");
 		$(".Cover").css("height","50px");
 		$(".CoverBis").css("height","80px");
@@ -88,7 +93,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 	else{
 		$(".Cover").css("height","90px");
 		$(".CoverBis").css("height","100px");
-	}
+	}*/
 	
 	
 
@@ -102,8 +107,8 @@ Menu.Init = function(mainDiv, contentDiv) {
 	if (Main.env == 0) console.log('CostiConsumi', CostiConsumi);
 	CostiConsumi.Init();  
 	
-	var widthSmartPort=765;
-	if($(window).width()<widthSmartPort){
+	var widthSmart=765;
+	if($(window).width()<widthSmart){
 		console.log("header height="+$("#Header").height());
 		$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
 		$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
@@ -156,25 +161,27 @@ Menu.OnClickMainMenu = function(val) {
 		
 		
 	}
-
-	// seleziono nuovo elemento main e visualizzo nuova barra content menu
-	$("#MainEl" + val).addClass("MainMenuElSelected");
-	//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
-		$("#Cover"+val).css("display","block");
-		$("#CoverBis"+val).css("display","block");
-	//}
 	
+		// seleziono nuovo elemento main e visualizzo nuova barra content menu
+		$("#MainEl" + val).addClass("MainMenuElSelected");
+		if ($(window).width()<theWidth){
+		//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
+			$("#Cover"+val).css("display","block");
+			$("#CoverBis"+val).css("display","block");
+		//}
 		
-	//definizione della visualizzazione dei div che servono a mostrare il contorno di selezione del menu nella sezione mobile
-	for (i=0;i<Menu.MainMenu.length;i++){
-		if (i===val){
-			continue;
+			
+		//definizione della visualizzazione dei div che servono a mostrare il contorno di selezione del menu nella sezione mobile
+		for (i=0;i<Menu.MainMenu.length;i++){
+			if (i===val){
+				continue;
+			}
+			else{
+				$("#Cover"+i).css("display","none");
+				$("#CoverBis"+i).css("display","none");
+			}
 		}
-		else{
-			$("#Cover"+i).css("display","none");
-			$("#CoverBis"+i).css("display","none");
-		}
-	}	
+	}
 	
 	
 	
@@ -356,13 +363,14 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 	}
 }
 	
-	$(document).ready(function() {	
+	$(document).ready(function() {
+		
 		
 		$(window).on("resize", function()
 				{
 			
-			var widthSmartPort=765;
-			if($(window).width()<widthSmartPort){
+			var widthSmart=765;
+			if($(window).width()<widthSmart){
 				console.log("header height="+$("#Header").height());
 				$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
 				$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
@@ -372,19 +380,14 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 				$('#ContentMenu').css('height','100px');
 			}
 			
-			if($(window).height()<=480){
-				$(".MainMenuImg").css("width","35%");
-				$(".Cover").css("height","50px");
-				$(".CoverBis").css("height","100px");
-			}
-			else{
-				$(".MainMenuImg").css("width","50%");
-				$(".Cover").css("height","90px");
-				$(".CoverBis").css("height","120px");
-			}
+			heightMenuButton=$(".MainMenuEl").height();
+			widthMenuButton=$(".MainMenuEl").width();
+			$(".Cover").css("height",heightMenuButton);
+			$(".CoverBis").css("height",heightMenuButton+5);
 			
+
 			
-				});
+});
 		
 		
 		

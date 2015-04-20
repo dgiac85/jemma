@@ -133,21 +133,20 @@ $(document).ready(function() {
 	    $("#toggleUser").click(function(){
 	    	
 	    	height=$("#Header").height();
-	    	if ($("#dataANDuser").css("top")==="0px"){		    		
-	    		$("#dataANDuser").animate({"top":height*(-1)}, 500);
-	    		$("#ContainerLogo").animate({"top":"0px"}, 500);
-	    		$("#dataANDuser").css("display","none");
+	    	if ($("#dataANDuser").css("top")==="0px"){	
 	    		$("#ContainerLogo").css("display","block");
+	    		$("#ContainerLogo").animate({"top":"0px"}, 500);
+	    		$("#dataANDuser").css("top",height*(-1));
+	    		$("#dataANDuser").css("display","none");	    		
 	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_bianco.png");	    		
 	    	}
-	    	else{
-	    		
+	    	else{	    		
 	    		$("#dataANDuser").animate({"top":"0px"}, 500);
-	    		$("#ContainerLogo").animate({"top":height*(-1)}, 500);
+	    		$("#ContainerLogo").css("top",height*(-1));
+	    		
 	    		$("#dataANDuser").css("display","block");	    		
 	    		$("#ContainerLogo").css("display","none");
 	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_verde.png");	
-
 	    	}
 	    	
 	    });
@@ -162,7 +161,7 @@ $(document).ready(function() {
 		$(".Cover").css("height",$(".MainMenuEl").height());
 		$(".CoverBis").css("height",$(".MainMenuEl").height()+4);
 		
-	
+		if($(this).width() >= widthSmart){
 			element=$('#dataANDuser').detach();
 			element1=$('#HeaderSep').detach();
 			$('#Header').append(element);
@@ -173,7 +172,17 @@ $(document).ready(function() {
 			$("#ContentMain").css("height","calc(100% - 70px)");
 			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
 			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
-
+		}
+		else{
+			if ($("#dataANDuser").css("top")==="0px"){		    		
+	    		$("#dataANDuser").animate({"top":height*(-1)}, 500);
+	    		$("#ContainerLogo").animate({"top":"0px"}, 500);
+	    		$("#dataANDuser").css("display","none");
+	    		$("#ContainerLogo").css("display","block");
+	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_bianco.png");	    		
+	    	}
+			
+		}
 
 		if($(this).width() <= width)
 		{	
@@ -190,7 +199,8 @@ $(document).ready(function() {
 			$("#ContentMain").css("height",heightMenu);
 			$("#ContentMain").css("width","-webkit-calc(100% - 192px)");
 			$("#ContentMain").css("width","-moz-calc(100% - 192px)");
-			$("#ContentMain").css("width","calc(100% - 192px)");			
+			$("#ContentMain").css("width","-webkit-calc(100% - 192px)");
+			
 			$('#MobSep1').css('display','none');
 			$("#mobileMenu").css("display","none");
 				
