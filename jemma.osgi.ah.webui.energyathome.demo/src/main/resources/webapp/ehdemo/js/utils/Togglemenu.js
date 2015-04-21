@@ -57,6 +57,10 @@ function goMobileSmart(){
 }
 
 function exitMobile(){
+//	if($(window).width()>widthSmart){
+//		//exitMobileSmart();
+//	}
+	
 	$('#ContainerMenu').css('display','block');
 	$('#ContentMenu').css('display','block');
 	
@@ -71,11 +75,11 @@ function exitMobile(){
 
 }
 
-function exitMobileSmart(){
-	element=$('#dataANDuser').detach();
-	$('#logo').append(element);	
-	$('#datausersmartphoneToggle').css('display','none');
-}
+//function exitMobileSmart(){
+//	element=$('#dataANDuser').detach();
+//	$('#logo').append(element);	
+//	$('#datausersmartphoneToggle').css('display','none');
+//}
 
 $(document).ready(function() {	
 	heightContainerMenu=$("#ContainerMenu").height();	
@@ -85,7 +89,7 @@ $(document).ready(function() {
 
 	$("#mobileMenu").css("left","-200%");
 	if($(window).width()<width){
-			$("#ContentMain").css("width","100%");
+			//$("#ContentMain").css("width","100%"); DA VALUTARE
 			$("#ContentMain").css("height","calc(100% - 70px)");
 			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
 			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
@@ -142,7 +146,7 @@ $(document).ready(function() {
 	    	}
 	    	else{	    		
 	    		$("#dataANDuser").animate({"top":"0px"}, 500);
-	    		$("#ContainerLogo").css("top",height*(-1));
+	    		$("#ContainerLogo").animate({"top":height*(-1)}, 500);
 	    		
 	    		$("#dataANDuser").css("display","block");	    		
 	    		$("#ContainerLogo").css("display","none");
@@ -158,8 +162,8 @@ $(document).ready(function() {
 	{
 
 		//per la gestione dei bordini del menu una volta che si fa il resize
-		$(".Cover").css("height",$(".MainMenuEl").height());
-		$(".CoverBis").css("height",$(".MainMenuEl").height()+4);
+		//$(".Cover").css("height",$(".MainMenuEl").height());
+		//$(".CoverBis").css("height",$(".MainMenuEl").height()+4);
 		
 		if($(this).width() >= widthSmart){
 			element=$('#dataANDuser').detach();
@@ -168,7 +172,7 @@ $(document).ready(function() {
 			$('#Header').append(element1);
 			$('#datausersmartphoneToggle').css('display','none');
 			$('#dataANDuser').css('display','block');	
-			$("#ContentMain").css("width","100%");
+			//$("#ContentMain").css("width","100%"); DA VALUTARE
 			$("#ContentMain").css("height","calc(100% - 70px)");
 			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
 			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
@@ -189,7 +193,13 @@ $(document).ready(function() {
 			if ($("#mobileMenu").css("left")==="0px"){
 				$("#toggleMenu").toggleClass("active");
 				$("#mobileMenu").animate({"left":"-200%"}, 600);
-			}			
+			}	
+			heightMenu=$("#ContainerMenu").css("height");
+			$("#ContentMain").css("height",heightMenu);
+			$("#ContentMain").css("width","100%");
+			$("#ContentMain").css("height","calc(100% - 70px)");
+			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
+			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
 			$("#mobileMenu").css("display","block");			
 			goMobile();		
 		}

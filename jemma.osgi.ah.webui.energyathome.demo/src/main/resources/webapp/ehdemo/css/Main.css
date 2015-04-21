@@ -524,6 +524,7 @@ width:200px
 	  border-radius:4px;
 	  -moz-border-radius:4px;
 	     height: 200px;
+	     float:none;
 }
 	
 	#Container{
@@ -602,10 +603,11 @@ background-color:#333333;
 width:100%
 }
 
-}
+}/*chiusura media query 1200 766
 
 
 /* iPhone 5 and other Main Smartphones----------- */
+/*SMARTPHONE LANDSCAPE*/
 @media screen and (max-width: 765px){
 
 #Container{
@@ -650,9 +652,9 @@ background-color: #333333;
 }
 	
 	#MainMenu {
-  width: 50%;
+  width: 100%;
   margin: 0px;
-  height: 95%;
+  height: 50%;
   overflow: hidden;
   z-index: 1;
   background-color: #333333;
@@ -679,12 +681,12 @@ background-color: #333333;
 	}
 
 	#ContentMenu {
-  background-color: #202020;
+   background-color: #202020;
   position: absolute;
-  left: 50%;
-  top: 10px;
-  width: auto;
-  height: 80%;
+  left: 0%;
+  top: 50%;
+    width: 99%;
+  height: 40% !important;
 }
 
 #Header{
@@ -748,9 +750,27 @@ float: none;
 .Content {
   margin-left: 10px;
 }
+}/*chiusura media query 765
+
+/*SMARTPHONE PORTRAIT*/
+@media (max-width: 480px){
+
+#MainMenu {
+  width: 50%;
+  height: 100%;
+	}
+	
+	#ContentMenu {
+  left: 50%;
+  top: 10px;
+  width: auto;
+    height: 93% !important;
 }
 
-@media screen and (max-width: 213px){
+}/*chiusura media query 480*/
+
+
+@media (max-width: 213px){
 #LogoImg {
  height: 40px;
  margin-top: 10px;
@@ -767,7 +787,7 @@ float: none;
   font-size: 4.5vw;
 }
 
-}
+}/*chiusura media query 213*/
 
 
 

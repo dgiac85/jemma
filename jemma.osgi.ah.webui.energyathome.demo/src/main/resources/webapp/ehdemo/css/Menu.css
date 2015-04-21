@@ -1,10 +1,5 @@
 /*GLOBAL*/
 
-.Cover{
-	display:none;
-}
-
-
 #MainMenuTable {
 	position: absolute;
 	left: 2%;
@@ -239,11 +234,27 @@ Media Queries
 ***********************************************************************/
 
 @media (max-width: 1200px) and (min-width:766px){
+	
+	
+#Cover0{top:50%; left:5%;}
+#CoverBis0{top:51%;left:3%;width:200px;height:30px;}	
 
-#datausercontent{
-float: left;
-width: 16%;
+#Cover1{top:50%; left:25%;}
+#CoverBis1{top:51%;left:25%;width:200px;height:30px;}
+
+#Cover2{top:50%;left:50%;}
+#CoverBis2{top:51%;left:50%;width:200px;height:30px;}
+
+#Cover3{top:50%; left:75%;}
+#CoverBis3{top:51%; left:75%;width:200px;height:30px;}
+	
+.toggleMobile {
+	border-top-right-radius:15px;
+	border-bottom-right-radius:0px;
+	border-bottom-left-radius:0px;
+	border-top-left-radius:0px;
 }
+
 
 .ContentMenuRow {
 margin-left:0px;
@@ -361,7 +372,6 @@ border-top-right-radius: 4px;
 }
 
 #mobileMenu{
-height:260px;
 width: 70%;
 }
 
@@ -429,8 +439,6 @@ color: #9ec200;
 }
 
 .MainMenuEl {
-width: 110px;
-height: 130px;
 position: absolute;
 top: 7.25%;
 margin-top: 0px;
@@ -438,22 +446,23 @@ border-bottom: none;
 z-index: 5;
 }
 
-}
+}/*chiusura media query 1200 766
 
-
+/*SMARTPHONE LANDSCAPE*/
 @media (max-width: 765px){
 	
-#Cover0{top: calc(4% + 2px);top: -moz-calc(4% + 2px);top: -webkit-calc(4% + 2px);}
-#CoverBis0{top:4%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}	
+#Cover0{top:50%; left:5%;}
+#CoverBis0{top:51%;left:3%;width:200px;height:30px;}	
 
-#Cover1{top:calc(25% + 2px);top: -moz-calc(25% + 2px);top: -webkit-calc(25% + 2px);}
-#CoverBis1{top:25%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+#Cover1{top:50%; left:25%;}
+#CoverBis1{top:51%;left:25%;width:200px;height:30px;}
 
-#Cover2{top:calc(50% + 2px);top: -moz-calc(50% + 2px);top: -webkit-calc(50% + 2px);}
-#CoverBis2{top: 50%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+#Cover2{top:50%;left:50%;}
+#CoverBis2{top:51%;left:50%;width:200px;height:30px;}
 
-#Cover3{top:calc(75% + 2px);top: -moz-calc(75% + 2px);top: -webkit-calc(75% + 2px);}
-#CoverBis3{top:75%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+#Cover3{top:50%; left:75%;}
+#CoverBis3{top:51%; left:70%;width:200px;height:30px;}
+
 
 
 #datausersmartphoneToggle{
@@ -509,6 +518,8 @@ height: auto;
 .ContentMenuImg {
 border: none;
 outline: none;
+  width: 10vh;
+  height: 10vh;
 }
 
 .ContentMenuTitle {
@@ -528,11 +539,11 @@ color: #9ec200;
 }
 
 .ContentMenuEl {
-left: 5%;
-/* float: none; */
-width: 80%;
-/* top: 20%; */
-  margin-left: 20%;
+  left: 5%;
+  float: left;
+  /* width: 25%; */
+  /* top: 20%; */
+  /* margin-left: 20%; */
 }
 
 #contImg {
@@ -544,16 +555,15 @@ margin: 0px auto;
 
 
 .MainMenuImg{
-width: 25vw;
-height: 15vh;
+  width: 15vw;
+  height: 30vh;
 }
 
 .ContentMenuRow {
 background-color: transparent;
+height:800px;
 width: auto;
 margin-top: 15px;
-margin-left: 15px;
-padding-left: 15px;
 padding-bottom: 15px;
 margin: 0;
 }
@@ -596,7 +606,7 @@ margin: 0 auto;
 
 
 .MainMenuEl {
-width: 43%;
+width: 20%;
 height: auto;
 position: absolute;
 top: 7.25%;
@@ -611,20 +621,77 @@ z-index: 5;
 border: 2px solid #9ec200;
 border-top-left-radius: 4px;
 border-bottom-left-radius:4px;
-border-right:none;
-width: 43%;
+border-bottom:none;
+
+  width: 20%;
+  height: 50%;
 z-index: 5;
 background: #202020;
 
 }
+
+#MainEl0{top:4%; left:0%;}
+#MainEl1{top: 4%;left: 25%;}
+#MainEl2{
+top:4%;left:50%;  }
+#MainEl3{top:4%;left:70%;}
+
+} /*chiusura media query 765
+
+/*SMARTPHONE PORTRAIT*/
+@media (max-width: 480px){
+#Cover0{top: calc(4% + 2px);top: -moz-calc(4% + 2px);top: -webkit-calc(4% + 2px);}
+#CoverBis0{top:4%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}	
+
+#Cover1{top:calc(25% + 2px);top: -moz-calc(25% + 2px);top: -webkit-calc(25% + 2px);}
+#CoverBis1{top:25%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+
+#Cover2{top:calc(50% + 2px);top: -moz-calc(50% + 2px);top: -webkit-calc(50% + 2px);}
+#CoverBis2{top: 50%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+
+#Cover3{top:calc(75% + 2px);top: -moz-calc(75% + 2px);top: -webkit-calc(75% + 2px);}
+#CoverBis3{top:75%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+
+.MainMenuEl{
+	height:auto;
+	
+}
+
+	.MainMenuElSelected {
+
+border-right:none;
+border-bottom:solid;
+width: 43%;
+z-index: 5;
+height: auto;
+}		
+	
+.MainMenuImg {
+  width: 20vw;
+  height: 10vh;
+}
+
+.ContentMenuImg {
+  width: 10vh;
+  height: 10vh;
+}
+
+.ContentMenuEl {
+left: 5%;
+/* float: none; */
+width: 80%;
+/* top: 20%; */
+  margin-left: 20%;
+}
+
 
 #MainEl0{top:4%; left:5%;}
 #MainEl1{top: 25%;left: 5%;}
 #MainEl2{
 top:50%;left:5%;  }
 #MainEl3{top:75%;left:5%;}
-
-} 
+	
+} /*chiusura media query 480
 
 /*Dispositivi piccolissimi come ad esempio LG Optimus One*/
 @media (max-width: 213px){
@@ -648,4 +715,4 @@ top:50%;left:5%;  }
   width: 100%;
   height: 80%;
 
-}
+}/*chiusura media query 213*/

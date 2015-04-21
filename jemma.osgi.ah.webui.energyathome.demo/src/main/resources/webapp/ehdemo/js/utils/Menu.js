@@ -16,8 +16,10 @@ var Menu = {
 
 var ctrl=false; //controllo per il primo accesso
 var theWidth=1200;
-
-
+var selected;
+var numButtons;
+var widthMenuButton;
+var heightMenuButton;
 
 
 /**
@@ -30,6 +32,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 	
 	var dim;
 	var num = Menu.MainMenu.length;
+	numButtons=num;
 
 	Menu.MainW = $("#" + mainDiv).width();
 	Menu.MainH = $("#" + mainDiv).height();
@@ -66,7 +69,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 	for (i = 0; i < num; i++) {
 		Menu.MainHtml = Menu.MainHtml + 
 						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'/>"+
-						"<div id='Cover"+ i +"' class='Cover' style='position:absolute; width:4px; background:#202020;left:50%;z-index:300'></div>" +
+//						"<div id='Cover"+ i +"' class='Cover' style='position:absolute; background:#202020;z-index:300'></div>" +
 						"<div id='CoverBis"+ i +"' class='CoverBis' style='position:absolute; background:#202020;z-index:300'></div>" +
 						"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
 						"  <img id='MainImg" + i + "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>" +
@@ -74,13 +77,18 @@ Menu.Init = function(mainDiv, contentDiv) {
 						"</div>";
 
 		topOffset = topOffset + dim + dist;
+		
+		
 	}
 	
 	$("#" + mainDiv).html(Menu.MainHtml);
-	heightMenuButton=$(".MainMenuEl").height();
-	widthMenuButton=$(".MainMenuEl").width();
-	$(".Cover").css("height",heightMenuButton);
-	$(".CoverBis").css("height",heightMenuButton+5);
+	showCovers();
+	ctrlCoverPortOrLand();	
+	
+	
+	
+
+	
 	
 	//Per mostrare il contorno illuminato per l'elemento selezionato
 	
@@ -107,12 +115,18 @@ Menu.Init = function(mainDiv, contentDiv) {
 	if (Main.env == 0) console.log('CostiConsumi', CostiConsumi);
 	CostiConsumi.Init();  
 	
-	var widthSmart=765;
+	//alert("w="+widthMenuButton);
+	//alert("h="+heightMenuButton);
+	
 	if($(window).width()<widthSmart){
 		console.log("header height="+$("#Header").height());
 		$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
 		$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
 	}
+	
+	
+	
+	
 	
 
 }
@@ -123,7 +137,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 Menu.OnClickMainMenu = function(val) {
 	// richiamo funzione di Exit per l'elemento che lascio
 	oldContent = $(".ContentMenuElSelected").attr("id");
-	
+	selected=val;
 	
 	//$("#mobileMenu").animate({"left":"-1000px"}, 500);
 	if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu oldContent = " + oldContent);
@@ -164,24 +178,19 @@ Menu.OnClickMainMenu = function(val) {
 	
 		// seleziono nuovo elemento main e visualizzo nuova barra content menu
 		$("#MainEl" + val).addClass("MainMenuElSelected");
-		if ($(window).width()<theWidth){
-		//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
-			$("#Cover"+val).css("display","block");
-			$("#CoverBis"+val).css("display","block");
-		//}
 		
-			
-		//definizione della visualizzazione dei div che servono a mostrare il contorno di selezione del menu nella sezione mobile
-		for (i=0;i<Menu.MainMenu.length;i++){
-			if (i===val){
-				continue;
+		if ($(window).width()<theWidth){
+//			//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
+			//$("#Cover"+val).css("display","block");
+			$("#CoverBis"+val).css("display","block");
+//			//}
+				
+				
+				//definizione della visualizzazione dei div che servono a mostrare il contorno di selezione del menu nella sezione mobile
+					
+					coverYesOrNo(val);
+					
 			}
-			else{
-				$("#Cover"+i).css("display","none");
-				$("#CoverBis"+i).css("display","none");
-			}
-		}
-	}
 	
 	
 	
@@ -203,12 +212,14 @@ Menu.OnClickMainMenu = function(val) {
 //	}
 	var func;
 	
-	
+	//è sempre fotovoltaico la prima pagina
 	if (!ctrl){		
 			func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
 			ctrl=true;	
 			$("#el0Content0").addClass("ContentMenuElSelected");
-			$("#img0Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);	
+			$("#img0Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);
+		//	$("#Cover0").css("display","block");
+			$("#CoverBis0").css("display","block");
 	}
 	
 	if($(window).width()>theWidth){
@@ -362,39 +373,103 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 		if (Main.env == 0) console.log(80, "Menu", "OnClickContentMenu func undefined");
 	}
 }
+
+
 	
 	$(document).ready(function() {
 		
 		
-		$(window).on("resize", function()
-				{
-			
-			var widthSmart=765;
-			if($(window).width()<widthSmart){
-				console.log("header height="+$("#Header").height());
-				$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
-				$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
+//		for(val=0;val<4;val++){
+//			if ($(window).width()<theWidth){
+//				//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
+//					$("#Cover"+val).css("display","block");
+//					$("#CoverBis"+val).css("display","block");
+//			}
+//			else{
+//				$("#Cover"+val).css("display","none");
+//				$("#CoverBis"+val).css("display","none");
+//			}
+//		}
+		
+		$(window).on("resize", function(){
+//			for(val=0;val<4;val++){
+//				if ($(window).width()<theWidth){
+//					//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
+//						$("#Cover"+val).css("display","block");
+//						$("#CoverBis"+val).css("display","block");
+//				}
+//				else{
+//					$("#Cover"+val).css("display","none");
+//					$("#CoverBis"+val).css("display","none");
+//				}
+//			}
+			showCovers();
+			ctrlMenuPortOrLandOnResize();			
+			ctrlCoverPortOrLand();						
+		});
+});
+	
+	
+	function showCovers(){
+		if ($(window).width()<theWidth){					
+				//if($(".MainMenuEl").hasClass("MainMenuElSelected")){
+			coverYesOrNo(selected);
+					
+		}
+	
+	}
+	
+	function coverYesOrNo(selected){
+		for (i=0;i<numButtons;i++){
+			if (i===selected){
+			//	$("#Cover"+i).css("display","block");
+				$("#CoverBis"+i).css("display","block");
 			}
 			else{
-				$('#mobileMenu').css('height','260px');
-				$('#ContentMenu').css('height','100px');
+			//	$("#Cover"+i).css("display","none");
+				$("#CoverBis"+i).css("display","none");
 			}
-			
-			heightMenuButton=$(".MainMenuEl").height();
-			widthMenuButton=$(".MainMenuEl").width();
-			$(".Cover").css("height",heightMenuButton);
-			$(".CoverBis").css("height",heightMenuButton+5);
-			
+		}
+	}
 
-			
-});
+	function ctrlCoverPortOrLand(){
+		var widthTab=765
+		var widthSmartPort=480;
+		if ((($(window).width()<theWidth)&&($(window).width()>widthTab))||($(window).width()>widthSmartPort)){
+			widthMenuButton=$(".MainMenuEl").width();
+			console.log("W="+widthMenuButton);
+		//	$(".Cover").css("width",widthMenuButton);
+			widthMenuButton+=35;
+			$(".CoverBis").css("width",widthMenuButton);
+//		//	$(".Cover").css("height",30);
+			$(".CoverBis").css("height","30px");			
+		}
+		if($(window).width()<widthSmartPort){				
+			heightMenuButton=$(".MainMenuEl").height();
+		//	$(".Cover").css("height",heightMenuButton);
+			$(".CoverBis").css("height",heightMenuButton+30);
+		//	$(".Cover").css("width",30);
+			$(".CoverBis").css("width","30px");			
+		}
 		
 		
-		
-	
-			
-	});
-	
+	}
+
+	function ctrlMenuPortOrLandOnResize(){
+		var widthTab=765;
+		var widthSmartPort=480;
+		if($(window).width()<widthTab){
+			console.log("header height="+$("#Header").height());
+			$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
+			$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
+		}
+		else{
+			//è l'altezza del menu mobile per le versioni ipad o desktop a bassa risoluzione
+			$('#mobileMenu').css('height','auto');
+			$('#ContentMenu').css('height','100px');
+		}
+	}
+
 	
 
 
