@@ -204,7 +204,7 @@ $(document).ready(function() {
 			$("#mobileMenu").css("display","block");			
 			goMobile();		
 		}
-		if($(window).width() > width){
+		if( ($(window).width() > width) || ( ($(window).width()>=soglia) && ($(window).width() <= width) ) ){
 			exitMobile();
 			heightMenu=$("#ContainerMenu").css("height");
 			$("#ContentMain").css("height",heightMenu);
