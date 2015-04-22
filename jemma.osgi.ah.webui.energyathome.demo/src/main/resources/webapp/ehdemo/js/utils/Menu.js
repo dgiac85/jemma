@@ -20,6 +20,7 @@ var selected;
 var numButtons;
 var widthMenuButton;
 var heightMenuButton;
+var soglia=1179;
 
 
 /**
@@ -118,11 +119,11 @@ Menu.Init = function(mainDiv, contentDiv) {
 	//alert("w="+widthMenuButton);
 	//alert("h="+heightMenuButton);
 	
-	if($(window).width()<widthSmart){
-		console.log("header height="+$("#Header").height());
-		$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
-		$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
-	}
+//	if($(window).width()<widthSmart){
+//		console.log("header height="+$("#Header").height());
+//		//$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
+//		//$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
+//	}
 	
 	
 	
@@ -179,7 +180,7 @@ Menu.OnClickMainMenu = function(val) {
 		// seleziono nuovo elemento main e visualizzo nuova barra content menu
 		$("#MainEl" + val).addClass("MainMenuElSelected");
 		
-		if ($(window).width()<theWidth){
+		if ($(window).width()<=theWidth){
 //			//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
 			//$("#Cover"+val).css("display","block");
 			$("#CoverBis"+val).css("display","block");
@@ -377,50 +378,36 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 
 	
 	$(document).ready(function() {
-		
-		
-//		for(val=0;val<4;val++){
-//			if ($(window).width()<theWidth){
-//				//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
-//					$("#Cover"+val).css("display","block");
-//					$("#CoverBis"+val).css("display","block");
-//			}
-//			else{
-//				$("#Cover"+val).css("display","none");
-//				$("#CoverBis"+val).css("display","none");
-//			}
-//		}
-		
+		showCovers();
+		//ctrlMenuPortOrLandOnResize();			
+		ctrlCoverPortOrLand();
 		$(window).on("resize", function(){
-//			for(val=0;val<4;val++){
-//				if ($(window).width()<theWidth){
-//					//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
-//						$("#Cover"+val).css("display","block");
-//						$("#CoverBis"+val).css("display","block");
-//				}
-//				else{
-//					$("#Cover"+val).css("display","none");
-//					$("#CoverBis"+val).css("display","none");
-//				}
-//			}
 			showCovers();
-			ctrlMenuPortOrLandOnResize();			
+			//ctrlMenuPortOrLandOnResize();			
 			ctrlCoverPortOrLand();						
 		});
 });
 	
 	
 	function showCovers(){
-		if ($(window).width()<theWidth){					
+		if ($(window).width()<soglia){					
 				//if($(".MainMenuEl").hasClass("MainMenuElSelected")){
 			coverYesOrNo(selected);
 					
+		}
+		else{
+			$(".CoverBis").css("display","none");
 		}
 	
 	}
 	
 	function coverYesOrNo(selected){
+		if (selected===undefined){
+			$("#CoverBis"+0).css("display","block");
+			return;
+		}
 		for (i=0;i<numButtons;i++){
+			
 			if (i===selected){
 			//	$("#Cover"+i).css("display","block");
 				$("#CoverBis"+i).css("display","block");
@@ -435,7 +422,7 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 	function ctrlCoverPortOrLand(){
 		var widthTab=765
 		var widthSmartPort=480;
-		if ((($(window).width()<theWidth)&&($(window).width()>widthTab))||($(window).width()>widthSmartPort)){
+		if ( ($(window).width()>widthSmartPort) && ($(window).width()<=theWidth) ){
 			widthMenuButton=$(".MainMenuEl").width();
 			console.log("W="+widthMenuButton);
 		//	$(".Cover").css("width",widthMenuButton);
@@ -455,20 +442,21 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 		
 	}
 
-	function ctrlMenuPortOrLandOnResize(){
-		var widthTab=765;
-		var widthSmartPort=480;
-		if($(window).width()<widthTab){
-			console.log("header height="+$("#Header").height());
-			$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
-			$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
-		}
-		else{
-			//è l'altezza del menu mobile per le versioni ipad o desktop a bassa risoluzione
-			$('#mobileMenu').css('height','auto');
-			$('#ContentMenu').css('height','100px');
-		}
-	}
+//	function ctrlMenuPortOrLandOnResize(){
+//		var widthTab=765;
+//		var widthSmartPort=480;
+////	if($(window).width()<widthTab){
+////		console.log("header height="+$("#Header").height());
+////		$('#mobileMenu').css('height',widthTab/1.5);
+////		//$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
+////		$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
+////	}
+////	else{
+////		//è l'altezza del menu mobile per le versioni ipad o desktop a bassa risoluzione
+////		$('#mobileMenu').css('height',widthTab/2);
+////		$('#ContentMenu').css('height',"150px");
+////	}
+//	}
 
 	
 

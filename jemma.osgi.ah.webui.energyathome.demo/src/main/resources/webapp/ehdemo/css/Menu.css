@@ -142,7 +142,7 @@ display: block;
 background: #202020;
 position: absolute;
 top: 55px;
-width: 60%;
+width: 95%;
 height: 250px;
 z-index: 20;
 border: 4px solid rgb(158, 194, 0);
@@ -233,20 +233,35 @@ transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
 Media Queries
 ***********************************************************************/
 
+/* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB */
+@media (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1){
+.MainMenuImg {
+  width: 100px;
+  height: 80px;
+}
+
+.MainMenuEl {
+  height: 120px;
+}
+
+}
+
+
+
 @media (max-width: 1200px) and (min-width:766px){
 	
 	
 #Cover0{top:50%; left:5%;}
-#CoverBis0{top:51%;left:3%;width:200px;height:30px;}	
+#CoverBis0{top:46%;left:1.6%;}	
 
 #Cover1{top:50%; left:25%;}
-#CoverBis1{top:51%;left:25%;width:200px;height:30px;}
+#CoverBis1{top:46%;left:25%;}
 
 #Cover2{top:50%;left:50%;}
-#CoverBis2{top:51%;left:50%;width:200px;height:30px;}
+#CoverBis2{top:46%;left:50%;}
 
 #Cover3{top:50%; left:75%;}
-#CoverBis3{top:51%; left:75%;width:200px;height:30px;}
+#CoverBis3{top:46%; left:65%;}
 	
 .toggleMobile {
 	border-top-right-radius:15px;
@@ -338,10 +353,10 @@ background: #202020;
 }
 
 
-#MainEl0{top:0%;left:0%}
-#MainEl1{top:0%;left:23%}
-#MainEl2{top:0%;left:48%}
-#MainEl3{top:0%;left:73%}
+#MainEl0{top: 7%;left:0%}
+#MainEl1{top: 7%;left:23%}
+#MainEl2{top: 7%;left:48%}
+#MainEl3{top: 7%;left:73%}
 
 
 
@@ -372,7 +387,7 @@ border-top-right-radius: 4px;
 }
 
 #mobileMenu{
-width: 70%;
+width: 95%;
 }
 
 
@@ -440,28 +455,30 @@ color: #9ec200;
 
 .MainMenuEl {
 position: absolute;
-top: 7.25%;
+ width: 170px;
 margin-top: 0px;
 border-bottom: none;
+margin-left: 15px;
+margin-right: 25px; 
 z-index: 5;
 }
 
-}/*chiusura media query 1200 766
+}/*chiusura media query 1200 766*/
 
 /*SMARTPHONE LANDSCAPE*/
-@media (max-width: 765px){
+@media (max-width: 765px),(max-height:375px) {
 	
 #Cover0{top:50%; left:5%;}
-#CoverBis0{top:51%;left:3%;width:200px;height:30px;}	
+#CoverBis0{top:46%;left:3%;width:200px;height:30px;}	
 
 #Cover1{top:50%; left:25%;}
-#CoverBis1{top:51%;left:25%;width:200px;height:30px;}
+#CoverBis1{top:46%;left:25%;width:200px;height:30px;}
 
 #Cover2{top:50%;left:50%;}
-#CoverBis2{top:51%;left:50%;width:200px;height:30px;}
+#CoverBis2{top:46%;left:50%;width:200px;height:30px;}
 
 #Cover3{top:50%; left:75%;}
-#CoverBis3{top:51%; left:70%;width:200px;height:30px;}
+#CoverBis3{top:46%; left:70%;width:200px;height:30px;}
 
 
 
@@ -548,8 +565,8 @@ color: #9ec200;
 
 #contImg {
 float: left;
-height: 50px;
-width: 50px;
+height: auto;
+  width: auto;
 margin: 0px auto;
 }
 
@@ -561,7 +578,6 @@ margin: 0px auto;
 
 .ContentMenuRow {
 background-color: transparent;
-height:800px;
 width: auto;
 margin-top: 15px;
 padding-bottom: 15px;
@@ -593,7 +609,7 @@ border-bottom-right-radius: 0px;
 .ContentMenuElSelected {
 color: #9ec200;
 /* width: 90%; */
-height: auto;
+  height: 50px;
 
 }
 
@@ -624,7 +640,7 @@ border-bottom-left-radius:4px;
 border-bottom:none;
 
   width: 20%;
-  height: 50%;
+  height: 45%;
 z-index: 5;
 background: #202020;
 
@@ -638,6 +654,33 @@ top:4%;left:50%;  }
 
 } /*chiusura media query 765
 
+/* Media Query per DESKTOP il min height a 481px è la max altezza conosciuta che si può raggiungere con gli smartphone
+DA PROVARE NEL MOMENTO IN CUI SI VUOLE CONTROLLARE LA PARTE PER SCHERMO.
+*/
+@media (max-width: 765px) and (min-height: 375px) and (-webkit-device-pixel-ratio : 1){
+	#mobileMenu{
+		height:50%;
+	}
+	
+	.ContentMenuEl {
+  		width: 15vw;
+	}
+	
+	.ContentMenuRow {
+ 		 top: 10%;
+	}
+	
+	.MainMenuImg {
+	  	width: 15vw;
+	  	height: 15vh;
+	}
+	
+	.ContentMenuImg {
+	  	width: 10vw;
+  		height: 5vh;
+	}
+}
+ 
 /*SMARTPHONE PORTRAIT*/
 @media (max-width: 480px){
 #Cover0{top: calc(4% + 2px);top: -moz-calc(4% + 2px);top: -webkit-calc(4% + 2px);}
@@ -650,11 +693,15 @@ top:4%;left:50%;  }
 #CoverBis2{top: 50%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
 
 #Cover3{top:calc(75% + 2px);top: -moz-calc(75% + 2px);top: -webkit-calc(75% + 2px);}
-#CoverBis3{top:75%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+#CoverBis3{top:70%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
 
 .MainMenuEl{
 	height:auto;
 	
+}
+
+#mobileMenu{
+	height:99%;
 }
 
 	.MainMenuElSelected {
@@ -681,7 +728,9 @@ left: 5%;
 /* float: none; */
 width: 80%;
 /* top: 20%; */
-  margin-left: 20%;
+
+    margin-left: 20%;
+  margin-bottom: 60px;
 }
 
 
@@ -689,7 +738,7 @@ width: 80%;
 #MainEl1{top: 25%;left: 5%;}
 #MainEl2{
 top:50%;left:5%;  }
-#MainEl3{top:75%;left:5%;}
+#MainEl3{top:70%;left:5%;}
 	
 } /*chiusura media query 480
 
@@ -716,3 +765,5 @@ top:50%;left:5%;  }
   height: 80%;
 
 }/*chiusura media query 213*/
+
+

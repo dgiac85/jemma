@@ -477,16 +477,39 @@ label.error {
 /**********************************************************************
 Media Queries
 ***********************************************************************/
+@media (min-width: 1201px){
+	#Header {
+  width: 100%;
+  background-color: #202020;
+  /* right: 2%; */
+  height: 94px;
+  float: left;
+}
+
+#LogoImg {
+  height: 91px;
+  width: auto;
+}
+}
 
 /*Per IPAD e tablet in landscape*/
 @media (max-width: 1200px){
 
-#ContainerSX{
+#ContainerSX {
   position: relative;
   float: left;
-  width: 98%;
-  height: 50%;
+  width: 49%;
+  height: 97%;
 }
+
+#ContainerDX {
+  position: relative;
+  float: left;
+  left:2%;
+  width: 49%;
+  height: 100%;
+}
+
 
 #Content {
   position: relative;
@@ -499,15 +522,9 @@ Media Queries
 #ContainerLogo {
 margin: 0px auto;
 height:51px;
-width:200px
+width:200px;
 }
 
-#ContainerDX {
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 46%;
-}
 
 #HeaderSepImg {
   width: 100%;
@@ -608,7 +625,7 @@ width:100%
 
 /* iPhone 5 and other Main Smartphones----------- */
 /*SMARTPHONE LANDSCAPE*/
-@media screen and (max-width: 765px){
+@media (max-width: 765px),(max-height:375px){
 
 #Container{
 background: #202020;
@@ -621,7 +638,7 @@ max-height:960px;
 
 #ContainerLogo {
 margin: 0px auto;
-width:70%;
+width:200px;
 }	
 	
 	
@@ -684,7 +701,7 @@ background-color: #333333;
    background-color: #202020;
   position: absolute;
   left: 0%;
-  top: 50%;
+  top: 45%;
     width: 99%;
   height: 40% !important;
 }
@@ -714,7 +731,8 @@ background-color: #333333;
 }
 	
 #LogoImg {
-  margin: 0px auto;
+    /* margin: 0px auto; */
+  margin-left: 20px;
 }
 	
 #logo{
@@ -788,6 +806,20 @@ float: none;
 }
 
 }/*chiusura media query 213*/
+
+
+/* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB */
+@media (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1){
+#ContainerMenu {
+  height: 525px;
+}
+
+#ContentMain {
+	height:525px;
+}
+
+
+	}
 
 
 

@@ -1,6 +1,7 @@
 
 var width=1200;
 var widthSmart=765;
+var soglia=1179;
 
 function goMobile(){
 	
@@ -60,13 +61,13 @@ function exitMobile(){
 //	if($(window).width()>widthSmart){
 //		//exitMobileSmart();
 //	}
-	
+	$('#toggleMenu').css('display','none');
 	$('#ContainerMenu').css('display','block');
 	$('#ContentMenu').css('display','block');
 	
 	element=$('#MainMenu').detach();
 	$('#ContainerMenu').append(element);
-	$('#toggleMenu').css('display','none');
+
 	$('.Separators').css('display','none');		
 	element2=$('#ContentMenu').detach();	
 	$('#ContainerContentMenu').append(element2);	
@@ -88,7 +89,7 @@ $(document).ready(function() {
 	$("#mobileMenu").css("display","block");
 
 	$("#mobileMenu").css("left","-200%");
-	if($(window).width()<width){
+	if($(window).width()<=width){
 			//$("#ContentMain").css("width","100%"); DA VALUTARE
 			$("#ContentMain").css("height","calc(100% - 70px)");
 			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
@@ -160,12 +161,12 @@ $(document).ready(function() {
 	//funzione per il controllo dell'on resize
 	$(window).on("resize", function()
 	{
-
+		
 		//per la gestione dei bordini del menu una volta che si fa il resize
 		//$(".Cover").css("height",$(".MainMenuEl").height());
 		//$(".CoverBis").css("height",$(".MainMenuEl").height()+4);
 		
-		if($(this).width() >= widthSmart){
+		if($(window).width() >= widthSmart){
 			element=$('#dataANDuser').detach();
 			element1=$('#HeaderSep').detach();
 			$('#Header').append(element);
@@ -188,12 +189,12 @@ $(document).ready(function() {
 			
 		}
 
-		if($(this).width() <= width)
+		if(($(window).width() <=soglia) || ($(window).width() <= width))
 		{	
-			if ($("#mobileMenu").css("left")==="0px"){
-				$("#toggleMenu").toggleClass("active");
-				$("#mobileMenu").animate({"left":"-200%"}, 600);
-			}	
+//			if ($("#mobileMenu").css("left")==="0px"){
+//				$("#toggleMenu").toggleClass("active");
+//				$("#mobileMenu").animate({"left":"-200%"}, 600);
+//			}	
 			heightMenu=$("#ContainerMenu").css("height");
 			$("#ContentMain").css("height",heightMenu);
 			$("#ContentMain").css("width","100%");
@@ -203,7 +204,7 @@ $(document).ready(function() {
 			$("#mobileMenu").css("display","block");			
 			goMobile();		
 		}
-		if($(this).width() > width){
+		if($(window).width() > width){
 			exitMobile();
 			heightMenu=$("#ContainerMenu").css("height");
 			$("#ContentMain").css("height",heightMenu);
