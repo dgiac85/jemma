@@ -1,5 +1,20 @@
 /*GLOBAL*/
 
+
+.perCover{
+  width: 150px;
+  height: 180px;
+  float: left;
+  margin-left: 25px;
+  margin-right: 25px;
+  float: left;
+}
+
+.CoverBis{
+	position:relative;
+}
+
+
 #MainMenuTable {
 	position: absolute;
 	left: 2%;
@@ -12,27 +27,23 @@
 
 
 .MainMenuEl{
-		width:150px;height:180px;float:left;margin-left:25px;margin-right:25px;
-		float:left;
+	width: auto;
+    height: 80%;
 	color: white;
 		
 	}
 
 
 .MainMenuImg{
-  width: 150px;
-  height: 150px;;
+  width: 120px;
+  height: 120px;;
 }
 
 .MainMenuEl:focus {
 	outline:none;
 	}
 
-#MainEl0{top:4%; left:5%;}
-#MainEl1{top: 25%;left: 5%;}
-#MainEl2{
-top:50%;left:5%;  }
-#MainEl3{top:75%;left:5%;}
+
 
 .MainMenuEl:hover {
 	border: solid 2px #9ec200;
@@ -139,7 +150,7 @@ border-bottom: 1px solid #CC5836;}
 
 #mobileMenu {
 display: block;
-background: #202020;
+background: #333333;
 position: absolute;
 top: 55px;
 width: 95%;
@@ -233,8 +244,8 @@ transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
 Media Queries
 ***********************************************************************/
 
-/* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB */
-@media (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1){
+/* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX   */
+@media (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
 .MainMenuImg {
   width: 100px;
   height: 80px;
@@ -248,10 +259,12 @@ Media Queries
 
 
 
+
+
 @media (max-width: 1200px) and (min-width:766px){
 	
 	
-#Cover0{top:50%; left:5%;}
+/* #Cover0{top:50%; left:5%;}
 #CoverBis0{top:46%;left:1.6%;}	
 
 #Cover1{top:50%; left:25%;}
@@ -261,7 +274,12 @@ Media Queries
 #CoverBis2{top:46%;left:50%;}
 
 #Cover3{top:50%; left:75%;}
-#CoverBis3{top:46%; left:65%;}
+#CoverBis3{top:46%; left:65%;} */
+#contImg1{	
+   width: 10vw;
+  margin: 0 auto;
+  margin-top: 10px;	
+}
 	
 .toggleMobile {
 	border-top-right-radius:15px;
@@ -288,7 +306,7 @@ z-index: 999;
 }	
 
 #mobileMenu{
-height: 450px;
+height: 400px;
 width: 70%;
 }
 
@@ -351,12 +369,20 @@ font-size: 1.5em;
 color: #9ec200;
 background: #202020;
 }
+.perCover{
+ 	  font-size: 1vw;
+ 	  width:15vw;
+}
 
+.MainMenuImg {
+   width: 10vw;
+  height: 10vh;
+}
 
-#MainEl0{top: 7%;left:0%}
-#MainEl1{top: 7%;left:23%}
-#MainEl2{top: 7%;left:48%}
-#MainEl3{top: 7%;left:73%}
+#contMainEl0{  position: relative;}
+#contMainEl1{  position: relative;}
+#contMainEl2{ position: relative; }
+#contMainEl3{ position: relative; }
 
 
 
@@ -366,10 +392,11 @@ width: 16%;
 }
 
 .ContentMenuRow {
-margin-left:0px;
-width: 100%;
-margin-bottom: 10px;	
-background: #202020;
+  left: 10%;
+  position: absolute;
+  width: 80%;
+  margin: 0px auto;
+  height: auto;
 }
 
 .MainMenuEl:hover {
@@ -405,8 +432,8 @@ z-index: 999;
 border:2px solid #9ec200;
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
--webkit-border-top-left-radius: 4px;
--webkit-border-top-right-radius: 4px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
 border-bottom:none;
 background: #202020;
 }	
@@ -419,9 +446,11 @@ margin: 0px auto;
 }
 
 .ContentMenuEl {
-height: 100%;
-width: 20%;
-margin:0px;
+  position: relative;
+  float: left;
+  height: 50%;
+  width: 20%;
+  margin: 0px;
 }
 
 .ContentMenuTitle {
@@ -454,12 +483,10 @@ color: #9ec200;
 }
 
 .MainMenuEl {
-position: absolute;
- width: 170px;
-margin-top: 0px;
+position: relative;
+width:100%; 
 border-bottom: none;
-margin-left: 15px;
-margin-right: 25px; 
+margin:0px auto;
 z-index: 5;
 }
 
@@ -478,7 +505,7 @@ z-index: 5;
 #CoverBis2{top:46%;left:50%;width:200px;height:30px;}
 
 #Cover3{top:50%; left:75%;}
-#CoverBis3{top:46%; left:70%;width:200px;height:30px;}
+#CoverBis3{height:30px;}
 
 
 
@@ -646,11 +673,11 @@ background: #202020;
 
 }
 
-#MainEl0{top:4%; left:0%;}
-#MainEl1{top: 4%;left: 25%;}
-#MainEl2{
+#contMainEl0{top:4%; left:0%;}
+#contMainEl1{top: 4%;left: 25%;}
+#contMainEl2{
 top:4%;left:50%;  }
-#MainEl3{top:4%;left:70%;}
+#contMainEl3{top:4%;left:70%;}
 
 } /*chiusura media query 765
 
@@ -734,11 +761,11 @@ width: 80%;
 }
 
 
-#MainEl0{top:4%; left:5%;}
-#MainEl1{top: 25%;left: 5%;}
-#MainEl2{
+#contMainEl0{top:4%; left:5%;}
+#contMainEl1{top: 25%;left: 5%;}
+#contMainEl2{
 top:50%;left:5%;  }
-#MainEl3{top:70%;left:5%;}
+#contMainEl3{top:70%;left:5%;}
 	
 } /*chiusura media query 480
 

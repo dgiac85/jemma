@@ -4,6 +4,12 @@ var widthSmart=765;
 var soglia=1179;
 
 function goMobile(){
+		
+	element=$('.perCover').detach();
+	$('#mobileMenu').append(element);
+	
+	element=$('#ContentMenu').detach();
+	$('#mobileMenu').append(element);
 	
 	$('#datausersmartphoneToggle').css('display','none');
 
@@ -21,20 +27,7 @@ function goMobile(){
 	
 	$('#toggleMenu').css('display','block');
 	$('.Separators').css('display','block');
-
-	element=$('#MainMenu').detach();
-	$('#mobileMenu').append(element);
-
-	
-	element=$('#ContentMenu').detach();
-	$('#mobileMenu').append(element);
-
-	
-	$('#ContentMenu').css('display','block');
-	$('#ContainerMenu').css('display','none');
-	
-	element=$('#MobSep2').detach();
-	$('#mobileMenu').append(element);
+	$('#ContainerMenu').css('display','none');	
 
 }
 
@@ -65,8 +58,10 @@ function exitMobile(){
 	$('#ContainerMenu').css('display','block');
 	$('#ContentMenu').css('display','block');
 	
-	element=$('#MainMenu').detach();
-	$('#ContainerMenu').append(element);
+	element=$('.perCover').detach();
+	$('#MainMenu').append(element);
+	
+
 
 	$('.Separators').css('display','none');		
 	element2=$('#ContentMenu').detach();	
@@ -94,7 +89,8 @@ $(document).ready(function() {
 			$("#ContentMain").css("height","calc(100% - 70px)");
 			$("#ContentMain").css("height","-moz-calc(100% - 70px)");
 			$("#ContentMain").css("height","-webkit-calc(100% - 70px)");
-		goMobile();			
+			
+		goMobile();	
 	}
 	else{
 		exitMobile();
@@ -122,7 +118,25 @@ $(document).ready(function() {
 			});
 	    	
 	    $("#toggleMenu").click(function(){
-	    			
+	    	
+				element=$('.perCover').detach();
+				$('#mobileMenu').append(element);
+				
+				/*calcolo il 40% di un div e gli tolgo l'altezza di MainMenuEl*/
+				heightA=(0.4 * (parseInt($('#mobileMenu').css('height'))))-parseInt($('.MainMenuEl').css('height'));
+				console.log(0.4 * (parseInt($('#mobileMenu').css('height'))));
+				console.log(parseInt($('.perCover').css('height')));
+				$('.perCover').css("top", heightA);
+				
+				
+				element=$('#ContentMenu').detach();
+				$('#mobileMenu').append(element);
+				
+				if ($(window).width()<width){
+					$('.perCover').css('top',heightA);
+					
+				}
+				
 	    	    	$(this).toggleClass("active");
 	    	    	var hasClass = this.classList.contains('active');
 	    	    	if (!hasClass){
@@ -161,12 +175,12 @@ $(document).ready(function() {
 	//funzione per il controllo dell'on resize
 	$(window).on("resize", function()
 	{
-		
+		height=$("#Header").height();
 		//per la gestione dei bordini del menu una volta che si fa il resize
 		//$(".Cover").css("height",$(".MainMenuEl").height());
 		//$(".CoverBis").css("height",$(".MainMenuEl").height()+4);
 		
-		if($(window).width() >= widthSmart){
+		if($(this).width() >= widthSmart){
 			element=$('#dataANDuser').detach();
 			element1=$('#HeaderSep').detach();
 			$('#Header').append(element);
@@ -189,7 +203,7 @@ $(document).ready(function() {
 			
 		}
 
-		if(($(window).width() <=soglia) || ($(window).width() <= width))
+		if(($(this).width() <=soglia) || ($(window).width() <= width))
 		{	
 //			if ($("#mobileMenu").css("left")==="0px"){
 //				$("#toggleMenu").toggleClass("active");
@@ -204,7 +218,7 @@ $(document).ready(function() {
 			$("#mobileMenu").css("display","block");			
 			goMobile();		
 		}
-		if( ($(window).width() > width) || ( ($(window).width()>=soglia) && ($(window).width() <= width) ) ){
+		if( ($(this).width() > width) || ( ($(window).width()>=soglia) && ($(window).width() <= width) ) ){
 			exitMobile();
 			heightMenu=$("#ContainerMenu").css("height");
 			$("#ContentMain").css("height",heightMenu);

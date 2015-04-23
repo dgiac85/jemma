@@ -536,12 +536,14 @@ width:200px;
 }
 
 #ContentMenu{
-	background-color: #202020;
-	 border: 2px solid #9ec200;
-	  border-radius:4px;
-	  -moz-border-radius:4px;
-	     height: 200px;
-	     float:none;
+  background-color: #202020;
+  border: 2px solid #9ec200;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  height: 200px;
+  float: none;
+  position: relative;
+  top: 40%;
 }
 	
 	#Container{
@@ -808,21 +810,23 @@ float: none;
 }/*chiusura media query 213*/
 
 
-/* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB */
-@media (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1){
-#ContainerMenu {
-  height: 525px;
-}
-
-#ContentMain {
-	height:525px;
-}
-
-
+/* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX */
+@media (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
+	#ContainerMenu {
+	  height: 525px;
 	}
+	
+	#ContentMain {
+		height:525px;
+	}
+}
 
-
-
-
+ /*FIREFOX BROWSER
+@media (device-width: 1536px) and (device-height:864px){
+	#ContainerMenu {
+	  height: 125px;
+	}
+	
+}*/
 
 

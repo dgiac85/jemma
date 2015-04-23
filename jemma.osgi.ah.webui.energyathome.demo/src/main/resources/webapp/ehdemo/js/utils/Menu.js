@@ -68,23 +68,26 @@ Menu.Init = function(mainDiv, contentDiv) {
 	Menu.MainHtml = "";
 	
 	for (i = 0; i < num; i++) {
+		
 		Menu.MainHtml = Menu.MainHtml + 
 						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'/>"+
-//						"<div id='Cover"+ i +"' class='Cover' style='position:absolute; background:#202020;z-index:300'></div>" +
-						"<div id='CoverBis"+ i +"' class='CoverBis' style='position:absolute; background:#202020;z-index:300'></div>" +
-						"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
-						"  <img id='MainImg" + i + "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>" +
-						"  <p id='NomeMain" + i + "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
-						"</div>";
-
+						"<div id='contMainEl"+ i +"' class='perCover'>" +							
+							"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
+								"<div id='contImg1'>"+
+									"  <img id='MainImg" + i + "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>"+
+								"</div>" +
+								"<p id='NomeMain" + i + "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
+							"</div>" +
+							//"<div id='CoverBis"+ i +"' class='CoverBis' style='position:relative; background:#202020;z-index:300'></div>" +
+						"</div>";		
+		
 		topOffset = topOffset + dim + dist;
 		
 		
 	}
 	
 	$("#" + mainDiv).html(Menu.MainHtml);
-	showCovers();
-	ctrlCoverPortOrLand();	
+	
 	
 	
 	
@@ -180,19 +183,6 @@ Menu.OnClickMainMenu = function(val) {
 		// seleziono nuovo elemento main e visualizzo nuova barra content menu
 		$("#MainEl" + val).addClass("MainMenuElSelected");
 		
-		if ($(window).width()<=theWidth){
-//			//if($(".MainMenuEl").hasClass("MainMenuElSelected")){			
-			//$("#Cover"+val).css("display","block");
-			$("#CoverBis"+val).css("display","block");
-//			//}
-				
-				
-				//definizione della visualizzazione dei div che servono a mostrare il contorno di selezione del menu nella sezione mobile
-					
-					coverYesOrNo(val);
-					
-			}
-	
 	
 	
 	
@@ -220,7 +210,7 @@ Menu.OnClickMainMenu = function(val) {
 			$("#el0Content0").addClass("ContentMenuElSelected");
 			$("#img0Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);
 		//	$("#Cover0").css("display","block");
-			$("#CoverBis0").css("display","block");
+			
 	}
 	
 	if($(window).width()>theWidth){
@@ -376,91 +366,7 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 }
 
 
-	
-	$(document).ready(function() {
-		showCovers();
-		//ctrlMenuPortOrLandOnResize();			
-		ctrlCoverPortOrLand();
-		$(window).on("resize", function(){
-			showCovers();
-			//ctrlMenuPortOrLandOnResize();			
-			ctrlCoverPortOrLand();						
-		});
-});
-	
-	
-	function showCovers(){
-		if ($(window).width()<soglia){					
-				//if($(".MainMenuEl").hasClass("MainMenuElSelected")){
-			coverYesOrNo(selected);
-					
-		}
-		else{
-			$(".CoverBis").css("display","none");
-		}
-	
-	}
-	
-	function coverYesOrNo(selected){
-		if (selected===undefined){
-			$("#CoverBis"+0).css("display","block");
-			return;
-		}
-		for (i=0;i<numButtons;i++){
-			
-			if (i===selected){
-			//	$("#Cover"+i).css("display","block");
-				$("#CoverBis"+i).css("display","block");
-			}
-			else{
-			//	$("#Cover"+i).css("display","none");
-				$("#CoverBis"+i).css("display","none");
-			}
-		}
-	}
-
-	function ctrlCoverPortOrLand(){
-		var widthTab=765
-		var widthSmartPort=480;
-		if ( ($(window).width()>widthSmartPort) && ($(window).width()<=theWidth) ){
-			widthMenuButton=$(".MainMenuEl").width();
-			console.log("W="+widthMenuButton);
-		//	$(".Cover").css("width",widthMenuButton);
-			widthMenuButton+=35;
-			$(".CoverBis").css("width",widthMenuButton);
-//		//	$(".Cover").css("height",30);
-			$(".CoverBis").css("height","30px");			
-		}
-		if($(window).width()<widthSmartPort){				
-			heightMenuButton=$(".MainMenuEl").height();
-		//	$(".Cover").css("height",heightMenuButton);
-			$(".CoverBis").css("height",heightMenuButton+30);
-		//	$(".Cover").css("width",30);
-			$(".CoverBis").css("width","30px");			
-		}
-		
-		
-	}
-
-//	function ctrlMenuPortOrLandOnResize(){
-//		var widthTab=765;
-//		var widthSmartPort=480;
-////	if($(window).width()<widthTab){
-////		console.log("header height="+$("#Header").height());
-////		$('#mobileMenu').css('height',widthTab/1.5);
-////		//$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
-////		$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
-////	}
-////	else{
-////		//è l'altezza del menu mobile per le versioni ipad o desktop a bassa risoluzione
-////		$('#mobileMenu').css('height',widthTab/2);
-////		$('#ContentMenu').css('height',"150px");
-////	}
-//	}
 
 	
-
-
-
-
-
+	
+	
