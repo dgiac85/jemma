@@ -192,6 +192,13 @@ border: 4px solid #9ec200;
 z-index: 999;
 }
 
+/* #toggleMenu {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+} */
+
 .toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
 {
 display: block;

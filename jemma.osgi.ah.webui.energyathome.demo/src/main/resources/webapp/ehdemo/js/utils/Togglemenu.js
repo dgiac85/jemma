@@ -6,8 +6,6 @@ if (client.browser.chrome){
 	var width=1200;
 }
 
- /*piace a firefox*/
-//trovare un modo per farla funzionare con chrome al quale piace il valore 1200
 var widthSmart=766;
 var soglia=1179;
 var widthSmartPort=480;
@@ -72,7 +70,7 @@ function exitMobile(){
 }
 
 $(document).ready(function() {	
-	alert(client.browser.chrome);
+
 	$("#mobileMenu").css("display","block");
 
 	$("#mobileMenu").css("left","-200%");
