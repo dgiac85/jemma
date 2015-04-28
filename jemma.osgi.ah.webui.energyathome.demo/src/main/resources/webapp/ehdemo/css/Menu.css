@@ -192,12 +192,16 @@ border: 4px solid #9ec200;
 z-index: 999;
 }
 
-/* #toggleMenu {
+#toggleMenu {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-top-left-radius: 0px;
-} */
+}
+
+#toggleUser {
+  border-bottom-right-radius: 0px;
+}
 
 .toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
 {
@@ -508,7 +512,7 @@ z-index: 5;
 
 
 /*SMARTPHONE LANDSCAPE*/
-@media (max-width: 747px) and (min-width:479px) {
+@media (max-width: 767px) and (min-width:479px) {
 	
 #datausersmartphoneToggle{
 width: 55px;
@@ -635,8 +639,13 @@ outline: none;
 
 
 #toggleMenu{
-border-bottom-left-radius: 0px;
-width:55px;
+	  border-bottom-left-radius: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 15px;
+  width: 50px;
+
 }
 
 #toggleUser{
@@ -807,8 +816,12 @@ height: auto;
 #contMainEl3{ position: absolute; top:75% !important;  left: auto; margin:0px;right:calc(49% + 9px);right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px);}
 
 #toggleMenu{
-border-bottom-left-radius: 0px;
-width:55px;
+	  border-bottom-left-radius: 0px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 15px;
+width:50px;
 }
 
 #toggleUser{

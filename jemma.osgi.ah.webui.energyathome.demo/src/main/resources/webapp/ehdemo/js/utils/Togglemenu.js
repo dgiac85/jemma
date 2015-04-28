@@ -1,13 +1,25 @@
 //per il cross-browsing
-if (client.browser.firefox){
+if (client.engine.gecko){
 	var width=1204;
+	var widthSmart=751;
 }
-if (client.browser.chrome){
+if (client.engine.webkit){
 	var width=1200;
+	var widthSmart=747;
+}
+if (client.engine.opera){
+	var width=1200;
+	var widthSmart=747;
+}
+if (client.browser.safari){
+	var width=1200;
+	var widthSmart=747;
+}
+if (!client.engine.ie){
+	var width=1200;
+	var widthSmart=747;
 }
 
-var widthSmart=766;
-var soglia=1179;
 var widthSmartPort=480;
 
 function goMobile(){
@@ -28,7 +40,7 @@ function goMobile(){
 	$('#ContentMain').css('top',height);
 	
 	
-	if($(window).width()<=widthSmart-20){
+	if($(window).width()<widthSmart){
 		goMobileSmart();
 	}
 	
@@ -70,9 +82,8 @@ function exitMobile(){
 }
 
 $(document).ready(function() {	
-
+	
 	$("#mobileMenu").css("display","block");
-
 	$("#mobileMenu").css("left","-200%");
 	if($(window).width()<width){
 		goMobile();	
@@ -87,11 +98,11 @@ $(document).ready(function() {
 	
 	
 	function ctrlHeightButtonMenu(){
-		if (($(window).width()<width) && ($(window).width()>=widthSmartPort-20) ){
+		if (($(window).width()<width) && ($(window).width()>=widthSmartPort) ){
 			heightTop=(0.5 * (parseInt($('#mobileMenu').css('height'))))-parseInt($('.MainMenuEl').css('height'));
 			$('.perCover').css("top", heightTop);						
 		}
-		if($(window).width()<widthSmart-20){
+		if($(window).width()<widthSmart){
 			heightTop=(0.4 * (parseInt($('#mobileMenu').css('height'))))-parseInt($('.MainMenuEl').css('height'));
 			$('.perCover').css("top", heightTop);
 		}
@@ -174,7 +185,7 @@ $(document).ready(function() {
 			$('#datausersmartphoneToggle').css('display','none');
 		}
 		
-		if ($(this).width() > widthSmart-20) {
+		if ($(this).width() >= widthSmart) {
 			
 		
 			element=$('#dataANDuser').detach();
@@ -187,7 +198,7 @@ $(document).ready(function() {
 			height=$("#Header").height();
 			$("#ContentMain").css("height",$(this).height()-height);
 		}
-		else{
+		if ($(this).width() < widthSmart){
 			goMobileSmart();
 		}
 		
@@ -195,12 +206,16 @@ $(document).ready(function() {
 		
 		
 		if($(this).width() < width)
-		{	
-			$("#ContentMain").css("width","100%");			
+		{							
 			$("#mobileMenu").css("display","block");			
 			goMobile();		
 			height=$("#Header").height();
 			$("#ContentMain").css("height",$(window).height()-height);
+			
+			if ( (client.engine.webkit) || (client.engine.gecko) || (client.engine.ktml) || (client.engine.opera) ){
+				$("#ContentMain").css("width","100%");
+			}			
+			
 		}
 		if($(this).width() >= width){			
 			exitMobile();

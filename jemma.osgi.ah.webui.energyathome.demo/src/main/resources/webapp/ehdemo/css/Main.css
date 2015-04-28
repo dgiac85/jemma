@@ -10,6 +10,10 @@ body,html {
 	
 }
 
+#menulabel{
+	display:none;
+}
+
 img {
 	-ms-interpolation-mode: bicubic;
 }
@@ -620,18 +624,23 @@ background-color:#333333;
 width:100%
 }
 
+#menulabel {
+  display: block;
+}
+
 }/*chiusura media query 1200 766
 
 
 
 /* iPhone 5 and other Main Smartphones----------- */
 /*SMARTPHONE LANDSCAPE*/
-@media (max-width: 747px) and (min-width:479px) {
+@media (max-width: 767px) and (min-width:479px) {
 
 #Container{
 background: #202020;
 max-height:960px;
 }
+
 
 #ContainerSX {
   position: relative;

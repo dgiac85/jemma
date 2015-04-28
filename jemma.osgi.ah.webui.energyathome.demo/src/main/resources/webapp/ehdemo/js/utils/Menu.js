@@ -20,8 +20,6 @@ var selected;
 var numButtons;
 var widthMenuButton;
 var heightMenuButton;
-var soglia=1179;
-
 
 /**
  * Inizializza il menu principale e i sottomenu I sottomenu vengono creati tutti
