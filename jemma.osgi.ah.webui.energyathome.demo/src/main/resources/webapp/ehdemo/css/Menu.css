@@ -1,17 +1,30 @@
 /*GLOBAL*/
 
+#contImg1{
+  width: 80%;
+  margin: 0px auto;
+}
+
+#contImg{
+width: 30%;
+height: 100%;
+float: left;
+  position: relative;
+  left: 15px;
+}
 
 .perCover{
   width: 150px;
   height: 180px;
   float: left;
-  margin-left: 25px;
+  margin-left: 20px;
   margin-right: 25px;
   float: left;
 }
 
-.CoverBis{
-	position:relative;
+
+#toggleUser{
+	display:none;
 }
 
 
@@ -28,7 +41,7 @@
 
 .MainMenuEl{
 	width: auto;
-    height: 80%;
+    height: 85%;
 	color: white;
 		
 	}
@@ -76,7 +89,6 @@ outline: none;
   height: 40px;
   padding: 10px;
   width: 20%;
-  margin: 5px;
   float: left;
   color: white;
   outline: none;
@@ -104,25 +116,20 @@ outline: none;
 .ContentMenuRow {
 background-color: #333333;
 position: relative;
-margin-left: 192px;
-margin-bottom: 30px;
+margin-left: 200px;
 float: left;
 width: 60%;
 overflow: hidden;
 }
 
 .ContentMenuTitle {
-	/*position: absolute;*/
-	/*top: 0%;
-	left: 38%;
-	width: 55%;
-	height: 20%;*/
-	/*text-align: center;*/
-
-	float:left;
-	font-size: 0.9em;
-	font-weight: bold;
-	text-align: left;
+  position: relative;
+  left: 20px;
+  margin: 11px auto;
+  float: left;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: left;
 }
 
 .ContentMenuImg {
@@ -151,7 +158,7 @@ border-bottom: 1px solid #CC5836;}
 #mobileMenu {
 display: block;
 background: #333333;
-position: absolute;
+position: fixed;
 top: 55px;
 width: 95%;
 height: 250px;
@@ -177,6 +184,7 @@ float: left;
 width: auto;
 height: 45px;
 margin-top:5px;
+padding-right: 6px;
 cursor: pointer;
 background:#333333;
 border-radius: 15px;
@@ -240,6 +248,10 @@ opacity: 0;
 transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
 
 
+#datausersmartphoneToggle{
+	display:none;
+}
+
 /**********************************************************************
 Media Queries
 ***********************************************************************/
@@ -258,36 +270,36 @@ Media Queries
 }
 
 
+@media (max-width: 1220px) and (min-width:768px){
+			
+#datausersmartphoneToggle{
+	display:none;
+}
 
+#toggleUser{
+	display:none;
+}
 
+#ContainerUser{
+	display:none;
+}
 
-@media (max-width: 1200px) and (min-width:766px){
-	
-	
-/* #Cover0{top:50%; left:5%;}
-#CoverBis0{top:46%;left:1.6%;}	
+#LogoImgUser{
+	display:none;
+}
 
-#Cover1{top:50%; left:25%;}
-#CoverBis1{top:46%;left:25%;}
-
-#Cover2{top:50%;left:50%;}
-#CoverBis2{top:46%;left:50%;}
-
-#Cover3{top:50%; left:75%;}
-#CoverBis3{top:46%; left:65%;} */
 #contImg1{	
    width: 10vw;
   margin: 0 auto;
   margin-top: 10px;	
 }
 	
-.toggleMobile {
+#toggleMenu {
 	border-top-right-radius:15px;
 	border-bottom-right-radius:0px;
 	border-bottom-left-radius:0px;
 	border-top-left-radius:0px;
 }
-
 
 .ContentMenuRow {
 margin-left:0px;
@@ -306,7 +318,7 @@ z-index: 999;
 }	
 
 #mobileMenu{
-height: 400px;
+height: 320px;
 width: 70%;
 }
 
@@ -375,16 +387,14 @@ background: #202020;
 }
 
 .MainMenuImg {
-   width: 10vw;
+   width: auto;
   height: 10vh;
 }
 
-#contMainEl0{  position: relative;}
-#contMainEl1{  position: relative;}
-#contMainEl2{ position: relative; }
-#contMainEl3{ position: relative; }
-
-
+#contMainEl0{  position: relative;left:0% !important;}
+#contMainEl1{  position: relative;left:1% !important;}
+#contMainEl2{ position: relative; left:2% !important;}
+#contMainEl3{ position: relative; left:3% !important;}
 
 #datausercontent{
 float: left;
@@ -478,9 +488,6 @@ width: 100%;
 margin: 0 auto;
 }
 
-.MainMenuElSelected {
-color: #9ec200;
-}
 
 .MainMenuEl {
 position: relative;
@@ -492,23 +499,207 @@ z-index: 5;
 
 }/*chiusura media query 1200 766*/
 
+
 /*SMARTPHONE LANDSCAPE*/
-@media (max-width: 765px),(max-height:375px) {
+@media (max-width: 747px) and (min-width:479px) {
 	
-#Cover0{top:50%; left:5%;}
-#CoverBis0{top:46%;left:3%;width:200px;height:30px;}	
+#datausersmartphoneToggle{
+width: 55px;
+float: left;
+height: auto;
+}
 
-#Cover1{top:50%; left:25%;}
-#CoverBis1{top:46%;left:25%;width:200px;height:30px;}
+#ContainerUser{
+width: 100%;
+height: 100%;
+margin: 0px auto;
+}
 
-#Cover2{top:50%;left:50%;}
-#CoverBis2{top:46%;left:50%;width:200px;height:30px;}
+#LogoImgUser{
+width: 100%;
+height: 100%;
+}
 
-#Cover3{top:50%; left:75%;}
-#CoverBis3{height:30px;}
+#datausercontent {
+width: 190px;
+margin: 0 auto;
+position: fixed;
+left: 20%;
+font-size: 1em;
+z-index: 40;
+background: #202020;
+}
+
+
+#containerToggle {
+width: 55px;
+float: left;  
+background: #202020;
+height: auto;
+}
+
+.MainMenuImg {
+  width: 10vw;
+  height: 10vh;
+}
+
+.ContentMenuImg {
+  margin: 0px auto;
+  width: 100%;
+  height: 100%;
+}
+
+.ContentMenuTitle {
+position: absolute;
+text-align: center;
+position: relative;
+left: 15%;
+float: left;
+font-size: 0.9em;
+font-weight: bold;
+text-align: left;
+}
+
+
+.ContentMenuElSelected {
+color: #9ec200;
+}
+
+.ContentMenuEl {
+  position: relative;
+  float: left;
+  height: 50%;
+  width: 20%;
+  margin: 0px;
+}
+
+.MainMenuElSelected {
+border:2px solid #9ec200;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom:none;
+background: #202020;
+}
+
+.MainMenuEl:hover {
+  border-bottom: none;
+  background: #202020;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+}
+
+#contImg {
+  height: 50px;
+  width: 50px;
+  margin: 0px auto;
+}
+
+
+.MainMenuImg{
+  width: auto;
+  height: auto;
+}
 
 
 
+.ContentMenuRow {
+  background-color: #202020;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  height: auto;
+}
+
+.MainMenuTitle {
+left: 0%;
+/* text-align: center; */
+/* width: 20%; */
+font-size: 1.5vw;
+font-weight: bold;
+padding-top: 2px;
+border: none;
+outline: none;
+}
+
+
+#toggleMenu{
+border-bottom-left-radius: 0px;
+width:55px;
+}
+
+#toggleUser{
+border-bottom-right-radius: 0px;
+}
+
+
+.ContentMenuElSelected {
+color: #9ec200;
+/* width: 90%; */
+  height: 50px;
+
+}
+
+.ContentMenuTitle {
+float: left;
+width: 100px;
+margin: 0 auto;
+}
+
+.MainMenuEl {
+  position: relative;
+  width: 100%;
+  height:100px;
+  border-bottom: none;
+  margin: 0px auto;
+  z-index: 5;
+}
+
+
+.perCover {
+  width: 150px;
+  height: 180px;
+  float: left;
+   margin-left: 15px;
+  margin-right: 1px;
+}
+
+
+
+.perCover {
+  font-size: 1vw;
+  width: 15vw;
+}
+
+#contMainEl0{  position: relative;left:0%;  height: auto; }
+#contMainEl1{  position: relative;left:5%;  height: auto;}
+#contMainEl2{ position: relative; left:10%;  height: auto;}
+#contMainEl3{ position: relative; left:15%;  height: auto;}
+
+} /*chiusura media query 765
+
+
+
+/* /*
+Media Query per DESKTOP il min height a 481px è la max altezza conosciuta che si può raggiungere con gli smartphone
+DA PROVARE NEL MOMENTO IN CUI SI VUOLE CONTROLLARE LA PARTE PER SCHERMO.
+
+@media (max-width: 765px) and (min-height: 375px) and (-webkit-device-pixel-ratio : 1){
+	
+	
+#toggleMenu{
+border-bottom-left-radius: 0px;
+width:55px;
+}
+
+#toggleUser{
+border-bottom-right-radius: 0px;
+}
+		
 #datausersmartphoneToggle{
 width: 55px;
 float: left;
@@ -542,15 +733,35 @@ position: fixed;
 border: 0px;
 padding-left: 0px;
 padding-right: 0px;
-/* border-radius: 15px; */
-/* border-top-left-radius: 0px; */
-/* border-top-right-radius: 0px; */
-/* border-bottom-right-radius: 0px; */
-/* border-bottom-left-radius: 0px; */
+border-radius: 15px;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
 width: 100%;
-/* border-bottom-right-radius: 0px; */
-/* border-bottom-left-radius: 0px; */
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 0px;
 }
+
+.MainMenuElSelected {
+border:2px solid #9ec200;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom:none;
+background: #202020;
+}
+
+.MainMenuEl:hover {
+  border-bottom: none;
+  background: #202020;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+}
+
 
 #containerToggle {
 width: 55px;
@@ -558,136 +769,6 @@ float: left;
 background: #202020;
 height: auto;
 }
-
-.ContentMenuImg {
-border: none;
-outline: none;
-  width: 10vh;
-  height: 10vh;
-}
-
-.ContentMenuTitle {
-position: absolute;
-text-align: center;
-position: relative;
-left: 15%;
-float: left;
-font-size: 0.9em;
-font-weight: bold;
-text-align: left;
-}
-
-
-.ContentMenuElSelected {
-color: #9ec200;
-}
-
-.ContentMenuEl {
-  left: 5%;
-  float: left;
-  /* width: 25%; */
-  /* top: 20%; */
-  /* margin-left: 20%; */
-}
-
-#contImg {
-float: left;
-height: auto;
-  width: auto;
-margin: 0px auto;
-}
-
-
-.MainMenuImg{
-  width: 15vw;
-  height: 30vh;
-}
-
-.ContentMenuRow {
-background-color: transparent;
-width: auto;
-margin-top: 15px;
-padding-bottom: 15px;
-margin: 0;
-}
-
-.MainMenuTitle {
-left: 0%;
-/* text-align: center; */
-/* width: 20%; */
-font-size: 0.6em;
-font-weight: bold;
-padding-top: 2px;
-border: none;
-outline: none;
-}
-
-
-#toggleMenu{
-border-bottom-left-radius: 0px;
-width:55px;
-}
-
-#toggleUser{
-border-bottom-right-radius: 0px;
-}
-
-
-.ContentMenuElSelected {
-color: #9ec200;
-/* width: 90%; */
-  height: 50px;
-
-}
-
-.ContentMenuTitle {
-float: left;
-width: 100px;
-margin: 0 auto;
-}
-
-
-
-.MainMenuEl {
-width: 20%;
-height: auto;
-position: absolute;
-top: 7.25%;
-margin-top: 0px;
-border-right:none;
-z-index: 5;
-}
-
-
-.MainMenuElSelected {
-
-border: 2px solid #9ec200;
-border-top-left-radius: 4px;
-border-bottom-left-radius:4px;
-border-bottom:none;
-
-  width: 20%;
-  height: 45%;
-z-index: 5;
-background: #202020;
-
-}
-
-#contMainEl0{top:4%; left:0%;}
-#contMainEl1{top: 4%;left: 25%;}
-#contMainEl2{
-top:4%;left:50%;  }
-#contMainEl3{top:4%;left:70%;}
-
-} /*chiusura media query 765
-
-/* Media Query per DESKTOP il min height a 481px è la max altezza conosciuta che si può raggiungere con gli smartphone
-DA PROVARE NEL MOMENTO IN CUI SI VUOLE CONTROLLARE LA PARTE PER SCHERMO.
-*/
-@media (max-width: 765px) and (min-height: 375px) and (-webkit-device-pixel-ratio : 1){
-	#mobileMenu{
-		height:50%;
-	}
 	
 	.ContentMenuEl {
   		width: 15vw;
@@ -698,46 +779,137 @@ DA PROVARE NEL MOMENTO IN CUI SI VUOLE CONTROLLARE LA PARTE PER SCHERMO.
 	}
 	
 	.MainMenuImg {
-	  	width: 15vw;
-	  	height: 15vh;
+	  	width: 11vw;
+	  	height: auto;
 	}
 	
 	.ContentMenuImg {
 	  	width: 10vw;
-  		height: 5vh;
+  		height: auto;
 	}
-}
+} */
+ 
+
  
 /*SMARTPHONE PORTRAIT*/
 @media (max-width: 480px){
-#Cover0{top: calc(4% + 2px);top: -moz-calc(4% + 2px);top: -webkit-calc(4% + 2px);}
-#CoverBis0{top:4%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}	
 
-#Cover1{top:calc(25% + 2px);top: -moz-calc(25% + 2px);top: -webkit-calc(25% + 2px);}
-#CoverBis1{top:25%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
+#contMainEl0{  position: absolute;top:5% !important;  left: auto; margin:0px;right:calc(49% + 9px); right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px);}
+#contMainEl1{  position: absolute;top:25% !important;  left: auto; margin:0px;right:calc(49% + 9px);right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px);}
+#contMainEl2{ position: absolute;top:50% !important;   left: auto;margin:0px;right:calc(49% + 9px);right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px); }
+#contMainEl3{ position: absolute; top:75% !important;  left: auto; margin:0px;right:calc(49% + 9px);right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px);}
 
-#Cover2{top:calc(50% + 2px);top: -moz-calc(50% + 2px);top: -webkit-calc(50% + 2px);}
-#CoverBis2{top: 50%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
-
-#Cover3{top:calc(75% + 2px);top: -moz-calc(75% + 2px);top: -webkit-calc(75% + 2px);}
-#CoverBis3{top:70%; width:30px;left:calc(50% + 2px);left:-moz-calc(50% + 2px);left:-webkit-calc(50% + 2px);}
-
-.MainMenuEl{
-	height:auto;
-	
+#toggleMenu{
+border-bottom-left-radius: 0px;
+width:55px;
 }
 
-#mobileMenu{
-	height:99%;
+#toggleUser{
+border-bottom-right-radius: 0px;
+}
+		
+#datausersmartphoneToggle{
+width: 55px;
+float: left;
+height: auto;
+}
+
+#ContainerUser{
+width: 100%;
+height: 100%;
+margin: 0px auto;
+}
+
+#LogoImgUser{
+width: 100%;
+height: 100%;
+}
+
+#datausercontent {
+width: 190px;
+margin: 0 auto;
+position: fixed;
+left: 20%;
+font-size: 1em;
+z-index: 40;
+background: #202020;
+}
+
+.MainMenuElSelected {
+border:2px solid #9ec200;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom:none;
+
+background: #202020;
+}
+
+.MainMenuEl:hover {
+  border-bottom: none;
+  background: #202020;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+  height:auto;
+}
+
+
+#containerToggle {
+width: 55px;
+float: left;  
+background: #202020;
+height: auto;
+}
+
+.MainMenuEl {
+  position: relative;
+  width: 100%;
+  height:89%;
+  border-bottom: none;
+  margin: 0px auto;
+  z-index: 5;
+}
+
+.perCover {
+  font-size: 1vw;
+  width: 35vw;
+}
+
+.MainMenuEl:hover {
+	
+  border-right: 2px solid #202020;
+border-bottom: 2px solid #9ec200;
+    border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+}
+
+
+#mobileMenu {
+
+  height: calc(100% - 90px);
+  height: -moz-calc(100% - 90px);
+  height: -webkit-calc(100% - 90px);
+  width: 90%;
 }
 
 	.MainMenuElSelected {
 
-border-right:none;
+  border-right: 2px solid #202020;
 border-bottom:solid;
-width: 43%;
+width: 100%;
 z-index: 5;
 height: auto;
+
+  border-top-left-radius: 4px;
+
+  border-bottom-left-radius: 4px;
+    border-top-right-radius: 0px;
+     border-bottom-right-radius: 0px;
+    
+
 }		
 	
 .MainMenuImg {
@@ -760,17 +932,25 @@ width: 80%;
   margin-bottom: 60px;
 }
 
+.ContentMenuRow {
+  background-color: #202020;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  height: 90%;
+}
 
-#contMainEl0{top:4%; left:5%;}
-#contMainEl1{top: 25%;left: 5%;}
-#contMainEl2{
-top:50%;left:5%;  }
-#contMainEl3{top:70%;left:5%;}
 	
 } /*chiusura media query 480
 
 /*Dispositivi piccolissimi come ad esempio LG Optimus One*/
 @media (max-width: 213px){
+#contMainEl0{  left: 18px !important;}
+#contMainEl1{  left: 18px !important;}
+#contMainEl2{ left: 18px !important; }
+#contMainEl3{ left: 18px !important;}
+	
 #containerToggle {
   width: 30px;
 }
@@ -791,6 +971,60 @@ top:50%;left:5%;  }
   width: 100%;
   height: 80%;
 
+}
 }/*chiusura media query 213*/
+
+/**************************************************************************/
+/*MEDIA QUERIES SPECIFICHE*/
+
+/* Samsung Galaxy S5 -----------P&L */
+@media (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
+/* Styles */
+  #mobileMenu {
+ 	 height: 250px;
+	}	
+}
+
+@media (device-width: 360px) and (device-height: 640px) and (-webkit-min-device-pixel-ratio: 2){
+	.perCover{
+		 right: -webkit-calc(49% + 7px) !important;
+		 right: -moz-calc(49% + 7px) !important;
+	}
+}
+
+/*PER FIREFOX*/
+@media (width: 360px){
+	.perCover{
+		 right: -webkit-calc(49% + 8px) !important;
+		 right: -moz-calc(49% + 8px) !important;
+	}
+}
+
+
+/* iPhone 5 -----------P&L */
+@media only screen and (device-width: 568px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+	 #mobileMenu {
+ 	 height: 230px;
+	}
+	
+}
+
+@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
+	.perCover{
+		 right: -webkit-calc(49% + 8px) !important;
+		 right: -moz-calc(49% + 8px) !important;
+	}
+}
+
+/*PER FIREFOX*/
+@media (width: 320px){
+	.perCover{
+		 right: -webkit-calc(49% + 8px) !important;
+		 right: -moz-calc(49% + 8px) !important;
+	}
+}
+
+
 
 

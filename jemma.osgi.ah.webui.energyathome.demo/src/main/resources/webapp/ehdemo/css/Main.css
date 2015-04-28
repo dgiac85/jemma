@@ -458,11 +458,11 @@ label.error {
 }
 
 #MainMenu {
-	/* width: 100%; */
-	/* height: auto; */
-	margin:auto;
-	overflow:hidden;
-	background-color:#333333;
+  width: 90%;
+  /* height: auto; */
+  margin: 14px auto;
+  overflow: hidden;
+  background-color: #333333;
 }
 
 #ContainerMenu{
@@ -477,7 +477,7 @@ label.error {
 /**********************************************************************
 Media Queries
 ***********************************************************************/
-@media (min-width: 1201px){
+@media (min-width: 1200px){
 	#Header {
   width: 100%;
   background-color: #202020;
@@ -493,7 +493,7 @@ Media Queries
 }
 
 /*Per IPAD e tablet in landscape*/
-@media (max-width: 1200px){
+@media (max-width: 1220px){
 
 #ContainerSX {
   position: relative;
@@ -507,7 +507,7 @@ Media Queries
   float: left;
   left:2%;
   width: 49%;
-  height: 100%;
+  height: 97%;
 }
 
 
@@ -540,10 +540,10 @@ width:200px;
   border: 2px solid #9ec200;
   border-radius: 4px;
   -moz-border-radius: 4px;
-  height: 200px;
+  height: 130px;
   float: none;
   position: relative;
-  top: 40%;
+  top: 50%;
 }
 	
 	#Container{
@@ -583,10 +583,7 @@ width:200px;
 	
 	 #ContentMain {
 		width: 100%;
-		padding-bottom:10px;
-		height: calc(100% - 70px);	
-		height: -moz-calc(100% - 70px);
-		height: -webkit-calc(100% - 70px);		
+		padding-bottom:10px;	
 	}
 	
 	#logo {  
@@ -607,6 +604,7 @@ width:200px;
 height: 100%;
 overflow: hidden;
 color: #202020;
+margin-left: 1px;
 }
 
 #ContainerMenu{
@@ -625,13 +623,27 @@ width:100%
 }/*chiusura media query 1200 766
 
 
+
 /* iPhone 5 and other Main Smartphones----------- */
 /*SMARTPHONE LANDSCAPE*/
-@media (max-width: 765px),(max-height:375px){
+@media (max-width: 747px) and (min-width:479px) {
 
 #Container{
 background: #202020;
 max-height:960px;
+}
+
+#ContainerSX {
+  position: relative;
+  float: left;
+  width: 99%;
+  height: 45%;
+}
+
+#Consigli {
+  width: 100%;
+  height: 10%;
+  margin-top: 2px;
 }
 
 #menulabel{
@@ -699,14 +711,14 @@ background-color: #333333;
 		margin:5px auto;
 	}
 
-	#ContentMenu {
+/* 	#ContentMenu {
    background-color: #202020;
   position: absolute;
   left: 0%;
   top: 45%;
     width: 99%;
   height: 40% !important;
-}
+} */
 
 #Header{
 		  /* min-width: 426px; */
@@ -735,12 +747,13 @@ background-color: #333333;
 #LogoImg {
     /* margin: 0px auto; */
   margin-left: 20px;
+  height: 59px;
 }
 	
 #logo{
-  width: calc(100% - 110px);
-  width: -moz-calc(100% - 110px);
-  width: -webkit-calc(100% - 110px);
+  width: calc(100% - 141px);
+  width: -moz-calc(100% - 141px);
+  width: -webkit-calc(100% - 141px);
   margin: 0px auto;
   height: 57px;
   position: relative;
@@ -770,21 +783,54 @@ float: none;
 .Content {
   margin-left: 10px;
 }
+
+#ContentMenu {
+  top: 40%;
+}
+
 }/*chiusura media query 765
+
+
+
 
 /*SMARTPHONE PORTRAIT*/
 @media (max-width: 480px){
+#menulabel{
+	display:none;
+}
 
+
+#logo {
+  width: calc(100% - 110px);
+  width: -moz-calc(100% - 110px);
+  width: -webkit-calc(100% - 110px);
+  
+  margin: 0px auto;
+  height: 51px;
+}	
+
+#LogoImg{
+	  height: 61px;
+}
+
+#dataANDuser {
+  height: 51px;
+  margin: 0px auto;
+  width: 200px;
+  float:none;
+}
+	
 #MainMenu {
   width: 50%;
   height: 100%;
 	}
 	
-	#ContentMenu {
-  left: 50%;
+#ContentMenu {
+  left: 49%;
   top: 10px;
-  width: auto;
-    height: 93% !important;
+  width: 50%;
+  height: 90% !important;
+  position: relative;
 }
 
 }/*chiusura media query 480*/
@@ -819,6 +865,10 @@ float: none;
 	#ContentMain {
 		height:525px;
 	}
+	
+	.perCover {
+ 	 height:auto !important;
+	}
 }
 
  /*FIREFOX BROWSER
@@ -828,5 +878,80 @@ float: none;
 	}
 	
 }*/
+
+/**************************************************************************/
+/*MEDIA QUERIES SPECIFICHE*/
+
+/* iPads (portrait) ----------- */
+@media only screen and (max-device-width : 800px) and (max-device-height : 1280px) and (-webkit-min-device-pixel-ratio : 1) {
+/* Styles */
+
+	#ContainerSX {
+	  width: 99%;
+	  height:56%;
+	}
+	
+	#ContainerDX {
+	  left:0%;
+	  height:40%;
+	  width: 99%;
+	}
+	
+	#CostoConsumoInfo {
+	  width: 100%;
+	}
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
+/* Styles */
+#ContentMenu {
+  height: 100px;
+}
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (device-width: 568px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+	#ContentMenu {
+  height: 100px;
+}
+	
+}
+
+/* Galaxy Tab (landscape) ----------- */
+@media only screen and (device-height : 600px) and (device-width : 1024px) and (-webkit-device-pixel-ratio: 1) {
+/* Styles */
+#ContainerSX {
+  position: relative;
+  float: left;
+  width: 49%;
+  height: 97%;
+}
+
+#ContainerDX {
+  position: relative;
+  float: left;
+  left:2%;
+  width: 49%;
+  height: 97%;
+}
+
+#Consigli {
+  height: 13%;
+}
+	
+}
+
+/* Galaxy Tab (portrait) ----------- */
+@media only screen and (device-width : 600px) and (device-height : 1024px) and (-webkit-device-pixel-ratio: 1) {
+/* Styles */
+#Consigli {
+  height: 13%;
+}
+	
+}
+
+
 
 

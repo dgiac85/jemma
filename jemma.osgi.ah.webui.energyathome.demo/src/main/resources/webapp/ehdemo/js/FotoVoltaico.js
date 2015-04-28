@@ -1272,7 +1272,7 @@ CostiConsumi.SetConsumoImg = function() {
 
 	if (CostiConsumi.mode == CostiConsumi.FOTOVOLTAICO) {
 		if ($('#consigliTurnOn').length == 0) {
-			$(document.createElement('div')).attr('id', 'consigliTurnOn').attr('style','font-size: 2vmin').appendTo($("#Consigli")).show();
+			$(document.createElement('div')).attr('id', 'consigliTurnOn').appendTo($("#Consigli")).show();
 		}
 
 		if (valProd > val) {

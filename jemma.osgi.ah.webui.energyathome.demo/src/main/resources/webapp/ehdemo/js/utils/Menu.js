@@ -15,7 +15,7 @@ var Menu = {
 }
 
 var ctrl=false; //controllo per il primo accesso
-var theWidth=1200;
+var theWidth=1204;
 var selected;
 var numButtons;
 var widthMenuButton;
@@ -154,7 +154,7 @@ Menu.OnClickMainMenu = function(val) {
 		iContent = parseInt(oldContent.substring(k + 7));
 	
 		  
-		if ($(window).width()>theWidth){
+		if ($(window).width()>=theWidth){
 			exitFunc = Menu.MainMenu[iMain].SubMenu[iContent].FuncExit;
 			if ((exitFunc != undefined) && (exitFunc != null)) {
 				Tracing.Trace(Menu.MainMenu[iMain].SubMenu[iContent].Section,Tracing.OUT, null, null);
@@ -193,7 +193,7 @@ Menu.OnClickMainMenu = function(val) {
 	$("#ContentMenu" + val).addClass("visibleDiv");
 	$("#ContentMenu" + val).removeClass("invisibleDiv");
 	// seleziono primo elemento del menu
-	if($(window).width()>theWidth){
+	if($(window).width()>=theWidth){
 		$("#el" + val + "Content0").addClass("ContentMenuElSelected");
 		$("#img" + val + "Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);		
 	}
@@ -213,7 +213,7 @@ Menu.OnClickMainMenu = function(val) {
 			
 	}
 	
-	if($(window).width()>theWidth){
+	if($(window).width()>=theWidth){
 			func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
 			console.log("entra");		
 	}
@@ -297,7 +297,7 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 	oldContent = $(".ContentMenuElSelected").attr("id");
 	if (Main.env == 0) console.log(80, "Menu", "OnClickContentMenu oldContent = " + oldContent);
 	
-	if($(window).width()<=theWidth){
+	if($(window).width()<theWidth){
 	
 		if ($(".toggleMobile").hasClass("active")){
 			$(".toggleMobile").toggleClass("active");
