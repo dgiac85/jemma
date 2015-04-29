@@ -1,26 +1,28 @@
-//per il cross-browsing
+//per il cross-browsing //CI STA ANCORA UN PROBLEMA CON LA WIDTH a 750 per firefox
+if (!client.engine.ie){
+	var width=1200;
+	var widthSmart=731;
+}
+
 if (client.engine.gecko){
 	var width=1204;
-	var widthSmart=751;
+	var widthSmart=735;
 }
 if (client.engine.webkit){
 	var width=1200;
-	var widthSmart=747;
+	var widthSmart=731;
 }
 if (client.engine.opera){
 	var width=1200;
-	var widthSmart=747;
+	var widthSmart=731;
 }
 if (client.browser.safari){
 	var width=1200;
-	var widthSmart=747;
-}
-if (!client.engine.ie){
-	var width=1200;
-	var widthSmart=747;
+	var widthSmart=731;
 }
 
 var widthSmartPort=480;
+var widthSmart2=854;
 
 function goMobile(){
 		
@@ -85,27 +87,47 @@ $(document).ready(function() {
 	
 	$("#mobileMenu").css("display","block");
 	$("#mobileMenu").css("left","-200%");
-	if($(window).width()<width){
+	if($(window).width() < width){
 		goMobile();	
 		heightH=$("#Header").height();
 		$("#ContentMain").css("height",$(window).height()-heightH);
+		$("#ContainerLogo").css("top","0px");
+	}
+//	if($(window).width()<widthSmart){
+//		height=$("#Header").height();
+//		$("#dataANDuser").css("top",height*(-1));
+//	}
+	
+	if( ($(window).width()<widthSmart2) && ($(window).height()<widthSmartPort) ){
+		$("#ContentMain").css("height","auto");
+	}
+	
+	if($(window).width()<widthSmartPort){
+		$("#ContentMain").css("height","auto");
 	}
 	if($(window).width()>=width){
 		heightContainerMenu=$("#ContainerMenu").height();	
 		$("#ContentMain").css("height",heightContainerMenu);
+		$("#Content").css("height",heightContainerMenu);
 		exitMobile();
 	}
 	
 	
 	function ctrlHeightButtonMenu(){
-		if (($(window).width()<width) && ($(window).width()>=widthSmartPort) ){
-			heightTop=(0.5 * (parseInt($('#mobileMenu').css('height'))))-parseInt($('.MainMenuEl').css('height'));
-			$('.perCover').css("top", heightTop);						
+		if (($(window).width()<width) && ($(window).width()>widthSmart-2) ){
+				heightTop=(0.5 * (parseInt($('#mobileMenu').css('height'))))-parseInt($('.MainMenuEl').css('height'));
+				$('.perCover').css("top", heightTop);
+				
 		}
-		if($(window).width()<widthSmart){
+		if($(window).width()<=widthSmart){
 			heightTop=(0.4 * (parseInt($('#mobileMenu').css('height'))))-parseInt($('.MainMenuEl').css('height'));
 			$('.perCover').css("top", heightTop);
+			console.log("HT="+heightTop);
 		}
+		
+		if ($(window).width()===736){ //particolarità per iPhone6Plus
+			$('.perCover').css("top", "20px"); 
+		} 
 	}
 	
 	//successive ctrl of the screen resolution that can change in real-time
@@ -152,7 +174,7 @@ $(document).ready(function() {
 	    
 	    $("#toggleUser").click(function(){
 	    	
-	    	height=$("#Header").height();
+	       	height=$("#Header").height();
 	    	if ($("#dataANDuser").css("display")==="block"){	
 	    		$("#ContainerLogo").css("display","block");
 	    		$("#dataANDuser").css("display","none");	    		
@@ -164,13 +186,31 @@ $(document).ready(function() {
 	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_verde.png");	
 	    	}
 	    	
-	    });
+	    	
+//	    	height=$("#Header").height();
+//	    	if ($("#dataANDuser").css("top")==="0px"){
+//	    		$("#ContainerLogo").animate({"top":"0px"}, 500);
+//	    		$("#dataANDuser").animate({"top":height*(-1)}, 500);	    		
+//	    		$("#dataANDuser").css("display","none");
+//	    		$("#ContainerLogo").css("display","block");	    		
+//	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_bianco.png");	    		
+//	    	}
+//	    	if ($("#ContainerLogo").css("top")==="0px"){	    		
+//	    		$("#dataANDuser").animate({"top":"0px"}, 500);
+//	    		$("#ContainerLogo").animate({"top":height*(-1)}, 500);
+//	    		$("#ContainerLogo").css("display","none");
+//	    		$("#dataANDuser").css("display","block");    		
+//	    		$("#LogoImgUser").attr("src","./Resources/Images/menu/utente_verde.png");	
+//	    	}	    	
+	 });
 	    
 	
 	
 	//funzione per il controllo dell'on resize
 	$(window).on("resize", function()
 	{
+		
+		
 		if ($("#dataANDuser").css("display")==="block"){	
     		$("#ContainerLogo").css("display","block");
     		$("#dataANDuser").css("display","none");	    		
@@ -187,7 +227,7 @@ $(document).ready(function() {
 		
 		if ($(this).width() >= widthSmart) {
 			
-		
+			console.log("entra");
 			element=$('#dataANDuser').detach();
 			element1=$('#HeaderSep').detach();
 			
@@ -197,13 +237,7 @@ $(document).ready(function() {
 
 			height=$("#Header").height();
 			$("#ContentMain").css("height",$(this).height()-height);
-		}
-		if ($(this).width() < widthSmart){
-			goMobileSmart();
-		}
-		
-		
-		
+		}		
 		
 		if($(this).width() < width)
 		{							
@@ -221,13 +255,27 @@ $(document).ready(function() {
 			exitMobile();
 			heightMenu=$("#ContainerMenu").css("height");
 			$("#ContentMain").css("height",heightMenu);
+			$("#Content").css("height",heightMenu);
 			
 			$("#ContentMain").css("width","-webkit-calc(100% - 192px)");
 			$("#ContentMain").css("width","-moz-calc(100% - 192px)");
-			$("#ContentMain").css("width","-webkit-calc(100% - 192px)");
+			$("#ContentMain").css("width","calc(100% - 192px)");
+			
+			$("#Content").css("width","-webkit-calc(100% - 192px)");
+			$("#Content").css("width","-moz-calc(100% - 192px)");
+			$("#Content").css("width","calc(100% - 192px)");
+			
 			$("#mobileMenu").css("display","none");
 				
-		}		
+		}	
+		
+		if( ($(window).width()<widthSmart2) && ($(window).height()<widthSmartPort) ){
+			$("#ContentMain").css("height","auto");
+		}
+		
+		if($(window).width()<widthSmartPort){
+			$("#ContentMain").css("height","auto");
+		}
 
 		});		
 	

@@ -10,7 +10,11 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta content='True' name='HandheldFriendly' />
-		<meta content='width=device-width, initial-scale=1.0, maximum-scale=3.0' name='viewport' />
+		<!-- <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' /> -->
+		<meta id='viewport' name="viewport"/>
+		
+	
+		
 		
 		<link rel='shortcut icon' href='Resources/Images/eh_bianca.ico' />
 		<link rel='icon' href='Resources/Images/eh_bianca.ico' />
@@ -44,6 +48,9 @@
 		<link rel="shortcut icon" href="Resources/Images/energy@home-icon-addressbar.png" />
 		<link rel="apple-touch-startup-image" sizes="1004x768" href="./startup-icon-ipod.png" />
 		<link rel="apple-touch-startup-image" href="./startup-icon-iphone.png" />
+		
+	
+	
 		
 		<script type="text/javascript">
 			var localDate = new Date();
@@ -141,6 +148,15 @@
 		<script language="javascript" type="text/javascript" src="js/utils/Menu.js?201305315125"></script>
 		
 		<script language="javascript" type="text/javascript" src="js/utils/ToggleMenu.js"></script>
+		
+	    <script type="text/javascript">
+			$(document).ready(function(){
+	           if (screen.width < 767) {
+	                        var viewportContent = "width=device-width, maximum-scale=1.0, initial-scale=1.0";                            
+	                        document.getElementById('viewport').setAttribute('content', viewportContent);                         
+	            }
+	        });
+		</script>
 		
 	</head>
 	<body onLoad="Main.onLoad()" onUnload="Main.onUnload()">
@@ -286,7 +302,7 @@
 							<button id='nextNews'>next</button>
 							<button id='backNews'>go back</button>
 						</div>
-						<div id='InfoFeedDettaglio' style='margin-top:5px; font-size: 1vw'>
+						<div id='InfoFeedDettaglio'>
 							<div id='PrimaNews'>
 								<a target='_blank'>
 									<div class='titoloNews'>

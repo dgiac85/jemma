@@ -15,7 +15,7 @@ var Trial = {
 				
 	htmlInformazioni : "<div id='InformazioniTitolo' class='TrialTitolo'>" + Msg.trial["titoloInfo"] + "</div><div id='Informazioni'>" +
 		"<img id='InfoTrialBackground' src='" + Define.trial["sfondoTrial"] + "'>" +
-		"<div id='InformazioniTestoTitolo' style='font-size:1vw;'><a target='_blank' href='http://www.energy-home.it/SitePages/Activities/Trial.aspx'>" + Msg.trial["titoloTestoInfo"] + "</a>"+
+		"<div id='InformazioniTestoTitolo'><a target='_blank' href='http://www.energy-home.it/SitePages/Activities/Trial.aspx'>" + Msg.trial["titoloTestoInfo"] + "</a>"+
 		"<br/><br/><div id='MembersEH' style='position: absolute;'>"+Msg.trial["membriEH"]+"</div></div>"+
 		"<img id='InformazioniTesto' align='middle' src='" + Define.trial["imgAssociati"] + "'/></div>",
 	

@@ -38,8 +38,8 @@
 			this.img1.style.position = 'absolute';
 			this.img1.style.width = '100%';
 			this.img1.style.height = '100%';
-			this.img1.style.left = '0px';
-			this.img1.style.top = '0px';
+			this.img1.style.left = '10px';
+			this.img1.style.top = '10px';
 			
 			this.img2 = document.createElement('img');
 			var imagename = '';
@@ -103,6 +103,7 @@
 			this.img2.style.width = '89.3%';
 			this.img2.style.height = '80%';
 			this.img2.style.left = '7.2%';	
+			this.img2.style.top='10px';
 			this.img2.style.bottom = '12%'; //'3.4%';
 			
 			this.img3 = document.createElement('img');
@@ -110,7 +111,8 @@
 			this.img3.style.position = 'absolute';
 			this.img3.style.width = '89.3%';
 			this.img3.style.height = '80%';
-			this.img3.style.left = '7.2%';	
+			this.img3.style.left = '7.2%';
+			this.img3.style.top = '10px';
 			this.img3.style.bottom = '12%'; //'3.4%';
 			
 			this.img4 = document.createElement('img');

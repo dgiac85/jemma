@@ -328,11 +328,11 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 	
     if ((valMain==0) && (valContent==1)){
 		$("#Consigli").css("display","none");
-		$("#CostoConsumoSintesi").css("height","98%");
+		//$("#CostoConsumoSintesi").css("height","98%");
     }	
 	else{
 		$("#Consigli").css("display","block");
-		$("#CostoConsumoSintesi").css("height","70%");
+		//$("#CostoConsumoSintesi").css("height","70%");
     }
     
     if ((valMain==0) && (valContent==3)){

@@ -151,11 +151,12 @@ span {
 }
 
 #Content {
-	position: absolute;
-	left: 15%;
-	top: 11%;
-	width: 83%;
-	height: 75%;
+	position:relative;
+	width: -webkit-calc(100% - 192px);
+  	width: -moz-calc(100% - 192px);
+  	width: calc(100% - 192px);
+	padding-bottom:10px;
+	height:725px;
 	overflow: hidden;
 	color: #202020;
 	background-color: #333;
@@ -198,7 +199,7 @@ span {
 }
 
 .Content {
-	/*position:relative;*/
+	position:relative;
 	/*left: 1%;*/
 	/*top: 10%;*/
 	/*width: 100%;*/
@@ -209,13 +210,13 @@ span {
 }
 
 #NonDisponibile {
-	position: absolute;
-	color: #abd037;
-	font-size: 2.0em;
-	text-align:center;
-	overflow: hidden;
-	padding-top:20%;
-	left: 30%;
+	position: relative;
+  color: #abd037;
+  font-size: 2.0em;
+  text-align: center;
+  overflow: hidden;
+  /* padding-top: 20%; */
+  margin: 21% auto;
 }
 
 #Timestamp {
@@ -628,13 +629,21 @@ width:100%
   display: block;
 }
 
-}/*chiusura media query 1200 766
+}/*chiusura media query 1200 766*/
+
+@media (max-width: 1220px) and (min-width:768px){
+	#menulabel {
+  display: block;
+}
+}
+
+
 
 
 
 /* iPhone 5 and other Main Smartphones----------- */
 /*SMARTPHONE LANDSCAPE*/
-@media (max-width: 767px) and (min-width:479px) {
+@media (max-width: 751px) and (min-width:479px) {
 
 #Container{
 background: #202020;
@@ -778,6 +787,7 @@ width: 200px;
 height: 58px;
 margin: 0 auto;
 float: none;
+display:block;
 /* padding-bottom: 5px; */
 }
 #userID{
@@ -808,6 +818,27 @@ float: none;
 	display:none;
 }
 
+#ContainerSX {
+  width: 99%;
+  height: 56%;
+}
+
+#ContainerDX {
+  left: 0%;
+  height: 40%;
+  width: 99%;
+}
+
+#ContentMain{
+	height:auto;
+	position:absolute;
+	left:0px;
+}
+
+#Header {
+  position: fixed;
+  z-index: 100;
+}
 
 #logo {
   width: calc(100% - 110px);
@@ -827,6 +858,7 @@ float: none;
   margin: 0px auto;
   width: 200px;
   float:none;
+  display:none;
 }
 	
 #MainMenu {
@@ -866,7 +898,7 @@ float: none;
 
 
 /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX */
-@media (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
+@media only screen and (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
 	#ContainerMenu {
 	  height: 525px;
 	}
@@ -877,6 +909,12 @@ float: none;
 	
 	.perCover {
  	 height:auto !important;
+	}
+}
+
+@media  only screen and (device-height: 1280px) and (device-width:752px){
+	ContainerDX{
+		height:720px;
 	}
 }
 
@@ -894,22 +932,38 @@ float: none;
 /* iPads (portrait) ----------- */
 @media only screen and (max-device-width : 800px) and (max-device-height : 1280px) and (-webkit-min-device-pixel-ratio : 1) {
 /* Styles */
-
+ 
 	#ContainerSX {
 	  width: 99%;
-	  height:56%;
+	  height:auto;
 	}
 	
 	#ContainerDX {
 	  left:0%;
-	  height:40%;
+	    height: auto;
 	  width: 99%;
 	}
 	
 	#CostoConsumoInfo {
 	  width: 100%;
-	}
+	} 
 }
+
+@media (max-width:854px) and (max-height:480px){
+	#ContainerSX {
+  		width: 100%;
+	}
+	#ContentMain{
+		height:auto;
+	}
+	#ContainerDX {
+  left: 0%;
+  height:513px;
+  width: 99%;
+	}
+	
+}
+
 
 /* Samsung Galaxy S5 ----------- */
 @media (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
@@ -960,6 +1014,35 @@ float: none;
 }
 	
 }
+
+/* IPhone6 Plus (landscape) ----------- */
+@media (device-width: 736px) and (device-height:414px){
+	#dataANDuser {
+  position: relative;
+  /* left: 5%; */
+margin: 0 auto;
+width: 200px;
+height: 58px;
+margin: 0 auto;
+float: right;
+display:block;
+/* padding-bottom: 5px; */
+}
+
+#logo {
+  width: calc(100% - 141px);
+  width: -moz-calc(100% - 141px);
+  width: 20%;
+  margin: 0px auto;
+  height: 57px;
+  position: relative;
+  top: 0px;
+}
+
+
+
+}
+
 
 
 
