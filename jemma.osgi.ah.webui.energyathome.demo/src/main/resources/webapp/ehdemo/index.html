@@ -10,18 +10,14 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta content='True' name='HandheldFriendly' />
-		<!-- <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0' name='viewport' /> -->
-		<meta id='viewport' name="viewport"/>
-		
+		<meta name='viewport' content='width=device-width, user-scalable=no'/>
 	
-		
-		
 		<link rel='shortcut icon' href='Resources/Images/eh_bianca.ico' />
 		<link rel='icon' href='Resources/Images/eh_bianca.ico' />
 		
 		<link rel='stylesheet' type='text/css' href='js/other/spinner.css' />
-		<link rel='stylesheet' type='text/css' href='css/Main.css' />
-		<link rel='stylesheet' type='text/css' href='css/Menu.css' />
+		<link rel='stylesheet' type='text/css' href='css/Main.css'  media='screen'/>
+		<link rel='stylesheet' type='text/css' href='css/Menu.css' media='screen'/>
 		<link rel='stylesheet' type='text/css' href='css/Storico.css' />
 		<link rel='stylesheet' type='text/css' href='css/Community.css' />
 		<link rel='stylesheet' type='text/css' href='css/Trial.css' />
@@ -87,6 +83,7 @@
 		<script language="javascript" type="text/javascript" src="js/utils/Tools.js?201305315125"></script>
 		
 		<script language="javascript" type="text/javascript" src="js/utils/client.js"></script>
+		<script language="javascript" type="text/javascript" src="js/utils/modernizr.custom.js"></script>
 		
 		
 
@@ -104,6 +101,7 @@
 		<script language="javascript" type="text/javascript" src="js/dispositivi/ifIndesitFridge.js"></script>
 		<script language="javascript" type="text/javascript" src="js/dispositivi/ifIndesitOven.js"></script>
 		<script language="javascript" type="text/javascript" src="js/dispositivi/ifWindowCovering.js"></script>
+		<script language="javascript" type="text/javascript" src="js/plot/touch-tooltip-fix.js"></script>
 		
 		<script type="text/javascript">
 			var w = window.innerWidth;
@@ -149,20 +147,12 @@
 		
 		<script language="javascript" type="text/javascript" src="js/utils/ToggleMenu.js"></script>
 		
-	    <script type="text/javascript">
-			$(document).ready(function(){
-	           if (screen.width < 767) {
-	                        var viewportContent = "width=device-width, maximum-scale=1.0, initial-scale=1.0";                            
-	                        document.getElementById('viewport').setAttribute('content', viewportContent);                         
-	            }
-	        });
-		</script>
-		
 	</head>
 	<body onLoad="Main.onLoad()" onUnload="Main.onUnload()">
 		
 	<div id="Container">
-		<div id="mobileMenu" class="mMenu"></div>			
+		<div id="mobileMenu" class="mMenu"></div>	
+		<div id="mobileElett"><div id ="chiudiElet" style="width:30px;height:30px;background-color:red;""></div></div>		
 		<div id="Header">
 			<div id="containerToggle" class="cToggle">
 				<div class="toggleMobile" id="toggleMenu">	
@@ -179,7 +169,7 @@
 				</div>
 			</div>				
 			<div id="datausersmartphoneToggle" style="float:right">
-				<div class="toggleMobile" id="toggleUser">
+				<div class="toggleMobile2" id="toggleUser">
 					<div id="ContainerUser">	
 						<img id="LogoImgUser" src="./Resources/Images/menu/utente_bianco.png" >
 					</div>
@@ -337,7 +327,7 @@
 				
 				</div>  <!-- chiusura content main -->
 			<div id="ContainerContentMenu" style="float:left;width:100%;height:auto;"> 
-				<div id="ContentMenu"></div>
+				<div id="ContentMenu"></div></div>
 			 </div>
 			
 		</div> <!-- chiusura container -->

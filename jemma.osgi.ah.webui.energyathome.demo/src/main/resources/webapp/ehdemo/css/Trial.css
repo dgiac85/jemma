@@ -166,32 +166,32 @@
 }
 
 #InformazioniTestoTitolo, #ContattiTestoTitolo {
-  position: absolute;
-  top: 1%;
-  left: 38%;
-  width: 20%;
-  /* margin: 0px auto; */
-  font-size: 0.8vw;
-  /* width: 90%; */
-  height: auto;
+  position: relative;
+  top: -98%;
+  left: 0%;
+  width: auto;
+  margin: 0px auto;
+  font-size: 1vw;
+  width: 27%;
+  /* height: auto; */
   /* text-align: center; */
   /* font-weight: bold; */
 }
 
 #MembersEH {
-	position: absolute;
-	top: 70%;
-	left: 5%;
-	width: 90%;
-	height: 8%;
-	text-align: center;
-	font-weight: bold;
-	//border-bottom: solid 1px #9EC200;
+  position: absolute;
+  margin-top: 10px;
+  left: 3%;
+  width: 76%;
+  margin: -12px auto;
+  /* height: 8%; */
+  /* text-align: left; */
+  font-weight: bold;
 }
 
 #InformazioniTesto {
   position: absolute;
-  top: 8%;
+  top: 11%;
   left: 5%;
   width: 90%;
   height: 87%;

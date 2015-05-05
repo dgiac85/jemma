@@ -28,7 +28,7 @@ img {
 
 span {
 	color: black;
-	font-size: 1.0em;
+	font-size: 1.5vw;
 }
 
 
@@ -101,6 +101,8 @@ span {
 	
 }
 
+
+
 #Consigli{
   float: left;
   position: relative;
@@ -120,15 +122,15 @@ span {
 }
 
 #userID{
-	/*position: relative;*/
-	margin-top: 10px;
-	margin-right:10px;
-	color: #fff;
-	width:100%;
-	font-size: 1.0em;
-	text-align:right;
-	overflow: hidden;
-	float: right;
+  /* position: relative; */
+  margin-top: 5px;
+  margin-right: 10px;
+  color: #fff;
+  width: 100%;
+  font-size: 1.2vw;
+  text-align: right;
+  overflow: hidden;
+  float: right;
 }
 
 #ContentMenu {
@@ -199,7 +201,6 @@ span {
 }
 
 .Content {
-	position:relative;
 	/*left: 1%;*/
 	/*top: 10%;*/
 	/*width: 100%;*/
@@ -220,29 +221,34 @@ span {
 }
 
 #Timestamp {
-	/*position: absolute;*/
-	margin-top: 5px;
-	margin-right: 10px;
-	float:right;
-	text-align:right;
-	width: 100%;
-	text-align:right;
-	font-size: 1.0em;
+
+  margin-top: 2px;
+  margin-right: 10px;
+  float: right;
+  height:3vh;
+  text-align: right;
+  width: 100%;
+  text-align: right;
+  font-size: 1.2vw;
 }
 
 #Data {
 	margin-right: 12px;
 	color: #f0f0f0;
+	font-size:1.2vw
 	
 }
 
 #Ora {
 	color: #f0f0f0;
+	  font-size: 1.2vw;
 	
 }
 
 #ClockImg {
-	margin-right: 12px;
+	  margin-right: 9px;
+  width: 1.3vw;
+  position: relative;
 	
 }
 
@@ -479,10 +485,11 @@ label.error {
 	background-color:#333333;
 }
 
+
 /**********************************************************************
 Media Queries
 ***********************************************************************/
-@media (min-width: 1200px){
+@media only screen and (min-width: 1221px){
 	#Header {
   width: 100%;
   background-color: #202020;
@@ -498,14 +505,27 @@ Media Queries
 }
 
 /*Per IPAD e tablet in landscape*/
-@media (max-width: 1220px){
+@media only screen and (max-width: 1220px){
 
 #ContainerSX {
   position: relative;
+  margin-left: 5px;
   float: left;
   width: 49%;
   height: 97%;
 }
+
+#Data {
+	margin-right: 12px;
+	color: #f0f0f0;
+	font-size:1.8vw;
+}
+
+#Ora {
+	color: #f0f0f0;
+	
+}
+
 
 #ContainerDX {
   position: relative;
@@ -547,8 +567,10 @@ width:200px;
   -moz-border-radius: 4px;
   height: 130px;
   float: none;
-  position: relative;
-  top: 50%;
+  position: absolute;
+  top: 53%;
+left: 1%;
+width: 98%;
 }
 	
 	#Container{
@@ -587,8 +609,13 @@ width:200px;
 	}
 	
 	 #ContentMain {
+	 position:absolute;
 		width: 100%;
-		padding-bottom:10px;	
+		max-height: 820px;
+  		min-height: 808px;
+		left:0px;
+		padding-bottom:10px;
+		margin-top:62px;	
 	}
 	
 	#logo {  
@@ -631,7 +658,7 @@ width:100%
 
 }/*chiusura media query 1200 766*/
 
-@media (max-width: 1220px) and (min-width:768px){
+@media only screen and (max-width: 1220px) and (min-width:768px){
 	#menulabel {
   display: block;
 }
@@ -643,19 +670,30 @@ width:100%
 
 /* iPhone 5 and other Main Smartphones----------- */
 /*SMARTPHONE LANDSCAPE*/
-@media (max-width: 751px) and (min-width:479px) {
+@media only screen and (max-width: 951px) and (min-width:479px) {
 
 #Container{
 background: #202020;
-max-height:960px;
+
 }
 
 
 #ContainerSX {
-  position: relative;
+   position: relative;
   float: left;
   width: 99%;
-  height: 45%;
+  height: 430px;
+  margin-left: 0px;
+
+}
+
+#ContainerDX {
+  position: relative;
+  float: left;
+  left: 2%;
+  width: 99%;
+  height: 1000px;
+  margin-left: 0px;
 }
 
 #Consigli {
@@ -710,14 +748,13 @@ background-color: #333333;
 	}
 	
 	#ContentMain {
-  position: relative;
   left: 0;
   float: left;
   width: 100%;
-  height: 1080px;
   background-color: #333333;
   overflow: hidden;	
-  max-height:1080px;
+  max-height: 1500px;
+  min-height: 1500px;
 	}
 	
 	
@@ -728,15 +765,6 @@ background-color: #333333;
 	#userID{
 		margin:5px auto;
 	}
-
-/* 	#ContentMenu {
-   background-color: #202020;
-  position: absolute;
-  left: 0%;
-  top: 45%;
-    width: 99%;
-  height: 40% !important;
-} */
 
 #Header{
 		  /* min-width: 426px; */
@@ -804,7 +832,7 @@ display:block;
 }
 
 #ContentMenu {
-  top: 40%;
+  top: 50%;
 }
 
 }/*chiusura media query 765
@@ -812,89 +840,7 @@ display:block;
 
 
 
-/*SMARTPHONE PORTRAIT*/
-@media (max-width: 480px){
-#menulabel{
-	display:none;
-}
 
-#ContainerSX {
-  width: 99%;
-  height: 56%;
-}
-
-#ContainerDX {
-  left: 0%;
-  height: 40%;
-  width: 99%;
-}
-
-#ContentMain{
-	height:auto;
-	position:absolute;
-	left:0px;
-}
-
-#Header {
-  position: fixed;
-  z-index: 100;
-}
-
-#logo {
-  width: calc(100% - 110px);
-  width: -moz-calc(100% - 110px);
-  width: -webkit-calc(100% - 110px);
-  
-  margin: 0px auto;
-  height: 51px;
-}	
-
-#LogoImg{
-	  height: 61px;
-}
-
-#dataANDuser {
-  height: 51px;
-  margin: 0px auto;
-  width: 200px;
-  float:none;
-  display:none;
-}
-	
-#MainMenu {
-  width: 50%;
-  height: 100%;
-	}
-	
-#ContentMenu {
-  left: 49%;
-  top: 10px;
-  width: 50%;
-  height: 90% !important;
-  position: relative;
-}
-
-}/*chiusura media query 480*/
-
-
-@media (max-width: 213px){
-#LogoImg {
- height: 40px;
- margin-top: 10px;
-}
-
-#logo {
-  width: calc(100% - 60px);
-  width: -moz-calc(100% - 60px);
-  width: -webkit-calc(100% - 60px);
-}
-
-#dataANDuser {
-  width:100%;
-  font-size: 4.5vw;
-}
-
-}/*chiusura media query 213*/
 
 
 /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX */
@@ -912,7 +858,7 @@ display:block;
 	}
 }
 
-@media  only screen and (device-height: 1280px) and (device-width:752px){
+@media only screen and (device-height: 1280px) and (device-width:752px){
 	ContainerDX{
 		height:720px;
 	}
@@ -949,7 +895,104 @@ display:block;
 	} 
 }
 
-@media (max-width:854px) and (max-height:480px){
+@media only screen and (device-height: 1280px) and (device-width: 800px){
+	#ContentMain{
+		height:auto !important;
+	}
+}
+
+/*SMARTPHONE PORTRAIT*/
+@media only screen and (max-device-width: 480px), (max-width:480px){
+
+	#Container {
+  top:0px;
+}
+	
+#menulabel{
+	display:none;
+}
+
+#ContainerSX {
+  width: 99%;
+  height: 56%;
+}
+
+#ContainerDX {
+  left: 0%;
+  height: 40%;
+  width: 99%;
+}
+
+#ContentMain{
+	height:auto;
+	position:static;
+	left:0px;
+	  max-height: 1250px;
+  min-height: 1250px;
+}
+
+
+#Header {
+	max-width: 480px;
+  min-width: 321px;
+  position: fixed;
+  z-index: 100;
+}
+
+#logo {
+  width: calc(100% - 110px);
+  width: -moz-calc(100% - 110px);
+  width: -webkit-calc(100% - 110px);
+  
+  margin: 0px auto;
+  height: 51px;
+}	
+
+#LogoImg{
+	  height: 61px;
+}
+
+#dataANDuser {
+  height: 51px;
+  margin: 0px auto;
+  width: 200px;
+  float:none;
+
+}
+	
+#MainMenu {
+  width: 50%;
+  height: 100%;
+	}
+	
+#ContentMenu {
+  left: 49%;
+  top: 4px;
+  width: 50%;
+  height: 95%;
+  position: relative;
+}
+
+}/*chiusura media query 480*/
+
+
+
+/*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){
+#ContentMain{
+		height:auto !important;
+	}
+
+#contImg1 {
+  width: 80%;
+  margin: 0px auto;
+}
+
+}
+
+
+
+@media only screen and (max-width:854px) and (max-height:480px){
 	#ContainerSX {
   		width: 100%;
 	}
@@ -958,19 +1001,24 @@ display:block;
 	}
 	#ContainerDX {
   left: 0%;
-  height:513px;
+  height:auto;
   width: 99%;
 	}
 	
 }
 
 
+
+
 /* Samsung Galaxy S5 ----------- */
-@media (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
 /* Styles */
 #ContentMenu {
-  height: 100px;
+top: 106px;
+  height: 79px;
 }
+
+
 }
 
 /* iPhone 5 ----------- */
@@ -981,6 +1029,17 @@ display:block;
 }
 	
 }
+
+/* iPhone 3GS e 4 in LANDSCAPE ----------- */
+@media only screen and (max-device-width: 480px) and (max-device-height:320px){
+#ContentMenu {
+  top: 106px;
+  height: 79px;
+  left: 0%;
+  width: 98%;
+}	
+
+	}
 
 /* Galaxy Tab (landscape) ----------- */
 @media only screen and (device-height : 600px) and (device-width : 1024px) and (-webkit-device-pixel-ratio: 1) {
@@ -1016,7 +1075,7 @@ display:block;
 }
 
 /* IPhone6 Plus (landscape) ----------- */
-@media (device-width: 736px) and (device-height:414px){
+@media only screen and (device-width: 736px) and (device-height:414px){
 	#dataANDuser {
   position: relative;
   /* left: 5%; */

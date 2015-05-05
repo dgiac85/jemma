@@ -11,7 +11,7 @@ var Elettrodomestici = {
 	indexElettrodomestico : 0,
 	numDispositivi : 0,
 	numDispoSchermo : 0,
-	numMaxDispoSchermo : 6,
+	numMaxDispoSchermo : 7,
 	timerDispo : null,
 	requestCB: null,
 	nextStep: null,
@@ -26,9 +26,11 @@ var Elettrodomestici = {
 	numPagine:0,
 	pagina:0,
 	lock:false,
-	perPagina:6
+	perPagina:9
 
 };
+
+
 
 //Funzione che crea un dizionario pid->nome locazione
 Elettrodomestici.GetLocations=function(callBack){
@@ -949,9 +951,19 @@ Elettrodomestici.refreshDevices=function(){
 			var icona_src= "Resources/Images/Devices/"+Elettrodomestici.getIcon(Elettrodomestici.listaElettrodomestici[i]);
 			$("#device_"+i+ " .IconaElettrodomestico .icona-dispositivo").attr("src",icona_src);
 			
+		
+			
 			$("#device_"+i).click(function(){
+				
+				if($(window).width()<480){
+				
+					$("#mobileElett").animate({"left":"0px"}, 600);			    	    		    	
+				}  
 				$('#Interfaccia .content').html(" ");
 				$('#Interfaccia .header .titolo').text("");
+				
+					
+					
 				
 				Elettrodomestici.addSpinner("#Interfaccia","none");
 				
@@ -1045,6 +1057,14 @@ Elettrodomestici.loadInterfaccia=function(nome,pid, cat_id, index,interfaccia_sr
 		}
 	});
 }
+/*funzione anonima per chiudere pannello elettrodomestici*/
+$(function ()
+		{
+$("#chiudiElet").click(function(){
+	$("#mobileElett").animate({"left":"200%"}, 600);
+});	
+		});
+
 
 Elettrodomestici.getDeviceClusters=function(pid,callBack){
 	if ((InterfaceEnergyHome.mode > 0) || (InterfaceEnergyHome.mode == -1)){

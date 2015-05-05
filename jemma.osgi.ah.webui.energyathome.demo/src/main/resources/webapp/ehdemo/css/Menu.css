@@ -1,19 +1,21 @@
 /*GLOBAL*/
 
 #contImg1{
-  width: 100%;
+    width: 90%;
+  margin: 0px auto;
 }
 
 #contImg{
-width: 30%;
-height: 100%;
-float: left;
+  width: 40px;
+  height: 40px%;
+  margin-right: 5px;
+  float: left;
   position: relative;
   left: 15px;
 }
 
 .perCover{
-  width: 130px;
+  width: 150px;
   height: 180px;
   float: left;
   margin-left: 20px;
@@ -42,13 +44,13 @@ float: left;
 	width: auto;
     height: 85%;
 	color: white;
-		
+	  padding-bottom: 10px;	
 	}
 
 
 .MainMenuImg{
-  width: 120px;
-  height: 120px;;
+  width: 130px;
+  height: 130px;;
 }
 
 .MainMenuEl:focus {
@@ -73,7 +75,7 @@ float: left;
 	top: 70%;
 	left: 0%;
 text-align: center;
-font-size: 0.9em;
+font-size: 1.05vw;
 font-weight: bold;
 border: none;
 outline: none;
@@ -84,14 +86,16 @@ outline: none;
 }
 
 .ContentMenuEl {
-	/* top: 1%; */
+  /* top: 1%; */
   height: 40px;
-  padding: 10px;
-  width: 20%;
+  padding: 7px;
+  padding-left: 6px;
+  width: 23%;
+  /* margin-left: 10px; */
   float: left;
   color: white;
   outline: none;
-	/*border-left: solid 2px black;*/
+  /* border-left: solid 2px black; */
 }
 
 .ContentMenuElSelected {
@@ -126,7 +130,7 @@ overflow: hidden;
   left: 20px;
   margin: 11px auto;
   float: left;
-  font-size: 0.9em;
+  font-size: 1vw;
   font-weight: bold;
   text-align: left;
 }
@@ -158,20 +162,13 @@ border-bottom: 1px solid #CC5836;}
 display: block;
 background: #333333;
 position: fixed;
-top: 55px;
+top: 63px;
 width: 95%;
 height: 300px;
 z-index: 20;
 border: 4px solid rgb(158, 194, 0);
 /* border-top-left-radius: 0px; */
-border-radius: 15px;
-border-top-left-radius: 0px;
-border-bottom-right-radius: 0px;
-border-bottom-left-radius: 0px;
--moz-border-radius: 15px;
--moz-border-top-left-radius: 0px;
--moz-border-bottom-right-radius: 0px;
--moz-border-bottom-left-radius: 0px;
+border-radius: 4px;
 padding: 10px 10px 0px;
 display: block;
 left: 0px;
@@ -267,7 +264,7 @@ Media Queries
 ***********************************************************************/
 
 /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX   */
-@media (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
+@media only screen and (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
 .MainMenuImg {
   width: 100px;
   height: 80px;
@@ -280,7 +277,7 @@ Media Queries
 }
 
 
-@media (max-width: 1220px) and (min-width:752px){
+@media only screen and (max-width: 1220px) and (min-width:952px){
 			
 #datausersmartphoneToggle{
 	display:none;
@@ -299,7 +296,8 @@ Media Queries
 }
 
 #contImg1{	
-   width: 10vw;
+  max-width:96px;
+  max-height:96px;
   margin: 0 auto;
   margin-top: 10px;	
 }
@@ -329,7 +327,8 @@ z-index: 999;
 
 #mobileMenu{
 height: 320px;
-width: 70%;
+  max-height: 320px;
+  top: 56px;
 }
 
 
@@ -349,7 +348,7 @@ border-bottom:none;
 height: 90px;
 width: 90px;
 margin: 0px auto;
-padding-top: 25px;
+padding-top: 15px;
 }
 
 .ContentMenuEl {
@@ -358,9 +357,6 @@ width: 20%;
 margin:0px;
 }
 
-.ContentMenuTitle {
-text-align: center;
-}
 
 .ContentMenuImg{
 margin:0px auto;
@@ -376,14 +372,7 @@ margin: 0 auto;
 }
 
 .MainMenuTitle {
-font-size: 1.5em;
-}
-
-.ContentMenuTitle {
-
-width: 100%;
-margin: 0 auto;
-font-size: 1.5em;
+font-size: 16px;
 }
 
 .MainMenuElSelected {
@@ -397,14 +386,14 @@ background: #202020;
 }
 
 .MainMenuImg {
-   width: auto;
-  height: 10vh;
+ max-width: 100%;
+  max-height: 96px;
 }
 
-#contMainEl0{  position: relative;left:0% !important;}
-#contMainEl1{  position: relative;left:1% !important;}
-#contMainEl2{ position: relative; left:2% !important;}
-#contMainEl3{ position: relative; left:3% !important;}
+#contMainEl0{top: -2.60000000000002px;  position: relative;left:0% !important;min-width:125px;max-width:125px}
+#contMainEl1{top: -2.60000000000002px;  position: relative;left:1% !important;min-width:125px;max-width:125px}
+#contMainEl2{top: -2.60000000000002px; position: relative; left:2% !important;min-width:125px;max-width:125px}
+#contMainEl3{top: -2.60000000000002px; position: relative; left:3% !important;min-width:125px;max-width:125px}
 
 #datausercontent{
 float: left;
@@ -412,11 +401,13 @@ width: 16%;
 }
 
 .ContentMenuRow {
-  left: 10%;
+  left: 2%;
+  top: 14%;
   position: absolute;
-  width: 80%;
+  width: 96%;
   margin: 0px auto;
   height: auto;
+  font-size: 2vw;
 }
 
 .MainMenuEl:hover {
@@ -434,7 +425,9 @@ border-top-right-radius: 4px;
 }
 
 #mobileMenu{
-width: 95%;
+  padding-top: 20px;
+  width: 94%;
+  max-width: 730px;
 }
 
 
@@ -460,21 +453,18 @@ background: #202020;
 
 
 #contImg{
-height:50px;
-width:50px;
-margin: 0px auto;
+  height: 50px;
+  width: 50px;
+  margin: 0px auto;
+  left: 8px;
 }
 
 .ContentMenuEl {
   position: relative;
   float: left;
   height: 50%;
-  width: 20%;
+  width: 23%;
   margin: 0px;
-}
-
-.ContentMenuTitle {
-text-align: center;
 }
 
 .ContentMenuImg{
@@ -492,11 +482,14 @@ height: auto;
 margin: 0 auto;
 }
 
-.ContentMenuTitle {
 
-width: 100%;
-margin: 0 auto;
+.ContentMenuTitle {
+    width: 62%;
+  margin: 33px auto;
+  left: 15px;
+  font-size: 16px;
 }
+
 
 
 .MainMenuEl {
@@ -510,14 +503,20 @@ z-index: 5;
 }/*chiusura media query 1200 766*/
 
 
-/*SMARTPHONE LANDSCAPE*/
-@media (max-width: 751px) and (min-width:479px) {
+/*TABLET E SMARTPHONE GRANDI IN LANDSCAPE*/
+@media only screen and (max-width: 951px) and (min-width:481px) {
 	
 #datausersmartphoneToggle{
 width: 55px;
 float: left;
 height: auto;
 }
+
+
+#mobileMenu {
+   max-height: 296px;
+}
+
 
 #ContainerUser{
 width: 100%;
@@ -546,11 +545,6 @@ width: 55px;
 float: left;  
 background: #202020;
 height: auto;
-}
-
-.MainMenuImg {
-  width: 10vw;
-  height: 10vh;
 }
 
 .ContentMenuImg {
@@ -600,6 +594,8 @@ background: #202020;
   -webkit-border-top-right-radius: 4px;
   -moz-border-top-left-radius: 4px;
   -moz-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
 }
 
 #contImg {
@@ -608,9 +604,15 @@ background: #202020;
   margin: 0px auto;
 }
 
+#contImg1 {
+  width: 60%;
+  margin: 0px auto;
+}
 
 .MainMenuImg{
-  width: auto;
+ width: 100%;
+  max-width: 72px;
+  min-width: 72px;
   height: auto;
 }
 
@@ -629,7 +631,7 @@ background: #202020;
 left: 0%;
 /* text-align: center; */
 /* width: 20%; */
-font-size: 1.5vw;
+font-size: 11px;
 font-weight: bold;
 padding-top: 2px;
 border: none;
@@ -666,9 +668,11 @@ margin: 0 auto;
 }
 
 .MainMenuEl {
-  position: relative;
+position: relative;
   width: 100%;
-  height:100px;
+   height: 110px;
+  max-height: 110px;
+  min-height: 110px;
   border-bottom: none;
   margin: 0px auto;
   z-index: 5;
@@ -679,140 +683,53 @@ margin: 0 auto;
   width: 150px;
   height: 180px;
   float: left;
-   margin-left: 15px;
+   margin-left: 6px;
   margin-right: 1px;
 }
 
 
-
-.perCover {
-  font-size: 1vw;
-  width: 15vw;
-}
-
-#contMainEl0{  position: relative;left:0%;  height: auto; }
-#contMainEl1{  position: relative;left:5%;  height: auto;}
-#contMainEl2{ position: relative; left:10%;  height: auto;}
-#contMainEl3{ position: relative; left:15%;  height: auto;}
+#contMainEl0{ top: 23.2px; position: relative;left:0%;  height: auto;   max-width: 90px;min-width:90px}
+#contMainEl1{ top: 23.2px; position: relative;left:5%;  height: auto;max-width: 90px;min-width:90px}
+#contMainEl2{ top: 23.2px;position: relative; left:10%;  height: auto;max-width: 90px;min-width:90px}
+#contMainEl3{ top: 23.2px; position: relative; left:15%;  height: auto;max-width: 90px;min-width:90px}
 
 } /*chiusura media query 765
 
 
+/*SCREEN PORTRAIT*/
+@media only screen and (max-width: 480px){
 
-/* /*
-Media Query per DESKTOP il min height a 481px è la max altezza conosciuta che si può raggiungere con gli smartphone
-DA PROVARE NEL MOMENTO IN CUI SI VUOLE CONTROLLARE LA PARTE PER SCHERMO.
-
-@media (max-width: 765px) and (min-height: 375px) and (-webkit-device-pixel-ratio : 1){
-	
-	
-#toggleMenu{
-border-bottom-left-radius: 0px;
-width:55px;
+#contMainEl0{
+  position: absolute;
+  top: 5%;
+  left: auto;
+  margin: 0px;
+    right: 222px;
 }
 
-#toggleUser{
-border-bottom-right-radius: 0px;
-}
-		
-#datausersmartphoneToggle{
-width: 55px;
-float: left;
-height: auto;
+#contMainEl1{
+  position: absolute;
+  top: 25% ;
+  left: auto;
+  margin: 0px;
+    right: 222px;
 }
 
-#ContainerUser{
-width: 100%;
-height: 100%;
-margin: 0px auto;
+#contMainEl2{
+  position: absolute;
+  top: 50% ;
+  left: auto;
+  margin: 0px;
+    right: 222px;
 }
 
-#LogoImgUser{
-width: 100%;
-height: 100%;
+#contMainEl3{
+  position: absolute;
+  top: 75% ;
+  left: auto;
+  margin: 0px;
+    right: 222px;
 }
-
-#datausercontent {
-width: 190px;
-margin: 0 auto;
-position: fixed;
-left: 20%;
-font-size: 1em;
-z-index: 40;
-background: #202020;
-}
-
-#mobileMenu {
-height: 100%;
-position: fixed;
-border: 0px;
-padding-left: 0px;
-padding-right: 0px;
-border-radius: 15px;
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;
-border-bottom-right-radius: 0px;
-border-bottom-left-radius: 0px;
-width: 100%;
-border-bottom-right-radius: 0px;
-border-bottom-left-radius: 0px;
-}
-
-.MainMenuElSelected {
-border:2px solid #9ec200;
-border-top-left-radius: 4px;
-border-top-right-radius: 4px;
-border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;
-border-bottom:none;
-background: #202020;
-}
-
-.MainMenuEl:hover {
-  border-bottom: none;
-  background: #202020;
-  -webkit-border-top-left-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-  -moz-border-top-left-radius: 4px;
-  -moz-border-top-right-radius: 4px;
-}
-
-
-#containerToggle {
-width: 55px;
-float: left;  
-background: #202020;
-height: auto;
-}
-	
-	.ContentMenuEl {
-  		width: 15vw;
-	}
-	
-	.ContentMenuRow {
- 		 top: 10%;
-	}
-	
-	.MainMenuImg {
-	  	width: 11vw;
-	  	height: auto;
-	}
-	
-	.ContentMenuImg {
-	  	width: 10vw;
-  		height: auto;
-	}
-} */
- 
-
- 
-/*SMARTPHONE PORTRAIT*/
-@media (max-width: 480px){
-
-#contMainEl0{  position: absolute;top:5% !important;  left: auto; margin:0px;right:calc(49% + 9px); right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px);}
-#contMainEl1{  position: absolute;top:25% !important;  left: auto; margin:0px;right:calc(49% + 9px);right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px);}
-#contMainEl2{ position: absolute;top:50% !important;   left: auto;margin:0px;right:calc(49% + 9px);right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px); }
-#contMainEl3{ position: absolute; top:75% !important;  left: auto; margin:0px;right:calc(49% + 9px);right:-webkit-calc(49% + 9px); right:-moz-calc(49% + 9px);}
 
 #toggleMenu{
 	  border-bottom-left-radius: 0px;
@@ -898,8 +815,10 @@ height: auto;
 }
 
 .perCover {
-  font-size: 1vw;
-  width: 35vw;
+
+  width: 167px;
+  max-width:167px;
+  min-width:167px;
 }
 
 .MainMenuEl:hover {
@@ -911,7 +830,7 @@ border-bottom: 2px solid #9ec200;
 }
 
 .MainMenuTitle{
-   font-size: 4vw;
+   font-size: 16px;
   width: 80%;
 }
 
@@ -920,7 +839,7 @@ border-bottom: 2px solid #9ec200;
   margin: 0px auto;
   width: auto;
   text-align: center;
-  font-size: 4vw;
+  font-size: 16px;
   float: none;
 }
 
@@ -930,39 +849,47 @@ border-bottom: 2px solid #9ec200;
 }
 
 
-#mobileMenu {
+/* #mobileMenu {
+  top:63px;
+  height: calc(100% - 81px);
+  height: -moz-calc(100% - 81px);
+  height: -webkit-calc(100% - 81px);
+  width: calc(100% - 28px);
+  width: -moz-calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  
 
-  height: calc(100% - 90px);
-  height: -moz-calc(100% - 90px);
-  height: -webkit-calc(100% - 90px);
-  width: 90%;
-}
+} */
+
+#mobileMenu {
+  top:63px;
+  height:800px;
+  max-height:800px;
+  min-height:800px;
+  width: 413px;
+  max-width:413px;
+  min-width:413px;
+  }
 
 	.MainMenuElSelected {
 
   border-right: 2px solid #202020;
-border-bottom:solid;
-width: 100%;
-z-index: 5;
-height: auto;
-
-  border-top-left-radius: 4px;
-
+  border-bottom: solid;
+  width: 100%;
+  /* z-index: 5; */
+  height: 90px;
+  /* border-top-left-radius: 4px; */
   border-bottom-left-radius: 4px;
-    border-top-right-radius: 0px;
-     border-bottom-right-radius: 0px;
-    
-
-}		
+ }		
 	
 .MainMenuImg {
-  width: 20vw;
-  height: 10vh;
+  width: 75px;
+  height: 75px;
 }
 
 .ContentMenuImg {
-  width: 10vh;
-  height: 10vh;
+    width: 60px;
+  height: 60px;
 }
 
 .ContentMenuEl {
@@ -985,14 +912,292 @@ height: auto;
 }
 
 	
-} /*chiusura media query 480
+} /*chiusura media query 480*/
 
-/*Dispositivi piccolissimi come ad esempio LG Optimus One*/
-@media (max-width: 213px){
-#contMainEl0{  left: 18px !important;}
-#contMainEl1{  left: 18px !important;}
-#contMainEl2{ left: 18px !important; }
-#contMainEl3{ left: 18px !important;}
+@media only screen and (max-device-width: 480px){
+	
+	#contMainEl0{
+
+    right: 162px;
+}
+
+#contMainEl1{
+right: 162px;
+}
+
+#contMainEl2{
+right: 162px;
+}
+
+#contMainEl3{
+right: 162px;
+}
+
+.MainMenuElSelected {
+  width: 80%;
+}
+
+.MainMenuEl {
+  width: 80%;
+}
+	
+	 #mobileMenu {
+  top:63px;
+  height: calc(100% - 81px);
+  height: -moz-calc(100% - 81px);
+  height: -webkit-calc(100% - 81px);
+  max-height: calc(100% - 81px);
+  max-height: -moz-calc(100% - 81px);
+  max-height: -webkit-calc(100% - 81px);
+  min-height: calc(100% - 81px);
+  min-height: -moz-calc(100% - 81px);
+  min-height: -webkit-calc(100% - 81px);
+  width: calc(100% - 28px);
+  width: -moz-calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  max-width: calc(100% - 28px);
+  max-width: -moz-calc(100% - 28px);
+  max-width: -webkit-calc(100% - 28px);
+  min-width: calc(100% - 28px);
+  min-width: -moz-calc(100% - 28px);
+  min-width: -webkit-calc(100% - 28px);
+
+} 
+}
+
+/* iPhone 3GS e 4 in PORTRAIT ----------- */
+@media only screen and (max-device-width: 350px),(max-width:350px){
+#contMainEl0{  position: absolute;top:5% !important;  left: auto; margin:0px;  right: 184px;}
+#contMainEl1{  position: absolute;top:25% !important;  left: auto; margin:0px;  right: 184px;}
+#contMainEl2{ position: absolute;top:50% !important;   left: auto;margin:0px;   right: 184px;}
+#contMainEl3{ position: absolute; top:75% !important;  left: auto; margin:0px;  right: 184px;}	
+	
+ #mobileMenu {	
+   top:63px;
+  height: calc(100% - 81px);
+  height: -moz-calc(100% - 81px);	
+  height: -webkit-calc(100% - 81px);
+  max-height: calc(100% - 81px);
+  max-height: -moz-calc(100% - 81px);
+  max-height: -webkit-calc(100% - 81px);
+  min-height: calc(100% - 81px);
+  min-height: -moz-calc(100% - 81px);
+  min-height: -webkit-calc(100% - 81px);
+    width: calc(100% - 28px);
+  width: -moz-calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  max-width: calc(100% - 28px);
+  max-width: -moz-calc(100% - 28px);
+  max-width: -webkit-calc(100% - 28px);
+  min-width: calc(100% - 28px);
+  min-width: -moz-calc(100% - 28px);
+  min-width: -webkit-calc(100% - 28px);	
+ }	
+ 
+ .MainMenuEl{
+ height: 68px;
+  left: 40px;
+ }
+ 
+.MainMenuImg {
+  width: 55px;
+  height: 55px;
+}
+
+.MainMenuEl:hover {
+  height: 65px;
+  left: 40px;
+}
+ 
+ .MainMenuElSelected {
+  height: 65px;
+  left: 40px;
+ }
+ 
+.ContentMenuImg {
+  width: 50px;
+  height: 50px;
+}
+
+.ContentMenuImg {
+  width: 35px;
+  height: 35px;
+}
+
+.MainMenuTitle {
+  font-size: 12px;
+  width: 80%;
+  margin: 0px auto;
+}
+ 
+.perCover {
+  width: 120px;
+  max-width: 120px;
+  min-width: 120px;
+  
+}
+
+.ContentMenuEl {
+  left: 5%;
+  width: auto;
+  height: 76px;
+  margin-left: 20%; 
+}
+
+#ContentMenu {
+   width: 47%;
+  left: 50%;
+  top: 0px;
+}
+}
+
+/* iPhone 3GS e 4 in LANDSCAPE ----------- */
+@media only screen and (max-device-width: 480px) and (max-device-height:320px){
+
+	#mobileMenu {
+  top: 63px;
+  height:225px;
+  min-height:225px;
+  max-height:225px;
+	}
+
+
+.ContentMenuImg {
+  margin: 0px auto;
+  width: 100%;
+  height: 100%;
+}
+
+.ContentMenuTitle {
+position: absolute;
+text-align: center;
+position: relative;
+left: 15%;
+float: left;
+font-size: 0.9em;
+font-weight: bold;
+text-align: left;
+}
+
+
+.ContentMenuElSelected {
+color: #9ec200;
+}
+
+.ContentMenuEl {
+  position: relative;
+  float: left;
+  height: 50%;
+  width: 20%;
+  margin: 0px;
+}
+
+.MainMenuElSelected {
+border:2px solid #9ec200;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom:none;
+background: #202020;
+}
+
+.MainMenuEl:hover {
+  border-bottom: none;
+  background: #202020;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+}
+
+#contImg {
+  height: 50px;
+  width: 50px;
+  margin: 0px auto;
+}
+
+#contImg1 {
+  width: 60%;
+  margin: 0px auto;
+}
+
+.MainMenuImg{
+ width: 100%;
+  max-width: 72px;
+  min-width: 72px;
+  height: auto;
+}
+
+
+
+.ContentMenuRow {
+  background-color: #202020;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  height: auto;
+}
+
+.MainMenuTitle {
+left: 0%;
+/* text-align: center; */
+/* width: 20%; */
+font-size: 11px;
+font-weight: bold;
+padding-top: 2px;
+border: none;
+outline: none;
+}
+
+
+.ContentMenuElSelected {
+color: #9ec200;
+/* width: 90%; */
+  height: 50px;
+
+}
+
+.ContentMenuTitle {
+float: left;
+width: 100px;
+margin: 0 auto;
+}
+
+.MainMenuEl {
+position: relative;
+  width: 100%;
+  height: 91px;
+  max-height: 91px;
+  min-height: 91px;
+  border-bottom: none;
+  margin: 0px auto;
+  z-index: 5;
+}
+
+
+.perCover {
+  width: 150px;
+  height: 180px;
+  float: left;
+   margin-left: 6px;
+  margin-right: 1px;
+}
+
+
+#contMainEl0{ top: 9.2px; position: relative;left:0%;  height: auto;   max-width: 90px;min-width:90px}
+#contMainEl1{ top: 9.2px; position: relative;left:5%;  height: auto;max-width: 90px;min-width:90px}
+#contMainEl2{ top: 9.2px;position: relative; left:10%;  height: auto;max-width: 90px;min-width:90px}
+#contMainEl3{ top: 9.2px; position: relative; left:15%;  height: auto;max-width: 90px;min-width:90px}
+}	
+
+
+/*Dispositivi piccolissimi come ad esempio LG Optimus One DA COMPLETARE*/
+@media only screen and (max-device-width: 213px){
+
 	
 #containerToggle {
   width: 30px;
@@ -1021,28 +1226,62 @@ height: auto;
 /*MEDIA QUERIES SPECIFICHE*/
 
 /* Samsung Galaxy S5 -----------P&L */
-@media (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
 /* Styles */
-  #mobileMenu {
- 	 height: 250px;
-	}	
+#mobileMenu {
+  top: 63px;
+ height:192px;
 }
 
-@media (device-width: 360px) and (device-height: 640px) and (-webkit-min-device-pixel-ratio: 2){
-	.perCover{
-		 right: -webkit-calc(49% + 7px) !important;
-		 right: -moz-calc(49% + 7px) !important;
-	}
+#contMainEl0 {
+  top: 1.2px;
 }
 
-/*PER FIREFOX*/
-@media (width: 360px){
-	.perCover{
-		 right: -webkit-calc(49% + 8px) !important;
-		 right: -moz-calc(49% + 8px) !important;
-	}
+#contMainEl1 {
+  top: 1.2px;
 }
 
+#contMainEl2 {
+  top: 1.2px;
+}
+
+#contMainEl3 {
+  top: 1.2px;
+}	
+	
+	#contImg1 {
+  width: 60%;
+  margin: 0px auto;
+}
+
+.MainMenuEl {
+
+ height: 85px;
+  max-height: 85px;
+  min-height: 85px;
+}
+}
+
+/*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){
+
+#contImg1 {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.MainMenuEl {
+  position: relative;
+  width: 100%;
+  height: 95px;
+  max-height: 95px;
+  min-height: 95px;
+  border-bottom: none;
+  margin: 0px auto;
+  z-index: 5;
+}
+
+}
 
 /* iPhone 5 -----------P&L */
 @media only screen and (device-width: 568px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 2){
@@ -1053,20 +1292,14 @@ height: auto;
 	
 }
 
-@media only screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2){
-	.perCover{
-		 right: -webkit-calc(49% + 8px) !important;
-		 right: -moz-calc(49% + 8px) !important;
-	}
-}
 
-/*PER FIREFOX*/
+/*PER FIREFOX
 @media (width: 320px){
 	.perCover{
 		 right: -webkit-calc(49% + 8px) !important;
 		 right: -moz-calc(49% + 8px) !important;
 	}
-}
+}*/
 
 
 

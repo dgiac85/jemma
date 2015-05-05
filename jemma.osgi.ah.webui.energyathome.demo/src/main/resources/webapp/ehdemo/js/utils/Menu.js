@@ -341,9 +341,14 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
     else{
     	$("#ContentMain").css("display","block");
     }
+
+    //bisogna controllare l'evento on resize
+    if ((valMain==1) && (valContent==0)){
+    	$("#ContentMain").css("height","100%");
+    }
+ 
     
-  
-			
+
 	if (Main.env == 0) console.log(80, "Menu", "valMain = " + valMain);
 	if (Main.env == 0) console.log(80, "Menu", "valContent = " + valContent);
 	if (Main.env == 0) console.log(80, "Menu", "Menu = ");

@@ -148,6 +148,19 @@ var ListaElettr = {"list":[
 	    "device_value":{
 	    	"name":"power",
 	    	"value": {"timestamp":0, "value":"0"}}}},
+	    	{"map":{
+	    		"appliance.pid": "2", 
+	    		"ah.app.name":"Electrolux", 
+	    	    "ah.app.type":"com.indesit.ah.app.whitegood", 
+	    	    "device_state_avail": "true",
+	    	    "ah.category.pid":"2", 
+	    	    "ah.location.pid":"3", 
+	    	    "ah.icon": "lvb2.png",
+	    	    "availability": 0, 
+	    	    "device_state":1, 
+	    	    "device_value":{
+	    	    	"name":"power",
+	    	    	"value": {"timestamp":0, "value":"0"}}}},
 	{"map":{
 		"appliance.pid": "0", 
 		"ah.app.name":"SmartInfo", 
@@ -556,6 +569,48 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
+	                   
+	                   /*MIO 1*/
+	                   {
+	                       "map": {
+	                           "device_value": {
+	                               "javaClass": "java.util.LinkedList",
+	                               "list": [
+	                                   {
+	                                       "name": "IstantaneousDemands",
+	                                       "value": {
+	                                           "timestamp": 1426004605365,
+	                                           "value": 5,
+	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+	                                       },
+	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+	                                   }
+	                               ]
+	                           },
+	                           "category": {
+	                               "name": "Phon",
+	                               "iconName": "plug.png",
+	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
+	                               "pid": "25"
+	                           },
+	                           "ah.category.pid": "25",
+	                           "appliance.pid": "ah.app.3521399293210525877-1",
+	                           "ah.location.pid": "4",
+	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.whitegood",
+	                           "ah.icon": "plug.png",
+	                           "ah.app.name": "Phon",
+	                           "ah.app.eps.types": [
+	                               "ah.ep.common",
+	                               "ah.ep.zigbee.WhiteGoods"
+	                           ],
+	                           "availability": 2
+	                       },
+	                       "javaClass": "java.util.Hashtable"
+	                   },
+	                   
+	                    
+	                   
+	                  
 	                   {
 	                       "map": {
 	                           "device_value": {
@@ -574,7 +629,7 @@ var AppliancesConfigurationFake={
 	                           },
 	                           "category": {
 	                               "name": "Indesit Fridge",
-	                               "iconName": "frigorifero.png",
+	                               "iconName": "oven.png",
 	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
 	                               "pid": "39"
 	                           },
@@ -592,6 +647,10 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
+	                   
+	                 
+	                   
+	                  
 	                   {
 	                       "map": {
 	                           "device_value": {
@@ -755,6 +814,61 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
+	                   
+	                   /*MIO 2*/
+	                   {
+	                       "map": {
+	                           "device_value": {
+	                               "javaClass": "java.util.LinkedList",
+	                               "list": [
+	                                        {
+	 	                                       "name": "OnOffState",
+	 	                                       "value": {
+	 	                                           "timestamp": 1426004605466,
+	 	                                           "value": true,
+	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+	 	                                       },
+	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+	 	                                   },
+	 	                                  {
+	 	                                       "name": "CurrentLevel",
+	 	                                       "value": {
+	 	                                           "timestamp": 1426004605466,
+	 	                                           "value": 200,
+	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+	 	                                       },
+	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+	 	                                   }
+	 	                                  
+	                               ]
+	                           },
+	                           "category": {
+	                               "name": "Philps lamp",
+	                               "iconName": "lampada.png",
+	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
+	                               "pid": "35"
+	                           },
+	                           "ah.category.pid": "35",
+	                           "appliance.pid": "ah.app.3521399290000526176-15",
+	                           "ah.location.pid": "7",
+	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.ColorLight",
+	                           "ah.icon": "lampada.png",
+	                           "ah.app.name": "Philips HUE",
+	                           "ah.app.eps.types": [
+	                               "ah.ep.common",
+	                               "ah.ep.zigbee.ColorLight",
+	                               "ah.ep.zigbee.OnOff"
+	                           ],
+	                           clusters: {
+	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.LevelControlServer":true,
+	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.dimmablelight":true,
+	                        	   "org.energy_home.jemma.ah.cluster.zigbee.zll.ColorControlServer":true
+	                           },
+	                           "availability": 2
+	                       },
+	                       "javaClass": "java.util.Hashtable"
+	                   },
+	                   
 	                   {
 	                       "map": {
 	                           "device_value": {
@@ -790,7 +904,47 @@ var AppliancesConfigurationFake={
 	                           "availability": 2
 	                       },
 	                       "javaClass": "java.util.Hashtable"
+	                   },
+	                   
+	                   {
+	                       "map": {
+	                           "device_value": {
+	                               "javaClass": "java.util.LinkedList",
+	                               "list": [
+	                                        {
+	 	                                       "name": "CurrentPositionLiftPercentage",
+	 	                                       "value": {
+	 	                                           "timestamp": 1426004605466,
+	 	                                           "value": 200,
+	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+	 	                                       },
+	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+	 	                                   }
+	                               ]
+	                           },
+	                           "category": {
+	                               "name": "Serranda",
+	                               "iconName": "windowc.png",
+	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
+	                               "pid": "44"
+	                           },
+	                           "ah.category.pid": "44",
+	                           "appliance.pid": "ah.app.3521399290000526178-256",
+	                           "ah.location.pid": "7",
+	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.WindowCovering",
+	                           "ah.icon": "windowc.png",
+	                           "ah.app.name": "Serranda",
+	                           "ah.app.eps.types": [
+	                               "ah.ep.common",
+	                               "ah.ep.zigbee.WindowCovering",
+	                           ],
+	                           "availability": 2
+	                       },
+	                       "javaClass": "java.util.Hashtable"
 	                   }
+	                   
+	                   
+	                   
 	               ]
 	           } 
 	       };

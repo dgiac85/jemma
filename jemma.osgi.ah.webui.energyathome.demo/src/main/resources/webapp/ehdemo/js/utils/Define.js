@@ -27,7 +27,7 @@ var Define = {
 	       	"storico": DefinePath.imgMenuPath + "storico_bianco.png",
 	       	"storicoSel": DefinePath.imgMenuPath + "storico_verde.png",
 	       	"forum": DefinePath.imgMenuPath + "community_bianco.png",
-	       	"forumSel": DefinePath.imgMenuPath + "community_verde.png",
+	       	"forumSel": DefinePath.imgMenuPath + "forum.png",
 	       	"tariffa": DefinePath.imgMenuPath + "tariffa_bianco.png",
 	       	"tariffaSel": DefinePath.imgMenuPath + "tariffa_verde.png",	       
 	       	"contatti": DefinePath.imgMenuPath + "contatti_bianco.png",
