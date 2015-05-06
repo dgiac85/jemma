@@ -11,7 +11,7 @@ var Elettrodomestici = {
 	indexElettrodomestico : 0,
 	numDispositivi : 0,
 	numDispoSchermo : 0,
-	numMaxDispoSchermo : 7,
+	numMaxDispoSchermo : 6,
 	timerDispo : null,
 	requestCB: null,
 	nextStep: null,
@@ -26,11 +26,90 @@ var Elettrodomestici = {
 	numPagine:0,
 	pagina:0,
 	lock:false,
-	perPagina:9
+	perPagina:0
 
 };
 
+var widthSmartphone=480;
 
+
+function insert(){
+	var element=$('#Interfaccia').detach();
+	$('#mobileElett').append(element);
+}
+
+function remove(){
+	var element=$('#Interfaccia').detach();
+	$('#RigaInterfaccia').append(element);
+}
+
+$(document).ready(function() {
+	
+	(function ($) {
+	    var d = 1, t = null, e = null, h, r = false;
+
+	    h = function () {
+	        r = false;
+	        $(window).trigger('resizeend', e);
+	    };
+
+	    $(window).on('resize', function (event) {
+	        e = event || e;
+	        clearTimeout(t);
+
+	        if (!r) {
+	            $(window).trigger('resizestart', e);
+	            r = true;
+	        }
+
+	        t = setTimeout(h, d);
+	    });
+	}(jQuery));
+	insert();
+		
+	$(window).on('resizestart', function(event){
+		console.log('Resize Start!');		
+	});
+	
+	$(window).on('resizeend', function(event){
+		console.log('Resize End!');
+		if (window.innerWidth<=widthSmartphone){
+			Elettrodomestici.refreshDevices();			
+			insert();
+					
+		}
+		else{
+			if ($("#mobileElett").css("left")==="0px") {
+				$("#mobileElett").animate({"left":"200%"}, 600);		
+			}
+			Elettrodomestici.refreshDevices();			
+			remove();
+			
+		}
+	});
+	
+	$(window).resize( function(){
+		if (window.innerWidth<=widthSmartphone){
+			
+		}
+		
+	});
+	
+	//GESTIONE ON RESIZE PER LA QUESTIONE DEL DIV INTERFACCIA
+	
+	
+//	$(window).on('resizestart', function () {
+//	    console.log('resize start');
+//	});
+//	$(window).on('resizeend', function () {
+//	    console.log('resize end');
+//	});
+//
+//	window.onresize = function () {
+//	    ResizeEventsTrigger.resizeEventsTrigger( $(this) );
+//	};
+	
+});
 
 //Funzione che crea un dizionario pid->nome locazione
 Elettrodomestici.GetLocations=function(callBack){
@@ -687,9 +766,11 @@ Elettrodomestici.GestElettrodomestici = function(){
 Elettrodomestici.init=function(){
 	Elettrodomestici.indexElettrodomestico = 0;
 	Elettrodomestici.interfaccia = null;
-	
+
 	var divElettro = $("#Elettrodomestici");
 
+
+	
 	if (divElettro.length == 0) {
 		$("#ContentMain").append(Elettrodomestici.htmlContent);
 	} else {
@@ -779,6 +860,12 @@ Elettrodomestici.stopUpdate=function(){
 Elettrodomestici.refreshDevices=function(){
 	$("#RigaElettrodomestici").html(" ");
 	
+	if (window.innerWidth<480){
+		Elettrodomestici.perPagina=20;
+	}
+	else{
+		Elettrodomestici.perPagina=6;
+	}
 	
 	var start= Elettrodomestici.pagina*Elettrodomestici.perPagina;
 	var end= ( start+Elettrodomestici.perPagina);
@@ -955,10 +1042,12 @@ Elettrodomestici.refreshDevices=function(){
 			
 			$("#device_"+i).click(function(){
 				
-				if($(window).width()<480){
+				if(window.innerWidth<widthSmartphone){
+					$("#Interfaccia").css("display","block");
+					insert();
+					$("#mobileElett").animate({"left":"0px"}, 600);						
+				} 
 				
-					$("#mobileElett").animate({"left":"0px"}, 600);			    	    		    	
-				}  
 				$('#Interfaccia .content').html(" ");
 				$('#Interfaccia .header .titolo').text("");
 				

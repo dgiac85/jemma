@@ -159,7 +159,7 @@ border-bottom: 1px solid #CC5836;}
 
 
 #mobileMenu {
-display: block;
+display: none;
 background: #333333;
 position: fixed;
 top: 63px;
@@ -264,11 +264,15 @@ Media Queries
 ***********************************************************************/
 
 /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX   */
-@media only screen and (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
+@media only screen and (device-width: 1232px) and (device-height:800px), (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
 .MainMenuImg {
   width: 100px;
   height: 80px;
 }
+
+.MainMenuTitle {
+width:80%;
+	}
 
 .MainMenuEl {
   height: 120px;
@@ -307,6 +311,7 @@ Media Queries
 	border-bottom-right-radius:0px;
 	border-bottom-left-radius:0px;
 	border-top-left-radius:0px;
+	border-bottom:none;
 }
 
 .ContentMenuRow {
@@ -329,6 +334,10 @@ z-index: 999;
 height: 320px;
   max-height: 320px;
   top: 56px;
+   padding-top: 20px;
+  width: 94%;
+  max-width: 730px;
+  display:block;
 }
 
 
@@ -425,9 +434,7 @@ border-top-right-radius: 4px;
 }
 
 #mobileMenu{
-  padding-top: 20px;
-  width: 94%;
-  max-width: 730px;
+ 
 }
 
 
@@ -435,7 +442,7 @@ border-top-right-radius: 4px;
 background: #202020;
 float: left;
 width: 30%;
-height: 51px;
+height: auto;
 cursor: pointer;
 z-index: 999;
 }	
@@ -515,6 +522,7 @@ height: auto;
 
 #mobileMenu {
    max-height: 296px;
+     top: 58px;
 }
 
 
@@ -693,7 +701,8 @@ position: relative;
 #contMainEl2{ top: 23.2px;position: relative; left:10%;  height: auto;max-width: 90px;min-width:90px}
 #contMainEl3{ top: 23.2px; position: relative; left:15%;  height: auto;max-width: 90px;min-width:90px}
 
-} /*chiusura media query 765
+} /*chiusura media query 765*/
+
 
 
 /*SCREEN PORTRAIT*/
@@ -862,7 +871,7 @@ border-bottom: 2px solid #9ec200;
 } */
 
 #mobileMenu {
-  top:63px;
+  top:56px;
   height:800px;
   max-height:800px;
   min-height:800px;
@@ -1265,6 +1274,11 @@ position: relative;
 /*Per IPAD in portrait*/
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){
 
+		#contMainEl0{ top: 38.2px; position: relative;left:0%;  height: auto;   max-width: 90px;min-width:90px}
+#contMainEl1{ top: 38.2px; position: relative;left:5%;  height: auto;max-width: 90px;min-width:90px}
+#contMainEl2{ top: 38.2px;position: relative; left:10%;  height: auto;max-width: 90px;min-width:90px}
+#contMainEl3{ top: 38.2px; position: relative; left:15%;  height: auto;max-width: 90px;min-width:90px}
+	
 #contImg1 {
   width: 80%;
   margin: 0px auto;

@@ -809,13 +809,7 @@ font-size: 1.0em;
 font-weight: bold;
 }
 
-#CostoConsumoSintesi {
-position: relative;
-float: left;
-width: 98%;
-height: 45%;
-z-index: 10;
-}
+
 
 .CostoConsumoAttualePV {
 top: 55%;
@@ -973,14 +967,6 @@ height: 35%;
 
 
 
-@media only screen and (max-width: 751px) and (min-width:479px) {
-#CostoConsumoSintesi {
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 76%;
-}
-}
 
 
 
@@ -1060,29 +1046,6 @@ font-size: 2.5vw;
 
 }
 
-@media  only screen and (device-height: 1280px) and (device-width:752px) and (-webkit-min-device-pixel-ratio : 1){
-	#divCentro {
-  top: 20%;
-  left: 46.5%; 
-	}
-	
-	#consigliTurnOn{
-		font-size:1.3vw;
-	}
-
-	
-	#Grafico{
-		width:98%;
-		height:320px;
-	}
-	
-	#Grafico2{
-		width:98%;
-		  left: 7px;
-		height:320px;
-	}
-	
-}
 
 
 
@@ -1240,9 +1203,73 @@ width: 95%;
 /**************************************************************************/
 /*MEDIA QUERIES SPECIFICHE*/
 
+@media  only screen and (device-height: 1280px) and (device-width:752px) and (-webkit-min-device-pixel-ratio : 1){
+	#divCentro {
+  top: 20%;
+  left: 46.5%; 
+	}
+	
+	#consigliTurnOn{
+		font-size:1.3vw;
+	}
+
+	
+	#Grafico{
+		width:98%;
+		height:320px;
+	}
+	
+	#Grafico2{
+		width:98%;
+		  left: 7px;
+		height:320px;
+	}
+	
+}
+
+
+
 /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX */
 
+@media only screen and (device-height: 1280px) and (device-width: 800px), (device-height: 1232px) and (device-width: 800px){
+	
+#Grafico {
+  width: 98%;
+  height: 290px;
+  font-size: 2vw;
+  margin-top: -7px;
+}
+	
+	
+	#Grafico2{
+   width: 98%;
+  height: 314px;
+  font-size: 2vw;
+  position: absolute;
+  left: 1%;
+  margin-top: -24px;
+  margin-bottom: 0px;
+	}
+  
+}
 
+/*TABLET TELECOM*/
+@media only screen and (device-height: 1232px) and (device-width: 800px){
+	#Grafico {
+  height: 265px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+	}
+	
+	#Grafico2{
+   height: 265px;
+  position: absolute;
+  left: 7px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+	}
+
+}
 
 
 /* Galaxy Tab (portrait and landscape) ----------- */
