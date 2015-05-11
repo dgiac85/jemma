@@ -106,6 +106,8 @@ var CostiConsumi = {
 /* Inizializza la schermata */
 CostiConsumi.Init = function() {
 	
+	
+	
 	indicatoreTermometro = 'images/termometro_iac.png';
 	suffIndicatoreT = '_iac';
 
@@ -132,6 +134,7 @@ CostiConsumi.Init = function() {
 	$("#TariffaImgDiv").hide();
 	$("#TariffaImg").hide();
 	$("#TariffaPos").hide();
+	
 	var divFrecce = $("#FrecceFV");
 	if (divFrecce.length == 0) {
 		$(document.createElement('div')).addClass('divFrecce').attr('id', 'FrecceFV').appendTo($("#CostoConsumoSintesi")).show();
@@ -146,7 +149,10 @@ CostiConsumi.Init = function() {
 		$("#divFrecceConsumi").show();
 		$("#divFrecceRete").show();
 		$("#divCentro").show();
+		//$("#CostoConsumoSintesi").css("height","70%");
 	}
+	
+	
 	
 	if ($('#DettaglioGraficoProduzioneOdierno').length == 0) {
 		$('#CostoConsumoInfo').append($('#Grafico').clone().attr('id', 'Grafico2'));
@@ -375,6 +381,7 @@ CostiConsumi.ExitFotoVoltaico = function() {
 
 	Main.ResetError();
 	$("#CostiConsumi").hide();
+	$("#CostoConsumoSintesi").css("height","70%");
 }
 
 /*

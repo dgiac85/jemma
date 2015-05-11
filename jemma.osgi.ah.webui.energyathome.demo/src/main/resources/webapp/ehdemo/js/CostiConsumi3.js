@@ -14,6 +14,8 @@ CostiConsumi.GestConsumi = function() {
 		CostiConsumi.mode = CostiConsumi.CONSUMI;
 		$("#TitoloCostiConsumi").html(Msg.home["titoloConsumi"]);
 		$('#consigliTurnOn').hide();
+		
+		$("#CostoConsumoSintesi").css("height","98%");
 
 		if (Main.enablePV) {
 			$("#ProduzioneAttualeTitolo").hide();

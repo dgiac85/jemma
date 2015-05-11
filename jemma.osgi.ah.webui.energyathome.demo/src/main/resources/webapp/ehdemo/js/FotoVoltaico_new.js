@@ -115,6 +115,7 @@ CostiConsumi.Init = function() {
 	$("#TariffaImgDiv").hide();
 	$("#TariffaImg").hide();
 	$("#TariffaPos").hide();
+	
 	var divFrecce = $("#FrecceFV");
 	if (divFrecce.length == 0) {
 		$(document.createElement('div')).addClass('divFrecce').attr('id', 'FrecceFV').appendTo($("#CostoConsumoSintesi")).show();
@@ -123,6 +124,7 @@ CostiConsumi.Init = function() {
 		$(document.createElement('div')).attr('id', 'divFrecceRete').appendTo($("#FrecceFV"));
 		$(document.createElement('div')).attr('id', 'divCentro').appendTo($("#FrecceFV"));
 		$(document.createElement('img')).attr('id', 'imgCentro').attr('src', "./Resources/Images/center.png").appendTo($("#divCentro"));
+		
 	} else {
 		$("#FrecceFV").show();
 		$("#divFrecceProd").show();

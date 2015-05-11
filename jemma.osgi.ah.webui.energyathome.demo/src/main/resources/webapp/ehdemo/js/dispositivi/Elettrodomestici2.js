@@ -32,19 +32,23 @@ var Elettrodomestici = {
 
 var widthSmartphone=480;
 
-
+//funzione per l'inserimento del pannello interfaccia nel mobile menu
 function insert(){
 	var element=$('#Interfaccia').detach();
 	$('#mobileElett').append(element);
 }
 
+//funzione per la rimozione dell'interfaccia dal mobile menu ed il ritorno nel pannello normale
 function remove(){
 	var element=$('#Interfaccia').detach();
 	$('#RigaInterfaccia').append(element);
 }
 
+var misura=0;
+var nP=0;
+
 $(document).ready(function() {
-	
+
 	(function ($) {
 	    var d = 1, t = null, e = null, h, r = false;
 
@@ -54,6 +58,7 @@ $(document).ready(function() {
 	    };
 
 	    $(window).on('resize', function (event) {
+	        	
 	        e = event || e;
 	        clearTimeout(t);
 
@@ -65,49 +70,42 @@ $(document).ready(function() {
 	        t = setTimeout(h, d);
 	    });
 	}(jQuery));
+	
+	
 	insert();
 		
 	$(window).on('resizestart', function(event){
-		console.log('Resize Start!');		
+		console.log('Resize Start!');
+		
 	});
 	
 	$(window).on('resizeend', function(event){
-		console.log('Resize End!');
-		if (window.innerWidth<=widthSmartphone){
-			Elettrodomestici.refreshDevices();			
-			insert();
-					
+	
+		if (window.innerWidth<=widthSmartphone){					
+			insert();					
 		}
 		else{
 			if ($("#mobileElett").css("left")==="0px") {
 				$("#mobileElett").animate({"left":"200%"}, 600);		
-			}
-			Elettrodomestici.refreshDevices();			
-			remove();
-			
+			}						
+			remove();			
 		}
-	});
 	
-	$(window).resize( function(){
-		if (window.innerWidth<=widthSmartphone){
-			
-		}
+		if(window.innerWidth>misura){
+
+			if ((Elettrodomestici.pagina===Elettrodomestici.numPagine-1) )  {
+				Elettrodomestici.pagina=0;
+						
+			} 	
+		}	
 		
+		//ogni volta che finisce un resize della pagina si fa un refresh dei devices
+		Elettrodomestici.refreshDevices();
+
+		console.log('Resize End!');
 	});
 	
-	//GESTIONE ON RESIZE PER LA QUESTIONE DEL DIV INTERFACCIA
 	
-	
-//	$(window).on('resizestart', function () {
-//	    console.log('resize start');
-//	});
-//	$(window).on('resizeend', function () {
-//	    console.log('resize end');
-//	});
-//
-//	window.onresize = function () {
-//	    ResizeEventsTrigger.resizeEventsTrigger( $(this) );
-//	};
 	
 });
 
@@ -422,7 +420,7 @@ Elettrodomestici.GetDevicesInfos=function(callBack){
 						//Elettrodomestici.listaElettrodomestici.push(Elettrodom);
 					}
 					Elettrodomestici.numDispositivi = Elettrodomestici.listaElettrodomestici.length;
-					Elettrodomestici.numPagine = Math.ceil(Elettrodomestici.listaElettrodomestici.length/Elettrodomestici.perPagina);
+					//Elettrodomestici.numPagine = Math.ceil(Elettrodomestici.listaElettrodomestici.length/Elettrodomestici.perPagina);
 					callBack();
 				}
 			});
@@ -857,27 +855,51 @@ Elettrodomestici.stopUpdate=function(){
 	}
 }
 
+//funzione che in base al resize della pagina definisce il numero di elettrodomestici che vanno inseriti nella pagina
+function ctrlElPerPagina(){
+	var i=0;
+	var dimBox=225; //dimensione standard del box uguale a 255px
+	var dimensioneTot=0;
+	var dimRigaElettr=$("#Elettrodomestici").width();
+	
+	
+	while(dimensioneTot < dimRigaElettr){
+		i++;
+		dimensioneTot=dimBox*i;		
+	}
+	i-=1;
+
+	return i;
+}
+
+
 Elettrodomestici.refreshDevices=function(){
 	$("#RigaElettrodomestici").html(" ");
 	
-	if (window.innerWidth<480){
-		Elettrodomestici.perPagina=20;
+	Elettrodomestici.perPagina=ctrlElPerPagina();
+	
+	if(window.innerWidth<=widthSmartphone){
+		Elettrodomestici.numPagine=1;
+		Elettrodomestici.pagina=0;
+		Elettrodomestici.perPagina=Elettrodomestici.listaElettrodomestici.length;
 	}
 	else{
-		Elettrodomestici.perPagina=6;
+		Elettrodomestici.numPagine = Math.ceil(Elettrodomestici.listaElettrodomestici.length/Elettrodomestici.perPagina);
 	}
-	
+		
 	var start= Elettrodomestici.pagina*Elettrodomestici.perPagina;
 	var end= ( start+Elettrodomestici.perPagina);
 	if (end>Elettrodomestici.listaElettrodomestici.length) {
 		end=Elettrodomestici.listaElettrodomestici.length;
 	}
 	
-	if (Elettrodomestici.numPagine<2) {
+	if (Elettrodomestici.numPagine<2){
 		$("#RigaPulsanti").hide();
-	}else{
+	}
+	else{
 		$("#RigaPulsanti").show();
 	}
+	
 	if (Elettrodomestici.pagina>0) {
 		$("#RigaPulsanti #indietro").show();
 	}else{
@@ -1042,7 +1064,7 @@ Elettrodomestici.refreshDevices=function(){
 			
 			$("#device_"+i).click(function(){
 				
-				if(window.innerWidth<widthSmartphone){
+				if(window.innerWidth<=widthSmartphone){
 					$("#Interfaccia").css("display","block");
 					insert();
 					$("#mobileElett").animate({"left":"0px"}, 600);						

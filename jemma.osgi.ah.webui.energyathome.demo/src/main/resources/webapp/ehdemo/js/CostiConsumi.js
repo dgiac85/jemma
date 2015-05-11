@@ -205,6 +205,9 @@ CostiConsumi.GestCosti = function() {
 		CostiConsumi.visType = CostiConsumi.COSTI;
 		$("#Content").html(CostiConsumi.htmlContent["Costi"]);
 		Log.alert(80, CostiConsumi.MODULE, "CostiConsumi.GestCosti");
+		
+		
+		$("#CostoConsumoSintesi").css("height","98%");
 
 		$('#CostoIndicatoreImg').gauge( {
 			max : 2.0,

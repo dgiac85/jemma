@@ -66,11 +66,12 @@ color: black;
 }
 
 #IndicatoreTitoloPV {
-position: absolute;
-top: 9%;
-width: 21%;
-font-size: 0.9vw;
-left: 3%;
+  font-size: 0.9vw;
+  /* top: 20%; */
+  width:20%;
+  float: left;
+margin: 7px 0px 12px 21px;
+  /* margin-top: 13px; */
 }
 
 #IndicatorePV {
@@ -119,12 +120,14 @@ border-radius: 16px;
 }
 
 #PVConsumoIACIndicatoreImg {
-width: 64%;
-height: 115%;
-position: relative;
-bottom: 25%;
-margin-left: 21%;
-margin-top: 1%;
+  width: 64%;
+  height: 100%;
+  /* position: absolute; */
+  float: left;
+  /* bottom: 25%; */
+  /* margin-left: 21%; */
+  margin-top: -14px;
+  margin-left: -11px;
 }
 
 .IndicatoreTxt {
@@ -167,19 +170,21 @@ border-left: 1px solid #0B0B96;
 
 
 #InfoTitolo {
+	display:none;
 position: absolute;
-top: 2%;
-left: 2%;
-width: 96%;
-height: 10%;
+  top: 1%;
+  left: 2%;
+  width: 96%;
+  height: 20px;
 text-align: center;
 background-color: transparent;
+  color: white;
 }
 
 #Grafico {
 
 position: absolute;
-top: 2%;
+top: 5%;
 left: 2%;
 right: 2%;
 height: 44%;
@@ -444,10 +449,10 @@ height: 20%;
   font-size: 1.8vw;
   text-align: center;
   width: 60%;
-  max-height: 13%;
   padding-top: 1%;
   background-color: transparent;
   z-index: 2;
+  color:black;
 }
 
 .highlightbar {
@@ -501,7 +506,7 @@ border-radius: 6px;
   position: absolute;
   top: 25%;
   left: 49%;
-
+  z-index:-1;
 }
 
 #imgFrecceConsumi {
@@ -523,6 +528,7 @@ border-radius: 6px;
   width: 100%;
   height: 100%;
   top: 0%;
+  z-index:-50;
 }
 
 #imgCentro {
@@ -842,10 +848,17 @@ position: relative;
 float: left;
 width: 100%;
 height: 70%;
+z-index:0;
 }
 
 #divFrecceConsumi {
 height: 35%;
+}
+
+.containerVal{
+	width: 78%;
+  height: 30px;
+  margin: 0px auto;
 }
 
 
@@ -882,11 +895,6 @@ z-index: 10;
 }
 
 
-#PVConsumoIACIndicatoreImg {
-  width: 65%;
-  margin-top: 2%;
-}
-
 .CostoConsumoAttualePV {
 top: 55%;
 }
@@ -898,10 +906,10 @@ top: 55%;
 
 #divCentro {
   position: relative;
-  top: 20%;
-  left: 1.5%;
-  width: 50px;
-  height: 50px;
+  top: 18%;
+  left: 0.5%;
+  width: 70px;
+  height: 70px;
 }
 
 #consigliTurnOn {
@@ -915,17 +923,25 @@ top: 55%;
 
 .meter {
 width: 100%;
-height: 60%;
+height: 55%;
 margin: auto;
 }
 
-.values{
-  top: 86%;
-  font-size: 2vw;
+.values {
+  top: 0%;
+  left: 0px;
+  /* left: 2px; */
+  width: 80%;
+  position: relative;
+  margin: auto auto;
+  /* text-align: center; */
+  height: auto;
+  font-size: 2.2vw;
+  color: black;
 }
 
 #IndicatoreTitoloPV {
-   font-size: 1.1vw;
+   font-size: 1.5vw;
   top: 22%;
 }
 
@@ -952,32 +968,83 @@ height: 70%;
 position: relative;
 float: left;
 margin-top: 10px;
-width: 98%;
+width: 100%;
 margin-left: 0px;
 height: 97%;
 }
 
 #divFrecceConsumi {
 height: 35%;
+left:48.5%
 }
 
 
 }
 
+@media only screen and (max-width: 951px) and (min-width:479px){
+	#consigliTurnOn {
+  width: 96%;
+  height: 50%;
+    margin-top: 3px;
+}
 
+#IndicatorePV {
+  height: 15.6%;
+}
 
+.boxTitles {
+  font-size: 13px;
+}
 
+#Grafico {
+  top: 4%;
+  height:45%;
+}
 
+.values {
+  top: 0%;
+  left: 0px;
+  /* left: 2px; */
+  width: 80%;
+  position: relative;
+  margin: auto auto;
+  /* text-align: center; */
+  height: auto;
+  font-size: 3.5vw;
+  color: black;
+}
 
+#Grafico2 {
+  top: 53%;
+  height:45%;
+}
 
-/* iPads (portrait) ----------- */
+#imgFrecceConsumi {
+  margin-left: 5px;
+  height: 176px;
+  width: 19px;
+}
+
+#divCentro {
+    top: 16%;
+  left: 0%;
+  width:70px;
+  height:70px;
+}
+
+#CostoConsumoInfo {
+height: 100%;
+}
+}
+
+/* SOLO PER DEVICE MOBILI*/
 @media only screen and (max-device-width : 800px) and (max-device-height : 1280px) and (-webkit-min-device-pixel-ratio : 1) {
 /* Styles */
 
 #divCentro {
-  top: 21%;
-  left: 46.7%;
-  width: 5%;
+  top: 18%;
+  left: -4px;
+  width: 7%;
 }
 
 	#CostoConsumoInfo {
@@ -1037,22 +1104,25 @@ font-size: 2.5vw;
 }
 
 #CostoConsumoSintesi {
-  height: 350px;
+  height: 350px !important;
 }
 
 #IndicatorePV {
-  height: 50px;
+   height: 70px;
+  margin-top: 4px;
+  margin-bottom: -5px;
+  
 }
 
 }
 
 
 
-
-@media only screen and (max-width:854px) and (max-height:480px){
+/*SOLO PER SMARTPHONE*/
+@media only screen and (max-device-width:854px) and (max-device-height:480px){
 	#CostoConsumoSintesi {
 	  width: 75%;
-	  height: 215px;
+	  height: 215px !important;
 	}
 	#Consigli {
    margin-left: 4px;
@@ -1079,8 +1149,9 @@ font-size: 2.5vw;
   width: 98%;
   height: 225px;
   left: 0px;
-  top: 25px;
-  left: 5px;
+   top: 39px;
+  left: 6px;
+ 
   position: relative;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -1111,20 +1182,73 @@ font-size: 2.5vw;
   margin-top: 1px;
 }
 
-
-
 }
 
 
 
 @media only screen and (max-device-width:480px), (max-width: 480px){
 #CostoConsumoSintesi {
-  height: 250px;
-  width:98%;
+  height: 300px;
+  width: 98%;
+  left: 1px;
 }
 
 #divCentro {
-  top: 21%;
+  top: 18%;
+  width: 11%;
+  left: 0px;
+}
+
+#consigliTurnOn {
+  width: 90%;
+}
+
+#PVConsumoIACIndicatoreImg {
+  margin-left: -11px;
+}
+
+.pvSingleBox {
+width: 34%;
+  height: 41%;
+  border: 4px solid #575757
+}
+
+#ReteAttuale {
+	top:4%;
+  right: 1px;
+}
+
+#imgFrecceRete {
+  width: 38%;
+  height: 14px;
+}
+
+#imgFrecceProd {
+  width: 38%;
+  height: 14px;
+}
+
+.CostoConsumoAttualePV {
+  bottom:1px;
+  left: -2px;
+}
+
+#divFrecceProd {
+  left: 8%;
+}
+
+#ProduzioneAttuale {
+  left: 1px;
+    top: 4%;
+}
+
+#imgFrecceConsumi {
+  height: 128px;
+  width: 10px;
+}
+
+#divFrecceConsumi {
+  left: 48.5%;
 }
 
 #Consigli {
@@ -1133,15 +1257,25 @@ font-size: 2.5vw;
 }
 
 .boxTitles {
-  font-size: 3vw;
+  font-size: 2.8vw;
 }
 
 .values {
-  font-size: 4vw;
+  top: 0%;
+  left: 0px;
+  /* left: 2px; */
+  width: 82px;
+  position: relative;
+  margin: auto auto;
+  /* text-align: center; */
+  height: auto;
+  font-size: 4.8vw;
+  color: black;
+
 }
 
 #consigliTurnOn {
-  font-size: 3vw;
+  font-size: 16px;
 }
 
 .box {
@@ -1153,8 +1287,14 @@ font-size: 2.5vw;
   margin-top:8px;
 }
 
+.meter {
+  width: 98px;
+  height: 69px;
+}
+
 #IndicatorePV {
   height: 50px;
+    width: 98%;
 }
 
 #Grafico{
@@ -1162,7 +1302,7 @@ font-size: 2.5vw;
 width: 95%;
   height: 350px;
   top: 30px;
-  left: 8px;
+  left: 0px;
     font-size: 4vw;
 }
 
@@ -1170,34 +1310,47 @@ width: 95%;
 	position:relative;
 width: 95%;
   height: 350px;
-  left: 8px;
- top: 60px;
+  left: 0px;
+ top: 45px;
    font-size: 4vw;
 }
 
 #CostoConsumoInfo {
-  height: 800px;
+  height: 775px;
 }
 
 #IndicatoreTitoloPV {
   font-size: 2.2vw;
   top: 20%;
+  margin: 8px 0px 12px 10px;
 }
 
 #percIAC {
   font-size: 4vw;
   top: 32%;
-  right: 1%;
-}
-
-#PVConsumoIACIndicatoreImg {
-  bottom: 33%;
-  margin-left: 20%;
+  right: 5px;
 }
 
 }
 
+/* @media only screen and (max-width: 480px){
+#Grafico2 {
+  top: 40px;
+}
+} */
 
+@media only screen and (max-device-width: 480px){
+
+	#Grafico {
+	  top: 10px;
+	  left: 7px;
+	}
+	
+	#Grafico2 {
+		top:6px;
+	  left: 6px;
+	}
+}
 
 
 /**************************************************************************/
@@ -1270,6 +1423,14 @@ width: 95%;
 	}
 
 }
+
+
+@media only screen and (device-width: 1232px) and (device-height: 800px),(device-width: 1280px) and (device-height: 800px){
+	#CostoConsumoSintesi {
+  height: 67% !important;
+	}
+}
+
 
 
 /* Galaxy Tab (portrait and landscape) ----------- */

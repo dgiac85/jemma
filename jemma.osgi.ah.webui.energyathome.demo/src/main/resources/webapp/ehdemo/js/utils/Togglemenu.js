@@ -57,6 +57,7 @@ function exitMobile(){
 
 $(document).ready(function() {	
 
+	console.log(window.innerWidth);
 	if ( ($("#dataANDuser").css("display")==="block") && ($(".toggleMobile2").css("display")==="block") ) {	
 		$("#ContainerLogo").css("display","block");
 		$("#dataANDuser").css("display","none");	    		
@@ -176,7 +177,7 @@ $(document).ready(function() {
 			}
 		}
 		else{
-			$("#CostoConsumoSintesi").css("height","250px");
+			$("#CostoConsumoSintesi").css("height","300px");
 		}
 		
 		

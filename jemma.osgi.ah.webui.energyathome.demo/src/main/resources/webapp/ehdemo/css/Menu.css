@@ -75,7 +75,7 @@
 	top: 70%;
 	left: 0%;
 text-align: center;
-font-size: 1.05vw;
+font-size: 16px;
 font-weight: bold;
 border: none;
 outline: none;
@@ -281,6 +281,10 @@ width:80%;
 }
 
 
+
+
+
+
 @media only screen and (max-width: 1220px) and (min-width:952px){
 			
 #datausersmartphoneToggle{
@@ -399,10 +403,10 @@ background: #202020;
   max-height: 96px;
 }
 
-#contMainEl0{top: -2.60000000000002px;  position: relative;left:0% !important;min-width:125px;max-width:125px}
-#contMainEl1{top: -2.60000000000002px;  position: relative;left:1% !important;min-width:125px;max-width:125px}
-#contMainEl2{top: -2.60000000000002px; position: relative; left:2% !important;min-width:125px;max-width:125px}
-#contMainEl3{top: -2.60000000000002px; position: relative; left:3% !important;min-width:125px;max-width:125px}
+#contMainEl0{top: 0.4px;  position: relative;left:0% !important;min-width:125px;max-width:125px}
+#contMainEl1{top: 0.4px;  position: relative;left:1% !important;min-width:125px;max-width:125px}
+#contMainEl2{top: 0.4px; position: relative; left:2% !important;min-width:125px;max-width:125px}
+#contMainEl3{top: 0.4px; position: relative; left:3% !important;min-width:125px;max-width:125px}
 
 #datausercontent{
 float: left;
@@ -516,7 +520,7 @@ z-index: 5;
 #datausersmartphoneToggle{
 width: 55px;
 float: left;
-height: auto;
+height: 100%;
 }
 
 
@@ -704,6 +708,27 @@ position: relative;
 } /*chiusura media query 765*/
 
 
+@media only screen and (max-device-width: 951px) and (min-device-width: 481px){
+#contMainEl0 {
+  top: -9.8px;
+}
+#contMainEl3 {
+  top: -9.8px;
+}
+#contMainEl2 {
+  top: -9.8px;
+}
+#contMainEl1 {
+  top: -9.8px;
+}
+
+#datausersmartphoneToggle {
+  width: 55px;
+  float: left;
+  height: 53px;
+}
+}
+
 
 /*SCREEN PORTRAIT*/
 @media only screen and (max-width: 480px){
@@ -713,7 +738,7 @@ position: relative;
   top: 5%;
   left: auto;
   margin: 0px;
-    right: 222px;
+    right: 160px;
 }
 
 #contMainEl1{
@@ -721,7 +746,7 @@ position: relative;
   top: 25% ;
   left: auto;
   margin: 0px;
-    right: 222px;
+    right: 160px;
 }
 
 #contMainEl2{
@@ -729,7 +754,7 @@ position: relative;
   top: 50% ;
   left: auto;
   margin: 0px;
-    right: 222px;
+    right: 160px;
 }
 
 #contMainEl3{
@@ -737,7 +762,7 @@ position: relative;
   top: 75% ;
   left: auto;
   margin: 0px;
-    right: 222px;
+    right: 160px;
 }
 
 #toggleMenu{
@@ -831,7 +856,8 @@ height: auto;
 }
 
 .MainMenuEl:hover {
-	
+ width:80%;	
+ height: 90px;
   border-right: 2px solid #202020;
 border-bottom: 2px solid #9ec200;
     border-top-right-radius: 0px;
@@ -875,16 +901,16 @@ border-bottom: 2px solid #9ec200;
   height:800px;
   max-height:800px;
   min-height:800px;
-  width: 413px;
-  max-width:413px;
-  min-width:413px;
+  width: 312px;
+  max-width:312px;
+  min-width:312px;
   }
 
 	.MainMenuElSelected {
 
   border-right: 2px solid #202020;
   border-bottom: solid;
-  width: 100%;
+  width: 90%;
   /* z-index: 5; */
   height: 90px;
   /* border-top-left-radius: 4px; */
@@ -927,19 +953,19 @@ border-bottom: 2px solid #9ec200;
 	
 	#contMainEl0{
 
-    right: 162px;
+    right: 158px;
 }
 
 #contMainEl1{
-right: 162px;
+right: 158px;
 }
 
 #contMainEl2{
-right: 162px;
+right: 158px;
 }
 
 #contMainEl3{
-right: 162px;
+right: 158px;
 }
 
 .MainMenuElSelected {
@@ -955,23 +981,20 @@ right: 162px;
   height: calc(100% - 81px);
   height: -moz-calc(100% - 81px);
   height: -webkit-calc(100% - 81px);
-  max-height: calc(100% - 81px);
-  max-height: -moz-calc(100% - 81px);
-  max-height: -webkit-calc(100% - 81px);
   min-height: calc(100% - 81px);
   min-height: -moz-calc(100% - 81px);
   min-height: -webkit-calc(100% - 81px);
-  width: calc(100% - 28px);
-  width: -moz-calc(100% - 28px);
-  width: -webkit-calc(100% - 28px);
-  max-width: calc(100% - 28px);
-  max-width: -moz-calc(100% - 28px);
-  max-width: -webkit-calc(100% - 28px);
-  min-width: calc(100% - 28px);
-  min-width: -moz-calc(100% - 28px);
-  min-width: -webkit-calc(100% - 28px);
+  max-height: calc(100% - 81px);
+  max-height: -moz-calc(100% - 81px);
+  max-height: -webkit-calc(100% - 81px);
+  width:320px;
 
 } 
+
+#ContentMenu{
+	left:146px;
+}
+
 }
 
 /* iPhone 3GS e 4 in PORTRAIT ----------- */
@@ -1233,6 +1256,20 @@ position: relative;
 
 /**************************************************************************/
 /*MEDIA QUERIES SPECIFICHE*/
+
+/*PAD TELECOM*/
+@media only screen and (device-height: 1232px) and (device-width:800px), (device-width: 800px) and (device-height:1280px){
+	#contMainEl0 {
+  top: 24.2px;
+	}
+	#contMainEl1 {
+  top: 24.2px;}
+  #contMainEl2 {
+  top: 24.2px;}
+  #contMainEl3 {
+  top: 24.2px}
+  
+}
 
 /* Samsung Galaxy S5 -----------P&L */
 @media only screen and (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){

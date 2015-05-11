@@ -137,12 +137,12 @@ Menu.Init = function(mainDiv, contentDiv) {
 
 
 Menu.OnClickMainMenu = function(val) {
-	if($("#Consigli").css("display")==="none"){
-		ctrlCostoConsumoSintesi("block");
-	}
-	else{
-		ctrlCostoConsumoSintesi("none");
-	}
+//	if($("#Consigli").css("display")==="none"){
+//		ctrlCostoConsumoSintesi();
+//	}
+//	else{
+//		ctrlCostoConsumoSintesi("none");
+//	}
 	
 	// richiamo funzione di Exit per l'elemento che lascio
 	oldContent = $(".ContentMenuElSelected").attr("id");
@@ -220,8 +220,10 @@ Menu.OnClickMainMenu = function(val) {
 	
 	 if (val===0){
 	    	$("#Consigli").css("display","block");
+	    	$("#CostoConsumoSintesi").css("height","70%");
 	 }
-	
+	 
+	 
 	if(window.innerWidth>=theWidth){
 			func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
 			console.log("entra");		
@@ -301,28 +303,17 @@ Menu.InitContentMenu = function(contentDiv) {
 }
 
 
-function ctrlCostoConsumoSintesi(val){
-	if( ($("#Consigli").css("display")===val) && (window.innerWidth>480) ){
-		
-		$("#CostoConsumoSintesi").css("height","98%");
-	}
-	else if ( (window.innerWidth>480) && ((window.innerWidth<theWidth)) ) {
-		$("#CostoConsumoSintesi").css("height","70%");
-	}
-	else if (window.innerWidth<=480){
-		$("#CostoConsumoSintesi").css("height","250px");
-	}
-	else{
-		$("#CostoConsumoSintesi").css("height","70%");
-	}
-}
+$(document).ready(function() {
+	
+});
 
 Menu.OnClickContentMenu = function(valMain, valContent) {
 	//per capire se sono in consumi o in fotovoltaico
-	ctrlCostoConsumoSintesi("block");
-	
+
+	//imposto l'altezza dell'iframe relativo all'inserimento di username e password
+//	ctrlCostoConsumoSintesi();
+
 	// richiamo funzione di Exit per l'elemento che lascio
-	
 	oldContent = $(".ContentMenuElSelected").attr("id");
 	if (Main.env == 0) console.log(80, "Menu", "OnClickContentMenu oldContent = " + oldContent);
 	
@@ -357,16 +348,15 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 
     func = Menu.MainMenu[valMain].SubMenu[valContent].FuncEnter;
 	
-   
-    
+  
     
     if ((valMain==0) && (valContent==1)){
 		$("#Consigli").css("display","none");
-		//$("#CostoConsumoSintesi").css("height","98%");
+		$("#CostoConsumoSintesi").css("height","98%");
     }	
 	else{
 		$("#Consigli").css("display","block");
-		//$("#CostoConsumoSintesi").css("height","70%");
+		$("#CostoConsumoSintesi").css("height","70%");
     }
     
     if ((valMain==0) && (valContent==3)){
@@ -392,6 +382,8 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 		eval(func);
 		
 		document.body.scrollTop = document.documentElement.scrollTop = 0;
+		
+		    
 	} else {
 		
 		if (Main.env == 0) console.log(80, "Menu", "OnClickContentMenu func undefined");

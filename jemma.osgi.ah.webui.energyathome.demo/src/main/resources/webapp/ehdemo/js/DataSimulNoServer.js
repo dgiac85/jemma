@@ -905,7 +905,7 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
-	                   
+	                   //MIO3
 	                   {
 	                       "map": {
 	                           "device_value": {
