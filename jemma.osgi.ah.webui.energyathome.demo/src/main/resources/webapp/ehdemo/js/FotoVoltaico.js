@@ -257,7 +257,7 @@ CostiConsumi.GestOnClickMainMenu = function() {
 }
 
 CostiConsumi.GestFotoVoltaico = function() {
-
+	alert("ciao");
 	$("#CostiConsumi").show();
 	if ((CostiConsumi.mode == CostiConsumi.CONSUMI) || (CostiConsumi.mode == CostiConsumi.COSTI)) {
 		CostiConsumi.mode = CostiConsumi.FOTOVOLTAICO;
@@ -311,6 +311,7 @@ CostiConsumi.GestFotoVoltaico = function() {
 		$("#CostoConsumoAttuale").addClass('CostoConsumoAttualePV');
 		$("#ProduzioneAttualeTitolo").show();
 		$("#ProduzioneAttuale").show();
+		
 		$("#ReteAttualeTitolo").show();
 		$("#ReteAttuale").show();
 		$("#FrecceFV").show();

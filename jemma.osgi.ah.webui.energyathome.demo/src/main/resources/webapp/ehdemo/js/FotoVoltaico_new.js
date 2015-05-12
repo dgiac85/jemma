@@ -89,6 +89,8 @@ var CostiConsumi = {
 /* Inizializza la schermata */
 CostiConsumi.Init = function() {
 	
+
+	
 	indicatoreTermometro = 'images/termometro_iac.png';
 	suffIndicatoreT = '_iac';
 
@@ -164,6 +166,7 @@ CostiConsumi.GestOnClickMainMenu = function() {
 
 CostiConsumi.GestFotoVoltaico = function() {
 
+	
 	$("#CostiConsumi").show();
 	if ((CostiConsumi.mode == CostiConsumi.CONSUMI) || (CostiConsumi.mode == CostiConsumi.COSTI)) {
 		CostiConsumi.mode = CostiConsumi.FOTOVOLTAICO;
@@ -179,6 +182,7 @@ CostiConsumi.GestFotoVoltaico = function() {
 		$("#IndicatorePV").show();
 		$("#ValConsumoAttuale").show();
 		$("#ValProduzioneAttuale").show();
+		
 		$("#ValReteAttuale").show();
 		$("#DettaglioSuddivisioneCosti").hide();
 		if (navigator.userAgent.indexOf('MSIE 7.0') > -1) {

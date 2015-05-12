@@ -94,7 +94,8 @@ span {
 	width: -webkit-calc(100% - 192px);
 	width: -moz-calc(100% - 192px);
 	width: calc(100% - 192px);	
-	height: 725px;
+	height: 725px !important;
+	min-height:0px !important;
 	  padding-bottom: 10px;
 	background-color: #333333;
 	overflow:hidden;
@@ -597,11 +598,11 @@ width: 98%;
 	 #ContentMain {
 	 position:absolute;
 		width: 100%;
-		height:calc(100% - 56px);
-		height:-moz-calc(100% - 56px);
-		height:-webkit-calc(100% - 56px);
+		height:calc(100% - 56px) !important;
+		height:-moz-calc(100% - 56px) !important;
+		height:-webkit-calc(100% - 56px) !important;
 		  max-height: 1200px;
-  min-height: 768px;
+  min-height: 768px !important;
 		left:0px;
 		padding-bottom:10px;
 		margin-top:62px;	
@@ -742,7 +743,7 @@ background-color: #333333;
   	  height: calc(100% - 56px);
   height: -moz-calc(100% - 56px);
   height: -webkit-calc(100% - 56px);
-  min-height: 1560px;
+  min-height: 1560px !important;
 	}
 	
 	
@@ -971,11 +972,11 @@ display:block;
 }
 
 #ContentMain{
-	height:auto;
+	height:auto !important;
 	position:static;
 	left:0px;
 	  max-height: 1300px;
-  min-height: 1300px;
+  min-height: 1300px !important;
 }
 
 

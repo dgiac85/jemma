@@ -304,6 +304,10 @@ Menu.InitContentMenu = function(contentDiv) {
 
 
 $(document).ready(function() {
+	//gestione dell'evento on resize 
+	$(window).resize( function(){
+
+	});
 	
 });
 
@@ -348,9 +352,23 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 
     func = Menu.MainMenu[valMain].SubMenu[valContent].FuncEnter;
 	
-  
+    /*GESTIRLE PER OGNI PAGINA*/
+    if ((valMain==0) && (valContent==0)){
+    	if(window.innerWidth<951){
+    		$("#ContentMain").css("cssText", "min-height: 1560px");
+    	}
+    	else{
+    		$("#ContentMain").css("min-height","0px");
+    	}
+    }
     
     if ((valMain==0) && (valContent==1)){
+    	if(window.innerWidth<951){
+    		$("#ContentMain").css("cssText", "min-height: 1560px");
+    	}
+    	else{
+    		$("#ContentMain").css("min-height","0px");
+    	}
 		$("#Consigli").css("display","none");
 		$("#CostoConsumoSintesi").css("height","98%");
     }	
@@ -365,6 +383,8 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
     else{
     	$("#ContentMain").css("display","block");
     }
+    
+    /*GESTIRLE PER OGNI PAGINA*/
 
   
     

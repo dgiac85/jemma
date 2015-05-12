@@ -40,14 +40,19 @@ function insert(){
 
 //funzione per la rimozione dell'interfaccia dal mobile menu ed il ritorno nel pannello normale
 function remove(){
-	var element=$('#Interfaccia').detach();
-	$('#RigaInterfaccia').append(element);
+	var element=$('#Interfaccia').detach();	
+	$("#RigaInterfaccia").append(element);	
+	element=$('#RiepilogoConsumi').detach();
+	$('#RigaInterfaccia').append(element);	
+	
 }
 
 var misura=0;
 var nP=0;
 
 $(document).ready(function() {
+	
+	
 
 	(function ($) {
 	    var d = 1, t = null, e = null, h, r = false;
@@ -762,6 +767,9 @@ Elettrodomestici.GestElettrodomestici = function(){
 }
 
 Elettrodomestici.init=function(){
+	
+	
+	
 	Elettrodomestici.indexElettrodomestico = 0;
 	Elettrodomestici.interfaccia = null;
 
@@ -874,6 +882,7 @@ function ctrlElPerPagina(){
 
 
 Elettrodomestici.refreshDevices=function(){
+	$("#ContentMain").css("cssText", "min-height: 0px !important;");
 	$("#RigaElettrodomestici").html(" ");
 	
 	Elettrodomestici.perPagina=ctrlElPerPagina();
@@ -886,6 +895,7 @@ Elettrodomestici.refreshDevices=function(){
 	else{
 		Elettrodomestici.numPagine = Math.ceil(Elettrodomestici.listaElettrodomestici.length/Elettrodomestici.perPagina);
 	}
+	
 		
 	var start= Elettrodomestici.pagina*Elettrodomestici.perPagina;
 	var end= ( start+Elettrodomestici.perPagina);
@@ -1059,9 +1069,7 @@ Elettrodomestici.refreshDevices=function(){
 			$("#device_"+i+ " .StatoElettrodomestico .posizione_value").text(Elettrodomestici.locazioni[Elettrodomestici.listaElettrodomestici[i].location]);
 			var icona_src= "Resources/Images/Devices/"+Elettrodomestici.getIcon(Elettrodomestici.listaElettrodomestici[i]);
 			$("#device_"+i+ " .IconaElettrodomestico .icona-dispositivo").attr("src",icona_src);
-			
-		
-			
+						
 			$("#device_"+i).click(function(){
 				
 				if(window.innerWidth<=widthSmartphone){
@@ -1071,9 +1079,7 @@ Elettrodomestici.refreshDevices=function(){
 				} 
 				
 				$('#Interfaccia .content').html(" ");
-				$('#Interfaccia .header .titolo').text("");
-				
-					
+				$('#Interfaccia .header .titolo').text("");		
 					
 				
 				Elettrodomestici.addSpinner("#Interfaccia","none");
@@ -1142,6 +1148,10 @@ Elettrodomestici.refreshDevices=function(){
 				}
 			});
 		}
+		//for per la visualizzazione degli elettrodomestici nella riga elettrodomestici
+//		for (j=0; j<Elettrodomestici.numPagine;j++){
+//			$("#device_"+j*Elettrodomestici.perPagina).css("margin-left","115px");
+//		}
 	});
 }
 
