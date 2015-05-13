@@ -11,7 +11,9 @@ var Menu = {
 	sfondoElImg : Define.menu["sfondoButton"],
 	MainMenu : null,
 	SubMenuHtml : null,
-	timercheckObjService: null
+	timercheckObjService: null,
+	mainMenuSelected:0,
+	contentMenuSelected:0
 }
 
 var ctrl=false; //controllo per il primo accesso
@@ -86,69 +88,23 @@ Menu.Init = function(mainDiv, contentDiv) {
 	
 	$("#" + mainDiv).html(Menu.MainHtml);
 	
-	
-	
-	
-
-	
-	
-	//Per mostrare il contorno illuminato per l'elemento selezionato
-	
-	
-	/*if($(window).height()<=480){
-		$(".MainMenuImg").css("width","35%");
-		$(".Cover").css("height","50px");
-		$(".CoverBis").css("height","80px");
-	}
-	else{
-		$(".Cover").css("height","90px");
-		$(".CoverBis").css("height","100px");
-	}*/
-	
-	
-
-
-	// forzo dimensioni da css altrimenti il titolo ha dimensioni 0
-	//$(".MainMenuEl").css("width", dim + "px");
-	//$(".MainMenuEl").css("height", hDiv + "px");
 
 	Menu.InitContentMenu(contentDiv);
 	//Menu.OnClickMainMenu(0);
 	if (Main.env == 0) console.log('CostiConsumi', CostiConsumi);
 	CostiConsumi.Init();  
 	
-	//alert("w="+widthMenuButton);
-	//alert("h="+heightMenuButton);
-	
-//	if($(window).width()<widthSmart){
-//		console.log("header height="+$("#Header").height());
-//		//$('#mobileMenu').css('height',$(window).height()-$("#Header").height());
-//		//$('#ContentMenu').css('height',$(window).height()-$("#Header").height()-35);
-//	}
-	
-	
-	
-	
-	
-
 }
 
 
 
 
 Menu.OnClickMainMenu = function(val) {
-//	if($("#Consigli").css("display")==="none"){
-//		ctrlCostoConsumoSintesi();
-//	}
-//	else{
-//		ctrlCostoConsumoSintesi("none");
-//	}
 	
 	// richiamo funzione di Exit per l'elemento che lascio
 	oldContent = $(".ContentMenuElSelected").attr("id");
 	selected=val;
 	
-	//$("#mobileMenu").animate({"left":"-1000px"}, 500);
 	if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu oldContent = " + oldContent);
 	
 	if (oldContent != undefined) {
@@ -189,9 +145,8 @@ Menu.OnClickMainMenu = function(val) {
 		$("#MainEl" + val).addClass("MainMenuElSelected");
 		
 	
-	
-	
 	$("#MainImg" + val).attr("src", Menu.MainMenu[val].ImageSelected);
+	Menu.mainMenuSelected=val;
 
 	$(".visibleDiv").addClass("invisibleDiv");
 	$(".visibleDiv").removeClass("visibleDiv");
@@ -220,7 +175,7 @@ Menu.OnClickMainMenu = function(val) {
 	
 	 if (val===0){
 	    	$("#Consigli").css("display","block");
-	    	$("#CostoConsumoSintesi").css("height","70%");
+	    	//$("#CostoConsumoSintesi").css("height","70%");
 	 }
 	 
 	 
@@ -304,7 +259,7 @@ Menu.InitContentMenu = function(contentDiv) {
 
 
 $(document).ready(function() {
-	//gestione dell'evento on resize 
+	//gestione dell'evento on resize per le pagine che hanno dei div in comune
 	$(window).resize( function(){
 
 	});
@@ -351,43 +306,16 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 	$("#img" + valMain + "Content" + valContent).attr("src",Menu.MainMenu[valMain].SubMenu[valContent].ImageSelected);
 
     func = Menu.MainMenu[valMain].SubMenu[valContent].FuncEnter;
+    
+    Menu.contentMenuSelected=valContent;
 	
-    /*GESTIRLE PER OGNI PAGINA*/
-    if ((valMain==0) && (valContent==0)){
-    	if(window.innerWidth<951){
-    		$("#ContentMain").css("cssText", "min-height: 1560px");
-    	}
-    	else{
-    		$("#ContentMain").css("min-height","0px");
-    	}
-    }
-    
-    if ((valMain==0) && (valContent==1)){
-    	if(window.innerWidth<951){
-    		$("#ContentMain").css("cssText", "min-height: 1560px");
-    	}
-    	else{
-    		$("#ContentMain").css("min-height","0px");
-    	}
-		$("#Consigli").css("display","none");
-		$("#CostoConsumoSintesi").css("height","98%");
-    }	
-	else{
-		$("#Consigli").css("display","block");
-		$("#CostoConsumoSintesi").css("height","70%");
-    }
-    
     if ((valMain==0) && (valContent==3)){
     	$("#ContentMain").css("display","none");
     }
     else{
     	$("#ContentMain").css("display","block");
     }
-    
-    /*GESTIRLE PER OGNI PAGINA*/
-
-  
-    
+      
 
 	if (Main.env == 0) console.log(80, "Menu", "valMain = " + valMain);
 	if (Main.env == 0) console.log(80, "Menu", "valContent = " + valContent);

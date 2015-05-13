@@ -5,17 +5,53 @@ var potenza = {
 var consumoMaxValue = 0;
 var consumoMaxIcon;
 var consumoMaxNome;
+var widthBreak1=951;
+var widthSmPh=480;
+
+$(document).ready(function() {	
+	$(window).resize( function(){
+		if(window.innerWidth<=widthBreak1){
+			$("#ContentMain").css("min-height","1560px");
+		}
+		else{
+			$("#ContentMain").css("min-height","768px");		
+		}
+		
+		if(window.innerWidth<=widthSmPh){
+			$("#ContentMain").css("min-height","1300px");
+			$("#CostoConsumoSintesi").css("height","300px");
+		}
+		else{
+			if ((Menu.mainMenuSelected==0) && (Menu.contentMenuSelected===1))
+				$("#CostoConsumoSintesi").css("height","98%");
+		}
+	
+	});
+});
+
 
 CostiConsumi.GestConsumi = function() {
-
+    
 	$("#CostiConsumi").show();
+	$("#CostoConsumoSintesi").css("height","98%");
+	if(window.innerWidth<=widthBreak1){
+		$("#ContentMain").css("min-height","1560px");
+	}
+	else{
+		$("#ContentMain").css("min-height","768px");		
+	}
+	if(window.innerWidth<=widthSmPh){
+		$("#ContentMain").css("min-height","1300px");
+		$("#CostoConsumoSintesi").css("height","300px");
+	}
+	
 	if ((CostiConsumi.mode == CostiConsumi.COSTI) || (CostiConsumi.mode == CostiConsumi.FOTOVOLTAICO)) {
 
 		CostiConsumi.mode = CostiConsumi.CONSUMI;
 		$("#TitoloCostiConsumi").html(Msg.home["titoloConsumi"]);
 		$('#consigliTurnOn').hide();
 		
-		$("#CostoConsumoSintesi").css("height","98%");
+		
 
 		if (Main.enablePV) {
 			$("#ProduzioneAttualeTitolo").hide();

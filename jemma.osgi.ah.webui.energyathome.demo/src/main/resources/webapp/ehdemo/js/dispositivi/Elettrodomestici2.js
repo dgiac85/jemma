@@ -31,6 +31,7 @@ var Elettrodomestici = {
 };
 
 var widthSmartphone=480;
+var dim=0;
 
 //funzione per l'inserimento del pannello interfaccia nel mobile menu
 function insert(){
@@ -48,12 +49,32 @@ function remove(){
 }
 
 var misura=0;
-var nP=0;
+
+function dimensionaSpaziDevice(){
+	switch(Elettrodomestici.perPagina){
+	case 1:
+		$(".Elettrodomestico").css("width","90%");
+		break;
+	case 2:
+		$(".Elettrodomestico").css("width","42%");
+		break;
+	case 3:
+		$(".Elettrodomestico").css("width","29%");
+		break;
+	case 4:
+		$(".Elettrodomestico").css("width","22%");
+		break;
+	case 5:
+		$(".Elettrodomestico").css("width","18%");
+		break;
+	case 6:
+		$(".Elettrodomestico").css("width","15%");
+		break;
+	}	
+}
 
 $(document).ready(function() {
 	
-	
-
 	(function ($) {
 	    var d = 1, t = null, e = null, h, r = false;
 
@@ -63,7 +84,10 @@ $(document).ready(function() {
 	    };
 
 	    $(window).on('resize', function (event) {
-	        	
+	        console.log(Elettrodomestici.perPagina);
+	        ctrlElPerPagina();
+	    	dimensionaSpaziDevice();				
+	    	
 	        e = event || e;
 	        clearTimeout(t);
 
@@ -866,14 +890,14 @@ Elettrodomestici.stopUpdate=function(){
 //funzione che in base al resize della pagina definisce il numero di elettrodomestici che vanno inseriti nella pagina
 function ctrlElPerPagina(){
 	var i=0;
-	var dimBox=225; //dimensione standard del box uguale a 255px
+	var dimBox=255; //dimensione standard del box uguale a 255px
 	var dimensioneTot=0;
 	var dimRigaElettr=$("#Elettrodomestici").width();
 	
 	
 	while(dimensioneTot < dimRigaElettr){
 		i++;
-		dimensioneTot=dimBox*i;		
+		dimensioneTot=(dimBox)*i;		
 	}
 	i-=1;
 
@@ -882,7 +906,7 @@ function ctrlElPerPagina(){
 
 
 Elettrodomestici.refreshDevices=function(){
-	$("#ContentMain").css("cssText", "min-height: 0px !important;");
+	$("#ContentMain").css("min-height", "768px");
 	$("#RigaElettrodomestici").html(" ");
 	
 	Elettrodomestici.perPagina=ctrlElPerPagina();
@@ -896,6 +920,7 @@ Elettrodomestici.refreshDevices=function(){
 		Elettrodomestici.numPagine = Math.ceil(Elettrodomestici.listaElettrodomestici.length/Elettrodomestici.perPagina);
 	}
 	
+
 		
 	var start= Elettrodomestici.pagina*Elettrodomestici.perPagina;
 	var end= ( start+Elettrodomestici.perPagina);
@@ -1147,7 +1172,9 @@ Elettrodomestici.refreshDevices=function(){
 					});
 				}
 			});
-		}
+		}		
+		dimensionaSpaziDevice();
+		
 		//for per la visualizzazione degli elettrodomestici nella riga elettrodomestici
 //		for (j=0; j<Elettrodomestici.numPagine;j++){
 //			$("#device_"+j*Elettrodomestici.perPagina).css("margin-left","115px");

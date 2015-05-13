@@ -94,8 +94,8 @@ span {
 	width: -webkit-calc(100% - 192px);
 	width: -moz-calc(100% - 192px);
 	width: calc(100% - 192px);	
-	height: 725px !important;
-	min-height:0px !important;
+	height: 768px;
+	min-height:0px;
 	  padding-bottom: 10px;
 	background-color: #333333;
 	overflow:hidden;
@@ -159,7 +159,7 @@ span {
   	width: -moz-calc(100% - 192px);
   	width: calc(100% - 192px);
 	padding-bottom:10px;
-	height:725px;
+	height:765px;
 	overflow: hidden;
 	color: #202020;
 	background-color: #333;
@@ -479,7 +479,7 @@ label.error {
 #ContainerMenu{
 	float:left;
 	width: 192px;
-	  height: 725px;
+	  height: 768px;
   padding-bottom: 10px;
 	overflow:hidden;
 	background-color:#333333;
@@ -598,11 +598,11 @@ width: 98%;
 	 #ContentMain {
 	 position:absolute;
 		width: 100%;
-		height:calc(100% - 56px) !important;
-		height:-moz-calc(100% - 56px) !important;
-		height:-webkit-calc(100% - 56px) !important;
+		height:calc(100% - 70px);
+		height:-moz-calc(100% - 70px);
+		height:-webkit-calc(100% - 70px);
 		  max-height: 1200px;
-  min-height: 768px !important;
+  min-height: 768px;
 		left:0px;
 		padding-bottom:10px;
 		margin-top:62px;	
@@ -737,13 +737,13 @@ background-color: #333333;
 	#ContentMain {
   left: 0;
   float: left;
-  width: 100%;
   background-color: #333333;
   overflow: hidden;
+  width:100%
   	  height: calc(100% - 56px);
   height: -moz-calc(100% - 56px);
   height: -webkit-calc(100% - 56px);
-  min-height: 1560px !important;
+  min-height: 1560px;
 	}
 	
 	
@@ -835,12 +835,9 @@ display:block;
 /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX */
 @media only screen and (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1), (device-width:1232px) and (device-height:800px),(device-width: 1536px) and (device-height:864px){
 	#ContainerMenu {
-	  height: 525px;
+	  height: 768px;
 	}
 	
-	#ContentMain{
-		height:525px;
-	}
 	
 	.perCover {
  	 height:auto !important;
@@ -972,11 +969,11 @@ display:block;
 }
 
 #ContentMain{
-	height:auto !important;
+	height:auto;
 	position:static;
 	left:0px;
 	  max-height: 1300px;
-  min-height: 1300px !important;
+  min-height: 1300px;
 }
 
 
@@ -1036,7 +1033,7 @@ display:block;
 #ContentMain{
 		height:auto;
 		max-height:955px;
-		min-height:955px;
+		min-height:955px !important;
 	}
 
 #contImg1 {
@@ -1049,7 +1046,7 @@ display:block;
 @media only screen and (device-height: 768px){
 #ContentMain {
    max-height: 712px;
-  min-height: 712px;
+  min-height: 712px !important;
   height: 712px;
  }
 }

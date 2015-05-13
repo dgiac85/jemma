@@ -200,7 +200,6 @@ var CostiConsumi = {
  * gestisce la visualizzazione delal schermata dei costi
  ******************************************************************************/
 CostiConsumi.GestCosti = function() {
-	
 		showSpinner();
 		CostiConsumi.visType = CostiConsumi.COSTI;
 		$("#Content").html(CostiConsumi.htmlContent["Costi"]);

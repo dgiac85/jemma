@@ -166,21 +166,7 @@ $(document).ready(function() {
 		if (window.innerWidth <= widthTab)  {
 			goMobileSmart();
 		}
-		
-		//controllo sul pannello #CostoConsumoSintesi che deve cambiare le sue dimensioni in altezza in base alla risoluzione e alla pagina in cui si trova
-		if (window.innerWidth > widthSmPh)  {
-			if( ($("#Consigli").css("display")==="block") ){ 
-				$("#CostoConsumoSintesi").css("height","70%");
-			}
-			else{
-				$("#CostoConsumoSintesi").css("height","98%");
-			}
-		}
-		else{
-			$("#CostoConsumoSintesi").css("height","300px");
-		}
-		
-		
+			
 		});		
 	
 	
