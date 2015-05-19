@@ -121,6 +121,8 @@ $(document).ready(function() {
 			if ((Menu.contentMenuSelected===0) && (Menu.mainMenuSelected==0) )
 				$("#CostoConsumoSintesi").css("height","70%");
 		}
+		if ((Menu.contentMenuSelected===0) && (Menu.mainMenuSelected==0) )
+			$("#CostoConsumoSintesi").css("height","70%");
 	
 	});
 });

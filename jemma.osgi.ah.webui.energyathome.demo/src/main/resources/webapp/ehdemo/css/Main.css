@@ -159,7 +159,7 @@ span {
   	width: -moz-calc(100% - 192px);
   	width: calc(100% - 192px);
 	padding-bottom:10px;
-	height:765px;
+	height:768px;
 	overflow: hidden;
 	color: #202020;
 	background-color: #333;
@@ -821,7 +821,7 @@ display:block;
 }
 
 #ContentMenu {
-  top: 50%;
+  top: 153px;
 }
 
 }/*chiusura media query 765
@@ -838,12 +838,6 @@ display:block;
 	  height: 768px;
 	}
 	
-	
-	.perCover {
- 	 height:auto !important;
-	}
-	
-
 }
 
 
@@ -1069,12 +1063,12 @@ display:block;
 
 @media only screen and (max-device-height: 480px) and (max-device-width: 854px){
 #ContentMain {
-  height: 820px;
-    min-height: 820px;}
+  height: auto;
+      min-height: 0px !important;}
     
-    #ContainerDX {
-  height: 820px;
-    }
+ #ContainerDX {
+  height: 545px;
+}
 }
 
 

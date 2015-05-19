@@ -30,6 +30,7 @@ var Elettrodomestici = {
 
 };
 
+var theWidth=1220;
 var widthSmartphone=480;
 var dim=0;
 
@@ -75,6 +76,8 @@ function dimensionaSpaziDevice(){
 
 $(document).ready(function() {
 	
+ 
+	
 	(function ($) {
 	    var d = 1, t = null, e = null, h, r = false;
 
@@ -87,7 +90,9 @@ $(document).ready(function() {
 	        console.log(Elettrodomestici.perPagina);
 	        ctrlElPerPagina();
 	    	dimensionaSpaziDevice();				
-	    	
+	    	if(window.innerWidth>widthSmartphone){
+				$("#Interfaccia").css("display","block");		
+			}
 	        e = event || e;
 	        clearTimeout(t);
 
@@ -787,6 +792,7 @@ Elettrodomestici.ReadCurrentPower=function(callBack){
 }
 
 Elettrodomestici.GestElettrodomestici = function(){
+	
 	Elettrodomestici.init();
 }
 
@@ -906,12 +912,20 @@ function ctrlElPerPagina(){
 
 
 Elettrodomestici.refreshDevices=function(){
-	$("#ContentMain").css("min-height", "768px");
+	if(window.innerWidth<=theWidth){
+		$("#ContentMain").css("min-height", "868px");
+	}
+	if (window.innerWidth<=widthSmartphone) {
+		
+	}
+	
 	$("#RigaElettrodomestici").html(" ");
 	
 	Elettrodomestici.perPagina=ctrlElPerPagina();
 	
-	if(window.innerWidth<=widthSmartphone){
+	if( (window.innerWidth<=widthSmartphone) || (window.innerHeight<=widthSmartphone) ) {
+		$("#ContentMain").css("min-height", "none");
+		$("#ContentMain").css("max-height", "none");
 		Elettrodomestici.numPagine=1;
 		Elettrodomestici.pagina=0;
 		Elettrodomestici.perPagina=Elettrodomestici.listaElettrodomestici.length;
@@ -1097,7 +1111,7 @@ Elettrodomestici.refreshDevices=function(){
 						
 			$("#device_"+i).click(function(){
 				
-				if(window.innerWidth<=widthSmartphone){
+				if( (window.innerWidth<=widthSmartphone) || (window.innerHeight<=widthSmartphone) ){
 					$("#Interfaccia").css("display","block");
 					insert();
 					$("#mobileElett").animate({"left":"0px"}, 600);						
@@ -1174,7 +1188,9 @@ Elettrodomestici.refreshDevices=function(){
 			});
 		}		
 		dimensionaSpaziDevice();
-		
+		if( (window.innerWidth<=widthSmartphone) || (window.innerHeight<=widthSmartphone) ){
+			$("#Interfaccia").css("display","none");		
+		}
 		//for per la visualizzazione degli elettrodomestici nella riga elettrodomestici
 //		for (j=0; j<Elettrodomestici.numPagine;j++){
 //			$("#device_"+j*Elettrodomestici.perPagina).css("margin-left","115px");
