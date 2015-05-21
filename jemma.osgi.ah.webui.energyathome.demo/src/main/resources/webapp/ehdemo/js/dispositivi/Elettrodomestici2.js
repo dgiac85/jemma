@@ -38,6 +38,8 @@ var dim=0;
 function insert(){
 	var element=$('#Interfaccia').detach();
 	$('#mobileElett').append(element);
+//	element=$("#RiepilogoConsumi").detach();
+//	$("#ContentMain").append(element);
 }
 
 //funzione per la rimozione dell'interfaccia dal mobile menu ed il ritorno nel pannello normale
@@ -46,6 +48,8 @@ function remove(){
 	$("#RigaInterfaccia").append(element);	
 	element=$('#RiepilogoConsumi').detach();
 	$('#RigaInterfaccia').append(element);	
+//	element=$("#RiepilogoConsumi").detach();
+//	$("#RigaInterfaccia").append(element);
 	
 }
 
@@ -75,9 +79,6 @@ function dimensionaSpaziDevice(){
 }
 
 $(document).ready(function() {
-	
- 
-	
 	(function ($) {
 	    var d = 1, t = null, e = null, h, r = false;
 
@@ -91,8 +92,12 @@ $(document).ready(function() {
 	        ctrlElPerPagina();
 	    	dimensionaSpaziDevice();				
 	    	if(window.innerWidth>widthSmartphone){
-				$("#Interfaccia").css("display","block");		
+				$("#Interfaccia").css("display","block");	
+				if ($("#mobileElett").css("left")==="0px") {
+					$("#mobileElett").animate({"left":"200%"}, 600);		
+				}
 			}
+	    	
 	        e = event || e;
 	        clearTimeout(t);
 
@@ -114,14 +119,12 @@ $(document).ready(function() {
 	});
 	
 	$(window).on('resizeend', function(event){
-	
 		if (window.innerWidth<=widthSmartphone){					
-			insert();					
+			insert();
+			
 		}
 		else{
-			if ($("#mobileElett").css("left")==="0px") {
-				$("#mobileElett").animate({"left":"200%"}, 600);		
-			}						
+									
 			remove();			
 		}
 	
@@ -132,14 +135,20 @@ $(document).ready(function() {
 						
 			} 	
 		}	
-		
 		//ogni volta che finisce un resize della pagina si fa un refresh dei devices
-		Elettrodomestici.refreshDevices();
+		if (!Modernizr.touch){
+			Elettrodomestici.refreshDevices();			
+		}
+		else{
+			if (window.innerWidth>widthSmartphone){
+				Elettrodomestici.refreshDevices();
+			}
+		}
+		
 
 		console.log('Resize End!');
 	});
-	
-	
+		
 	
 });
 
@@ -229,6 +238,10 @@ Elettrodomestici.getCategoryIndex=function(name){
 
 //Funzione alternativa per la lista di elettrodomestici
 Elettrodomestici.GetDevicesInfos=function(callBack){
+	if (window.innerWidth<=widthSmartphone){
+		$("#Interfaccia").css("display","none");
+		//$("#RiepilogoConsumi").css("top",window.innerHeight-118);
+	}
 	if ((InterfaceEnergyHome.mode > 0) || (InterfaceEnergyHome.mode == -1)) {
 		try {
 			Elettrodomestici.requestCB = InterfaceEnergyHome.objService.getAppliancesConfigurationsDemo(function(result, err, req) {   //getInfosDemo(function(result, err, req) {
@@ -730,6 +743,11 @@ Elettrodomestici.GetDevicesInfos=function(callBack){
 		Elettrodomestici.numPagine = Math.ceil(Elettrodomestici.listaElettrodomestici.length/Elettrodomestici.perPagina);
 		callBack();
 	}
+	if (window.innerWidth<=widthSmartphone){
+		$("#Interfaccia").css("display","none");
+		//$("#RiepilogoConsumi").css("top",window.innerHeight-118);
+	}
+
 }
 
 Elettrodomestici.ReadCurrentProduction=function(callBack){
@@ -794,6 +812,7 @@ Elettrodomestici.ReadCurrentPower=function(callBack){
 Elettrodomestici.GestElettrodomestici = function(){
 	
 	Elettrodomestici.init();
+	
 }
 
 Elettrodomestici.init=function(){
@@ -841,6 +860,7 @@ Elettrodomestici.init=function(){
 			}
 		});
 		
+		
 		Elettrodomestici.addSpinner("#RigaElettrodomestici","none");
 		Elettrodomestici.GetCategories(function(){
 			Elettrodomestici.GetLocations(function(){
@@ -849,6 +869,8 @@ Elettrodomestici.init=function(){
 			});
 		});
 	});
+	if (window.innerWidth<=widthSmartphone)
+		$("#Interfaccia").css("display","none");
 }
 
 Elettrodomestici.update=function(){
@@ -1189,7 +1211,10 @@ Elettrodomestici.refreshDevices=function(){
 		}		
 		dimensionaSpaziDevice();
 		if( (window.innerWidth<=widthSmartphone) || (window.innerHeight<=widthSmartphone) ){
-			$("#Interfaccia").css("display","none");		
+			if ($("#mobileElett").css("left")==="200%") {
+				$("#Interfaccia").css("display","none");
+			}
+					
 		}
 		//for per la visualizzazione degli elettrodomestici nella riga elettrodomestici
 //		for (j=0; j<Elettrodomestici.numPagine;j++){
@@ -1220,6 +1245,7 @@ Elettrodomestici.loadInterfaccia=function(nome,pid, cat_id, index,interfaccia_sr
 			Elettrodomestici.interfaccia.init(clusters, index);
 		}
 	});
+	
 }
 /*funzione anonima per chiudere pannello elettrodomestici*/
 $(function ()

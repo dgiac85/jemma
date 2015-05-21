@@ -21,9 +21,9 @@ $(document).ready(function() {
 			$("#ContentMain").css("min-height","1300px");
 			$("#CostoConsumoSintesi").css("height","300px");
 		}
-		else{
-			if ((Menu.mainMenuSelected==0) && (Menu.contentMenuSelected===1))
-				$("#CostoConsumoSintesi").css("height","98%");
+		if (window.innerWidth>480){
+			if (Menu.contentMenuSelected===1)
+					$("#CostoConsumoSintesi").css("height","98%");
 		}
 	
 	});

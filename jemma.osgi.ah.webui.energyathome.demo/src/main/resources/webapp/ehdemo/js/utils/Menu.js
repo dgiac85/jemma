@@ -147,6 +147,7 @@ Menu.OnClickMainMenu = function(val) {
 	
 	$("#MainImg" + val).attr("src", Menu.MainMenu[val].ImageSelected);
 	Menu.mainMenuSelected=val;
+	Menu.contentMenuSelected=0;
 
 	$(".visibleDiv").addClass("invisibleDiv");
 	$(".visibleDiv").removeClass("visibleDiv");
@@ -271,6 +272,7 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 
 	//imposto l'altezza dell'iframe relativo all'inserimento di username e password
 //	ctrlCostoConsumoSintesi();
+	$("#mobileElett").animate({"left":"200%"}, 600);	
 
 	// richiamo funzione di Exit per l'elemento che lascio
 	oldContent = $(".ContentMenuElSelected").attr("id");
@@ -308,6 +310,11 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
     func = Menu.MainMenu[valMain].SubMenu[valContent].FuncEnter;
     
     Menu.contentMenuSelected=valContent;
+    
+//    if ((valMain==0) && (valContent!=2)){
+//    	element=$("#RiepilogoConsumi").detach();
+//    	$("#RigaInterfaccia").append(element);
+//    }
 	
     if ((valMain==0) && (valContent==3)){
     	$("#ContentMain").css("display","none");
@@ -328,6 +335,8 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 		
 		Tracing.Trace(Menu.MainMenu[valMain].SubMenu[valContent].Section, Tracing.IN, null, null);
 		eval(func);
+		//per la pagina dei dispositivi
+		
 		
 		document.body.scrollTop = document.documentElement.scrollTop = 0;
 		

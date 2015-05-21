@@ -106,23 +106,30 @@ var widthSmPh=480;
 var quale;
 
 $(document).ready(function() {	
-	$(window).resize( function(){
+	$(window).resize( function(){		
+		if (window.innerWidth>480){
+			if (Menu.contentMenuSelected===0)
+					$("#CostoConsumoSintesi").css("height","70%");
+		}
+	
+		
 		if(window.innerWidth<951){
 			$("#ContentMain").css("min-height","1560px");
 		}
 		else{
 			$("#ContentMain").css("min-height","768px");		
 		}
+	
+		
 		if(window.innerWidth<=widthSmPh){
 			$("#ContentMain").css("min-height","1300px");
 			$("#CostoConsumoSintesi").css("height","300px");
 		}
 		else{
-			if ((Menu.contentMenuSelected===0) && (Menu.mainMenuSelected==0) )
+			if ((Menu.contentMenuSelected===0) && (Menu.mainMenuSelected===0) )
 				$("#CostoConsumoSintesi").css("height","70%");
 		}
-		if ((Menu.contentMenuSelected===0) && (Menu.mainMenuSelected==0) )
-			$("#CostoConsumoSintesi").css("height","70%");
+		
 	
 	});
 });

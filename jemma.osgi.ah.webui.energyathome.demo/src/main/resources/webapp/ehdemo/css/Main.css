@@ -884,29 +884,45 @@ display:block;
 	#ContentMain {
   height: 1204px;
   max-height: 1204px;
-  min-height: 1204px;
+  min-height: 1204px !important;
 }
 	
 	
-	#ContainerDX {
+#ContainerDX {
   left: 0%;
-  height: 672px;
-  width: 99%;}
+  height: 616px;
+  width: 99%;
+  top: 0%;
+}
   
 }
 
 
-/*TABLET TELECOM*/
-@media only screen and  (device-height: 1232px) and (device-width: 800px){
+/*TABLET TELECOM in LANDSCAPE*/
+@media only screen and (device-width: 1280px) and (device-height: 800px){
 #ContainerDX {
   height: 620px;
   top: 0%;
 }
 	
 		#ContentMain {
-  height: 1155px;
-  max-height: 1155px;
-  min-height: 1155px;
+  height: 620px !important;
+  max-height: 620px !important;
+  min-height: 620px !important;
+}
+
+#ContainerMenu {
+  height: 620px;
+}
+
+.perCover {
+  height: 162px;
+}
+
+#MainMenu {
+
+  height: 98%;
+
 }
 	
 }
@@ -968,6 +984,7 @@ display:block;
 	left:0px;
 	  max-height: 1300px;
   min-height: 1300px;
+  padding-bottom:0px;
 }
 
 
@@ -1039,9 +1056,9 @@ display:block;
 
 @media only screen and (device-height: 768px){
 #ContentMain {
-   max-height: 712px;
-  min-height: 712px !important;
-  height: 712px;
+    max-height: 700px;
+  min-height: 700px !important;
+  height: 700px;
  }
 }
 

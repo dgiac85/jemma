@@ -422,9 +422,6 @@ width: 16%;
 .MainMenuEl:hover {
 border-bottom:none;
 background: #202020;
-border-radius: 0px;
--moz-border-radius: 0px;
--webkit-border-radius: 0px;
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
 -webkit-border-top-left-radius: 4px;
@@ -818,15 +815,7 @@ border-bottom:none;
 background: #202020;
 }
 
-.MainMenuEl:hover {
-  border-bottom: none;
-  background: #202020;
-  -webkit-border-top-left-radius: 4px;
-  -webkit-border-top-right-radius: 4px;
-  -moz-border-top-left-radius: 4px;
-  -moz-border-top-right-radius: 4px;
-  height:auto;
-}
+
 
 
 #containerToggle {
@@ -853,12 +842,19 @@ height: auto;
 }
 
 .MainMenuEl:hover {
- width:80%;	
- height: 90px;
   border-right: 2px solid #202020;
-border-bottom: 2px solid #9ec200;
-    border-top-right-radius: 0px;
-     border-bottom-right-radius: 0px;
+  border-bottom:2px solid #9ec200;
+  width: 90%;
+  /* z-index: 5; */
+  height: 90px;
+  /* border-top-left-radius: 4px; */
+  border-bottom-left-radius: 4px;
+   background: #202020;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-top-left-radius: 4px;
+  -moz-border-top-right-radius: 4px;
+
 }
 
 .MainMenuTitle{
@@ -950,19 +946,19 @@ border-bottom: 2px solid #9ec200;
 	
 	#contMainEl0{
 
-    right: 158px;
+    right: 167px;
 }
 
 #contMainEl1{
-right: 158px;
+right: 167px;
 }
 
 #contMainEl2{
-right: 158px;
+right: 167px;
 }
 
 #contMainEl3{
-right: 158px;
+right: 167px;
 }
 
 .MainMenuElSelected {
@@ -970,7 +966,7 @@ right: 158px;
 }
 
 .MainMenuEl {
-  width: 80%;
+  width: 90%;
 }
 	
 	 #mobileMenu {
@@ -996,10 +992,10 @@ right: 158px;
 
 /* iPhone 3GS e 4 in PORTRAIT ----------- */
 @media only screen and (max-device-width: 350px),(max-width:350px){
-#contMainEl0{  position: absolute;top:5% !important;  left: auto; margin:0px;  right: 184px;}
-#contMainEl1{  position: absolute;top:25% !important;  left: auto; margin:0px;  right: 184px;}
-#contMainEl2{ position: absolute;top:50% !important;   left: auto;margin:0px;   right: 184px;}
-#contMainEl3{ position: absolute; top:75% !important;  left: auto; margin:0px;  right: 184px;}	
+#contMainEl0{  position: absolute;top:5% !important;  left: auto; margin:0px;  right: 169px;}
+#contMainEl1{  position: absolute;top:25% !important;  left: auto; margin:0px;  right: 169px;}
+#contMainEl2{ position: absolute;top:50% !important;   left: auto;margin:0px;   right: 169px;}
+#contMainEl3{ position: absolute; top:75% !important;  left: auto; margin:0px;  right: 169px;}	
 	
  #mobileMenu {	
    top:63px;
@@ -1011,16 +1007,11 @@ right: 158px;
   max-height: -webkit-calc(100% - 81px);
   min-height: calc(100% - 81px);
   min-height: -moz-calc(100% - 81px);
-  min-height: -webkit-calc(100% - 81px);
-    width: calc(100% - 28px);
-  width: -moz-calc(100% - 28px);
-  width: -webkit-calc(100% - 28px);
-  max-width: calc(100% - 28px);
-  max-width: -moz-calc(100% - 28px);
-  max-width: -webkit-calc(100% - 28px);
-  min-width: calc(100% - 28px);
-  min-width: -moz-calc(100% - 28px);
-  min-width: -webkit-calc(100% - 28px);	
+  min-height: -webkit-calc(100% - 81px);	
+    width: 250px;
+  max-width: 250px;
+  min-width: 250px;
+  
  }	
  
  .MainMenuEl{
@@ -1075,9 +1066,38 @@ right: 158px;
 
 #ContentMenu {
    width: 47%;
-  left: 50%;
+  left: 125px;
   top: 0px;
 }
+}
+
+@media only screen and (max-device-width: 350px){
+	#contMainEl0{  position: absolute;top:5% !important;  left: auto; margin:0px;  right: 209px;}
+#contMainEl1{  position: absolute;top:25% !important;  left: auto; margin:0px;  right: 209px;}
+#contMainEl2{ position: absolute;top:50% !important;   left: auto;margin:0px;   right: 209px;}
+#contMainEl3{ position: absolute; top:75% !important;  left: auto; margin:0px;  right: 209px;}	
+	
+ #mobileMenu {	
+   top:63px;
+  height: calc(100% - 81px);
+  height: -moz-calc(100% - 81px);	
+  height: -webkit-calc(100% - 81px);
+  max-height: calc(100% - 81px);
+  max-height: -moz-calc(100% - 81px);
+  max-height: -webkit-calc(100% - 81px);
+  min-height: calc(100% - 81px);
+  min-height: -moz-calc(100% - 81px);
+  min-height: -webkit-calc(100% - 81px);
+    width: calc(100% - 28px);
+  width: -moz-calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  max-width: calc(100% - 28px);
+  max-width: -moz-calc(100% - 28px);
+  max-width: -webkit-calc(100% - 28px);
+  min-width: calc(100% - 28px);
+  min-width: -moz-calc(100% - 28px);
+  min-width: -webkit-calc(100% - 28px);	
+ }	
 }
 
 /* iPhone 3GS e 4 in LANDSCAPE ----------- */
@@ -1266,6 +1286,13 @@ position: relative;
   #contMainEl3 {
   top: 24.2px}
   
+}
+
+@media only screen and (device-width: 1280px) and (device-height: 800px){
+	.perCover {
+  height: 162px;
+}
+	
 }
 
 /* Samsung Galaxy S5 -----------P&L */
