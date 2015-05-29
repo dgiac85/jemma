@@ -8,42 +8,173 @@ var consumoMaxNome;
 var widthBreak1=951;
 var widthSmPh=480;
 
-$(document).ready(function() {	
-	$(window).resize( function(){
-		if(window.innerWidth<=widthBreak1){
-			$("#ContentMain").css("min-height","1560px");
-		}
-		else{
-			$("#ContentMain").css("min-height","768px");		
-		}
-		
-		if(window.innerWidth<=widthSmPh){
-			$("#ContentMain").css("min-height","1300px");
-			$("#CostoConsumoSintesi").css("height","300px");
-		}
-		if (window.innerWidth>480){
-			if (Menu.contentMenuSelected===1)
-					$("#CostoConsumoSintesi").css("height","98%");
-		}
+$(document).ready(function() {
 	
-	});
+//	(function ($) {
+//	    var d = 1, t = null, e = null, h, r = false;
+//
+//	    h = function () {
+//	        r = false;
+//	        $(window).trigger('resizeConsEnd', e);
+//	    };
+	
+	    $(window).resize( function(){
+	    	
+	   
+	    	
+	    if (Menu.contentMenuSelected===1){
+			gestisciPosGraficoConsumi();
+	    	gestisciDivCostoConsumoAttuale();
+	    	impostaAltezzeCons();
+	    }
+	    	
+		
+		
+//		e = event || e;
+//	    clearTimeout(t);
+//
+//	    if (!r) {
+//	        $(window).trigger('resizeConsStart', e);
+//	        r = true;
+//	    }
+//
+//	    t = setTimeout(h, d);
+//	    });
+//	}(jquery));
+//	
+//	$(window).on('resizeconsend', function(event){
+//	
+});
+
 });
 
 
-CostiConsumi.GestConsumi = function() {
-    
-	$("#CostiConsumi").show();
-	$("#CostoConsumoSintesi").css("height","98%");
-	if(window.innerWidth<=widthBreak1){
-		$("#ContentMain").css("min-height","1560px");
+function impostaAltezzeCons(){
+	
+	if( (window.innerWidth<=widthBreak1) && (Menu.contentMenuSelected===1) ){
+		$("#ContentMain").css("min-height","1460px");
+		$("#CostoConsumoSintesi").css("height","700px");
+		$("#ContainerSX").css("height","690px");
+	}
+	if (window.innerWidth>widthBreak1){
+		$("#ContentMain").css("min-height","768px");
+		$("#ContainerSX").css("height","98%");
+	}
+	
+	if(window.innerWidth<=widthSmPh){			
+		if (Menu.contentMenuSelected===1){
+			$("#ContentMain").css("min-height","1670px");
+			$("#CostoConsumoSintesi").css("width","98%");
+			$("#CostoConsumoSintesi").css("height","800px");
+			$("#CostoConsumoInfo").css("height","972px");
+			$("#ContainerSX").css("height","810px");			
+		}
+		
+	}
+	if (window.innerWidth>widthSmPh){
+		if (Menu.contentMenuSelected===1){
+				if (window.innerWidth>widthBreak1){
+					$("#CostoConsumoSintesi").css("height","98%");
+					$("#CostoConsumoInfo").css("height","98%");												
+				}
+				else{
+					$("#CostoConsumoSintesi").css("height","700px");
+					$("#CostoConsumoInfo").css("height","700px");
+				}
+		}
+	}
+	
+	//per il tablet TELECOM ASUS IN PORTRAIT
+	if ( (Modernizr.touch)&&(window.innerWidth>=800)&&(Menu.contentMenuSelected===1) ){
+		$("#ContainerSX").css("height","460px");
+		$("#Grafico").css({'width': '63%','height': '375px','font-size': '2vw','margin-top': '7px','margin-left':'8px','left': '0'});
+		$("#CostoConsumoSintesi").css("height","460px");
+		$("#CostoConsumoInfo").css("height","635px");
+		$("#CostoConsumoAttualeTitolo").css("font-size","3vw");
+	}
+	
+	//per il tablet TELECOM ASUS IN LANDSCAPE
+	if ( (Modernizr.touch)&&(window.innerHeight<=800) && (Menu.contentMenuSelected===1) ){
+		$("#Grafico").css({'width': '63%','height': '60%','font-size': '2vw','margin-top': '7px','margin-left':'8px','left': '0'});
+		$("#CostoConsumoSintesi").css("height","98%");
+		$("#CostoConsumoInfo").css("height","98%");
+		$("#CostoConsumoAttualeTitolo").css("font-size",$("#ProduzioneAttualeTitolo").css("font-size"));
+	}
+	
+	//gestione smartphone 360*640 in landscape
+	if ( (Modernizr.touch) && (window.innerHeight<=widthSmPh) && (Menu.contentMenuSelected===1) ){
+		$("#CostoConsumoSintesi").css("width","98%");
+		$("#CostoConsumoSintesi").css("height","auto");
+		$( ".pvSingleBox" ).addClass("boxPerConsumi");
+		$("#containerValCons1").css({'width':'100%','float':'left'});
+		$("#Grafico").css('width', '50%');
+		$("#Grafico").css('height', '43%');
+		
+	}
+	
+
+}
+
+
+function gestisciPosGraficoConsumi(){
+	$("#Grafico").css({'margin': '1% 0% 1% 2%','height': '60%','width':'61%'});	
+	if (window.innerWidth<480){
+		$("#Grafico").css({'margin': '1% 0% 1% 1%','position':'relative','height': '46%','width':'98%'});
+	}	
+}
+
+function gestisciDivCostoConsumoAttuale(){
+	var element=$('#CostoConsumoAttualeTitolo').detach();	
+	var element1=$('#ConsumoAttualeMeter').detach();
+	var element2=$('#containerValCons1').detach();
+	
+	if (window.innerWidth<=widthSmPh){	
+		//var element3=$('#DettaglioCosto').detach();
+		if (Menu.contentMenuSelected===1){
+			$("#CostoConsumoAttuale").append(element1);
+			$("#CostoConsumoAttuale").append(element);
+			$("#CostoConsumoAttuale").append(element2);
+			//$("#ValConsumoAttuale").css("width","150px");
+			
+		 
+			//$("#ValProduzioneAttuale").css("display","none");
+			//$("#ValReteAttuale").css("display","none");
+			$("#CostoConsumoAttualeTitolo").css({'font-size': '16px','float': 'left','width': '66%','margin': '8px auto'});
+			$("#ConsumoAttualeMeter").css("float","left");
+			$("#containerValCons1").css({'width':'-webkit-calc(100% - 100px)','width':'-moz-calc(100% - 100px)','width':'calc(100% - 100px)','float':'left'})
+		}
+		else{
+			
+			$("#CostoConsumoAttuale").append(element);
+			$("#CostoConsumoAttuale").append(element1);
+			$("#CostoConsumoAttuale").append(element2);
+		}
 	}
 	else{
-		$("#ContentMain").css("min-height","768px");		
+		$("#CostoConsumoAttuale").append(element);
+		$("#CostoConsumoAttuale").append(element1);
+		$("#CostoConsumoAttuale").append(element2);
+		$("#ConsumoAttualeMeter").css("float","none");
+		$("#CostoConsumoAttualeTitolo").css("float","none");
+		
 	}
+}
+
+CostiConsumi.GestConsumi = function() {
+    
+	$('.containerVal').prop('id', 'containerValCons1');
+	
+	
+	gestisciPosGraficoConsumi();
 	if(window.innerWidth<=widthSmPh){
-		$("#ContentMain").css("min-height","1300px");
-		$("#CostoConsumoSintesi").css("height","300px");
-	}
+		gestisciDivCostoConsumoAttuale();		
+	}	
+	
+	$("#Consigli").css("display","none");	
+	$("#CostiConsumi").show();	
+	impostaAltezzeCons();
+	
+	
 	
 	if ((CostiConsumi.mode == CostiConsumi.COSTI) || (CostiConsumi.mode == CostiConsumi.FOTOVOLTAICO)) {
 
@@ -126,6 +257,15 @@ CostiConsumi.GestConsumi = function() {
 		$("#ConsumoIndicatoreImg").show();
 
 		$("#CostoConsumoAttualeTitolo").text(Msg.home["titoloConsumi"]);
+		if ( (Modernizr.touch) && (window.innerWidth<=480) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","5.8vw");
+		}
+		if ( (Modernizr.touch) && (window.innerHeight<=480) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","2.8vw");
+			$("#CostoConsumoAttualeTitolo").css("margin","8px");
+			$("#CostoConsumoAttualeTitolo").css("margin-bottom","0px");
+			
+		}
 		$("#CostoTConsumoMaxTitolo").text(Msg.home["consumoMaggiore"]);
 		$("#InfoTitolo").text(Msg.home["consumoMensile"]);
 	}
@@ -383,10 +523,10 @@ CostiConsumi.VisConsumoMaggiore = function() {
 	if (CostiConsumi.maxConsumoElettr != null) {
 
 		if (CostiConsumi.maxConsumoElettr[InterfaceEnergyHome.ATTR_APP_VALUE].list[0].value.value == 0) {
-			$("#DettaglioConsumoMaggiore").html("<span id='MsgConsumoMaggiore'></span>");
+			$("#DettaglioConsumoMaggiore").html("<div id='MsgConsumoMaggiore'></div>");
 			$("#MsgConsumoMaggiore").text(Msg.home["maxDisp0"]);
 		} else {
-			$("#DettaglioConsumoMaggiore").html("<span id='TestoConsumoMaggiore'></span><img id='ConsumoMaggioreImg' src=''>");
+			$("#DettaglioConsumoMaggiore").html("<div id='TestoConsumoMaggiore'></div><img id='ConsumoMaggioreImg' src=''>");
 
 			// metto immagine del device che sta consumando di piu'
 			$("#ConsumoMaggioreImg").attr("src", DefinePath.imgDispPath + CostiConsumi.maxConsumoElettr[InterfaceEnergyHome.ATTR_APP_ICON]);
@@ -1005,6 +1145,10 @@ CostiConsumi.GraphNoServerCustomDevice = function(res, err)
 								consumoMaxNome = nome;
 								consumoMaxValue = consumo;
 								consumoMaxIcon = icona + ".png";
+								//utilizzo temporaneo
+								if (nome==="Forno"){
+									consumoMaxIcon = icona+ "_acceso" + ".png";
+								}
 							}
 						}
 						
@@ -1076,22 +1220,14 @@ CostiConsumi.GraphNoServerCustomDevice = function(res, err)
 						allowPointSelect : true,
 						cursor : 'pointer',
 						dataLabels : {
-							enabled : true,
-							color : '#000',
-							connectorColor : '#000',
-							formatter : function() {
-								return '<b>' + this.point.name + '</b>:<br />' + Math.floor(this.percentage) + ' %';
+							enabled : false,							
 							},
-							overflow : 'justify',
-							distance : 9,
-							rotation : 0,
-							style : {
-								color : '#333333',
-								fontSize : '9pt',
-								padding : '5px'
-							}
+							showInLegend: true,
+						
+						
 						}
-					}
+					
+					
 				},
 				credits : false,
 				series : [{ type : 'pie',
@@ -1110,7 +1246,7 @@ CostiConsumi.GraphNoServerCustomDevice = function(res, err)
 //Visualizza l'elettrodomestico simulato con il maggiore consumo ...
 CostiConsumi.VisMaxConsumoNoServer = function() {
 		
-	$("#DettaglioConsumoMaggiore").html("<table><tr><td><img id='ConsumoMaggioreImg' align='center' src=''></td><td><span id='TestoConsumoMaggiore'></span></td></tr></table>");
+	$("#DettaglioConsumoMaggiore").html("<div id='ContenitoreConsumoMaggiore'><div id='contImgConsMag'><img id='ConsumoMaggioreImg' align='center' src=''></div><div id='TestoConsumoMaggiore'></div></div>");
 
 	// metto immagine del device che sta consumando di piu'
 	$("#ConsumoMaggioreImg").attr("src",

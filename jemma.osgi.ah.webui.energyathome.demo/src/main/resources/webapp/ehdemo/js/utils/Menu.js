@@ -282,7 +282,7 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 	
 		if ($(".toggleMobile").hasClass("active")){
 			$(".toggleMobile").toggleClass("active");
-			$("#mobileMenu").animate({"left":"-200%"}, 600);
+			$("#mobileMenu").animate({"left":"-250%"}, 600);
 		}
 	}
 	if (oldContent != undefined) {

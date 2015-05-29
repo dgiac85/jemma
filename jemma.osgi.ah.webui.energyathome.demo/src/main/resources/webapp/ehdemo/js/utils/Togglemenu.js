@@ -65,16 +65,17 @@ $(document).ready(function() {
 	}
 	console.log("FINESTRA"+$(window).innerWidth());	
 	$("#mobileMenu").css("display","block");
-	$("#mobileMenu").css("left","-200%");
-
+	$("#mobileMenu").css("left","-250%");
 	
 	/*per ottenere la larghezza della finestra senza problemi. All'on resize invece persiste il problema della soglia forse*/
 	if( window.innerWidth <= width){
+		
 		goMobile();	
 	}
 	
 	if (window.innerWidth <= widthTab)  {
 		goMobileSmart();
+	
 	}
 
 	$(function ()
@@ -83,7 +84,7 @@ $(document).ready(function() {
 	    	if ((event.target.id!=="toggleMenu")&&(event.target.id!=="mobileMenu")&&(event.target.className!=="toggleMobile")&&(event.target.className!=="toggleMobile active")){
 		    	if ($("#mobileMenu").css("left")==="0px"){    		
 			       	$("#toggleMenu").toggleClass("active");
-			    	$("#mobileMenu").animate({"left":"-200%"}, 600);
+			    	$("#mobileMenu").animate({"left":"-250%"}, 600);
 		    	}
 	    	}    	
 		});
@@ -102,7 +103,7 @@ $(document).ready(function() {
 	    	    	$(this).toggleClass("active");
 	    	    	var hasClass = this.classList.contains('active');
 	    	    	if (!hasClass){
-	    	    		$("#mobileMenu").animate({"left":"-200%"}, 600);
+	    	    		$("#mobileMenu").animate({"left":"-250%"}, 600);
 	    	    	}
 	    	    	else{	    	
 	    	    		$("#mobileMenu").animate({"left":"0px"}, 600);

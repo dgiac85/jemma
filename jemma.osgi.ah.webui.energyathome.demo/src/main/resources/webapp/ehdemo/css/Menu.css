@@ -271,11 +271,15 @@ Media Queries
 }
 
 .MainMenuTitle {
-width:80%;
-	}
+  width: 100%;
+  margin: 0 auto;
+}
 
 .MainMenuEl {
-  height: 150px;
+
+    height: 110px;
+  width: 110px;
+  padding-bottom:5px;
 }
 
 }
@@ -532,7 +536,7 @@ margin: 0px auto;
 
 #LogoImgUser{
 width: 100%;
-height: 100%;
+height: 62px;
 }
 
 #datausercontent {
@@ -1288,11 +1292,11 @@ position: relative;
   
 }
 
-@media only screen and (device-width: 1280px) and (device-height: 800px){
+@media only screen and (device-width: 1280px) and (device-height: 752px){
 	.perCover {
-  height: 162px;
+  height: 132px;
 }
-	
+
 }
 
 /* Samsung Galaxy S5 -----------P&L */
@@ -1300,7 +1304,7 @@ position: relative;
 /* Styles */
 #mobileMenu {
   top: 63px;
- height:192px;
+ height:215px;
 }
 
 #contMainEl0 {

@@ -1028,7 +1028,7 @@ CostiConsumi.VisConsumoMaggiore = function() {
 		else
 		{
 			
-			$("#DettaglioConsumoMaggiore").html("<span id='TestoConsumoMaggiore'></span><img id='ConsumoMaggioreImg' src=''>");
+			$("#DettaglioConsumoMaggiore").html("<div id='TestoConsumoMaggiore'></div><div id='contImgConsMag'><img id='ConsumoMaggioreImg' src=''></div>");
 			Log.alert(80, CostiConsumi.MODULE, "VisConsumoMaggiore : "
 				+ CostiConsumi.maxConsumoElettr.icona);
 			// metto immagine del device che sta consumando di piu'

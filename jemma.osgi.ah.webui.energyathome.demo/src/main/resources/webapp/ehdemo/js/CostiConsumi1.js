@@ -454,7 +454,7 @@ CostiConsumi.VisConsumoMaggiore = function() {
 			$("#DettaglioConsumoMaggiore").html("<span id='MsgConsumoMaggiore'></span>");
 			$("#MsgConsumoMaggiore").text(Msg.home["maxDisp0"]);
 		} else {
-			$("#DettaglioConsumoMaggiore").html("<span id='TestoConsumoMaggiore'></span><img id='ConsumoMaggioreImg' src=''>");
+			$("#DettaglioConsumoMaggiore").html("<div id='TestoConsumoMaggiore'></div><img id='ConsumoMaggioreImg' src=''>");
 
 			// metto immagine del device che sta consumando di piu'
 			$("#ConsumoMaggioreImg").attr("src",DefinePath.imgDispPath + CostiConsumi.maxConsumoElettr[InterfaceEnergyHome.ATTR_APP_ICON]);

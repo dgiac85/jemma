@@ -3,7 +3,7 @@
 	top: 5%;
 	left: 2%;
 	width: 93%;
-	height: 90%;
+	height:90%;
 	background-color: transparent;
 	/**
 	background-color: white;
@@ -301,10 +301,16 @@
 	-moz-border-radius: 6px;
 }
 
-@media only screen and (min-device-width : 599px) and (max-device-width : 1024px) and (orientation : portrait)  and (-webkit-min-device-pixel-ratio : 1) {
+@media only screen and (max-device-width : 1280px) and (orientation:portrait) {
 	#Storico {
-	 top: 3%;
-	  left: 2%;
 	  width: 95%;
+	  height:80%
+	}
+}
+
+@media only screen and (max-device-width : 1280px) and (orientation:landscape) {
+	#Storico {
+	  width: 95%;
+	  height:90%
 	}
 }

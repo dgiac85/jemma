@@ -85,6 +85,7 @@ Highcharts.theme = {
 		}
 	},
 	plotOptions: {
+		
 		line: {
 			dataLabels: {
 				color: '#CCC'

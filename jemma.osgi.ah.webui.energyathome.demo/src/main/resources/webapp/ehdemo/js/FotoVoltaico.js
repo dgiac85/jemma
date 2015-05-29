@@ -106,33 +106,46 @@ var widthSmPh=480;
 var quale;
 
 $(document).ready(function() {	
-	$(window).resize( function(){		
-		if (window.innerWidth>480){
-			if (Menu.contentMenuSelected===0)
-					$("#CostoConsumoSintesi").css("height","70%");
-		}
+
+//	(function ($) {
+//	    var d = 1, t = null, e = null, h, r = false;
+//
+//	    h = function () {
+//	        r = false;
+//	        $(window).trigger('resizeFotend', e);
+//	};
 	
+	$(window).resize( function(){	
 		
-		if(window.innerWidth<951){
-			$("#ContentMain").css("min-height","1560px");
-		}
-		else{
-			$("#ContentMain").css("min-height","768px");		
-		}
-	
-		
-		if(window.innerWidth<=widthSmPh){
-			$("#ContentMain").css("min-height","1300px");
-			$("#CostoConsumoSintesi").css("height","300px");
-		}
-		else{
-			if ((Menu.contentMenuSelected===0) && (Menu.mainMenuSelected===0) )
-				$("#CostoConsumoSintesi").css("height","70%");
+		if (Menu.contentMenuSelected===0){
+			gestisciPosGraficoFotoVoltaico();
+			sistemaConsAttuale();
+			impostaAltezzeEAmpiezzeFV();
 		}
 		
-	
+		
+		
+		
+//		e = event || e;
+//	    clearTimeout(t);
+//
+//	    if (!r) {
+//	        $(window).trigger('resizeFotStart', e);
+//	        r = true;
+//	    }
+//
+//	    t = setTimeout(h, d);
+//	    });
+//	}(jQuery));
+//	
+//	$(window).on('resizeFotEnd', function(event){
+//		
 	});
+		
+	
 });
+
+
 
 /* Inizializza la schermata */
 CostiConsumi.Init = function() {
@@ -285,22 +298,96 @@ CostiConsumi.GestOnClickMainMenu = function() {
 	}
 }
 
+function gestisciPosGraficoFotoVoltaico(){
+	$("#Grafico").css({  'margin': '2% 2% 1% 2%','height': '46%','width':'95%', 'position':'relative','float':'left'});
+	$("#CostoConsumoAttualeTitolo").css({'float': 'none','width': '100%','margin-top': '7px 0px 0px 0px'});
+	$("#CostoConsumoAttualeTitolo").css("font-size",$("#ProduzioneAttualeTitolo").css("font-size"));
+	if (window.innerWidth<480){
+		$("#Grafico").css({'position':'relative','margin': '5% 2% 1% 2%','height': '46%','width':'95%'});
+		$("#CostoConsumoAttualeTitolo").css({'font-size': '2.8vw','float': 'none','width': '100%','margin-top': '7px 0px 0px 0px'});
+		
+		$("#ConsumoAttualeMeter").css("float","none");
+		$("#containerValCons0").css({'width':'78%','float':'none'});
+	}
+	
+}
+
+function sistemaConsAttuale(){
+	var element=$('#CostoConsumoAttualeTitolo').detach();	
+	var element1=$('#ConsumoAttualeMeter').detach();
+	var element2=$('#containerValCons0').detach();
+	
+	$("#CostoConsumoAttuale").append(element);
+	$("#CostoConsumoAttuale").append(element1);
+	$("#CostoConsumoAttuale").append(element2);
+}
+
+function impostaAltezzeEAmpiezzeFV(){
+	
+	if( (window.innerWidth<951) && (Menu.contentMenuSelected===0) ){
+		$("#ContentMain").css("min-height","1560px");
+		$("#CostoConsumoInfo").css("height","100%");
+		$("#ContainerSX").css("height","558px");
+		$("#CostoConsumoSintesi").css("height","390px");
+	}
+	if (window.innerWidth>951){
+		$("#ContentMain").css("min-height","768px");	
+		$("#ContainerSX").css("height","98%");
+		$("#CostoConsumoSintesi").css("height","70%");
+	}
+
+	
+	if(window.innerWidth<=widthSmPh){
+		if (Menu.contentMenuSelected===0){
+			$("#ContentMain").css("min-height","1325px");
+			$("#CostoConsumoSintesi").css("height","300px");			
+			$("#CostoConsumoSintesi").css("width","98%");
+			$("#CostoConsumoInfo").css("height","775px");
+			$("#ContainerSX").css("height","475px");
+		}
+	}
+		
+	//per il tablet TELECOM ASUS IN PORTRAIT --- PROVARE PER GLI ALTRI TABLET
+	if ( (Modernizr.touch)&&(window.innerWidth>=800)&& (Menu.contentMenuSelected===0) ){
+		$("#ContainerSX").css("height","430px");
+		$("#Grafico").css({'width': '98%','height': '290px','font-size': '2vw','margin-top': '7px','margin-left':'8px','left': '0'});
+		$("#CostoConsumoSintesi").css("height","275px");
+	}
+	
+	//per il tablet TELECOM ASUS IN LANDSCAPE --- PROVARE PER GLI ALTRI TABLET
+	if ( (Modernizr.touch)&&(window.innerHeight<=800) && (Menu.contentMenuSelected===0) ){
+		$("#ContainerSX").css("height","500px");
+		$("#Grafico").css({'width': '95%','height': '46%','font-size': '1.1em', 'font-weight':'bold','margin-top': '7px','margin-left':'8px','left': '0'});
+		$("#CostoConsumoInfo").css("height","98%");
+		$("#CostoConsumoSintesi").css("height","70%");
+	}
+	
+	//gestione smartphone 360*640 in landscape
+	if ( (Modernizr.touch) && (window.innerHeight<=widthSmPh) && (Menu.contentMenuSelected===0) ){
+		$("#CostoConsumoSintesi").css("width","75%");
+		$("#CostoConsumoSintesi").css("height","215px");
+		$( ".pvSingleBox" ).removeClass("boxPerConsumi");
+		$("#Grafico").css("width","98%");
+		$("#Grafico").css("height","46%");
+	}
+	
+	
+	
+}
+
+
 CostiConsumi.GestFotoVoltaico = function() {
 	quale=false;
-	//gestione della altezza del content mai e della visualizzazione del tab consigli
-	$("#CostoConsumoSintesi").css("height","70%");
-	if(window.innerWidth<951){
-		$("#ContentMain").css("min-height","1560px");
-	}
-	else{
-		$("#ContentMain").css("min-height","768px");
-	}
-	if(window.innerWidth<=480){
-		$("#ContentMain").css("min-height","1300px");
-		$("#CostoConsumoSintesi").css("height","300px");
-	}
-	$("#Consigli").css("display","block");
 	
+	$('.containerVal').prop('id', 'containerValCons0');
+	//$("#CostoConsumoAttualeTitolo").prop('id','CostoConsumoAttualeTitolo0');
+	
+	gestisciPosGraficoFotoVoltaico();
+	sistemaConsAttuale();
+	impostaAltezzeEAmpiezzeFV();
+	
+	$("#Consigli").css("display","block");
+		
 	$("#CostiConsumi").show();
 	if ((CostiConsumi.mode == CostiConsumi.CONSUMI) || (CostiConsumi.mode == CostiConsumi.COSTI)) {
 		CostiConsumi.mode = CostiConsumi.FOTOVOLTAICO;
@@ -346,6 +433,12 @@ CostiConsumi.GestFotoVoltaico = function() {
 		$("#PVConsumoIACIndicatoreImg").show();
 
 		$("#CostoConsumoAttualeTitolo").text(Msg.home["titoloConsumi"]);
+		if ( (Modernizr.touch) && (window.innerWidth<=480) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","2.8vw");
+		}
+		if ( (Modernizr.touch) && (window.innerHeight<=480) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","1.8vw");
+		}
 		$("#ProduzioneAttualeTitolo").text(Msg.home["titoloProduzione"]);
 		$("#ReteAttualeTitolo").text(Msg.home["titoloReteOut"]);
 		$("#CostoTConsumoMaxTitolo").text(Msg.home["consumoMaggiore"]);
