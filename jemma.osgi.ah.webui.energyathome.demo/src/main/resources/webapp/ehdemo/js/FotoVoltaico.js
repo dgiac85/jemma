@@ -351,7 +351,8 @@ function impostaAltezzeEAmpiezzeFV(){
 	if ( (Modernizr.touch)&&(window.innerWidth>=800)&& (Menu.contentMenuSelected===0) ){
 		$("#ContainerSX").css("height","430px");
 		$("#Grafico").css({'width': '98%','height': '290px','font-size': '2vw','margin-top': '7px','margin-left':'8px','left': '0'});
-		$("#CostoConsumoSintesi").css("height","275px");
+		$("#CostoConsumoSintesi").css("height","65%");
+		$("#CostoConsumoSintesi").css("width","100%");
 	}
 	
 	//per il tablet TELECOM ASUS IN LANDSCAPE --- PROVARE PER GLI ALTRI TABLET
@@ -359,7 +360,8 @@ function impostaAltezzeEAmpiezzeFV(){
 		$("#ContainerSX").css("height","500px");
 		$("#Grafico").css({'width': '95%','height': '46%','font-size': '1.1em', 'font-weight':'bold','margin-top': '7px','margin-left':'8px','left': '0'});
 		$("#CostoConsumoInfo").css("height","99%");
-		//$("#CostoConsumoSintesi").css("height","70%");
+		$("#CostoConsumoSintesi").css("height","70%");
+		$("#CostoConsumoSintesi").css("width","100%");
 	}
 	
 	//gestione smartphone 360*640 in landscape
