@@ -605,7 +605,7 @@ width: 98%;
   min-height: 768px;
 		left:0px;
 		padding-bottom:10px;
-		margin-top:62px;	
+		  margin-top: 59px;	
 	}
 	
 	#logo {  
@@ -701,7 +701,7 @@ width:200px;
 #Content {
   position: absolute;
   /* left: 10%; */
-  top: 62px;
+  top: 71px;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -739,7 +739,7 @@ background-color: #333333;
   background-color: #333333;
   overflow: hidden;
   width:100%;
-  	 
+  	   margin-top:71px;
   min-height: 1560px;
 	}
 	
@@ -1038,6 +1038,11 @@ display:block;
   position: relative;
 }
 
+#Content {
+  position: relative;
+  height: 1250px;
+}
+
 }/*chiusura media query 480*/
 
 @media only screen and (max-device-width: 480px){
@@ -1080,6 +1085,7 @@ display:block;
 	}
 	#ContentMain{
 		height:auto;
+		  margin-top: 62px;
 	}
 	#ContainerDX {
   left: 0%;

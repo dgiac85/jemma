@@ -1,17 +1,11 @@
 #Storico {
-	position: absolute;
-	top: 5%;
-	left: 2%;
+	position: relative;
+	margin:0 auto;
 	width: 93%;
 	height:90%;
+	top:17px;
 	background-color: transparent;
-	/**
-	background-color: white;
-	border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
-	behavior: url(border-radius.htc);	
-	**/
+
 }
 
 #StoricoBg {
@@ -40,6 +34,7 @@
 }
 
 #LabelStoricokWh {
+	display:none;
 	position: absolute;
 	top: 9%;
 	left: 2%;
@@ -53,6 +48,7 @@
 }
 
 #LabelStoricoEuro {
+	display:none;
 	position: absolute;
 	top: 9%;
 	left: 75%;
@@ -314,3 +310,90 @@
 	  height:90%
 	}
 }
+
+@media only screen and (max-device-width:596px), (max-width: 596px){
+	#Storico {
+  position: relative;
+  top: 71px;
+    margin: 0px 2px;
+  width: 99%;
+  height:91%;
+	}
+	
+	#Prec {
+  position: relative;
+  float: left;
+  margin-right: 5px;
+  top:0;
+  left:0;
+  width:8%;
+  height:2%;
+	}
+	
+#Succ {
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  top: 0;
+  left: 0;
+  width: 8%;
+  height: 2%;
+	}
+	
+#SuccImg {
+  margin-left: 2px;
+}
+
+#PrecImg {
+  margin-left: 2px;
+}	
+	
+  #StoricoGraphContainer {
+  position: relative;
+  float: left;
+  top: -43px;
+  height:50%;
+  width:100%;
+  left:0px;
+  }
+  
+  #StoricoGraph {
+  position: relative;
+  float: left;
+  }	
+  
+  #SepStorico {
+  display: none;
+  }
+  
+#StoricoScelta {
+  position: relative;
+  float: left;
+  top: 0;
+  left: 0;
+  height: 53%;
+  width: 100%;
+}
+
+#SceltaDispositivo {
+  height: 39%;
+}
+
+#SceltaPeriodo {
+  height: 26%;
+}
+
+#LabelStoricokWh {
+	display:none !important;
+}
+
+#LabelStoricoEuro {
+	display:none !important;
+}
+
+#StoricoBg {
+  height: 110%;
+}  
+
+}
+

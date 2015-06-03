@@ -339,11 +339,11 @@ function impostaAltezzeEAmpiezzeFV(){
 	
 	if(window.innerWidth<=widthSmPh){
 		if (Menu.contentMenuSelected===0){
-			$("#ContentMain").css("min-height","1325px");
-			$("#CostoConsumoSintesi").css("height","300px");			
+			$("#ContentMain").css("min-height","1270px");
+			$("#CostoConsumoSintesi").css("height","60%");			
 			$("#CostoConsumoSintesi").css("width","98%");
 			$("#CostoConsumoInfo").css("height","775px");
-			$("#ContainerSX").css("height","475px");
+			$("#ContainerSX").css("height","455px");
 		}
 	}
 		
@@ -355,15 +355,15 @@ function impostaAltezzeEAmpiezzeFV(){
 	}
 	
 	//per il tablet TELECOM ASUS IN LANDSCAPE --- PROVARE PER GLI ALTRI TABLET
-	if ( (Modernizr.touch)&&(window.innerHeight<=800) && (Menu.contentMenuSelected===0) ){
+	if ( (Modernizr.touch)&&(window.innerHeight<=800) && (Menu.contentMenuSelected===0) && (window.innerHeight < window.innerWidth) ){
 		$("#ContainerSX").css("height","500px");
 		$("#Grafico").css({'width': '95%','height': '46%','font-size': '1.1em', 'font-weight':'bold','margin-top': '7px','margin-left':'8px','left': '0'});
-		$("#CostoConsumoInfo").css("height","98%");
-		$("#CostoConsumoSintesi").css("height","70%");
+		$("#CostoConsumoInfo").css("height","99%");
+		//$("#CostoConsumoSintesi").css("height","70%");
 	}
 	
 	//gestione smartphone 360*640 in landscape
-	if ( (Modernizr.touch) && (window.innerHeight<=widthSmPh) && (Menu.contentMenuSelected===0) ){
+	if ( (Modernizr.touch) && (window.innerHeight<=widthSmPh) && (Menu.contentMenuSelected===0) && (window.innerHeight < window.innerWidth) ){
 		$("#CostoConsumoSintesi").css("width","75%");
 		$("#CostoConsumoSintesi").css("height","215px");
 		$( ".pvSingleBox" ).removeClass("boxPerConsumi");

@@ -59,6 +59,71 @@ var Storico = {
 
 };
 
+
+$(document).ready(function() {
+	widthMeasured=window.innerWidth;
+	heightMeasured=window.innerHeight;
+	
+	(function ($) {
+	    var d = 1, t = null, e = null, h, r = false;
+
+	    h = function () {
+	        r = false;
+	        $(window).trigger('resizeend', e);
+	    };
+
+	    $(window).on('resize', function (event) {
+		    	
+	        e = event || e;
+	        clearTimeout(t);
+
+	        if (!r) {
+	            $(window).trigger('resizestart', e);
+	            r = true;
+	        }
+
+	        t = setTimeout(h, d);
+	        
+	   
+		
+	    });
+	}(jQuery));
+	
+	
+	
+		
+	$(window).on('resizestart', function(event){
+
+		
+	});
+	
+	$(window).on('resizeend', function(event){
+		gestisciFrecce();       
+
+	});
+		
+	
+});
+
+function gestisciFrecce(){
+    if (window.innerWidth<=596){
+    	//gestire qui la posizione delle freccette per smartphone
+	 var element1=$('#Prec').detach();
+	 var element2=$('#Succ').detach();
+	 element1.insertAfter("#StoricoGraphContainer");
+	 element2.insertAfter("#Prec");	    	 
+    }
+    else{
+    	//gestire qui la posizione delle freccette per tablet e desktop
+    	 var element1=$('#Prec').detach();
+    	 var element2=$('#Succ').detach();
+    	 element1.insertAfter("#LabelStoricoEuro");
+    	 element2.insertAfter("#Prec");
+    }
+}
+
+
+
 Storico.ExitStorico = function() {
 	//hideSpinner();
 	Main.ResetError();
@@ -478,9 +543,12 @@ Storico.VisStorico = function(tipo) {
 								 hideSpinner();
 							 }
 			             }, 
-						 type : 'column'},
+						 type : 'column',
+							 style : { color : 'blue'}	 },
 				title : {text : titolo,
-						 textAlign : 'left',
+						 textAlign : 'center',
+						 spacingBottom: '35px',
+						 style : { font : 'normal 10px Verdana, sans-serif'},  
 						 show : true},
 						 subtitle : {text : ''},
 				credits : false,
@@ -496,14 +564,15 @@ Storico.VisStorico = function(tipo) {
 							 	    offset : 45,
 							 	    style : { color : "black"}},
 						 categories : cat},
+						 
 				yAxis : [ { min : 0,
-							title : { text : titleX,
+							title : { text : null,
 									  style : { color : 'blue'}},
 							labels : { formatter : function() {return this.value + 'KWh';},
 							style : { color : 'blue'}}}, 
 						  { gridLineWidth: 1,
 							min: 0,
-							title : { text : titleY2,
+							title : { text : null,
 									  style : { color : '#21e700'}},
 							labels : { formatter : function() { return this.value + ' KWh';},
 							style : {color : 'green'}},
@@ -747,6 +816,7 @@ Storico.DatiProduzioneStorico = function(val) {
 Storico.GetStorico = function() {
 	Main.ResetError();
 	showSpinner();
+	gestisciFrecce();
 	if (Main.env == 0) console.log(20, Storico.MODULE, "Dispositivo= " + Storico.dispositivoScelto + " Periodo = " + Storico.periodoScelto);
 	if (Main.env == 0) console.log(20, Storico.MODULE, "============ GetStorico: inizio = " + Storico.dataInizio.toString() + " fine = " + Storico.dataFine.toString());
 

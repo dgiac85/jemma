@@ -51,6 +51,8 @@ $(document).ready(function() {
 
 function impostaAltezzeCons(){
 	
+	//$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
+	
 	if( (window.innerWidth<=widthBreak1) && (Menu.contentMenuSelected===1) ){
 		$("#ContentMain").css("min-height","1460px");
 		$("#CostoConsumoSintesi").css("height","700px");
@@ -66,7 +68,7 @@ function impostaAltezzeCons(){
 			$("#ContentMain").css("min-height","1670px");
 			$("#CostoConsumoSintesi").css("width","98%");
 			$("#CostoConsumoSintesi").css("height","800px");
-			$("#CostoConsumoInfo").css("height","972px");
+			$("#CostoConsumoInfo").css("height","820px");
 			$("#ContainerSX").css("height","810px");			
 		}
 		
@@ -139,7 +141,7 @@ function gestisciDivCostoConsumoAttuale(){
 		 
 			//$("#ValProduzioneAttuale").css("display","none");
 			//$("#ValReteAttuale").css("display","none");
-			$("#CostoConsumoAttualeTitolo").css({'font-size': '16px','float': 'left','width': '66%','margin': '8px auto'});
+			//$("#CostoConsumoAttualeTitolo").css({'font-size': '16px','float': 'left','width': '66%','margin': '8px auto'});
 			$("#ConsumoAttualeMeter").css("float","left");
 			$("#containerValCons1").css({'width':'-webkit-calc(100% - 100px)','width':'-moz-calc(100% - 100px)','width':'calc(100% - 100px)','float':'left'})
 		}

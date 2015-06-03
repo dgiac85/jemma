@@ -33,6 +33,8 @@ var Elettrodomestici = {
 var theWidth=1220;
 var widthSmartphone=480;
 var dim=0;
+var widthMeasured=0;
+var heightMeasured=0;
 
 //funzione per l'inserimento del pannello interfaccia nel mobile menu
 function insert(){
@@ -51,6 +53,7 @@ function remove(){
 }
 
 var misura=0;
+
 
 function dimensionaSpaziDevice(){
 	switch(Elettrodomestici.perPagina){
@@ -76,6 +79,9 @@ function dimensionaSpaziDevice(){
 }
 
 $(document).ready(function() {
+	widthMeasured=window.innerWidth;
+	heightMeasured=window.innerHeight;
+
 	(function ($) {
 	    var d = 1, t = null, e = null, h, r = false;
 
@@ -87,7 +93,8 @@ $(document).ready(function() {
 	    $(window).on('resize', function (event) {
 	        console.log(Elettrodomestici.perPagina);
 	        ctrlElPerPagina();
-	    	dimensionaSpaziDevice();				
+	    	dimensionaSpaziDevice();	
+	    	
 	    	if(window.innerWidth>widthSmartphone){
 				$("#Interfaccia").css("display","block");	
 				if ($("#mobileElett").css("left")==="0px") {
@@ -105,9 +112,12 @@ $(document).ready(function() {
 
 	        t = setTimeout(h, d);
 	        
-	    	if (!Modernizr.touch){
-				Elettrodomestici.refreshDevices();			
+	    	if ( (!Modernizr.touch)&&(window.innerWidth!=widthMeasured) ){
+				Elettrodomestici.refreshDevices();	
+			
 			}
+	    	
+	    			
 		
 	    });
 	}(jQuery));
@@ -118,25 +128,30 @@ $(document).ready(function() {
 	$(window).on('resizestart', function(event){
 		console.log('Resize Start!');
 		
+		
 	});
 	
 	$(window).on('resizeend', function(event){
-		if (window.innerWidth<=widthSmartphone){					
-			insert();
-			
+		
+		widthMeasured=window.innerWidth;
+		heightMeasured=window.innerHeight;		
+		
+		if( (window.innerWidth>1220) && (Menu.contentMenuSelected===2)){
+			$("#ContentMain").css("min-height", "768px");
 		}
-		else{
-									
+		
+		if( (window.innerWidth<=theWidth) && (Menu.contentMenuSelected===2)){
+			$("#ContentMain").css("min-height", "854px");
+		}
+		
+		if (window.innerWidth<=widthSmartphone){					
+			insert();			
+		}
+		else{									
 			remove();			
 		}
 	
-		if(window.innerWidth>misura){
-
-			if ((Elettrodomestici.pagina===Elettrodomestici.numPagine-1) )  {
-				Elettrodomestici.pagina=0;
-						
-			} 	
-		}	
+		
 		//ogni volta che finisce un resize della pagina si fa un refresh dei devices
 		if (Modernizr.touch){
 			if (window.innerWidth>widthSmartphone){
@@ -145,6 +160,9 @@ $(document).ready(function() {
 		}
 
 		console.log('Resize End!');
+		controllaPresenzaInterfaccia();
+		
+			
 	});
 		
 	
@@ -234,16 +252,20 @@ Elettrodomestici.getCategoryIndex=function(name){
 	return -1;
 }
 
-//Funzione alternativa per la lista di elettrodomestici
-Elettrodomestici.GetDevicesInfos=function(callBack){
-	if (window.innerWidth<=widthSmartphone){
+function controllaPresenzaInterfaccia(){
+	if ( (window.innerWidth<=widthSmartphone) || ( (Modernizr.touch) && (window.innerHeight<window.innerWidth) && (window.innerHeight<=widthSmartphone) )){
 		$("#Interfaccia").css("display","none");
 		$("#RiepilogoConsumi").css("display","none");
+		$("#RigaInterfaccia").css("display","none");
 	}
-	
-	if( (window.innerWidth<=theWidth) && (Menu.contentMenuSelected===2)){
-		$("#ContentMain").css("min-height", "825px");
+	else{
+		$("#RigaInterfaccia").css("display","block");
 	}
+}
+
+//Funzione alternativa per la lista di elettrodomestici
+Elettrodomestici.GetDevicesInfos=function(callBack){
+	controllaPresenzaInterfaccia();	
 	
 	if ((InterfaceEnergyHome.mode > 0) || (InterfaceEnergyHome.mode == -1)) {
 		try {
@@ -872,8 +894,8 @@ Elettrodomestici.init=function(){
 			});
 		});
 	});
-	if (window.innerWidth<=widthSmartphone)
-		$("#Interfaccia").css("display","none");
+//	if (window.innerWidth<=widthSmartphone)
+//		$("#Interfaccia").css("display","none");
 }
 
 Elettrodomestici.update=function(){
@@ -937,8 +959,11 @@ function ctrlElPerPagina(){
 
 
 Elettrodomestici.refreshDevices=function(){
+	if( (window.innerWidth>1220) && (Menu.contentMenuSelected===2)){
+		$("#ContentMain").css("min-height", "768px");
+	}
 	if( (window.innerWidth<=theWidth) && (Menu.contentMenuSelected===2)){
-		$("#ContentMain").css("min-height", "825px");
+		$("#ContentMain").css("min-height", "854px");
 	}
 	if (window.innerWidth<=widthSmartphone) {
 		
@@ -948,7 +973,7 @@ Elettrodomestici.refreshDevices=function(){
 	
 	Elettrodomestici.perPagina=ctrlElPerPagina();
 	
-	if( (window.innerWidth<=widthSmartphone) || (window.innerHeight<=widthSmartphone) ) {
+	if( (window.innerWidth<=widthSmartphone) || ( (window.innerHeight<=widthSmartphone) && (Modernizr.touch) ) ) {
 		$("#ContentMain").css("min-height", "none");
 		$("#ContentMain").css("max-height", "none");
 		Elettrodomestici.numPagine=1;
