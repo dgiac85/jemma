@@ -130,14 +130,16 @@ function gestisciPosGraficoConsumi(){
 }
 
 function gestisciCostoConsumoTitolo(){
-	if ( (window.innerWidth>951) && (window.innerWidth>1220) ){
-		$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
-	}
-	if ( (window.innerWidth<=951) ){
-		$("#CostoConsumoAttualeTitolo").css("font-size","2.5vw");
-	}
-	if ( (window.innerWidth<=480) ){
-		$("#CostoConsumoAttualeTitolo").css("font-size","5.5vw");
+	if (Menu.contentMenuSelected===1){
+		if ( (window.innerWidth>951) && (window.innerWidth>1220) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
+		}
+		if ( (window.innerWidth<=951) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","2.5vw");
+		}
+		if ( (window.innerWidth<=480) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","5.5vw");
+		}
 	}
 }
 
