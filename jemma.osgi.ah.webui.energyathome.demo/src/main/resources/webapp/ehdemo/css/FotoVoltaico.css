@@ -1501,7 +1501,7 @@ width: 67%;
 	
 #CostoConsumoSintesi {
   height: 300px;
-  width: 98%;
+  width: 98% !important;
   left: 1px;
 }
 
@@ -1589,7 +1589,7 @@ height:120px;
   top: 0%;
   left: 0px;
   /* left: 2px; */
-  width: 82px !important;
+  width: 100px !important;
   position: relative;
   margin: auto auto;
   /* text-align: center; */

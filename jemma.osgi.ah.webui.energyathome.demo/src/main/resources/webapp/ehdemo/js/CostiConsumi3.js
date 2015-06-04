@@ -10,13 +10,13 @@ var widthSmPh=480;
 
 $(document).ready(function() {
 	
-//	(function ($) {
-//	    var d = 1, t = null, e = null, h, r = false;
-//
-//	    h = function () {
-//	        r = false;
-//	        $(window).trigger('resizeConsEnd', e);
-//	    };
+	(function ($) {
+	    var d = 1, t = null, e = null, h, r = false;
+
+	    h = function () {
+	        r = false;
+	        $(window).trigger('resizeConsEnd', e);
+	    };
 	
 	    $(window).resize( function(){
 	    	
@@ -26,27 +26,30 @@ $(document).ready(function() {
 			gestisciPosGraficoConsumi();
 	    	gestisciDivCostoConsumoAttuale();
 	    	impostaAltezzeCons();
+	    	
 	    }
 	    	
 		
 		
-//		e = event || e;
-//	    clearTimeout(t);
-//
-//	    if (!r) {
-//	        $(window).trigger('resizeConsStart', e);
-//	        r = true;
-//	    }
-//
-//	    t = setTimeout(h, d);
-//	    });
-//	}(jquery));
-//	
-//	$(window).on('resizeconsend', function(event){
-//	
+		e = event || e;
+	    clearTimeout(t);
+
+	    if (!r) {
+	        $(window).trigger('resizeConsStart', e);
+	        r = true;
+	    }
+
+	    t = setTimeout(h, d);
+	    });
+	}(jQuery));
+	
+	$(window).on('resizeConsEnd', function(event){
+		gestisciCostoConsumoTitolo();
+	});
+	
 });
 
-});
+
 
 
 function impostaAltezzeCons(){
@@ -57,6 +60,7 @@ function impostaAltezzeCons(){
 		$("#ContentMain").css("min-height","1460px");
 		$("#CostoConsumoSintesi").css("height","700px");
 		$("#ContainerSX").css("height","690px");
+		$("#CostoConsumoSintesi").css("width","98%");
 	}
 	if (window.innerWidth>widthBreak1){
 		$("#ContentMain").css("min-height","768px");
@@ -66,7 +70,7 @@ function impostaAltezzeCons(){
 	if(window.innerWidth<=widthSmPh){			
 		if (Menu.contentMenuSelected===1){
 			$("#ContentMain").css("min-height","1670px");
-			$("#CostoConsumoSintesi").css("width","98%");
+			$("#CostoConsumoSintesi").css("width","100%");
 			$("#CostoConsumoSintesi").css("height","800px");
 			$("#CostoConsumoInfo").css("height","820px");
 			$("#ContainerSX").css("height","810px");			
@@ -123,6 +127,18 @@ function gestisciPosGraficoConsumi(){
 	if (window.innerWidth<480){
 		$("#Grafico").css({'margin': '1% 0% 1% 1%','position':'relative','height': '46%','width':'98%'});
 	}	
+}
+
+function gestisciCostoConsumoTitolo(){
+	if ( (window.innerWidth>951) && (window.innerWidth>1220) ){
+		$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
+	}
+	if ( (window.innerWidth<=951) ){
+		$("#CostoConsumoAttualeTitolo").css("font-size","2.5vw");
+	}
+	if ( (window.innerWidth<=480) ){
+		$("#CostoConsumoAttualeTitolo").css("font-size","5.5vw");
+	}
 }
 
 function gestisciDivCostoConsumoAttuale(){
@@ -259,11 +275,14 @@ CostiConsumi.GestConsumi = function() {
 		$("#ConsumoIndicatoreImg").show();
 
 		$("#CostoConsumoAttualeTitolo").text(Msg.home["titoloConsumi"]);
-		if ( (Modernizr.touch) && (window.innerWidth<=480) ){
-			$("#CostoConsumoAttualeTitolo").css("font-size","5.8vw");
-		}
-		if ( (Modernizr.touch) && (window.innerHeight<=480) ){
-			$("#CostoConsumoAttualeTitolo").css("font-size","2.8vw");
+		
+		//si potrebbe fare anche ponendo un nome di classe differente all'oggetto in base alla pagina in cui ci si trova
+		//successivamente si può gestire la situazione mediante le media queries.
+		gestisciCostoConsumoTitolo();
+		
+	
+		if ( (Modernizr.touch) && (window.innerHeight<=480) && (Menu.contentMenuSelected===1) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","16px");
 			$("#CostoConsumoAttualeTitolo").css("margin","8px");
 			$("#CostoConsumoAttualeTitolo").css("margin-bottom","0px");
 			

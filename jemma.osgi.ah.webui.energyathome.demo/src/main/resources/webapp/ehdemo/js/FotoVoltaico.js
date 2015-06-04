@@ -302,7 +302,7 @@ function gestisciPosGraficoFotoVoltaico(){
 	$("#Grafico").css({  'margin': '2% 2% 1% 2%','height': '46%','width':'95%', 'position':'relative','float':'left'});
 	$("#CostoConsumoAttualeTitolo").css({'float': 'none','width': '100%','margin-top': '7px 0px 0px 0px'});
 	$("#CostoConsumoAttualeTitolo").css("font-size",$("#ProduzioneAttualeTitolo").css("font-size"));
-	if (window.innerWidth<480){
+	if ((window.innerWidth<480) && (Menu.contentMenuSelected===0) ){
 		$("#Grafico").css({'position':'relative','margin': '5% 2% 1% 2%','height': '46%','width':'95%'});
 		$("#CostoConsumoAttualeTitolo").css({'font-size': '2.8vw','float': 'none','width': '100%','margin-top': '7px 0px 0px 0px'});
 		
@@ -329,6 +329,7 @@ function impostaAltezzeEAmpiezzeFV(){
 		$("#CostoConsumoInfo").css("height","100%");
 		$("#ContainerSX").css("height","558px");
 		$("#CostoConsumoSintesi").css("height","390px");
+		$("#CostoConsumoSintesi").css("width","100%");
 	}
 	if (window.innerWidth>951){
 		$("#ContentMain").css("min-height","768px");	
@@ -435,12 +436,10 @@ CostiConsumi.GestFotoVoltaico = function() {
 		$("#PVConsumoIACIndicatoreImg").show();
 
 		$("#CostoConsumoAttualeTitolo").text(Msg.home["titoloConsumi"]);
-		if ( (Modernizr.touch) && (window.innerWidth<=480) ){
+		if ( (Modernizr.touch) && (window.innerWidth<=480) && (Menu.contentMenuSelected===0) ){
 			$("#CostoConsumoAttualeTitolo").css("font-size","2.8vw");
 		}
-		if ( (Modernizr.touch) && (window.innerHeight<=480) ){
-			$("#CostoConsumoAttualeTitolo").css("font-size","1.8vw");
-		}
+		
 		$("#ProduzioneAttualeTitolo").text(Msg.home["titoloProduzione"]);
 		$("#ReteAttualeTitolo").text(Msg.home["titoloReteOut"]);
 		$("#CostoTConsumoMaxTitolo").text(Msg.home["consumoMaggiore"]);
