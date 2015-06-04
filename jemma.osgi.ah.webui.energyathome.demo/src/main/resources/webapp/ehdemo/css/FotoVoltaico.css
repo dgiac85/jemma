@@ -150,7 +150,7 @@ border-radius: 16px;
 }
 
 #PVConsumoIACIndicatoreImg {
-  width: 64%;
+  width: 67%;
   height: 100%;
   /* position: absolute; */
   float: left;
@@ -502,7 +502,7 @@ height: 20%;
   vertical-align: middle;
   font-weight: bold;
   text-align: center;
-  width: 60%;
+  width: 62%;
   padding-top: 1%;
   background-color: transparent;
   z-index: 2;
@@ -925,8 +925,8 @@ z-index: 50;
 }
 
 
-.meter {
-
+.meter { 
+  width:100% !important;	
   height: 60%;
   margin: auto;
 }
@@ -1004,7 +1004,7 @@ top: 55%;
 
 
 .boxTitles {
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 
 #divCentro {
@@ -1021,11 +1021,11 @@ top: 55%;
   /* margin: -22px auto; */
   width: 92%;
   margin-top: 8px;
-  font-size: 2vw;
+  font-size: 2.3vh;
 }
 
 .meter {
-width: 100%;
+width: 100% !important;
 height: 55%;
 margin: auto;
 }
@@ -1043,12 +1043,15 @@ margin: auto;
   color: black;
 }
 
-#containerValCons1{
-	font-size: 2.2vw;
+#containerValCons1 {
+  font-size: 2.2vw;
+  width: 100% !important;
 }
 
-#containerValCons0{
-	font-size: 2.2vw;
+#containerValCons0 {
+  font-size: 2.2vw;
+  width: 130px !important;
+  height: 31px;
 }
 
 #IndicatoreTitoloPV {
@@ -1086,13 +1089,20 @@ left:48.5%
 }
 
 
+#IndicatoreTitoloPV {
+  margin: 17px 0px 12px 21px;
+}
+
+#PVConsumoIACIndicatoreImg {
+  width: 62%;
+}
 
 }
 
 @media only screen and (max-width: 951px) and (min-width:481px), (max-device-width:951px) and  (min-device-width:481px){
 	#consigliTurnOn {
   width: 96%;
-  height: 50%;
+  height: 64%;
     margin-top: 3px;
 }
 
@@ -1101,7 +1111,7 @@ left:48.5%
 }
 
 .boxTitles {
-  font-size: 13px;
+  font-size: 16px;
 }
 
 #Grafico {
@@ -1125,12 +1135,15 @@ left:48.5%
   color: black;
 }
 
-#containerValCons1{
-	font-size:3vw !important;
+#containerValCons1 {
+  width: 98% !important;
+  font-size: 3vw !important;
 }
 
 #containerValCons0{
-	font-size:2vw !important;
+	font-size:4vw !important;
+	  width: 160px !important;
+  height: 40px;
 }
 
 
@@ -1157,6 +1170,41 @@ height: 100%;
 
 #Indicatore {
   width: 70%;
+}
+
+#percIAC {
+  right: 0.5%;
+  font-size: 4vw;
+  top: 30%;
+}
+
+#IndicatoreTitoloPV {
+  font-size: 1.3vh;
+}
+
+#ProduzioneAttuale{
+  width: 32%;
+  height: 42%;
+}
+
+#ReteAttuale{
+  width: 32%;
+  height: 42%;
+}
+
+.CostoConsumoAttualePV{
+	 width: 32%;
+  height: 42%;
+}
+
+.meter {
+  width: 56%;
+  height: 60%;
+  margin: 0 auto;
+}
+
+#consigliTurnOn {
+  font-size: 2.0vh;
 }
 
 
@@ -1450,6 +1498,10 @@ width: 67%;
 
 
 @media only screen and (max-device-width:480px), (max-width: 480px){
+	
+	#PVConsumoIACIndicatoreImg {
+  width: 64%;
+	}
 
 	#ContenitoreConsumoMaggiore {
   height: 80%;
@@ -1549,9 +1601,10 @@ height:120px;
 }
 
 .CostoConsumoAttualePV {
-  bottom:1px;
+  bottom: 1px;
   left: -2px;
-  top:140px;
+  top: 140px;
+  width: 35%;
 }
 
 #divFrecceProd {
@@ -1561,6 +1614,7 @@ height:120px;
 #ProduzioneAttuale {
   left: 1px;
     top: 4%;
+    width:35%;
 }
 
 #imgFrecceConsumi {
@@ -1578,7 +1632,7 @@ height:120px;
 }
 
 .boxTitles {
-  font-size: 2.8vw;
+  font-size: 3.5vw;
 }
 
 #IndicatoreTitolo{
@@ -1614,7 +1668,7 @@ height:120px;
 }
 
 .meter {
-  width: 98px;
+  width: 98px !important;
   height: 69px;
 }
 
@@ -1626,7 +1680,7 @@ height:120px;
 
 #Grafico{
 	position:relative;
-width: 95% !important;
+
   height: 350px !important;
     font-size: 4vw !important;
 }
@@ -1718,9 +1772,16 @@ width: 95%;
 	float:left;
 }
 
-#containerValCons{
-	width: -webkit-calc(100% - 100px);
-	float: left;
+#containerValCons0{
+	font-size: 2.2vw;
+	width:100px !important;
+	height:auto;
+}
+
+#containerValCons1 {
+  font-size: 2.2vw;
+  width: calc(100% - 100px) !important;
+  float: left !important;
 }
 
 }

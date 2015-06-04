@@ -582,9 +582,10 @@ color: #9ec200;
 .ContentMenuEl {
   position: relative;
   float: left;
-  height: 50%;
-  width: 20%;
+  height: 67px;
+  width: 22%;
   margin: 0px;
+  left: 9px;
 }
 
 .MainMenuElSelected {
@@ -667,7 +668,7 @@ border-bottom-right-radius: 0px;
 .ContentMenuElSelected {
 color: #9ec200;
 /* width: 90%; */
-  height: 50px;
+  height: 67px;
 
 }
 

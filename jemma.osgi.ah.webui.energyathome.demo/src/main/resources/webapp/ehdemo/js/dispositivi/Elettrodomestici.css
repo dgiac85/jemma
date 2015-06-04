@@ -36,8 +36,8 @@ left: +200%;
   width: 99%;
   margin: 0px auto;
   /* min-width: 790px; */
-    height: 450px;
-  min-height: 450px;
+ height: 350px;
+  min-height: 350px;
   /* margin: 0; */
   padding-bottom: 25px;
   /* margin-left: auto; */
@@ -104,7 +104,7 @@ left: +200%;
     
       width: 98%;
   /* min-width: 790px; */
-    height: 38%;
+    height: 45%;
   margin: 0px auto;
   padding: 0;
   margin-left: auto;
@@ -113,7 +113,7 @@ left: +200%;
 }
 
 .Elettrodomestico {
-  height: 98%;
+  height: 100%;
   margin-right: 10px;
   margin-left: 15px;
   margin-bottom: 44px;
@@ -336,7 +336,7 @@ left: +200%;
     position: relative;
     top: 5%;
 
-    height: 76%;
+    height: 92%;
     width: 76%;
     border-radius: 16px;
     -webkit-border-radius: 16px;
@@ -386,7 +386,7 @@ left: +200%;
     position: relative;
     top: 5%;
       margin-left: 1%;
-    height: 76%;
+    height: 92%;
     width: 23%;
     border-radius: 16px;
     -webkit-border-radius: 16px;
@@ -485,11 +485,11 @@ Media Queries
   		height: 100%;
   		top:0%;
 	}
-	#RigaInterfaccia{
-  height: 47%;
-  min-height: 398px;
-  max-height: 441px;
-	}
+#RigaInterfaccia {
+  height: 54%;
+  min-height: 54%;
+  max-height: 54%;
+}
 }
 
 @media only screen and (max-device-width:800px) and (min-device-width:481px), (max-width: 800px) and (min-width:481px){
@@ -526,11 +526,11 @@ Media Queries
   min-height: 350px;
 	}
 	
-	#RigaInterfaccia{
-	  height: 445px;
-  min-height: 445px;
-  max-height: 445px;
-	}
+#RigaInterfaccia {
+  height: 56%;
+  min-height: 56%;
+  max-height: 56%;
+}
 		
 }
 

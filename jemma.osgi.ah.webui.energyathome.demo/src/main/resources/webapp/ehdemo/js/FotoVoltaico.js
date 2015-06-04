@@ -304,7 +304,7 @@ function gestisciPosGraficoFotoVoltaico(){
 	$("#CostoConsumoAttualeTitolo").css("font-size",$("#ProduzioneAttualeTitolo").css("font-size"));
 	if ((window.innerWidth<480) && (Menu.contentMenuSelected===0) ){
 		$("#Grafico").css({'position':'relative','margin': '5% 2% 1% 2%','height': '46%','width':'95%'});
-		$("#CostoConsumoAttualeTitolo").css({'font-size': '2.8vw','float': 'none','width': '100%','margin-top': '7px 0px 0px 0px'});
+		$("#CostoConsumoAttualeTitolo").css({'font-size': '3.5vw','float': 'none','width': '100%','margin-top': '7px 0px 0px 0px'});
 		
 		$("#ConsumoAttualeMeter").css("float","none");
 		$("#containerValCons0").css({'width':'78%','float':'none'});
@@ -330,6 +330,7 @@ function impostaAltezzeEAmpiezzeFV(){
 		$("#ContainerSX").css("height","558px");
 		$("#CostoConsumoSintesi").css("height","390px");
 		$("#CostoConsumoSintesi").css("width","100%");
+		$(".meter").css("width","56%");
 	}
 	if (window.innerWidth>951){
 		$("#ContentMain").css("min-height","768px");	
@@ -345,6 +346,7 @@ function impostaAltezzeEAmpiezzeFV(){
 			$("#CostoConsumoSintesi").css("width","98%");
 			$("#CostoConsumoInfo").css("height","775px");
 			$("#ContainerSX").css("height","455px");
+			$("#Grafico").css("width","95%");
 		}
 	}
 		

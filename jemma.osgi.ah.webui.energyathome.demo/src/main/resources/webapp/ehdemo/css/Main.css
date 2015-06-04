@@ -783,9 +783,9 @@ background-color: #333333;
 }
 	
 #logo{
-  width: calc(100% - 141px);
-  width: -moz-calc(100% - 141px);
-  width: -webkit-calc(100% - 141px);
+  width: calc(100% - 110px);
+  width: -moz-calc(100% - 110px);
+  width: -webkit-calc(100% - 110px);
   margin: 0px auto;
   height: 57px;
   position: relative;
