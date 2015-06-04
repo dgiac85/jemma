@@ -1174,7 +1174,7 @@ height: 100%;
 
 #divCentro {
   top: 18%;
-  left: -4px;
+  left: 1px;
   width: 7%;
 }
 
@@ -1216,13 +1216,14 @@ height: 100%;
 }
 	
 #consigliTurnOn {
-font-size: 2.0vw;
+  font-size: 2.0vw;
   position: relative;
   top: 0px;
-  padding: 13px;
+  padding: 5px;
   padding-bottom: 17px;
   width: 94%;
-  margin: 4px auto;
+  height: 43%;
+  margin: 8px auto;
 }
 
 #IndicatoreTitoloPV {
