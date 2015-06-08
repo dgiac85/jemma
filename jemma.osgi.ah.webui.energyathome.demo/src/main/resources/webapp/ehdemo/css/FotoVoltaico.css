@@ -496,17 +496,18 @@ height: 20%;
 }
 
 .values {
-  position: absolute;
-  top: 76%;
-  left: 20%;
+    position: relative;
+  /* top: 76%; */
+  /* left: 20%; */
   vertical-align: middle;
   font-weight: bold;
   text-align: center;
-  width: 62%;
+  width: 90%;
+  margin: 0px auto;
   padding-top: 1%;
   background-color: transparent;
   z-index: 2;
-  color:black;
+  color: black;
 }
 
 #containerValCons1{
@@ -708,9 +709,9 @@ border-radius: 10px;
 font-size: 1.25vw;
 line-height: 1.0;
 padding: 5px;
-margin: 10px auto;
+margin: 2px auto;
 width: 95%;
-height: 65%;
+height:auto;
 color: #000;
 }
 
@@ -788,14 +789,30 @@ border-radius: 16px;
   -moz-border-radius: 16px;
 }
 
-.boxTitles {
+/* .boxTitles {
 z-index: 100;
 color: green;
 font-size: 1.2vw;
 text-align: center;
 font-weight: bold;
 margin-top: 7px;
+} */
+
+
+.boxTitles {
+  position: relative;
+  float: left;
+  z-index: 100;
+  color: green;
+  font-size: 1.2vw;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 7px;
+  margin: 0px auto;
+  width: 100%;
+  height: 15%;
 }
+
 
 .meter {
 width: 85%;
@@ -925,10 +942,12 @@ z-index: 50;
 }
 
 
-.meter { 
-  width:100% !important;	
-  height: 60%;
-  margin: auto;
+.meter {
+  position: relative;
+  float: left;
+  width: 100% !important;
+  height: 66%;
+  margin: 0px auto;
 }
 
 .box{
@@ -948,9 +967,11 @@ height: 35%;
 }
 
 .containerVal{
-	width: 78%;
+  width: 100%;
   height: 25%;
   margin: 0px auto;
+  float: left;
+  position: relative;
 }
 
 #Indicatore {
@@ -963,6 +984,10 @@ height: 35%;
 /**********************************************************************
 Media Queries
 ***********************************************************************/
+
+
+
+
 
 @media only screen and (max-width : 1220px) {
 	
@@ -1002,9 +1027,12 @@ z-index: 10;
 top: 55%;
 }
 
+.pvSingleBox {
+width: 175px;
+}
 
 .boxTitles {
-  font-size: 1.7vw;
+  font-size: 1.5vw;
 }
 
 #divCentro {
@@ -1055,7 +1083,7 @@ margin: auto;
 }
 
 #IndicatoreTitoloPV {
-   font-size: 1.3vw;
+   font-size: 1vw;
   top: 22%;
 }
 
@@ -1099,6 +1127,44 @@ left:48.5%
 
 }
 
+
+@media only screen and (device-height : 768px) and (device-width : 1366px) {
+	#DatiCostoConsumo {
+	  width: 45%;
+	  height: 52%;
+	}
+	
+	#InfoFeedDettaglio .dettaglioNews span {
+  font-size: 1vw;
+	}
+	
+	#DatiCosti {
+  width: 43%;
+  height: 51%;
+  margin: 10px;
+  margin-top: 12px;
+  margin-left: 0px;
+	}
+	
+	.Dettagli {
+  color: green;
+  font-size: 14px;
+	}
+	
+	#ConsumoIndicatoreImg {
+  height: 26%;
+	}
+	
+	#CostoIndicatoreImg {
+  height: 26%;
+  }
+  
+  #PrimaNews {
+  	height:54px !important;
+  }
+  
+}
+
 @media only screen and (max-width: 951px) and (min-width:481px), (max-device-width:951px) and  (min-device-width:481px){
 	#consigliTurnOn {
   width: 96%;
@@ -1111,7 +1177,7 @@ left:48.5%
 }
 
 .boxTitles {
-  font-size: 16px;
+  font-size: 16px !important;
 }
 
 #Grafico {
@@ -1183,7 +1249,7 @@ height: 100%;
 }
 
 #ProduzioneAttuale{
-  width: 32%;
+  width: 200px;
   height: 42%;
 }
 
@@ -1632,7 +1698,7 @@ height:120px;
 }
 
 .boxTitles {
-  font-size: 3.5vw;
+  font-size: 3vw;
 }
 
 #IndicatoreTitolo{
@@ -1725,6 +1791,7 @@ width: 95%;
   top: 0;
   right: 0;
   width: 98%;
+  height:24%;
   border:4px solid #575757;
 }
 
@@ -1996,7 +2063,7 @@ width: 95%;
 }
 
 
-@media only screen and (device-width: 1232px) and (device-height: 800px),(device-width: 1280px) and (device-height: 800px){
+@media only screen and (device-width: 1232px) and (device-height: 800px){
 	#CostoConsumoSintesi {
   height: 67% !important;
 	}
@@ -2026,6 +2093,103 @@ width: 95%;
 }
 	
 }
+
+@media only screen and (device-height : 768px) and (device-width : 1024px) {
+#DatiCostoConsumo {
+  height: 26%;
+}
+
+#DatiCosti {
+  height: 26%;
+}
+
+.Dettagli {
+  font-size: 13px;
+  padding: 8px;
+}
+
+#ConsumoIndicatoreImg {
+  height: 30%;
+}
+
+#CostoIndicatoreImg {
+  height: 30%;
+}
+
+#InfoFeedDettaglio {
+  font-size: 2.2vh;
+}
+
+
+
+	}
+	
+@media only screen and (device-height : 900px) and (device-width : 1440px), (device-height : 900px) and (device-width : 1600px) {
+	.Dettagli {
+  		padding: 6px;
+	}
+	
+	#CostoIndicatoreImg {
+  		height: 26%;
+	}
+	
+	#ConsumoIndicatoreImg {
+  		height: 26%
+	}
+	
+	#DatiCosti{	
+		margin-top: -7px;
+	}
+}
+
+
+@media only screen and (device-height : 720px) and (device-width : 1280px){
+	.Dettagli {
+	  padding: 2px;
+	}
+	
+	#DatiCostoConsumo {
+	  margin-top: 3px;
+  margin-left: 8px;
+	}
+	
+		#CostoIndicatoreImg {
+  		height: 26%;
+	}
+	
+	#ConsumoIndicatoreImg {
+  		height: 26%
+	}
+	
+#DatiCosti {
+  margin-top: -5px;
+  margin-left: 9px
+}
+
+#imgFrecceConsumi {
+  height: 164px;
+}
+
+#divFrecceConsumi {
+  left: 48.7%;
+}
+
+#divCentro {
+  top: 17%;
+  left: 10px;
+}
+
+#imgCentro {
+  width: 84%;
+  height: auto;
+}
+	
+}
+	
+	
+
+
+
 
 
 

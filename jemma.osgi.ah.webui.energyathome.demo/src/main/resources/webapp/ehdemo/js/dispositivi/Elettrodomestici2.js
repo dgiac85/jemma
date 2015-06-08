@@ -139,14 +139,8 @@ $(document).ready(function() {
 		widthMeasured=window.innerWidth;
 		heightMeasured=window.innerHeight;		
 		
-		if( (window.innerWidth>1220) && (Menu.contentMenuSelected===2)){
-			$("#ContentMain").css("min-height", "768px");
-		}
-		
-		if( (window.innerWidth<=theWidth) && (Menu.contentMenuSelected===2)){
-			$("#ContentMain").css("min-height", "854px");
-		}
-		
+		impostaAltezzeElettrodomestici();
+			
 		if (window.innerWidth<=widthSmartphone){					
 			insert();			
 		}
@@ -179,6 +173,45 @@ $(document).ready(function() {
 		
 	
 });
+
+function impostaAltezzeElettrodomestici(){
+	
+	if( (window.innerWidth<=theWidth) && (Menu.contentMenuSelected===2)){
+		$("#ContentMain").css("min-height", "854px");
+	}
+	
+	
+	/*tablet portrait*/
+	if ( (Modernizr.touch) && (window.innerHeight<=1280) && (Menu.contentMenuSelected===2) ){
+		$("#ContentMain").css("min-height", "92%");
+		$("#ContentMain").css("height", "92%");
+	}
+
+	
+	/*per desktop 1024-768*/
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (window.innerHeight>=649) && (Menu.contentMenuSelected===2) ){
+
+		$("#ContentMain").css("min-height", "92%");
+		$("#ContentMain").css("height", "92%");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (window.innerWidth>1220) ){
+		$("#RigaElettrodomestici").css("height", "195px");
+		$("#RigaElettrodomestici").css("min-height", "195px");
+	}
+	else if ((window.innerWidth<1220)){
+		$("#RigaElettrodomestici").css("height", "350px");
+		$("#RigaElettrodomestici").css("min-height", "350px");
+	}
+	
+	/*per desktop 1280-1024*/
+	if ( (!Modernizr.touch) && (window.innerHeight>=841) && (window.innerWidth===1280) ){
+		$("#RigaElettrodomestici").css("height", "250px");
+		$("#RigaElettrodomestici").css("min-height", "250px");
+	}
+	
+	
+}
 
 //Funzione che crea un dizionario pid->nome locazione
 Elettrodomestici.GetLocations=function(callBack){
@@ -784,6 +817,8 @@ Elettrodomestici.GetDevicesInfos=function(callBack){
 		$("#Interfaccia").css("display","none");
 		//$("#RiepilogoConsumi").css("top",window.innerHeight-118);
 	}
+	
+	
 
 }
 
@@ -847,8 +882,9 @@ Elettrodomestici.ReadCurrentPower=function(callBack){
 }
 
 Elettrodomestici.GestElettrodomestici = function(){
-	
+
 	Elettrodomestici.init();
+	
 	
 }
 
@@ -959,6 +995,7 @@ function ctrlElPerPagina(){
 	var dimensioneTot=0;
 	var dimRigaElettr=$("#Elettrodomestici").width();
 	
+
 	
 	while(dimensioneTot < dimRigaElettr){
 		i++;
@@ -972,12 +1009,8 @@ function ctrlElPerPagina(){
 
 Elettrodomestici.refreshDevices=function(){
 	
-	if( (window.innerWidth>1220) && (Menu.contentMenuSelected===2)){
-		$("#ContentMain").css("min-height", "768px");
-	}
-	if( (window.innerWidth<=theWidth) && (Menu.contentMenuSelected===2)){
-		$("#ContentMain").css("min-height", "854px");
-	}
+	impostaAltezzeElettrodomestici();
+	
 	if (window.innerWidth<=widthSmartphone) {
 		
 	}
@@ -998,6 +1031,7 @@ Elettrodomestici.refreshDevices=function(){
 	else{
 		Elettrodomestici.numPagine = Math.ceil(Elettrodomestici.listaElettrodomestici.length/Elettrodomestici.perPagina);
 	}
+	
 	
 
 		
@@ -1259,6 +1293,8 @@ Elettrodomestici.refreshDevices=function(){
 			}
 					
 		}
+		
+	
 		//for per la visualizzazione degli elettrodomestici nella riga elettrodomestici
 //		for (j=0; j<Elettrodomestici.numPagine;j++){
 //			$("#device_"+j*Elettrodomestici.perPagina).css("margin-left","115px");
@@ -1498,7 +1534,9 @@ Elettrodomestici.getIcon=function(elettrodomestico, forza_stato){
 		}
 	}
 	//return Elettrodomestici.categorie[elettrodomestico.categoria].icon;
-	return elettrodomestico.icona + estensioneIcona;	
+	return elettrodomestico.icona + estensioneIcona;
+	
+	
 	
 }
 

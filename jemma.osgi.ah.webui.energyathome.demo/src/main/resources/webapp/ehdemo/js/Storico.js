@@ -834,6 +834,42 @@ Storico.GetStorico = function() {
 	} else {
 		InterfaceEnergyHome.GetStorico('Costo', Storico.device, Storico.dataInizio, Storico.dataFine, Storico.periodoScelto, Storico.DatiCostoStorico);
 	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (window.innerWidth>1220) ){
+		$("#Content").css("height", "490px");
+		$("#Storico").css("height", "450px");
+	}
+	
+	/*per desktop 1024-768*/
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (window.innerHeight>=649) && (Menu.contentMenuSelected===3) ){
+
+		$("#Content").css("min-height", "89%");
+		$("#Content").css("height", "89%");
+		$("#Storico").css("height", "90%");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=841) && (window.innerWidth===1280) ){
+		$("#Content").css("height", "668px");
+		$("#Storico").css("height", "546px");
+	}
+	
+	if ( ( (!Modernizr.touch) && (window.innerHeight>=781) && (window.innerWidth===1440) ) || ( ( (!Modernizr.touch) && (window.innerHeight>=781) && (window.innerWidth===1600) ) ) ){
+		$("#Content").css("height", "568px");
+		$("#Storico").css("height", "528px");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=601) && (window.innerWidth===1280) ){
+		$("#Content").css("height", "450px");
+		$("#Storico").css("height", "420px");
+	}
+	
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=905) && (window.innerWidth===1280) ){
+		$("#Content").css("height", "668px");
+		$("#Storico").css("height", "633px");
+	}
+	
+	
 }
 
 Storico.GetDispId = function(nomeElettr) {

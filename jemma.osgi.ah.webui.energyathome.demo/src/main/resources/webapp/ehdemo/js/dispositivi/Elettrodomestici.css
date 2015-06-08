@@ -492,6 +492,15 @@ Media Queries
 }
 }
 
+
+@media only screen and (device-height : 768px) and (device-width : 1366px) {
+#RigaInterfaccia {
+  height: 30%;
+}
+	}
+	
+
+
 @media only screen and (max-device-width:800px) and (min-device-width:481px), (max-width: 800px) and (min-width:481px){
 	#Elettrodomestici {
   	  height: 100%;
@@ -697,12 +706,40 @@ margin-left: 0px;
 
 /*Media queries specifiche*/
 
-@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){
-#Elettrodomestici {
-  height: 948px;
-  min-height: 948px;
+@media only screen and (device-height : 900px) and (device-width : 1440px),(device-height : 900px) and (device-width : 1600px) {
+	#RigaInterfaccia {
+	  height: 40%;
+	}
+}
+
+@media only screen and (device-height : 720px) and (device-width : 1280px){
+#RigaInterfaccia {
+  width: 98%;
+  /* min-width: 790px; */
+  height: 25%;
 }
 }
+
+@media only screen and (device-height : 800px) and (device-width : 1280px) {
+#RigaInterfaccia {
+  height: 30%;
+}
+}
+
+@media only screen and (device-height : 768px) and (device-width : 1024px) {
+	#RigaElettrodomestici {
+  		  height: 42% !important;
+  min-height: 42% !important;
+  top: 0%;
+	}
+	
+#RigaInterfaccia {
+  height: 47%;
+  min-height:47%;
+  max-height:47%;
+}
+	}
+		
 
 /*TABLET TELECOM IN PORTRAIT*/
 @media only screen and (device-height: 1232px) and (device-width: 800px){
@@ -748,8 +785,8 @@ margin-left: 0px;
 
 @media only screen and (device-width: 1280px) and (device-height: 752px){
 #RigaElettrodomestici {
-    height: 262px;
-  min-height: 262px;
+    height: 262px !important;
+  min-height: 262px !important;
 }
 
 #RigaInterfaccia {
@@ -769,6 +806,29 @@ margin-left: 0px;
 
 }
 
+/* gestione dell'altezza per gli schermi desktop*/
+
+@media only screen and (max-device-height: 800px) and (min-device-width:1024px){
+	#RigaElettrodomestici{
+		height:38%;
+		min-height:38%;
+	}
+	
+	.StatoElettrodomestico .row .left {
+  font-size: 14px;
+}
+}
+
+
+/* gestione dell'altezza per gli schermi desktop*/
+
+@media only screen and (max-height: 800px) and (min-width:1024px){
+
+.StatoElettrodomestico .row .left {
+  font-size: 14px;
+}
+
+}
 
 
 

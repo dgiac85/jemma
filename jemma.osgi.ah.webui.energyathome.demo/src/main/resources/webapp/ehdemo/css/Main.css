@@ -159,7 +159,6 @@ span {
   	width: -moz-calc(100% - 192px);
   	width: calc(100% - 192px);
 	padding-bottom:10px;
-	height:768px;
 	overflow: hidden;
 	color: #202020;
 	background-color: #333;
@@ -1059,24 +1058,14 @@ display:block;
 #ContentMain{
 		height:auto;
 		max-height:955px;
-		min-height:955px !important;
 	}
 
-#contImg1 {
+.contImg1 {
   width: 80%;
   margin: 0px auto;
 }
 
 }
-
-@media only screen and (device-height: 768px){
-#ContentMain {
-    max-height: 700px;
-  min-height: 700px !important;
-  height: 700px;
- }
-}
-
 
 @media only screen and (max-width:854px) and (max-height:480px){
 	#ContainerSX {
@@ -1213,6 +1202,16 @@ display:block;
 
 
 }
+
+
+
+
+
+/* gestione dell'altezza per gli schermi desktop*/
+
+
+
+
 
 
 

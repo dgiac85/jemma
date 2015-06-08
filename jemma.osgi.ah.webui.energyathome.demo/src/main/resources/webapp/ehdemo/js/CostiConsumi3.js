@@ -64,7 +64,7 @@ function impostaAltezzeCons(){
 		$(".meter").css("width","20vw");
 	}
 	if (window.innerWidth>widthBreak1){
-		$("#ContentMain").css("min-height","768px");
+
 		$("#ContainerSX").css("height","98%");
 		
 	}
@@ -84,7 +84,7 @@ function impostaAltezzeCons(){
 		if (Menu.contentMenuSelected===1){
 				if (window.innerWidth>widthBreak1){
 					$("#CostoConsumoSintesi").css("height","98%");
-					$("#CostoConsumoInfo").css("height","98%");												
+																
 				}
 				else{
 					$("#CostoConsumoSintesi").css("width","100%");
@@ -121,6 +121,16 @@ function impostaAltezzeCons(){
 		$("#Grafico").css('height', '43%');
 		
 	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=900) ){
+		$("#CostoConsumoSintesi").css("height","95%");
+	}
+	
+	/*per desktop 1024-768*/
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (window.innerHeight>=649) && (Menu.contentMenuSelected===1) ){
+		$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
+	}
+
 	
 
 }

@@ -73,7 +73,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'/>"+
 						"<div id='contMainEl"+ i +"' class='perCover'>" +							
 							"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
-								"<div id='contImg1'>"+
+								"<div class='contImg1'>"+
 									"  <img id='MainImg" + i + "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>"+
 								"</div>" +
 								"<p id='NomeMain" + i + "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+

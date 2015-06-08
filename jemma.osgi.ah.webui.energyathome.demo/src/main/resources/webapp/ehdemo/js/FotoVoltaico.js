@@ -106,7 +106,7 @@ var widthSmPh=480;
 var quale;
 
 $(document).ready(function() {	
-
+	$("#consigliTurnOn").css("height","47%");
 //	(function ($) {
 //	    var d = 1, t = null, e = null, h, r = false;
 //
@@ -120,8 +120,9 @@ $(document).ready(function() {
 		if (Menu.contentMenuSelected===0){
 			gestisciPosGraficoFotoVoltaico();
 			sistemaConsAttuale();
-			impostaAltezzeEAmpiezzeFV();
+			
 		}
+		impostaAltezzeEAmpiezzeFV();
 		
 		
 		
@@ -323,31 +324,34 @@ function sistemaConsAttuale(){
 }
 
 function impostaAltezzeEAmpiezzeFV(){
-	
-	if( (window.innerWidth<951) && (Menu.contentMenuSelected===0) ){
-		$("#ContentMain").css("min-height","1560px");
-		$("#CostoConsumoInfo").css("height","100%");
-		$("#ContainerSX").css("height","558px");
-		$("#CostoConsumoSintesi").css("height","390px");
-		$("#CostoConsumoSintesi").css("width","100%");
-		$(".meter").css("width","56%");
-	}
+	$("#consigliTurnOn").css("height","70%");
+	 
 	if (window.innerWidth>951){
-		$("#ContentMain").css("min-height","768px");	
+		$("#ContentMain").css("min-height","768px");
+		$("#Content").css("height", "768px");
+		$("#ContentMain").css("height", "768px");
 		$("#ContainerSX").css("height","98%");
-		$("#CostoConsumoSintesi").css("height","70%");
-	}
-
-	
-	if(window.innerWidth<=widthSmPh){
-		if (Menu.contentMenuSelected===0){
-			$("#ContentMain").css("min-height","1270px");
-			$("#CostoConsumoSintesi").css("height","60%");			
-			$("#CostoConsumoSintesi").css("width","98%");
-			$("#CostoConsumoInfo").css("height","775px");
-			$("#ContainerSX").css("height","455px");
-			$("#Grafico").css("width","95%");
-		}
+		$("#CostoConsumoSintesi").css("height","67%");
+		$("#CostoConsumoInfo").css("height","98%");
+		$("#ContainerMenu").css("height","768px");
+		$("#Consigli").css("margin-top","8px");
+		
+		$("#LogoImg").css("height","91px");
+		$("#logo").css("height","91px");
+		$("#dataANDuser").css("height","91px");
+		$("#Header").css("height","94px");
+		
+		$("#MainMenu").css("height","100%");
+		$(".perCover").css("height","180px");
+		$(".MainMenuEl").css("height","150px");
+		$(".contImg1").css("width","86%");
+		$(".contImg1").css("margin","0px auto");
+		$(".MainMenuImg").css("height","130px");
+		$(".MainMenuImg").css("width","130px");	
+		
+		$("#Content").css("height", "auto");
+		$("#Storico").css("height", "744px");
+			
 	}
 		
 	//per il tablet TELECOM ASUS IN PORTRAIT --- PROVARE PER GLI ALTRI TABLET
@@ -363,7 +367,7 @@ function impostaAltezzeEAmpiezzeFV(){
 		$("#ContainerSX").css("height","500px");
 		$("#Grafico").css({'width': '95%','height': '46%','font-size': '1.1em', 'font-weight':'bold','margin-top': '7px','margin-left':'8px','left': '0'});
 		$("#CostoConsumoInfo").css("height","99%");
-		$("#CostoConsumoSintesi").css("height","70%");
+		$("#CostoConsumoSintesi").css("height","67%");
 		$("#CostoConsumoSintesi").css("width","100%");
 	}
 	
@@ -376,7 +380,243 @@ function impostaAltezzeEAmpiezzeFV(){
 		$("#Grafico").css("height","46%");
 	}
 	
+	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (Menu.contentMenuSelected===0) ){
+		$("#CostoConsumoSintesi").css("height","68%");
+	}
 	
+
+	
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=1024) && (window.innerWidth<=1220) ){
+		$("#ContentMain").css("min-height", "89%");
+		$("#ContentMain").css("height", "89%");
+		$("#Content").css("height", "570px");
+		$("#Storico").css("height", "546px");
+		$("#CostoConsumoSintesi").css("height","68%");		
+		$("#ContainerMenu").css("height","89%");
+		
+		$("#LogoImg").css("height","55px");
+		$("#logo").css("height","55px");
+		$("#dataANDuser").css("height","55px");
+		$("#Header").css("height","57px");
+		
+	
+	
+	}
+	
+//	if ( (!Modernizr.touch) && (window.innerHeight<=900) ){
+//	    $("#PVConsumoIACIndicatoreImg").css("width","64%");
+////	  	$("#ContentMain").css("max-height", "490px");
+////	  	$("#ContentMain").css("min-height", "490px");
+////		$("#ContentMain").css("height", "490px");
+////		$("#Content").css("height", "490px");
+////		$("#Storico").css("height", "490px");
+//		$("#Consigli").css("margin-top","3px");
+//		$("#CostoConsumoSintesi").css("height","67%");
+//		$("#CostoConsumoInfo").css("height","95%");
+//		//$("#ContainerMenu").css("height","490px");
+////		$("#consigliTurnOn").css("margin-top","2px");
+////		$("#MainMenu").css("height","100%");
+////		$(".perCover").css("height","116px");
+////		$(".MainMenuEl").css("height","103px");
+////		$(".contImg1").css("width","59%");
+////		$(".contImg1").css("margin","0px auto");
+////		$(".MainMenuImg").css("height","89px");
+////		$(".MainMenuImg").css("width","89px");
+//	
+//	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=900) && (window.innerWidth<=1220) ){
+	  	$("#ContentMain").css("max-height", "580px");
+	  	$("#ContentMain").css("min-height", "580px");
+		$("#ContentMain").css("height", "580px");
+		$("#Content").css("height", "580px");
+		$("#Storico").css("height", "490px");
+	}
+	
+	
+	if( (window.innerWidth<951) && (Menu.contentMenuSelected===0) ){
+		$("#ContentMain").css("min-height","1560px");
+		$("#CostoConsumoInfo").css("height","100%");
+		$("#ContainerSX").css("height","558px");
+		$("#CostoConsumoSintesi").css("height","390px");
+		$("#CostoConsumoSintesi").css("width","100%");
+		$(".meter").css("width","56%");
+		
+		$("#LogoImg").css("height","55px");
+		$("#logo").css("height","55px");
+		$("#dataANDuser").css("height","55px");
+		$("#Header").css("height","57px");
+		
+		$("#MainMenu").css("height","100%");
+		$(".perCover").css("height","110px");
+		$(".MainMenuEl").css("height","150px");
+		$(".contImg1").css("width","86%");
+		$(".contImg1").css("margin","0px auto");
+		$(".MainMenuImg").css("height","auto");
+		
+			
+	}
+	
+	if(window.innerWidth<951){
+		$("#Content").css("height", "100%");
+		$("#Storico").css("height", "744px");
+	}
+	
+//	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (window.innerWidth>1220) ){
+//		$("#LogoImg").css("height","55px");
+//		$("#logo").css("height","55px");
+//		$("#dataANDuser").css("height","55px");
+//		$("#Header").css("height","57px");
+//		$("#Content").css("height", "490px");
+//		$("#Storico").css("height", "450px");
+//	}
+	
+
+	
+	if(window.innerWidth<=widthSmPh){
+
+			$("#ContentMain").css("min-height","1270px");
+			$("#ContentMain").css("height","auto");
+			$("#CostoConsumoSintesi").css("height","60%");			
+			$("#CostoConsumoSintesi").css("width","98%");
+			$("#CostoConsumoInfo").css("height","775px");
+			$("#ContainerSX").css("height","455px");
+			$("#Grafico").css("width","95%");
+			
+			$("#MainMenu").css("height","100%");
+			$(".perCover").css("height","180px");
+			$(".MainMenuEl").css("height","90px");
+			$(".contImg1").css("width","86%");
+			$(".contImg1").css("margin","0px auto");
+			$(".MainMenuImg").css("height","75px");
+			$(".MainMenuImg").css("width","75px");
+			
+			$("#Content").css("height", "1250px");
+			$("#Storico").css("height", "91%");
+		
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=649) && (window.innerWidth===1366) ){
+		  $("#PVConsumoIACIndicatoreImg").css("width","64%");
+	  	$("#ContentMain").css("max-height", "490px");
+	  	$("#ContentMain").css("min-height", "490px");
+		$("#ContentMain").css("height", "490px");
+		$("#Content").css("height", "490px");
+		$("#Storico").css("height", "490px");
+	$("#Consigli").css("margin-top","3px");
+		$("#CostoConsumoSintesi").css("height","67%");
+		$("#CostoConsumoInfo").css("height","95%");
+		$("#ContainerMenu").css("height","490px");
+		$("#consigliTurnOn").css("margin-top","2px");
+		$("#MainMenu").css("height","100%");
+		$(".perCover").css("height","116px");
+		$(".MainMenuEl").css("height","103px");
+		$(".contImg1").css("width","59%");
+		$(".contImg1").css("margin","0px auto");
+		$(".MainMenuImg").css("height","89px");
+		$(".MainMenuImg").css("width","89px");
+		  
+			$("#LogoImg").css("height","55px");
+			$("#logo").css("height","55px");
+			$("#dataANDuser").css("height","55px");
+		$("#Header").css("height","57px");
+			$("#Content").css("height", "490px");
+			$("#Storico").css("height", "450px");
+	}
+	
+	/*per desktop 1280-1024*/
+	if ( (!Modernizr.touch) && (window.innerHeight>=841) && (window.innerWidth===1280) ){
+		 $("#PVConsumoIACIndicatoreImg").css("width","64%");
+		$("#ContentMain").css("min-height","668px");
+		$("#Content").css("height", "668px");
+		$("#ContentMain").css("height", "668px");
+		$("#ContainerSX").css("height","98%");
+		$("#CostoConsumoSintesi").css("height","68%");
+		$("#CostoConsumoInfo").css("height","98%");
+		$("#ContainerMenu").css("height","668px");
+		$("#MainMenu").css("height","100%");
+		$("#Consigli").css("margin-top","8px");
+		
+		$("#LogoImg").css("height","91px");
+		$("#logo").css("height","91px");
+		$("#dataANDuser").css("height","91px");
+		$("#Header").css("height","94px");
+		
+		$(".perCover").css("height","160px");
+		$(".MainMenuEl").css("height","130px");
+		$(".contImg1").css("width","74%");
+		$(".contImg1").css("margin","0px auto");
+		$(".MainMenuImg").css("height","110px");
+		$(".MainMenuImg").css("width","110px");	
+		
+		$("#Content").css("height", "668px");
+		$("#Storico").css("height", "650px");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=641) && (window.innerHeight<841) && (window.innerWidth===1280) ){
+		$(".contImg1").css("width","80%");
+		$("#CostoConsumoInfo").css("height","98%");
+	}
+	
+	
+	/*per desktop 1440-900 /1600-900 - utilizzata generalmente dai macbook pro*/
+	if ( ( (!Modernizr.touch) && (window.innerHeight>=781) && (window.innerWidth===1440) ) || ( ( (!Modernizr.touch) && (window.innerHeight>=781) && (window.innerWidth===1600) ) ) ){
+		 $("#PVConsumoIACIndicatoreImg").css("width","64%");
+			$("#ContentMain").css("min-height","568px");
+			$("#Content").css("height", "568px");
+			$("#ContentMain").css("height", "568px");
+			$("#ContainerSX").css("height","98%");
+			$("#CostoConsumoSintesi").css("height","68%");
+			$("#CostoConsumoInfo").css("height","98%");
+			$("#ContainerMenu").css("height","568px");
+			$("#MainMenu").css("height","100%");
+			$("#Consigli").css("margin-top","8px");
+			
+			$("#LogoImg").css("height","91px");
+			$("#logo").css("height","91px");
+			$("#dataANDuser").css("height","91px");
+			$("#Header").css("height","94px");
+			
+			$(".perCover").css("height","130px");
+			$(".MainMenuEl").css("height","110px");
+			$(".contImg1").css("width","62%");
+			$(".contImg1").css("margin","0px auto");
+			$(".MainMenuImg").css("height","90px");
+			$(".MainMenuImg").css("width","90px");	
+			
+			$("#Content").css("height", "568px");
+			$("#Storico").css("height", "550px");
+	}
+	
+	/*per desktop 1280-720*/
+	if ( (!Modernizr.touch) && (window.innerHeight>=601) && (window.innerHeight<641) && (window.innerWidth===1280) ){
+		 $("#PVConsumoIACIndicatoreImg").css("width","64%");
+			$("#ContentMain").css("min-height","450px");
+			$("#Content").css("height", "450px");
+			$("#ContentMain").css("height", "450px");
+			$("#ContainerSX").css("height","98%");
+			$("#CostoConsumoSintesi").css("height","65%");
+			$("#CostoConsumoInfo").css("height","95%");
+			$("#ContainerMenu").css("height","450px");
+			$("#MainMenu").css("height","100%");
+			$("#Consigli").css("margin-top","8px");
+			
+			$("#LogoImg").css("height","55px");
+			$("#logo").css("height","55px");
+			$("#dataANDuser").css("height","55px");
+			$("#Header").css("height","57px");
+			
+			$(".perCover").css("height","110px");
+			$(".MainMenuEl").css("height","80px");
+			$(".contImg1").css("width","48%");
+			$(".contImg1").css("margin","0px auto");
+			$(".MainMenuImg").css("height","70px");
+			$(".MainMenuImg").css("width","70px");	
+			
+			$("#Content").css("height", "450px");
+			$("#Storico").css("height", "420px");
+	}	
 	
 }
 
@@ -1421,7 +1661,7 @@ CostiConsumi.SetConsumoImg = function() {
 		if ($('#consigliTurnOn').length == 0) {
 			$(document.createElement('div')).attr('id', 'consigliTurnOn').appendTo($("#Consigli")).show();
 		}
-
+		$("#consigliTurnOn").css("height","70%");
 		if (valProd > val) {
 			var tmpValRete = valRete * 1000;
 			$('#consigliTurnOn').show();
