@@ -324,15 +324,17 @@ function sistemaConsAttuale(){
 }
 
 function impostaAltezzeEAmpiezzeFV(){
+	
+	
 	$("#consigliTurnOn").css("height","70%");
 	 
-	if (window.innerWidth>951){
+	if ( (!Modernizr.touch) && (window.innerWidth>951) ){
 		$("#ContentMain").css("min-height","768px");
 		$("#Content").css("height", "768px");
 		$("#ContentMain").css("height", "768px");
 		$("#ContainerSX").css("height","98%");
 		$("#CostoConsumoSintesi").css("height","67%");
-		$("#CostoConsumoInfo").css("height","98%");
+		$("#CostoConsumoInfo").css("height","95%");
 		$("#ContainerMenu").css("height","768px");
 		$("#Consigli").css("margin-top","8px");
 		
@@ -371,6 +373,11 @@ function impostaAltezzeEAmpiezzeFV(){
 		$("#CostoConsumoSintesi").css("width","100%");
 	}
 	
+	if ( (Modernizr.touch) && (window.innerWidth<=854) && (window.innerHeight<=480) && (Menu.contentMenuSelected===0) ){
+		$("CostoConsumoSintesi").css("width","75%");
+		$("CostoConsumoSintesi").css("height","215px");		
+	}
+	
 	//gestione smartphone 360*640 in landscape
 	if ( (Modernizr.touch) && (window.innerHeight<=widthSmPh) && (Menu.contentMenuSelected===0) && (window.innerHeight < window.innerWidth) ){
 		$("#CostoConsumoSintesi").css("width","75%");
@@ -378,6 +385,7 @@ function impostaAltezzeEAmpiezzeFV(){
 		$( ".pvSingleBox" ).removeClass("boxPerConsumi");
 		$("#Grafico").css("width","98%");
 		$("#Grafico").css("height","46%");
+		
 	}
 	
 	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (Menu.contentMenuSelected===0) ){
@@ -388,10 +396,8 @@ function impostaAltezzeEAmpiezzeFV(){
 	
 	
 	if ( (!Modernizr.touch) && (window.innerHeight<=1024) && (window.innerWidth<=1220) ){
-		$("#ContentMain").css("min-height", "89%");
-		$("#ContentMain").css("height", "89%");
-		$("#Content").css("height", "570px");
-		$("#Storico").css("height", "546px");
+		$("#ContentMain").css("min-height", "93%");
+		$("#ContentMain").css("height", "93%");
 		$("#CostoConsumoSintesi").css("height","68%");		
 		$("#ContainerMenu").css("height","89%");
 		
@@ -427,15 +433,14 @@ function impostaAltezzeEAmpiezzeFV(){
 //	}
 	
 	if ( (!Modernizr.touch) && (window.innerHeight<=900) && (window.innerWidth<=1220) ){
-	  	$("#ContentMain").css("max-height", "580px");
-	  	$("#ContentMain").css("min-height", "580px");
-		$("#ContentMain").css("height", "580px");
-		$("#Content").css("height", "580px");
-		$("#Storico").css("height", "490px");
+	  	$("#ContentMain").css("max-height", "92%");
+	  	$("#ContentMain").css("min-height", "92%");
+		$("#ContentMain").css("height", "92%");
 	}
 	
 	
-	if( (window.innerWidth<951) && (Menu.contentMenuSelected===0) ){
+	
+	if( (!Modernizr.touch) && (window.innerWidth<951) && (Menu.contentMenuSelected===0) ){
 		$("#ContentMain").css("min-height","1560px");
 		$("#CostoConsumoInfo").css("height","100%");
 		$("#ContainerSX").css("height","558px");
@@ -458,10 +463,6 @@ function impostaAltezzeEAmpiezzeFV(){
 			
 	}
 	
-	if(window.innerWidth<951){
-		$("#Content").css("height", "100%");
-		$("#Storico").css("height", "744px");
-	}
 	
 //	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (window.innerWidth>1220) ){
 //		$("#LogoImg").css("height","55px");
@@ -478,7 +479,7 @@ function impostaAltezzeEAmpiezzeFV(){
 
 			$("#ContentMain").css("min-height","1270px");
 			$("#ContentMain").css("height","auto");
-			$("#CostoConsumoSintesi").css("height","60%");			
+			$("#CostoConsumoSintesi").css("height","275px");			
 			$("#CostoConsumoSintesi").css("width","98%");
 			$("#CostoConsumoInfo").css("height","775px");
 			$("#ContainerSX").css("height","455px");
@@ -491,9 +492,11 @@ function impostaAltezzeEAmpiezzeFV(){
 			$(".contImg1").css("margin","0px auto");
 			$(".MainMenuImg").css("height","75px");
 			$(".MainMenuImg").css("width","75px");
+			$(".MainMenuEl").css("height","50%");
 			
-			$("#Content").css("height", "1250px");
-			$("#Storico").css("height", "91%");
+
+			
+			$("#CostoConsumoAttualeTitolo").css("font-size","2.5vw");
 		
 	}
 	
@@ -502,8 +505,7 @@ function impostaAltezzeEAmpiezzeFV(){
 	  	$("#ContentMain").css("max-height", "490px");
 	  	$("#ContentMain").css("min-height", "490px");
 		$("#ContentMain").css("height", "490px");
-		$("#Content").css("height", "490px");
-		$("#Storico").css("height", "490px");
+
 	$("#Consigli").css("margin-top","3px");
 		$("#CostoConsumoSintesi").css("height","67%");
 		$("#CostoConsumoInfo").css("height","95%");
@@ -521,8 +523,7 @@ function impostaAltezzeEAmpiezzeFV(){
 			$("#logo").css("height","55px");
 			$("#dataANDuser").css("height","55px");
 		$("#Header").css("height","57px");
-			$("#Content").css("height", "490px");
-			$("#Storico").css("height", "450px");
+		
 	}
 	
 	/*per desktop 1280-1024*/
@@ -550,8 +551,7 @@ function impostaAltezzeEAmpiezzeFV(){
 		$(".MainMenuImg").css("height","110px");
 		$(".MainMenuImg").css("width","110px");	
 		
-		$("#Content").css("height", "668px");
-		$("#Storico").css("height", "650px");
+	
 	}
 	
 	if ( (!Modernizr.touch) && (window.innerHeight>=641) && (window.innerHeight<841) && (window.innerWidth===1280) ){
@@ -585,8 +585,7 @@ function impostaAltezzeEAmpiezzeFV(){
 			$(".MainMenuImg").css("height","90px");
 			$(".MainMenuImg").css("width","90px");	
 			
-			$("#Content").css("height", "568px");
-			$("#Storico").css("height", "550px");
+		
 	}
 	
 	/*per desktop 1280-720*/
@@ -614,8 +613,7 @@ function impostaAltezzeEAmpiezzeFV(){
 			$(".MainMenuImg").css("height","70px");
 			$(".MainMenuImg").css("width","70px");	
 			
-			$("#Content").css("height", "450px");
-			$("#Storico").css("height", "420px");
+			
 	}	
 	
 }
@@ -626,6 +624,11 @@ CostiConsumi.GestFotoVoltaico = function() {
 	
 	$('.containerVal').prop('id', 'containerValCons0');
 	//$("#CostoConsumoAttualeTitolo").prop('id','CostoConsumoAttualeTitolo0');
+	$("#ConsumoAttualeMeter").removeClass("meterPagCons");
+	$("#CostoConsumoAttualeTitolo").removeClass("consTitoloCons");
+	$("#ContainerSX").removeClass("contSXPaginaCons");
+	$("#CostoConsumoSintesi").removeClass("costConsSintCons");
+	$("#CostoConsumoSintesi").addClass("costConsSintFot");
 	
 	gestisciPosGraficoFotoVoltaico();
 	sistemaConsAttuale();

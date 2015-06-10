@@ -205,3 +205,80 @@
  #ifIndesitOven .points{
     width: 5px;
  }
+ 
+
+ @media only screen and (max-device-width:480px), (max-width: 480px){
+ #ifIndesitOven {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  color: #808080;
+  display: block;
+}
+
+#ifIndesitOven .col {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100% !important;
+  height: 45%;
+  vertical-align: top;
+  float: left;
+}
+
+#ifIndesitOven .col .label {
+  display: block;
+  width: 45% !important;
+  font-size: 5.5vw;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#ifIndesitOven .col.lborder {
+  border-left:none;
+}
+
+#ifIndesitOven .line {
+  height: 66px;
+}
+
+#Interfaccia .header {
+  margin:0px auto;
+  width:24%;
+}
+
+#ifIndesitOven .col .icona_row {
+  /* text-align: center; */
+  width: 10% !important;
+}
+
+
+ }
+ 
+ @media only screen and (max-device-height: 480px) and (max-device-width: 854px){
+ #ifIndesitOven .label {
+  display: block;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#ifIndesitOven .left-box {
+  position: relative;
+  height: 100%;
+  width: 218px;
+  left: -30px;
+  background: none;
+}
+
+#ifIndesitOven .left-box .icona, #ifIndesitOven .left-box .icona.NP {
+  height: 51%;
+}
+
+ }
+ 
+ 
+ /*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+	
+}

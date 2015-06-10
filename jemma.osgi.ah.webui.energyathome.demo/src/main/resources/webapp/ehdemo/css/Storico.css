@@ -297,6 +297,18 @@
 	-moz-border-radius: 6px;
 }
 
+@media only screen and (device-height : 768px) and (device-width : 1366px) {
+#Storico{
+	height:466px !important;
+}
+	}
+	
+@media only screen and (device-height : 768px) and (device-width : 1024px) {
+#Storico{
+	height:466px !important;
+}
+}
+
 @media only screen and (max-device-width : 1280px) and (orientation:portrait) {
 	#Storico {
 	  width: 95%;
@@ -304,7 +316,7 @@
 	}
 }
 
-@media only screen and (max-device-width : 1280px) and (orientation:landscape) {
+@media only screen and (max-device-width : 1280px) and (orientation:landscape), (device-width:1280) and (device-height:752) {
 	#Storico {
 	  width: 95%;
 	  height:90%
@@ -395,5 +407,10 @@
   height: 110%;
 }  
 
+}
+
+@media only screen and (device-height: 768px) and (device-width: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+#Storico {
+  height: 666px !important;
 }
 

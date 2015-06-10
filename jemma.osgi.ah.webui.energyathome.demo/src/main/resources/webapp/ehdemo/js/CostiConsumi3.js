@@ -26,6 +26,7 @@ $(document).ready(function() {
 			gestisciPosGraficoConsumi();
 	    	gestisciDivCostoConsumoAttuale();
 	    	impostaAltezzeCons();
+	    	gestisciCostoConsumoTitolo();
 	    	
 	    }
 	    	
@@ -44,7 +45,6 @@ $(document).ready(function() {
 	}(jQuery));
 	
 	$(window).on('resizeConsEnd', function(event){
-		gestisciCostoConsumoTitolo();
 	});
 	
 });
@@ -54,6 +54,8 @@ $(document).ready(function() {
 
 function impostaAltezzeCons(){
 	
+	$("ConsumoAttualeMeter").addClass("meterPagCons");
+	$("CostoConsumoAttualeTitolo").addClass("consTitoloCons");
 	//$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
 	
 	if( (window.innerWidth<=widthBreak1) && (Menu.contentMenuSelected===1) ){
@@ -77,6 +79,8 @@ function impostaAltezzeCons(){
 			$("#CostoConsumoInfo").css("height","820px");
 			$("#ContainerSX").css("height","810px");	
 			$("#Grafico").css("width","98%");
+			
+			
 		}
 		
 	}
@@ -122,8 +126,13 @@ function impostaAltezzeCons(){
 		
 	}
 	
+	if ( (Modernizr.touch) && (window.innerWidth<=854) && (window.innerHeight<=460) && (Menu.contentMenuSelected===1) ){
+		$("CostoConsumoSintesi").css("width","98%");
+		$("CostoConsumoSintesi").css("height","auto");		
+	}
+	
 	if ( (!Modernizr.touch) && (window.innerHeight<=900) ){
-		$("#CostoConsumoSintesi").css("height","95%");
+		$("#CostoConsumoSintesi").css("height","99%");
 	}
 	
 	/*per desktop 1024-768*/
@@ -197,6 +206,12 @@ CostiConsumi.GestConsumi = function() {
     
 	$('.containerVal').prop('id', 'containerValCons1');
 	
+	$("#ConsumoAttualeMeter").addClass('meterPagCons');
+	$("#CostoConsumoAttualeTitolo").addClass('consTitoloCons');
+	$("#IndicatoreTitolo").addClass('indTitoloCons');
+	$("#ContainerSX").addClass("contSXPaginaCons");
+	$("#CostoConsumoSintesi").addClass("costConsSintCons");
+	$("#CostoConsumoSintesi").removeClass("costConsSintFot");
 	
 	gestisciPosGraficoConsumi();
 	if(window.innerWidth<=widthSmPh){
@@ -291,6 +306,8 @@ CostiConsumi.GestConsumi = function() {
 
 		$("#CostoConsumoAttualeTitolo").text(Msg.home["titoloConsumi"]);
 		
+	
+		
 		//si potrebbe fare anche ponendo un nome di classe differente all'oggetto in base alla pagina in cui ci si trova
 		//successivamente si può gestire la situazione mediante le media queries.
 		gestisciCostoConsumoTitolo();
@@ -306,6 +323,7 @@ CostiConsumi.GestConsumi = function() {
 		$("#InfoTitolo").text(Msg.home["consumoMensile"]);
 	}
 	showSpinner();
+
 	
 	//dati da mostrare nel cruscotto
 	CostiConsumi.GetConsumoOdiernoCC();

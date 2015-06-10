@@ -266,8 +266,8 @@ Media Queries
 /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX   */
 @media only screen and (device-width: 1232px) and (device-height:800px), (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
 .MainMenuImg {
-  width: 100px;
-  height: 80px;
+  width: 100px !important;
+  height: 80px !important;
 }
 
 .MainMenuTitle {
@@ -277,7 +277,7 @@ Media Queries
 
 .MainMenuEl {
 
-    height: 110px;
+    height: 110px !important;
   width: 110px;
   padding-bottom:5px;
 }
@@ -405,10 +405,10 @@ background: #202020;
   max-height: 96px;
 }
 
-#contMainEl0{top: 34.4px;  position: relative;left:0% !important;min-width:125px;max-width:125px}
-#contMainEl1{top: 34.4px;  position: relative;left:1% !important;min-width:125px;max-width:125px}
-#contMainEl2{top: 34.4px; position: relative; left:2% !important;min-width:125px;max-width:125px}
-#contMainEl3{top: 34.4px; position: relative; left:3% !important;min-width:125px;max-width:125px}
+#contMainEl0{top: 0.4px;  position: relative;left:0% !important;min-width:125px;max-width:125px}
+#contMainEl1{top: 0.4px;  position: relative;left:1% !important;min-width:125px;max-width:125px}
+#contMainEl2{top: 0.4px; position: relative; left:2% !important;min-width:125px;max-width:125px}
+#contMainEl3{top: 0.4px; position: relative; left:3% !important;min-width:125px;max-width:125px}
 
 #datausercontent{
 float: left;
@@ -637,7 +637,7 @@ background: #202020;
   position: absolute;
   width: 100%;
   margin: 0px auto;
-  height: auto;
+  height: 84%;
 }
 
 .MainMenuTitle {
@@ -818,11 +818,8 @@ border-top-right-radius: 4px;
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px;
 border-bottom:none;
-
 background: #202020;
 }
-
-
 
 
 #containerToggle {
@@ -851,7 +848,6 @@ height: auto;
 .MainMenuEl:hover {
   border-right: 2px solid #202020;
   border-bottom:2px solid #9ec200;
-  width: 90%;
   /* z-index: 5; */
   height: 90px;
   /* border-top-left-radius: 4px; */
@@ -865,7 +861,7 @@ height: auto;
 }
 
 .MainMenuTitle{
-   font-size: 16px;
+   font-size: 13px;
   width: 80%;
 }
 
@@ -874,7 +870,7 @@ height: auto;
   margin: 0px auto;
   width: auto;
   text-align: center;
-  font-size: 16px;
+  font-size: 13px;
   float: none;
 }
 
@@ -896,14 +892,14 @@ height: auto;
 
 } */
 
-#mobileMenu {
-  top:56px;
-  height:800px;
-  max-height:800px;
-  min-height:800px;
+ #mobileMenu {
+  top: 59px;
+  height: 88%;
+  max-height: 88%;
+  min-height: 88%;
   width: 312px;
-  max-width:312px;
-  min-width:312px;
+  max-width: 312px;
+  min-width: 312px;
   }
 
 	.MainMenuElSelected {
@@ -949,23 +945,34 @@ height: auto;
 	
 } /*chiusura media query 480*/
 
+@media only screen and (max-width: 480px) and (max-height:560px){
+	#contMainEl0{top:20px}
+	#contMainEl1{top:128px}
+	#contMainEl2{top:239px}
+	#contMainEl3{top:348px}
+	
+}
+
 @media only screen and (max-device-width: 480px){
 	
-	#contMainEl0{
-
-    right: 167px;
+#contMainEl0 {
+  right: 160px;
 }
 
 #contMainEl1{
-right: 167px;
+right: 160px;
 }
 
 #contMainEl2{
-right: 167px;
+right: 160px;
 }
 
 #contMainEl3{
-right: 167px;
+right: 160px;
+}
+
+#contImg1{
+	width:68% !important;
 }
 
 .MainMenuElSelected {
@@ -973,7 +980,7 @@ right: 167px;
 }
 
 .MainMenuEl {
-  width: 90%;
+  width: 68%;
 }
 	
 	 #mobileMenu {
@@ -992,9 +999,22 @@ right: 167px;
 } 
 
 #ContentMenu{
-	left:146px;
+	left:135px;
 }
 
+}
+
+
+@media only screen and (device-height : 768px) and (max-device-width : 480px) {
+#mobileMenu {
+  top: 56px;
+  height: 88%;
+  max-height: 88%;
+  min-height: 88%;
+  width: 312px;
+  max-width: 312px;
+  min-width: 312px;
+}
 }
 
 /* iPhone 3GS e 4 in PORTRAIT ----------- */
@@ -1073,16 +1093,32 @@ right: 167px;
 
 #ContentMenu {
    width: 47%;
-  left: 125px;
+  left: 136px;
   top: 0px;
 }
 }
 
 @media only screen and (max-device-width: 350px){
-	#contMainEl0{  position: absolute;top:5% !important;  left: auto; margin:0px;  right: 209px;}
-#contMainEl1{  position: absolute;top:25% !important;  left: auto; margin:0px;  right: 209px;}
-#contMainEl2{ position: absolute;top:50% !important;   left: auto;margin:0px;   right: 209px;}
-#contMainEl3{ position: absolute; top:75% !important;  left: auto; margin:0px;  right: 209px;}	
+	#contMainEl0{  position: absolute;top:5% !important;    left: auto;
+  height: 168px !important;
+  margin: 0px;
+  right: 206px;
+  /* width: 20%; */}
+#contMainEl1{  position: absolute;top:25% !important;    left: auto;
+  height: 168px !important;
+  margin: 0px;
+  right: 206px;
+  /* width: 20%; */}
+#contMainEl2{ position: absolute;top:50% !important;     left: auto;
+  height: 168px !important;
+  margin: 0px;
+  right: 206px;
+  /* width: 20%; */}
+#contMainEl3{ position: absolute; top:75% !important;    left: auto;
+  height: 168px !important;
+  margin: 0px;
+  right: 206px;
+  /* width: 20%; */}	
 	
  #mobileMenu {	
    top:63px;
@@ -1105,6 +1141,10 @@ right: 167px;
   min-width: -moz-calc(100% - 28px);
   min-width: -webkit-calc(100% - 28px);	
  }	
+ 
+ .MainMenuEl {
+  width: 99%;
+}
 }
 
 /* iPhone 3GS e 4 in LANDSCAPE ----------- */
@@ -1297,7 +1337,7 @@ position: relative;
 
 @media only screen and (device-width: 1280px) and (device-height: 752px){
 	.perCover {
-  height: 132px;
+  height: 132px !important;
 }
 
 }
@@ -1371,15 +1411,17 @@ position: relative;
 
 /*Per IPAD in portrait*/
 @media only screen and (device-width: 1024px) and (device-height: 768px){
-#contMainEl0{top: 34.4px;  position: relative;left:0% !important;min-width:125px;max-width:125px}
+/* #contMainEl0{top: 34.4px;  position: relative;left:0% !important;min-width:125px;max-width:125px}
 #contMainEl1{top: 34.4px;  position: relative;left:1% !important;min-width:125px;max-width:125px}
 #contMainEl2{top: 34.4px; position: relative; left:2% !important;min-width:125px;max-width:125px}
-#contMainEl3{top: 34.4px; position: relative; left:3% !important;min-width:125px;max-width:125px}
+#contMainEl3{top: 34.4px; position: relative; left:3% !important;min-width:125px;max-width:125px} */
 
-.MainMenuEl {
+/* .MainMenuEl {
 	height:116px !important;
+} */
 }
-}
+
+
 
 
 /* iPhone 5 -----------P&L */
@@ -1399,6 +1441,75 @@ position: relative;
 		 right: -moz-calc(49% + 8px) !important;
 	}
 }*/
+
+
+
+
+/*I PHONE 6 PLUS  o IPHONE 6 MENU LANDSCAPE*/
+
+@media only screen and (device-width: 736px) and (device-height: 414px), (device-width: 667px) and (device-height: 375px){
+#contMainEl0 {
+  top: 23.2px;
+}
+#contMainEl1 {
+  top: 23.2px;
+}
+#contMainEl2 {
+  top: 23.2px;
+}
+#contMainEl3 {
+  top: 23.2px;
+}
+}
+
+
+/*I PHONE 6 PLUS MENU PORTRAIT*/
+@media only screen and (device-height: 736px) and (device-width: 414px){
+#contMainEl0 {
+  top: 5%;
+}
+#contMainEl1 {
+  top: 25%;
+}
+#contMainEl2 {
+  top: 50%;
+}
+#contMainEl3 {
+  top: 75%;
+}
+}
+
+/* IPHONE 6*/
+@media only screen and (device-width: 667px) and (device-height: 375px){
+#contMainEl0 {
+  top: 23.2px;
+}
+#contMainEl1 {
+  top: 23.2px;
+}
+#contMainEl2 {
+  top: 23.2px;
+}
+#contMainEl3 {
+  top: 23.2px;
+}
+}
+
+/*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+#contMainEl0 {
+  top: 38.2px;
+}
+#contMainEl1 {
+  top: 38.2px;
+}
+#contMainEl2 {
+  top: 38.2px;
+}
+#contMainEl3 {
+  top: 38.2px;
+}
+	}
 
 
 

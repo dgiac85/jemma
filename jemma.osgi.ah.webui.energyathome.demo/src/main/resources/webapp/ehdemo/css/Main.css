@@ -125,7 +125,6 @@ span {
 #userID{
   /* position: relative; */
   margin-top: 5px;
-  margin-right: 10px;
   color: #fff;
   width: 100%;
   font-size: 1.2vw;
@@ -222,8 +221,8 @@ span {
 
 #Timestamp {
 
-  margin-top: 2px;
-  margin-right: 10px;
+  /* margin-top: 2px; */
+  /* margin-right: 10px; */
   float: right;
   text-align: right;
   width: 100%;
@@ -527,7 +526,7 @@ Media Queries
   left: 0%;
   top: 0%;
   width: 100%;
-  height: 100%;
+  height: 100% !important;
 }
 
 #ContainerLogo {
@@ -683,7 +682,7 @@ background: #202020;
 
 #Consigli {
   width: 100%;
-  height: 17%;
+  height: 100px;
   margin-top: 2px;
 }
 
@@ -702,7 +701,7 @@ width:200px;
   /* left: 10%; */
   top: 71px;
   width: 100%;
-  height: 100%;
+  height: 100% !important;
   overflow: hidden;
   color: #202020;
   background-color: #333;
@@ -754,7 +753,7 @@ background-color: #333333;
 #Header{
 		  /* min-width: 426px; */
   z-index: 11;	
-  height: auto;
+  height: auto !important;
   width: 100%;
   position:fixed;
 	}
@@ -778,7 +777,7 @@ background-color: #333333;
 #LogoImg {
     /* margin: 0px auto; */
   margin-left: 20px;
-  height: 59px;
+  height: 59px !important;
 }
 	
 #logo{
@@ -786,7 +785,7 @@ background-color: #333333;
   width: -moz-calc(100% - 110px);
   width: -webkit-calc(100% - 110px);
   margin: 0px auto;
-  height: 57px;
+  height: 57px !important;
   position: relative;
   top: 0px;
 }
@@ -875,7 +874,7 @@ display:block;
 	#ContentMain {
 	
   height: 1153px !important;
-  max-height: 1204px;
+  max-height: 1153px !important;
   min-height: 1153px !important;
     margin-top: 62px;
   top: 0px;
@@ -893,10 +892,15 @@ display:block;
 
 	#ContainerSX {
 	  width: 99%;
-	  height:29%;
+	  height: 505px !important;
 	}
 
-
+	.contSXPaginaCons{
+		  width: 99%;
+  height: 460px !important;
+	}
+	
+	
   
 }
 
@@ -919,7 +923,7 @@ display:block;
 }
 
 #ContainerMenu {
-  height: 525px;
+  height: 525px !important;
 }
 
 #Content {
@@ -931,6 +935,9 @@ display:block;
   height: 98%;
 
 }
+
+
+
 	
 }
 
@@ -986,12 +993,12 @@ display:block;
 }
 
 #ContentMain{
-	height:auto;
-	position:static;
-	left:0px;
-	  max-height: 1300px;
-  min-height: 1300px;
-  padding-bottom:0px;
+   height: auto !important;
+  position: static;
+  left: 0px;
+  max-height: none !important;
+  min-height: 0px !important;
+  padding-bottom: 0px;
 }
 
 
@@ -1039,7 +1046,12 @@ display:block;
 
 #Content {
   position: relative;
-  height: 1250px;
+  height: 1250px !important;
+}
+
+#Consigli {
+  height: 110px;
+    width: 98%;
 }
 
 }/*chiusura media query 480*/
@@ -1054,11 +1066,24 @@ display:block;
 }
 
 /*Per IPAD in portrait*/
-@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){
-#ContentMain{
-		height:auto;
-		max-height:955px;
-	}
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+#ContentMain {
+  height: 943px !important;
+   max-height: 943px !important;
+   min-height:943px !important;
+}
+
+#ContainerDX {
+  left: 0% !important;
+  height: 44% !important;
+  width: 99% !important;
+  margin-top: 38px !important;
+}
+
+#ContainerSX {
+  width: 99% !important;
+  height: 45% !important;
+}
 
 .contImg1 {
   width: 80%;
