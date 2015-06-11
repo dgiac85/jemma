@@ -165,7 +165,13 @@ $(document).ready(function() {
 			if ( (window.innerWidth>widthSmartphone) && (window.innerHeight>845) ){
 				Elettrodomestici.refreshDevices();
 				
-			}	
+			}
+			
+			//caso particolare per IPAD nel passaggio da portrait a landscape
+			if ( (window.innerWidth>widthSmartphone) && (window.innerHeight===768) ){
+				Elettrodomestici.refreshDevices();
+				
+			}
 		}
 		controllaPresenzaInterfaccia();
 

@@ -1092,6 +1092,48 @@ display:block;
 
 }
 
+
+@media only screen and (device-width: 1024px) and (device-height: 768px) and (-webkit-max-device-pixel-ratio: 2){
+#ContentMain {
+  max-height: none; 
+  min-height: 0px !important;
+}
+	
+	#ContainerSX {
+  height:100% !important;
+}
+
+.costConsSintFot {
+  height: 58% !important;
+}
+
+#Consigli {
+  width: 100%;
+  height: 25%;
+}
+
+#consigliTurnOn {
+  font-size: 2.4vw !important;
+}
+
+}
+
+@media only screen and (device-width: 640px) and (device-height: 360px) and (-webkit-device-pixel-ratio: 1){
+#ContentMenu {
+  top: 106px;
+  height: 95px;
+}
+	}
+	
+@media only screen and (device-width: 640px) and (device-height: 384px){
+#ContentMenu {
+  top: 153px;
+
+  height: 105px;
+	}
+
+
+
 @media only screen and (max-width:854px) and (max-height:480px){
 	#ContainerSX {
   		width: 100%;
@@ -1232,7 +1274,7 @@ display:block;
 
 
 
-/* gestione dell'altezza per gli schermi desktop*/
+
 
 
 

@@ -1343,7 +1343,7 @@ position: relative;
 }
 
 /* Samsung Galaxy S5 -----------P&L */
-@media only screen and (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
+@media only screen and (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 1){
 /* Styles */
 #mobileMenu {
   top: 63px;
@@ -1378,6 +1378,7 @@ position: relative;
   min-height: 85px;
 }
 }
+
 
 /*Per IPAD in portrait*/
 @media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2){
@@ -1434,6 +1435,13 @@ position: relative;
 }
 
 
+@media only screen and (device-height: 568px) and (device-height: widthpx) and (-webkit-device-pixel-ratio: 2){
+.ContentMenuRow {
+  width: 79%;
+  left: 20px;
+	}
+}
+
 /*PER FIREFOX
 @media (width: 320px){
 	.perCover{
@@ -1480,7 +1488,7 @@ position: relative;
 }
 
 /* IPHONE 6*/
-@media only screen and (device-width: 667px) and (device-height: 375px){
+@media only screen and (device-width: 667px) and (device-height: 375px),(device-width: 640px) and (device-height: 384px),{
 #contMainEl0 {
   top: 23.2px;
 }
@@ -1510,6 +1518,55 @@ position: relative;
   top: 38.2px;
 }
 	}
+	
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 1){
+#contMainEl0 {
+  top: 23.2px;
+}
+#contMainEl1 {
+  top: 23.2px;
+}
+#contMainEl2 {
+  top: 23.2px;
+}
+#contMainEl3 {
+  top: 23.2px;
+}
+}	
+
+@media only screen and (device-width: 533px) and (device-height: 320px){
+#contMainEl0 {
+  top: -3.8px;
+}
+#contMainEl1 {
+  top: -3.8px;
+}
+#contMainEl2 {
+  top: -3.8px;
+}
+#contMainEl3 {
+  top: -3.8px;
+}	
+	
+#ContentMenu {
+  top: 126px;
+  width: 96%;
+  height: 41%;
+}
+
+#mobileMenu{
+	  width: 505px;
+  height: 237px;
+}
+
+}
+
+@media only screen and (device-height: 533px) and (device-width: 320px){
+.ContentMenuRow {
+  width: 84%;
+  left: 11%;
+}
+}
 
 
 

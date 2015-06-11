@@ -1804,7 +1804,7 @@ height:120px;
 
 #consigliTurnOn {
   font-size: 16px;
-    height: 60% !important;
+    height: 68% !important;
 }
 
 .box {
@@ -1975,6 +1975,11 @@ position: relative;
 		top:1px;
 	  left: 2px;
 	}
+	
+	#consigliTurnOn {
+  font-size: 16px;
+    height: 60% !important;
+}
 }
 
 
@@ -2474,6 +2479,34 @@ margin-top: 6px;
 
 #InfoFeed {
   width: 47%;
+}
+
+#CostoIndicatoreImg {
+  top: 3%;
+}
+
+#ConsumoIndicatoreImg {
+  top: 50%;
+}
+
+#InfoFeed {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+#imgFrecceConsumi {
+  margin-left: 1px;
+  width: 23px;
+}
+
+#TestoConsumoMaggiore {
+  font-size: 2.5vw;
+  float: left;
+  width: 32%;
+}
+
+#contImgConsMag {
+  float: left;
 }
 
 }
