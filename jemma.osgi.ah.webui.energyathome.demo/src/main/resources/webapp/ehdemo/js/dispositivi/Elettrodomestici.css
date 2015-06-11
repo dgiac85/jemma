@@ -798,7 +798,7 @@ margin-left: 0px;
 }
 
 
-@media only screen and (device-width: 1280px) and (device-height: 752px){
+@media only screen and (device-width: 1280px) and (device-height: 752px),(device-width: 1280px) and (device-height: 800px){
 #RigaElettrodomestici {
     height: 262px !important;
   min-height: 262px !important;

@@ -626,6 +626,8 @@ background: #202020;
  width: 100%;
   max-width: 72px;
   min-width: 72px;
+  width:72px !important;
+  height:72px !important;
   height: auto;
 }
 
@@ -980,7 +982,7 @@ right: 160px;
 }
 
 .MainMenuElSelected {
-  width: 80%;
+  width: 68% !important;
 }
 
 .MainMenuEl {
@@ -1150,6 +1152,10 @@ right: 160px;
  
  .MainMenuEl {
   width: 99%;
+}
+
+.MainMenuElSelected {
+  width: 82% !important;
 }
 }
 
@@ -1341,7 +1347,7 @@ position: relative;
   
 }
 
-@media only screen and (device-width: 1280px) and (device-height: 752px){
+@media only screen and (device-width: 1280px) and (device-height: 752px),(device-width:1280px) and (device-height:800px){
 	.perCover {
   height: 132px !important;
 }
@@ -1573,6 +1579,21 @@ position: relative;
   left: 11%;
 }
 }
+
+@media only screen and (device-height: 960px) and (device-width:600px) and (orientation:portrait){
+#contMainEl0 {
+  top: 23.2px;
+}
+#contMainEl1 {
+  top: 23.2px;
+}
+#contMainEl2 {
+  top: 23.2px;
+}
+#contMainEl3 {
+  top: 23.2px;
+}
+	}
 
 
 

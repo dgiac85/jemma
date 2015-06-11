@@ -109,7 +109,7 @@ border-radius: 16px;
 #Indicatore {
   position: relative;
   float: left;
-  /* top: 1%; */
+  top: 3px;
   /* right: 2%; */
   /* left: 3%; */
   margin-top: 6px;
@@ -1099,7 +1099,7 @@ margin: auto;
 }
 
 #IndicatorePV {
-  height: 10.6%;
+  height: 9.8%;
 }
 
 .box{
@@ -1780,7 +1780,7 @@ height:120px;
 }
 
 .boxTitles {
-  font-size: 2.5vw;
+  font-size: 11px;
 }
 
 #IndicatoreTitolo{
@@ -1796,7 +1796,7 @@ height:120px;
   margin: auto auto;
   /* text-align: center; */
   height: auto;
-  font-size: 4.8vw;
+  font-size: 23px;
   color: black;
 
 }
@@ -1845,7 +1845,7 @@ width: 95%;
 }
 
 #IndicatoreTitoloPV {
-  font-size: 2.2vw;
+  font-size: 9px;
   top: 20%;
   margin: 8px 0px 12px 10px;
 }
@@ -2069,7 +2069,7 @@ position: relative;
 @media only screen and (device-height: 1280px) and (device-width:800px){
 	
 	#consigliTurnOn{
-		font-size:1.3vw;
+		font-size:3.3vw;
 		margin-top: 5px;
 		
 	}
@@ -2235,7 +2235,7 @@ position: relative;
 }
 
 
-@media only screen and (device-width: 1232px) and (device-height: 800px){
+@media only screen and (device-width: 1232px) and (device-height: 800px), (device-width:1280px) and (device-height:800){
 	#CostoConsumoSintesi {
   height: 67% !important;
 	}
@@ -2509,6 +2509,44 @@ margin-top: 6px;
   float: left;
 }
 
+}
+
+@media only screen and (device-width: 960px) and (device-height:600px) and (orientation:landscape){
+	.CostoConsumoAttualePV {
+  		height: 142px !important;
+	}
+	
+	#ReteAttuale {
+		height: 142px !important;
+	}
+	
+	#ProduzioneAttuale{
+		height: 142px !important;
+	}
+	
+	#IndicatoreTitoloPV {
+  		margin-top: 10px !important;
+	}
+	
+	.Dettagli {
+  		padding: 4px;
+	}
+	
+	#DatiCostoConsumo {
+  		height: 23%;
+	}
+	
+	#DatiCosti {
+  		height: 24%;
+	}
+	
+	#CostoIndicatoreImg {
+  		height: 26%;
+	}
+	
+	#ConsumoIndicatoreImg {
+  		height: 26%;
+	}
 }
 	
 	

@@ -239,7 +239,7 @@ span {
 
 #Ora {
 	color: #f0f0f0;
-	  font-size: 1.2vw;
+	  font-size: 13px;
 	
 }
 
@@ -822,21 +822,21 @@ display:block;
 }/*chiusura media query 765
 
 
-/* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX */
+/* /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX */
 @media only screen and (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1), (device-width:1232px) and (device-height:800px),(device-width: 1536px) and (device-height:864px){
 	#ContainerMenu {
 	  height: 768px;
 	}
 	
 }
+ */
 
 
-
-@media only screen and (device-height: 1280px) and (device-width:752px){
+/* @media only screen and (device-height: 1280px) and (device-width:752px){
 	ContainerDX{
 		height:720px;
 	}
-}
+} */
 
  /*FIREFOX BROWSER
 @media (device-width: 1536px) and (device-height:864px){
@@ -904,9 +904,18 @@ display:block;
   
 }
 
+@media only screen and (device-height: 1280px) and (device-width: 800px){
+	#ContentMain {
+  height: 1196px !important;
+  max-height: 1196px !important;
+  min-height: 1196px !important;
+	}
+}
+
+
 
 /*TABLET TELECOM in LANDSCAPE*/
-@media only screen and (device-width: 1280px) and (device-height: 752px){
+@media only screen and (device-width: 1280px) and (device-height: 752px),(device-width:1280px) and (device-height:800px){
 #ContainerDX {
   height: 500px;
   top: 0%;
@@ -941,7 +950,7 @@ display:block;
 	
 }
 
-@media only screen and (device-width: 1232px) and (device-height: 800px),(device-width: 1280px) and (device-height: 800px){
+@media only screen and (device-width: 1232px) and (device-height: 800px){
 #ContainerDX {
   height: 96%;
 }
@@ -1270,6 +1279,19 @@ display:block;
 
 }
 
+
+@media only screen and (device-width: 960px) and (device-height:600px) and (orientation:landscape){
+	#ContentMain{
+		height: 532px !important;
+		max-height:532px !important;
+		min-height:532px !important;
+	}
+	
+	#ContainerSX{
+		height: 529px !important;
+	}
+	
+}
 
 
 
