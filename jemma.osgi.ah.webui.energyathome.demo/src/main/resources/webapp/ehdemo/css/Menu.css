@@ -831,7 +831,7 @@ height: auto;
 
 .MainMenuEl {
   position: relative;
-  width: 100%;
+  width: auto;
   height:89%;
   border-bottom: none;
   margin: 0px auto;
@@ -848,15 +848,19 @@ height: auto;
 .MainMenuEl:hover {
   border-right: 2px solid #202020;
   border-bottom:2px solid #9ec200;
-  /* z-index: 5; */
+   z-index: 5;
   height: 90px;
   /* border-top-left-radius: 4px; */
   border-bottom-left-radius: 4px;
    background: #202020;
+  width:auto;
+  right:0px;
+  width:90%;
   -webkit-border-top-left-radius: 4px;
   -webkit-border-top-right-radius: 4px;
   -moz-border-top-left-radius: 4px;
   -moz-border-top-right-radius: 4px;
+  
 
 }
 
@@ -982,6 +986,8 @@ right: 160px;
 .MainMenuEl {
   width: 68%;
 }
+
+
 	
 	 #mobileMenu {
   top:63px;
@@ -1093,7 +1099,7 @@ right: 160px;
 
 #ContentMenu {
    width: 47%;
-  left: 136px;
+  left: 124px;
   top: 0px;
 }
 }
@@ -1567,6 +1573,7 @@ position: relative;
   left: 11%;
 }
 }
+
 
 
 
