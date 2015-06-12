@@ -305,7 +305,7 @@
 	
 @media only screen and (device-height : 768px) and (device-width : 1024px) {
 #Storico{
-	height:466px !important;
+	height:466px;
 }
 }
 
@@ -411,6 +411,6 @@
 
 @media only screen and (device-height: 768px) and (device-width: 1024px) and (-webkit-max-device-pixel-ratio: 2){
 #Storico {
-  height: 666px !important;
+  height: 666px;
 }
 

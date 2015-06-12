@@ -135,8 +135,11 @@ function impostaAltezzeCons(){
 		$("#CostoConsumoSintesi").css("height","99%");
 	}
 	
-	/*per desktop 1024-768*/
-	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (window.innerHeight>=649) && (Menu.contentMenuSelected===1) ){
+	
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (Menu.contentMenuSelected===1)){
+		$("#ContentMain").css("max-height","580px");
+		$("#CostoConsumoSintesi").css("height","92%");
+		$("#CostoConsumoSintesi").css("max-height","92%");
 		$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
 	}
 

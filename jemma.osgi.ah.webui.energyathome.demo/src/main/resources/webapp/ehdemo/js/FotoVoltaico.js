@@ -410,27 +410,6 @@ function impostaAltezzeEAmpiezzeFV(){
 	
 	}
 	
-//	if ( (!Modernizr.touch) && (window.innerHeight<=900) ){
-//	    $("#PVConsumoIACIndicatoreImg").css("width","64%");
-////	  	$("#ContentMain").css("max-height", "490px");
-////	  	$("#ContentMain").css("min-height", "490px");
-////		$("#ContentMain").css("height", "490px");
-////		$("#Content").css("height", "490px");
-////		$("#Storico").css("height", "490px");
-//		$("#Consigli").css("margin-top","3px");
-//		$("#CostoConsumoSintesi").css("height","67%");
-//		$("#CostoConsumoInfo").css("height","95%");
-//		//$("#ContainerMenu").css("height","490px");
-////		$("#consigliTurnOn").css("margin-top","2px");
-////		$("#MainMenu").css("height","100%");
-////		$(".perCover").css("height","116px");
-////		$(".MainMenuEl").css("height","103px");
-////		$(".contImg1").css("width","59%");
-////		$(".contImg1").css("margin","0px auto");
-////		$(".MainMenuImg").css("height","89px");
-////		$(".MainMenuImg").css("width","89px");
-//	
-//	}
 	
 	if ( (!Modernizr.touch) && (window.innerHeight<=900) && (window.innerWidth<=1220) ){
 	  	$("#ContentMain").css("max-height", "92%");
@@ -441,9 +420,11 @@ function impostaAltezzeEAmpiezzeFV(){
 	
 	
 	if( (!Modernizr.touch) && (window.innerWidth<951) && (Menu.contentMenuSelected===0) ){
-		$("#ContentMain").css("min-height","1560px");
+		$("#ContentMain").css("min-height","0px");
+		$("#ContentMain").css("height","auto");
+		$("#ContentMain").css("max-height","none");
 		$("#CostoConsumoInfo").css("height","100%");
-		$("#ContainerSX").css("height","558px");
+		$("#ContainerSX").css("height","574px");
 		$("#CostoConsumoSintesi").css("height","390px");
 		$("#CostoConsumoSintesi").css("width","100%");
 		$(".meter").css("width","56%");
@@ -492,15 +473,12 @@ function impostaAltezzeEAmpiezzeFV(){
 			$(".contImg1").css("margin","0px auto");
 			$(".MainMenuImg").css("height","75px");
 			$(".MainMenuImg").css("width","75px");
-			$(".MainMenuEl").css("height","50%");
-			
-
-			
+			$(".MainMenuEl").css("height","50%");			
 			$("#CostoConsumoAttualeTitolo").css("font-size","2.5vw");
 		
 	}
 	
-	if ( (!Modernizr.touch) && (window.innerHeight>=649) && (window.innerWidth===1366) ){
+	if ( (!Modernizr.touch) && (window.innerWidth===1366) ){
 		  $("#PVConsumoIACIndicatoreImg").css("width","64%");
 	  	$("#ContentMain").css("max-height", "490px");
 	  	$("#ContentMain").css("min-height", "490px");
@@ -527,7 +505,7 @@ function impostaAltezzeEAmpiezzeFV(){
 	}
 	
 	/*per desktop 1280-1024*/
-	if ( (!Modernizr.touch) && (window.innerHeight>=841) && (window.innerWidth===1280) ){
+	if ( (!Modernizr.touch) && (window.innerWidth===1280) ){
 		 $("#PVConsumoIACIndicatoreImg").css("width","64%");
 		$("#ContentMain").css("min-height","668px");
 		$("#Content").css("height", "668px");
@@ -561,7 +539,7 @@ function impostaAltezzeEAmpiezzeFV(){
 	
 	
 	/*per desktop 1440-900 /1600-900 - utilizzata generalmente dai macbook pro*/
-	if ( ( (!Modernizr.touch) && (window.innerHeight>=781) && (window.innerWidth===1440) ) || ( ( (!Modernizr.touch) && (window.innerHeight>=781) && (window.innerWidth===1600) ) ) ){
+	if ( ( (!Modernizr.touch) && (window.innerWidth===1440) ) || ( ( (!Modernizr.touch) && (window.innerWidth===1600) ) ) ){
 		 $("#PVConsumoIACIndicatoreImg").css("width","64%");
 			$("#ContentMain").css("min-height","568px");
 			$("#Content").css("height", "568px");
@@ -615,6 +593,17 @@ function impostaAltezzeEAmpiezzeFV(){
 			
 			
 	}	
+	
+	if ( (Modernizr.touch) && (window.innerWidth===1024) && (window.innerHeight===768) ){
+		$(".costConsSintFot").css("height","58%");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) ){
+		$("#ContentMain").css("max-height","580px");
+		$("#CostoConsumoSintesi").css("max-height","58%");
+		$("#consigliTurnOn").css("font-size","2.1vw");
+		$("#IndicatoreTitoloPV").css("margin-top","6px");
+	}
 	
 }
 
@@ -1663,6 +1652,9 @@ CostiConsumi.SetConsumoImg = function() {
 	if (CostiConsumi.mode == CostiConsumi.FOTOVOLTAICO) {
 		if ($('#consigliTurnOn').length == 0) {
 			$(document.createElement('div')).attr('id', 'consigliTurnOn').appendTo($("#Consigli")).show();
+		}
+		if ( (!Modernizr.touch) && (window.innerWidth===1024) ){
+			$("#consigliTurnOn").css("font-size","2.1vw");
 		}
 		$("#consigliTurnOn").css("height","70%");
 		if (valProd > val) {

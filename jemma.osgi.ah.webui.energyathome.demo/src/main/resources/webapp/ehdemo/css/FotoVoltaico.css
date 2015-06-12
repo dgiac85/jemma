@@ -156,7 +156,7 @@ border-radius: 16px;
   float: left;
   /* bottom: 25%; */
   /* margin-left: 21%; */
-  margin-top: -14px;
+  margin-top: -17px;
   margin-left: -11px;
 }
 
@@ -1013,7 +1013,7 @@ Media Queries
 #percIAC {
   right: 0.5%;
   font-size: 2vw;
-  top: 30%;
+  top: 20%;
 }
 
 #CostoConsumoInfo {
@@ -1134,6 +1134,7 @@ left:48.5%
 
 #PVConsumoIACIndicatoreImg {
   width: 62%;
+  height:100%;
 }
 
 .consTitoloCons{
@@ -1155,7 +1156,7 @@ left:48.5%
 }
 
 
-@media only screen and (device-height : 768px) and (device-width : 1366px) {
+@media only screen and (max-device-height : 768px) and (device-width : 1366px) {
 
 	
 	#DatiCostoConsumo {
@@ -1191,15 +1192,15 @@ left:48.5%
   }
   
   	#ProduzioneAttuale {
-  height: 126px;
+  height: 126px !important;
 	}
 	
 	#ReteAttuale{
-		  height: 126px;
+		  height: 126px !important;
 	}
 	
 	.CostoConsumoAttualePV {
-  height: 126px;
+  height: 126px !important;
 }
 
 #consigliTurnOn {
@@ -1230,7 +1231,7 @@ left:48.5%
 }
 
 #IndicatorePV {
-  height: 15.6%;
+  height: 11.6%;
 }
 
 .boxTitles {
@@ -1304,7 +1305,8 @@ height: 100%;
 }
 
 #IndicatoreTitoloPV {
-  font-size: 1.3vh;
+  font-size: 2.2vw;
+  margin: 8px 0px 12px 21px;
 }
 
 #ProduzioneAttuale{
@@ -1329,7 +1331,7 @@ height: 100%;
 }
 
 #consigliTurnOn {
-  font-size: 2.5vw;
+  font-size: 2.7vw;
 }
 
 .meterPagCons{
@@ -1342,6 +1344,13 @@ height: 100%;
 
 .Dettagli {
    font-size: 16px !important;
+}
+
+#PVConsumoIACIndicatoreImg {
+  width: 62%;
+  /* height: 100%; */
+  margin-top: -15px;
+  width: 66%;
 }
 
 }
@@ -1724,7 +1733,8 @@ width: 67%;
 }
 
 #PVConsumoIACIndicatoreImg {
-  margin-left: -11px;
+  margin-left: -7px;
+  margin-top: -13px;
 }
 
 .pvSingleBox {
@@ -1847,7 +1857,7 @@ width: 95%;
 #IndicatoreTitoloPV {
   font-size: 9px;
   top: 20%;
-  margin: 8px 0px 12px 10px;
+  margin: 4px 0px 12px 10px;
 }
 
 #percIAC {

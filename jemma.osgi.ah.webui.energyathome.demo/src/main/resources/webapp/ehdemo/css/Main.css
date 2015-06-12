@@ -239,7 +239,7 @@ span {
 
 #Ora {
 	color: #f0f0f0;
-	  font-size: 13px;
+	  font-size: 22px;
 	
 }
 
@@ -603,7 +603,8 @@ width: 98%;
   min-height: 768px;
 		left:0px;
 		padding-bottom:10px;
-		  margin-top: 59px;	
+		  margin-top: 59px;
+			
 	}
 	
 	#logo {  
@@ -1113,7 +1114,7 @@ display:block;
 }
 
 .costConsSintFot {
-  height: 58% !important;
+  height: 58%;
 }
 
 #Consigli {
@@ -1122,7 +1123,7 @@ display:block;
 }
 
 #consigliTurnOn {
-  font-size: 2.4vw !important;
+  font-size: 2.4vw;
 }
 
 }

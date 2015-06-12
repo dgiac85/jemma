@@ -841,11 +841,11 @@ Storico.GetStorico = function() {
 	}
 	
 	/*per desktop 1024-768*/
-	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (window.innerHeight>=649) && (Menu.contentMenuSelected===3) ){
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (Menu.contentMenuSelected===3) ){
 
 		$("#Content").css("min-height", "89%");
 		$("#Content").css("height", "89%");
-		$("#Storico").css("height", "90%");
+		$("#Storico").css("height", "85%");
 	}
 	
 	if ( (!Modernizr.touch) && (window.innerHeight>=841) && (window.innerWidth===1280) ){
