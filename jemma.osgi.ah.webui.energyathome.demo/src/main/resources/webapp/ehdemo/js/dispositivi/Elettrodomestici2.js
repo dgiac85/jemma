@@ -96,7 +96,7 @@ $(document).ready(function() {
 	        
 	    		
 	    	
-	    	if( (!Modernizr.touch)&&(window.innerWidth>widthSmartphone) ){
+	    	if( (!Modernizr.touch)&&(window.innerWidth>320) ){
 				$("#Interfaccia").css("display","block");	
 				if ($("#mobileElett").css("left")==="0px") {
 					$("#mobileElett").animate({"left":"200%"}, 600);		
@@ -150,7 +150,7 @@ $(document).ready(function() {
 			}
 		}
 		else{
-			if ( (window.innerWidth<480) || (window.innerHeight<480)  )  {					
+			if ( (window.innerWidth<widthSmartphone) || (window.innerHeight<widthSmartphone)  )  {					
 				insert();			
 			}
 			else{									
