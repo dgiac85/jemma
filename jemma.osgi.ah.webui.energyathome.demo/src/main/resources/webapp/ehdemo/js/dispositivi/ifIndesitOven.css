@@ -20,6 +20,14 @@
     
 }
 
+#ifIndesitOven .col2 {
+  display: block;
+  position: relative;
+  height: 50%;
+  vertical-align: top;
+  float: left;
+}
+
 #ifIndesitOven .col.lborder{
     /*border-left: 1px solid #000;*/
 }
@@ -122,7 +130,7 @@
 
 #ifIndesitOven  .label{
     display: block;
-	font-size: 12px;
+	font-size: 19px;
     text-align: center;
 }
 
@@ -196,7 +204,7 @@
 #ifIndesitOven .green{
     font-size: 24px;
     color: #9cc31c;
-    /*margin-top: 20px;*/
+    margin-bottom: 20px;
     /*margin-bottom: 20px;*/
     
 }
@@ -209,6 +217,16 @@
     width: 5px;
  }
  
+ 
+
+/*MEDIA QUERIES*/
+ 
+@media only screen and (max-device-width:768px), (max-width: 768px){
+ 
+ #ifIndesitOven .label {
+  font-size: 16px;
+  }
+} 
 
  @media only screen and (max-device-width:480px), (max-width: 480px){
  #ifIndesitOven {
@@ -238,7 +256,13 @@
   width: 45% !important;
   font-size: 5.5vw;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 3px;
+  margin-top: 0px !important;
+}
+
+
+#ifIndesitOven .col2 {
+ width:100% !important;
 }
 
 #ifIndesitOven .col.lborder {
@@ -246,13 +270,13 @@
 }
 
 #ifIndesitOven .line {
-  height: 66px;
+  height: 50%;
 }
 
-#Interfaccia .header {
+/* #Interfaccia .header {
   margin:0px auto;
   width:24%;
-}
+} */
 
 #ifIndesitOven .col .icona_row {
   /* text-align: center; */
@@ -263,8 +287,12 @@
   display: block;
   width: 100%;
     height: 15%;
-    margin-left:0px;}
-
+    margin-left:0px;
+  }
+    
+#ifIndesitOven .green {
+  margin-bottom: 20px;
+}
 
  }
  
