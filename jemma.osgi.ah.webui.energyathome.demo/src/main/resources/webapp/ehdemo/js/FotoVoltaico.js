@@ -102,10 +102,55 @@ var CostiConsumi = {
 	visGraficoCount: 3,
 	setImgCount: -1
 }
+var widthSmPh=480;
+var quale;
+
+$(document).ready(function() {	
+	$("#consigliTurnOn").css("height","47%");
+//	(function ($) {
+//	    var d = 1, t = null, e = null, h, r = false;
+//
+//	    h = function () {
+//	        r = false;
+//	        $(window).trigger('resizeFotend', e);
+//	};
+	
+	$(window).resize( function(){	
+		
+		if (Menu.contentMenuSelected===0){
+			gestisciPosGraficoFotoVoltaico();
+			sistemaConsAttuale();
+			
+		}
+		impostaAltezzeEAmpiezzeFV();
+		
+		
+		
+		
+//		e = event || e;
+//	    clearTimeout(t);
+//
+//	    if (!r) {
+//	        $(window).trigger('resizeFotStart', e);
+//	        r = true;
+//	    }
+//
+//	    t = setTimeout(h, d);
+//	    });
+//	}(jQuery));
+//	
+//	$(window).on('resizeFotEnd', function(event){
+//		
+	});
+		
+	
+});
+
+
 
 /* Inizializza la schermata */
 CostiConsumi.Init = function() {
-	
+
 	indicatoreTermometro = 'images/termometro_iac.png';
 	suffIndicatoreT = '_iac';
 
@@ -132,6 +177,7 @@ CostiConsumi.Init = function() {
 	$("#TariffaImgDiv").hide();
 	$("#TariffaImg").hide();
 	$("#TariffaPos").hide();
+	
 	var divFrecce = $("#FrecceFV");
 	if (divFrecce.length == 0) {
 		$(document.createElement('div')).addClass('divFrecce').attr('id', 'FrecceFV').appendTo($("#CostoConsumoSintesi")).show();
@@ -146,7 +192,10 @@ CostiConsumi.Init = function() {
 		$("#divFrecceConsumi").show();
 		$("#divFrecceRete").show();
 		$("#divCentro").show();
+		//$("#CostoConsumoSintesi").css("height","70%");
 	}
+	
+	
 	
 	if ($('#DettaglioGraficoProduzioneOdierno').length == 0) {
 		$('#CostoConsumoInfo').append($('#Grafico').clone().attr('id', 'Grafico2'));
@@ -218,7 +267,7 @@ CostiConsumi.Init = function() {
 			} else if (indice.substring(0) == 'Forecast'){
 				fakeValues.Forecast.list[0] = parseInt(value, 10); 
 			} else if (indice.substring(0) == 'MoltForCost'){
-				fakeValues.MoltForCost.list[0] = parseInt(value, 10);
+				fakeValues.MoltForCost.list[0] = parseFloat(value, 10);
 			} else if (indice.substring(0) == 'SuddivisioneConsumi'){
 				for (var i=0; i<value; i++){
 					eval("fakeValues.SuddivisioneConsumi.map[data['SuddivisioneConsumi"+i+"_el']] = {list: new Array()}");
@@ -250,8 +299,332 @@ CostiConsumi.GestOnClickMainMenu = function() {
 	}
 }
 
-CostiConsumi.GestFotoVoltaico = function() {
+function gestisciPosGraficoFotoVoltaico(){
+	$("#Grafico").css({  'margin': '2% 2% 1% 2%','height': '46%','width':'95%', 'position':'relative','float':'left'});
+	$("#CostoConsumoAttualeTitolo").css({'float': 'none','width': '100%','margin-top': '7px 0px 0px 0px'});
+	$("#CostoConsumoAttualeTitolo").css("font-size",$("#ProduzioneAttualeTitolo").css("font-size"));
+	if ((window.innerWidth<480) && (Menu.contentMenuSelected===0) ){
+		$("#Grafico").css({'position':'relative','margin': '5% 2% 1% 2%','height': '46%','width':'95%'});
+		$("#CostoConsumoAttualeTitolo").css({'font-size': '3.5vw','float': 'none','width': '100%','margin-top': '7px 0px 0px 0px'});
+		
+		$("#ConsumoAttualeMeter").css("float","none");
+		$("#containerValCons0").css({'width':'78%','float':'none'});
+	}
+	
+}
 
+function sistemaConsAttuale(){
+	var element=$('#CostoConsumoAttualeTitolo').detach();	
+	var element1=$('#ConsumoAttualeMeter').detach();
+	var element2=$('#containerValCons0').detach();
+	
+	$("#CostoConsumoAttuale").append(element);
+	$("#CostoConsumoAttuale").append(element1);
+	$("#CostoConsumoAttuale").append(element2);
+}
+
+function impostaAltezzeEAmpiezzeFV(){
+	
+	
+	$("#consigliTurnOn").css("height","70%");
+	 
+	if ( (!Modernizr.touch) && (window.innerWidth>951) ){
+		$("#ContentMain").css("min-height","768px");
+		$("#Content").css("height", "768px");
+		$("#ContentMain").css("height", "768px");
+		$("#ContainerSX").css("height","98%");
+		$("#CostoConsumoSintesi").css("height","67%");
+		$("#CostoConsumoInfo").css("height","95%");
+		$("#ContainerMenu").css("height","768px");
+		$("#Consigli").css("margin-top","8px");
+		
+		$("#LogoImg").css("height","91px");
+		$("#logo").css("height","91px");
+		$("#dataANDuser").css("height","91px");
+		$("#Header").css("height","94px");
+		
+		$("#MainMenu").css("height","100%");
+		$(".perCover").css("height","180px");
+		$(".MainMenuEl").css("height","150px");
+		$(".contImg1").css("width","86%");
+		$(".contImg1").css("margin","0px auto");
+		$(".MainMenuImg").css("height","130px");
+		$(".MainMenuImg").css("width","130px");	
+		
+		$("#Content").css("height", "auto");
+		$("#Storico").css("height", "744px");
+			
+	}
+		
+	//per il tablet TELECOM ASUS IN PORTRAIT --- PROVARE PER GLI ALTRI TABLET
+	if ( (Modernizr.touch)&&(window.innerWidth>=800)&& (Menu.contentMenuSelected===0) ){
+		$("#ContainerSX").css("height","430px");
+		$("#Grafico").css({'width': '98%','height': '290px','font-size': '2vw','margin-top': '7px','margin-left':'8px','left': '0'});
+		$("#CostoConsumoSintesi").css("height","65%");
+		$("#CostoConsumoSintesi").css("width","100%");
+	}
+	
+	//per il tablet TELECOM ASUS IN LANDSCAPE --- PROVARE PER GLI ALTRI TABLET
+	if ( (Modernizr.touch)&&(window.innerHeight<=800) && (Menu.contentMenuSelected===0) && (window.innerHeight < window.innerWidth) ){
+		$("#ContainerSX").css("height","500px");
+		$("#Grafico").css({'width': '95%','height': '46%','font-size': '1.1em', 'font-weight':'bold','margin-top': '7px','margin-left':'8px','left': '0'});
+		$("#CostoConsumoInfo").css("height","99%");
+		$("#CostoConsumoSintesi").css("height","67%");
+		$("#CostoConsumoSintesi").css("width","100%");
+	}
+	
+	if ( (Modernizr.touch) && (window.innerWidth<=854) && (window.innerHeight<=480) && (Menu.contentMenuSelected===0) ){
+		$("CostoConsumoSintesi").css("width","75%");
+		$("CostoConsumoSintesi").css("height","215px");		
+	}
+	
+	//gestione smartphone 360*640 in landscape
+	if ( (Modernizr.touch) && (window.innerHeight<=widthSmPh) && (Menu.contentMenuSelected===0) && (window.innerHeight < window.innerWidth) ){
+		$("#CostoConsumoSintesi").css("width","75%");
+		$("#CostoConsumoSintesi").css("height","215px");
+		$( ".pvSingleBox" ).removeClass("boxPerConsumi");
+		$("#Grafico").css("width","98%");
+		$("#Grafico").css("height","46%");
+		
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (Menu.contentMenuSelected===0) ){
+		$("#CostoConsumoSintesi").css("height","68%");
+	}
+	
+
+	
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=1024) && (window.innerWidth<=1220) ){
+		$("#ContentMain").css("min-height", "93%");
+		$("#ContentMain").css("height", "93%");
+		$("#CostoConsumoSintesi").css("height","68%");		
+		$("#ContainerMenu").css("height","89%");
+		
+		$("#LogoImg").css("height","55px");
+		$("#logo").css("height","55px");
+		$("#dataANDuser").css("height","55px");
+		$("#Header").css("height","57px");
+		
+	
+	
+	}
+	
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=900) && (window.innerWidth<=1220) ){
+	  	$("#ContentMain").css("max-height", "92%");
+	  	$("#ContentMain").css("min-height", "92%");
+		$("#ContentMain").css("height", "92%");
+	}
+	
+	
+	
+	if( (!Modernizr.touch) && (window.innerWidth<951) && (Menu.contentMenuSelected===0) ){
+		$("#ContentMain").css("min-height","0px");
+		$("#ContentMain").css("height","auto");
+		$("#ContentMain").css("max-height","none");
+		$("#CostoConsumoInfo").css("height","100%");
+		$("#ContainerSX").css("height","574px");
+		$("#CostoConsumoSintesi").css("height","390px");
+		$("#CostoConsumoSintesi").css("width","100%");
+		$(".meter").css("width","56%");
+		
+		$("#LogoImg").css("height","55px");
+		$("#logo").css("height","55px");
+		$("#dataANDuser").css("height","55px");
+		$("#Header").css("height","57px");
+		
+		$("#MainMenu").css("height","100%");
+		$(".perCover").css("height","110px");
+		$(".MainMenuEl").css("height","150px");
+		$(".contImg1").css("width","86%");
+		$(".contImg1").css("margin","0px auto");
+		$(".MainMenuImg").css("height","auto");
+		
+			
+	}
+	
+	
+//	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (window.innerWidth>1220) ){
+//		$("#LogoImg").css("height","55px");
+//		$("#logo").css("height","55px");
+//		$("#dataANDuser").css("height","55px");
+//		$("#Header").css("height","57px");
+//		$("#Content").css("height", "490px");
+//		$("#Storico").css("height", "450px");
+//	}
+	
+
+	
+	if(window.innerWidth<=widthSmPh){
+
+			$("#ContentMain").css("min-height","1270px");
+			$("#ContentMain").css("height","auto");
+			$("#CostoConsumoSintesi").css("height","275px");			
+			$("#CostoConsumoSintesi").css("width","98%");
+			$("#CostoConsumoInfo").css("height","775px");
+			$("#ContainerSX").css("height","455px");
+			$("#Grafico").css("width","95%");
+			
+			$("#MainMenu").css("height","100%");
+			$(".perCover").css("height","180px");
+			$(".MainMenuEl").css("height","90px");
+			$(".contImg1").css("width","86%");
+			$(".contImg1").css("margin","0px auto");
+			$(".MainMenuImg").css("height","75px");
+			$(".MainMenuImg").css("width","75px");
+			$(".MainMenuEl").css("height","50%");			
+			$("#CostoConsumoAttualeTitolo").css("font-size","2.5vw");
+		
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerWidth===1366) ){
+		  $("#PVConsumoIACIndicatoreImg").css("width","64%");
+	  	$("#ContentMain").css("max-height", "490px");
+	  	$("#ContentMain").css("min-height", "490px");
+		$("#ContentMain").css("height", "490px");
+
+	$("#Consigli").css("margin-top","3px");
+		$("#CostoConsumoSintesi").css("height","67%");
+		$("#CostoConsumoInfo").css("height","95%");
+		$("#ContainerMenu").css("height","490px");
+		$("#consigliTurnOn").css("margin-top","2px");
+		$("#MainMenu").css("height","100%");
+		$(".perCover").css("height","116px");
+		$(".MainMenuEl").css("height","103px");
+		$(".contImg1").css("width","59%");
+		$(".contImg1").css("margin","0px auto");
+		$(".MainMenuImg").css("height","89px");
+		$(".MainMenuImg").css("width","89px");
+		  
+			$("#LogoImg").css("height","55px");
+			$("#logo").css("height","55px");
+			$("#dataANDuser").css("height","55px");
+		$("#Header").css("height","57px");
+		
+	}
+	
+	/*per desktop 1280-1024*/
+	if ( (!Modernizr.touch) && (window.innerWidth===1280) ){
+		 $("#PVConsumoIACIndicatoreImg").css("width","64%");
+		$("#ContentMain").css("min-height","668px");
+		$("#Content").css("height", "668px");
+		$("#ContentMain").css("height", "668px");
+		$("#ContainerSX").css("height","98%");
+		$("#CostoConsumoSintesi").css("height","68%");
+		$("#CostoConsumoInfo").css("height","98%");
+		$("#ContainerMenu").css("height","668px");
+		$("#MainMenu").css("height","100%");
+		$("#Consigli").css("margin-top","8px");
+		
+		$("#LogoImg").css("height","91px");
+		$("#logo").css("height","91px");
+		$("#dataANDuser").css("height","91px");
+		$("#Header").css("height","94px");
+		
+		$(".perCover").css("height","160px");
+		$(".MainMenuEl").css("height","130px");
+		$(".contImg1").css("width","74%");
+		$(".contImg1").css("margin","0px auto");
+		$(".MainMenuImg").css("height","110px");
+		$(".MainMenuImg").css("width","110px");	
+		
+	
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=641) && (window.innerHeight<841) && (window.innerWidth===1280) ){
+		$(".contImg1").css("width","80%");
+		$("#CostoConsumoInfo").css("height","98%");
+	}
+	
+	
+	/*per desktop 1440-900 /1600-900 - utilizzata generalmente dai macbook pro*/
+	if ( ( (!Modernizr.touch) && (window.innerWidth===1440) ) || ( ( (!Modernizr.touch) && (window.innerWidth===1600) ) ) ){
+		 $("#PVConsumoIACIndicatoreImg").css("width","64%");
+			$("#ContentMain").css("min-height","568px");
+			$("#Content").css("height", "568px");
+			$("#ContentMain").css("height", "568px");
+			$("#ContainerSX").css("height","98%");
+			$("#CostoConsumoSintesi").css("height","68%");
+			$("#CostoConsumoInfo").css("height","98%");
+			$("#ContainerMenu").css("height","568px");
+			$("#MainMenu").css("height","100%");
+			$("#Consigli").css("margin-top","8px");
+			
+			$("#LogoImg").css("height","91px");
+			$("#logo").css("height","91px");
+			$("#dataANDuser").css("height","91px");
+			$("#Header").css("height","94px");
+			
+			$(".perCover").css("height","130px");
+			$(".MainMenuEl").css("height","110px");
+			$(".contImg1").css("width","62%");
+			$(".contImg1").css("margin","0px auto");
+			$(".MainMenuImg").css("height","90px");
+			$(".MainMenuImg").css("width","90px");	
+			
+		
+	}
+	
+	/*per desktop 1280-720*/
+	if ( (!Modernizr.touch) && (window.innerHeight>=601) && (window.innerHeight<641) && (window.innerWidth===1280) ){
+		 $("#PVConsumoIACIndicatoreImg").css("width","64%");
+			$("#ContentMain").css("min-height","450px");
+			$("#Content").css("height", "450px");
+			$("#ContentMain").css("height", "450px");
+			$("#ContainerSX").css("height","98%");
+			$("#CostoConsumoSintesi").css("height","65%");
+			$("#CostoConsumoInfo").css("height","95%");
+			$("#ContainerMenu").css("height","450px");
+			$("#MainMenu").css("height","100%");
+			$("#Consigli").css("margin-top","8px");
+			
+			$("#LogoImg").css("height","55px");
+			$("#logo").css("height","55px");
+			$("#dataANDuser").css("height","55px");
+			$("#Header").css("height","57px");
+			
+			$(".perCover").css("height","110px");
+			$(".MainMenuEl").css("height","80px");
+			$(".contImg1").css("width","48%");
+			$(".contImg1").css("margin","0px auto");
+			$(".MainMenuImg").css("height","70px");
+			$(".MainMenuImg").css("width","70px");	
+			
+			
+	}	
+	
+	if ( (Modernizr.touch) && (window.innerWidth===1024) && (window.innerHeight===768) ){
+		$(".costConsSintFot").css("height","58%");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) ){
+		$("#ContentMain").css("max-height","580px");
+		$("#CostoConsumoSintesi").css("max-height","58%");
+		$("#consigliTurnOn").css("font-size","2.1vw");
+		$("#IndicatoreTitoloPV").css("margin-top","6px");
+	}
+	
+}
+
+
+CostiConsumi.GestFotoVoltaico = function() {
+	quale=false;
+	
+	$('.containerVal').prop('id', 'containerValCons0');
+	//$("#CostoConsumoAttualeTitolo").prop('id','CostoConsumoAttualeTitolo0');
+	$("#ConsumoAttualeMeter").removeClass("meterPagCons");
+	$("#CostoConsumoAttualeTitolo").removeClass("consTitoloCons");
+	$("#ContainerSX").removeClass("contSXPaginaCons");
+	$("#CostoConsumoSintesi").removeClass("costConsSintCons");
+	$("#CostoConsumoSintesi").addClass("costConsSintFot");
+	
+	gestisciPosGraficoFotoVoltaico();
+	sistemaConsAttuale();
+	impostaAltezzeEAmpiezzeFV();
+	
+	$("#Consigli").css("display","block");
+		
 	$("#CostiConsumi").show();
 	if ((CostiConsumi.mode == CostiConsumi.CONSUMI) || (CostiConsumi.mode == CostiConsumi.COSTI)) {
 		CostiConsumi.mode = CostiConsumi.FOTOVOLTAICO;
@@ -297,6 +670,10 @@ CostiConsumi.GestFotoVoltaico = function() {
 		$("#PVConsumoIACIndicatoreImg").show();
 
 		$("#CostoConsumoAttualeTitolo").text(Msg.home["titoloConsumi"]);
+		if ( (Modernizr.touch) && (window.innerWidth<=480) && (Menu.contentMenuSelected===0) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","2.8vw");
+		}
+		
 		$("#ProduzioneAttualeTitolo").text(Msg.home["titoloProduzione"]);
 		$("#ReteAttualeTitolo").text(Msg.home["titoloReteOut"]);
 		$("#CostoTConsumoMaxTitolo").text(Msg.home["consumoMaggiore"]);
@@ -305,6 +682,7 @@ CostiConsumi.GestFotoVoltaico = function() {
 		$("#CostoConsumoAttuale").addClass('CostoConsumoAttualePV');
 		$("#ProduzioneAttualeTitolo").show();
 		$("#ProduzioneAttuale").show();
+		
 		$("#ReteAttualeTitolo").show();
 		$("#ReteAttuale").show();
 		$("#FrecceFV").show();
@@ -375,6 +753,7 @@ CostiConsumi.ExitFotoVoltaico = function() {
 
 	Main.ResetError();
 	$("#CostiConsumi").hide();
+	$("#CostoConsumoSintesi").css("height","70%");
 }
 
 /*
@@ -386,13 +765,15 @@ CostiConsumi.GetDatiPotenza = function() {
 	if (InterfaceEnergyHome.visError != InterfaceEnergyHome.ERR_CONN_SERVER) {
 		Main.ResetError();
 	}
-	if ((InterfaceEnergyHome.mode > 0) || (InterfaceEnergyHome.mode == -1)) {
+	if ((InterfaceEnergyHome.mode > 0) || (InterfaceEnergyHome.mode == -1) ) {
 		try {
 			InterfaceEnergyHome.objService.getAppliancesConfigurationsDemo(CostiConsumi.DatiPotenzaAttuale);
 		} catch (err) {
 			InterfaceEnergyHome.GestErrorEH("GetDatiPotenza", err);
 		}
-	} else {
+	} else if(InterfaceEnergyHome.mode == -2) {
+		CostiConsumi.GestNoServerCustomDevice(fakeValues.noServerCustomDevice, null);
+	} else{
 		// per test
 		if (CostiConsumi.potenzaAttuale.value == null) {
 			CostiConsumi.potenzaAttuale.value = 0;
@@ -410,17 +791,16 @@ CostiConsumi.GetDatiPotenza = function() {
  * Metodo Positive CallBack di CostiConsumi.GetDatiPotenza
  */
 CostiConsumi.DatiPotenzaAttuale = function(result, err) {
-
 	if (err != null) {
 		InterfaceEnergyHome.GestErrorEH("DatiPotenzaAttuale", err);
 		CostiConsumi.potenzaAttuale.value = 0;
 	} else if (result != null) {
+		console.debug(InterfaceEnergyHome.mode );
 		if (InterfaceEnergyHome.mode == 0){
 			CostiConsumi.potenzaAttuale.value = result.value;
 		} else{
 			//prelevare dato smart info
-			if (result.list.length == 0){
-				console.log(fakeValues);
+			if (InterfaceEnergyHome.mode == -2){
 				//InterfaceEnergyHome.objService.getNoServerCustomDevice(CostiConsumi.GestNoServerCustomDevice);  //Da sostituire con lettura OBJNOSERVER già settato nell'Init!
 				CostiConsumi.GestNoServerCustomDevice(fakeValues.noServerCustomDevice, null);
 			} else {
@@ -488,40 +868,41 @@ CostiConsumi.GetDatiProduzione = function() {
 			InterfaceEnergyHome.GestErrorEH("GetDatiProduzione", err);
 		}
 	// noserver mode ...
-	} else if (InterfaceEnergyHome.mode == -1) {
+	} else if ((InterfaceEnergyHome.mode == -1)||(InterfaceEnergyHome.mode == -2)) {
 		try {	
 			// Legge la configurazione degli appliances ...
 			InterfaceEnergyHome.objService.getAppliancesConfigurationsDemo(CostiConsumi.CheckSmartInfo);
 		} catch (err) {
 			InterfaceEnergyHome.GestErrorEH("GetDatiProduzione", err);
 		}
+	
 	} else {
-		// per test
-		var powerProduction = '2';
-		Main.contatoreProd = powerProduction;
-		switch (Main.contatoreProd) {
-		case '0':
-			CostiConsumi.produzioneAttuale.value = 1000;
-			break;
-		case '1':
-			CostiConsumi.produzioneAttuale.value = 2000;
-			break;
-		case '2':
-			CostiConsumi.produzioneAttuale.value = 3000;
-			break;
-		case '3':
-			CostiConsumi.produzioneAttuale.value = 4000;
-			break;
-		case '4':
-			CostiConsumi.produzioneAttuale.value = 5000;
-			break;
-		case '5':
-			CostiConsumi.produzioneAttuale.value = 6000;
-			break;
-		default:
-			CostiConsumi.produzioneAttuale.value = 0;
-			break;
-		}
+			// per test
+			var powerProduction = '2';
+			Main.contatoreProd = powerProduction;
+			switch (Main.contatoreProd) {
+			case '0':
+				CostiConsumi.produzioneAttuale.value = 1000;
+				break;
+			case '1':
+				CostiConsumi.produzioneAttuale.value = 2000;
+				break;
+			case '2':
+				CostiConsumi.produzioneAttuale.value = 3000;
+				break;
+			case '3':
+				CostiConsumi.produzioneAttuale.value = 4000;
+				break;
+			case '4':
+				CostiConsumi.produzioneAttuale.value = 5000;
+				break;
+			case '5':
+				CostiConsumi.produzioneAttuale.value = 6000;
+				break;
+			default:
+				CostiConsumi.produzioneAttuale.value = 0;
+				break;
+			}
 
 		CostiConsumi.DatiProduzioneAttuale(CostiConsumi.produzioneAttuale, null);
 	}
@@ -594,7 +975,7 @@ CostiConsumi.DatiProduzioneAttuale = function(result, err) {
 	if (err != null) {
 		InterfaceEnergyHome.GestErrorEH("DatiProduzioneAttuale", err);
 	} else if (result != null) {
-		if (InterfaceEnergyHome.mode == -1) {
+		if ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)) {
 			CostiConsumi.produzioneAttuale.value = result.value * CostiConsumi.MOLTFORDEMO; //aggiungo un moltiplicatore 10 per la demo
 		} else {
 			CostiConsumi.produzioneAttuale.value = result.value * CostiConsumi.MOLTFORDEMO; //aggiungo un moltiplicatore 10 per la demo
@@ -792,7 +1173,7 @@ CostiConsumi.VisGrafico = function() {
 	    if(dataForecast[index] == null){
 	    	dataForecast[index] = 0;
 	    } else {
-	    	if (InterfaceEnergyHome.mode ==-1) {
+	    	if ((InterfaceEnergyHome.mode ==-1) || (InterfaceEnergyHome.mode == -2) ) {
 	    		dataForecast[index] = dataForecast[index] / 1000;
 	    	} else {
 	    		dataForecast[index] = dataForecast[index] * CostiConsumi.MOLTFORDEMO;
@@ -1126,7 +1507,7 @@ CostiConsumi.GetDatiVenditaIAC = function(result, err) {
 CostiConsumi.DatiPercIAC = function(result, err) {
 	var perc = 0;
 	
-	if (InterfaceEnergyHome.mode != -1) {
+	if (InterfaceEnergyHome.mode != -1 && InterfaceEnergyHome.mode != -2) {
 		if (err != null) {
 			CostiConsumi.datiVenditaIAC = null;
 			InterfaceEnergyHome.GestErrorEH("DatiProduzioneAttuale", err);
@@ -1190,7 +1571,8 @@ CostiConsumi.SetConsumoImg = function() {
 			$("#ValConsumoAttuale").html("n.a.");
 		} else {
 			val = CostiConsumi.potenzaAttuale.value;
-			$("#ValConsumoAttuale").html((val / 1000.0).toFixed(3) + " kW");
+			//$("#ValConsumoAttuale").html((val / 1000.0).toFixed(3) + " kW");
+			$("#ValConsumoAttuale").html((val) + " W");
 		}
 	}
 
@@ -1204,7 +1586,8 @@ CostiConsumi.SetConsumoImg = function() {
 			$("#ValProduzioneAttuale").html("n.a.");
 		} else {
 			valProd = CostiConsumi.produzioneAttuale.value;
-			$("#ValProduzioneAttuale").html((valProd / 1000.0).toFixed(3) + " kW");
+			//$("#ValProduzioneAttuale").html((valProd / 1000.0).toFixed(3) + " kW");
+			$("#ValProduzioneAttuale").html((valProd) + " W");
 		}
 	}
 
@@ -1218,7 +1601,8 @@ CostiConsumi.SetConsumoImg = function() {
 			$("#ValReteAttuale").html("n.a.");
 		} else {
 			valRete = CostiConsumi.reteAttuale.value;
-			$("#ValReteAttuale").html((valRete / 1000.0).toFixed(3) + " kW");
+			//$("#ValReteAttuale").html((valRete / 1000.0).toFixed(3) + " kW");
+			$("#ValReteAttuale").html((valRete) + " W");
 		}
 	}
 
@@ -1267,9 +1651,12 @@ CostiConsumi.SetConsumoImg = function() {
 
 	if (CostiConsumi.mode == CostiConsumi.FOTOVOLTAICO) {
 		if ($('#consigliTurnOn').length == 0) {
-			$(document.createElement('div')).attr('id', 'consigliTurnOn').appendTo($("#CostoConsumoSintesi")).show();
+			$(document.createElement('div')).attr('id', 'consigliTurnOn').appendTo($("#Consigli")).show();
 		}
-
+		if ( (!Modernizr.touch) && (window.innerWidth===1024) ){
+			$("#consigliTurnOn").css("font-size","2.1vw");
+		}
+		$("#consigliTurnOn").css("height","70%");
 		if (valProd > val) {
 			var tmpValRete = valRete * 1000;
 			$('#consigliTurnOn').show();
@@ -1294,7 +1681,7 @@ CostiConsumi.SetConsumoImg = function() {
 	}
 	
 	if (CostiConsumi.timerPotenza == null) {
-		if (InterfaceEnergyHome.mode == -1) {
+		if (InterfaceEnergyHome.mode == -1 || InterfaceEnergyHome.mode == -2) {
 			CostiConsumi.timerPotenza = setInterval(CostiConsumi.TimerPotenzaTick2, CostiConsumi.TIMER_UPDATE_POWER_METER);
 			CostiConsumi.timerPotenza2 = setInterval(CostiConsumi.TimerPotenzaTick3, CostiConsumi.TIMER_UPDATE_PROD_POWER_METER);
 		} else {
@@ -1343,7 +1730,7 @@ CostiConsumi.getDailyPVForecast = function() {
 	if (InterfaceEnergyHome.mode > 0) {
 		InterfaceEnergyHome.objService.getDailyPVForecast(CostiConsumi.getDailyPVForecastCB);
 	} else{
-		if (InterfaceEnergyHome.mode == -1) {
+		if (InterfaceEnergyHome.mode == -1 || InterfaceEnergyHome.mode == -2) {
 			//InterfaceEnergyHome.objService.getPropConfiguration(CostiConsumi.getDailyPVForecastCB, "PrevisioneEnergiaProdottaGiornalieroSimul");
 			CostiConsumi.getDailyPVForecastCB(fakeValues.previsioneEnergiaProdotta, null);
 		} else {

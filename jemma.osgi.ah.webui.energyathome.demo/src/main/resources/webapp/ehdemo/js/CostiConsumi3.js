@@ -5,15 +5,235 @@ var potenza = {
 var consumoMaxValue = 0;
 var consumoMaxIcon;
 var consumoMaxNome;
+var widthBreak1=951;
+var widthSmPh=480;
+
+$(document).ready(function() {
+	
+	(function ($) {
+	    var d = 1, t = null, e = null, h, r = false;
+
+	    h = function () {
+	        r = false;
+	        $(window).trigger('resizeConsEnd', e);
+	    };
+	
+	    $(window).resize( function(){
+	    	
+	   
+	    	
+	    if (Menu.contentMenuSelected===1){
+			gestisciPosGraficoConsumi();
+	    	gestisciDivCostoConsumoAttuale();
+	    	impostaAltezzeCons();
+	    	gestisciCostoConsumoTitolo();
+	    	
+	    }
+	    	
+		
+		
+		e = event || e;
+	    clearTimeout(t);
+
+	    if (!r) {
+	        $(window).trigger('resizeConsStart', e);
+	        r = true;
+	    }
+
+	    t = setTimeout(h, d);
+	    });
+	}(jQuery));
+	
+	$(window).on('resizeConsEnd', function(event){
+	});
+	
+});
+
+
+
+
+function impostaAltezzeCons(){
+	
+	$("ConsumoAttualeMeter").addClass("meterPagCons");
+	$("CostoConsumoAttualeTitolo").addClass("consTitoloCons");
+	//$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
+	
+	if( (window.innerWidth<=widthBreak1) && (Menu.contentMenuSelected===1) ){
+		$("#ContentMain").css("min-height","1460px");
+		$("#CostoConsumoSintesi").css("height","700px");
+		$("#ContainerSX").css("height","690px");
+		$("#CostoConsumoSintesi").css("width","98%");
+		$(".meter").css("width","20vw");
+	}
+	if (window.innerWidth>widthBreak1){
+
+		$("#ContainerSX").css("height","98%");
+		
+	}
+	
+	if(window.innerWidth<=widthSmPh){			
+		if (Menu.contentMenuSelected===1){
+			$("#ContentMain").css("min-height","1670px");
+			$("#CostoConsumoSintesi").css("width","100%");
+			$("#CostoConsumoSintesi").css("height","800px");
+			$("#CostoConsumoInfo").css("height","820px");
+			$("#ContainerSX").css("height","810px");	
+			$("#Grafico").css("width","98%");
+			
+			
+		}
+		
+	}
+	if (window.innerWidth>widthSmPh){
+		if (Menu.contentMenuSelected===1){
+				if (window.innerWidth>widthBreak1){
+					$("#CostoConsumoSintesi").css("height","98%");
+																
+				}
+				else{
+					$("#CostoConsumoSintesi").css("width","100%");
+					$("#CostoConsumoSintesi").css("height","700px");
+					$("#CostoConsumoInfo").css("height","700px");
+				}
+		}
+	}
+	
+	//per il tablet TELECOM ASUS IN PORTRAIT
+	if ( (Modernizr.touch)&&(window.innerWidth>=800)&&(Menu.contentMenuSelected===1) ){
+		$("#ContainerSX").css("height","460px");
+		$("#Grafico").css({'width': '63%','height': '375px','font-size': '2vw','margin-top': '7px','margin-left':'8px','left': '0'});
+		$("#CostoConsumoSintesi").css("height","460px");
+		$("#CostoConsumoInfo").css("height","635px");
+		$("#CostoConsumoAttualeTitolo").css("font-size","3vw");
+	}
+	
+	//per il tablet TELECOM ASUS IN LANDSCAPE
+	if ( (Modernizr.touch)&&(window.innerHeight<=800) && (Menu.contentMenuSelected===1) ){
+		$("#Grafico").css({'width': '63%','height': '60%','font-size': '2vw','margin-top': '7px','margin-left':'8px','left': '0'});
+		$("#CostoConsumoSintesi").css("height","98%");
+		$("#CostoConsumoInfo").css("height","98%");
+		$("#CostoConsumoAttualeTitolo").css("font-size",$("#ProduzioneAttualeTitolo").css("font-size"));
+	}
+	
+	//gestione smartphone 360*640 in landscape
+	if ( (Modernizr.touch) && (window.innerHeight<=widthSmPh) && (Menu.contentMenuSelected===1) ){
+		$("#CostoConsumoSintesi").css("width","98%");
+		$("#CostoConsumoSintesi").css("height","auto");
+		$( ".pvSingleBox" ).addClass("boxPerConsumi");
+		$("#containerValCons1").css({'width':'100%','float':'left'});
+		$("#Grafico").css('width', '50%');
+		$("#Grafico").css('height', '43%');
+		
+	}
+	
+	if ( (Modernizr.touch) && (window.innerWidth<=854) && (window.innerHeight<=460) && (Menu.contentMenuSelected===1) ){
+		$("CostoConsumoSintesi").css("width","98%");
+		$("CostoConsumoSintesi").css("height","auto");		
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=900) ){
+		$("#CostoConsumoSintesi").css("height","99%");
+	}
+	
+	
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (Menu.contentMenuSelected===1)){
+		$("#ContentMain").css("max-height","580px");
+		$("#CostoConsumoSintesi").css("height","92%");
+		$("#CostoConsumoSintesi").css("max-height","92%");
+		$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
+	}
+
+	
+
+}
+
+
+function gestisciPosGraficoConsumi(){
+	$("#Grafico").css({'margin': '1% 0% 1% 2%','height': '60%','width':'61%'});	
+	if (window.innerWidth<480){
+		$("#Grafico").css({'margin': '1% 0% 1% 1%','position':'relative','height': '46%','width':'98%'});
+	}	
+}
+
+function gestisciCostoConsumoTitolo(){
+	if (Menu.contentMenuSelected===1){
+		if ( (window.innerWidth>951) && (window.innerWidth>1220) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
+		}
+		if ( (window.innerWidth<=951) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","3vw");
+		}
+		if ( (window.innerWidth<=480) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","5.5vw");
+		}
+	}
+}
+
+function gestisciDivCostoConsumoAttuale(){
+	var element=$('#CostoConsumoAttualeTitolo').detach();	
+	var element1=$('#ConsumoAttualeMeter').detach();
+	var element2=$('#containerValCons1').detach();
+	
+	if (window.innerWidth<=widthSmPh){	
+		//var element3=$('#DettaglioCosto').detach();
+		if (Menu.contentMenuSelected===1){
+			$("#CostoConsumoAttuale").append(element1);
+			$("#CostoConsumoAttuale").append(element);
+			$("#CostoConsumoAttuale").append(element2);
+			//$("#ValConsumoAttuale").css("width","150px");
+			
+		 
+			//$("#ValProduzioneAttuale").css("display","none");
+			//$("#ValReteAttuale").css("display","none");
+			//$("#CostoConsumoAttualeTitolo").css({'font-size': '16px','float': 'left','width': '66%','margin': '8px auto'});
+			$("#ConsumoAttualeMeter").css("float","left");
+		}
+		else{
+			
+			$("#CostoConsumoAttuale").append(element);
+			$("#CostoConsumoAttuale").append(element1);
+			$("#CostoConsumoAttuale").append(element2);
+		}
+	}
+	else{
+		$("#CostoConsumoAttuale").append(element);
+		$("#CostoConsumoAttuale").append(element1);
+		$("#CostoConsumoAttuale").append(element2);
+		$("#ConsumoAttualeMeter").css("float","none");
+		$("#CostoConsumoAttualeTitolo").css("float","none");
+		
+	}
+}
 
 CostiConsumi.GestConsumi = function() {
-
-	$("#CostiConsumi").show();
+    
+	$('.containerVal').prop('id', 'containerValCons1');
+	
+	$("#ConsumoAttualeMeter").addClass('meterPagCons');
+	$("#CostoConsumoAttualeTitolo").addClass('consTitoloCons');
+	$("#IndicatoreTitolo").addClass('indTitoloCons');
+	$("#ContainerSX").addClass("contSXPaginaCons");
+	$("#CostoConsumoSintesi").addClass("costConsSintCons");
+	$("#CostoConsumoSintesi").removeClass("costConsSintFot");
+	
+	gestisciPosGraficoConsumi();
+	if(window.innerWidth<=widthSmPh){
+		gestisciDivCostoConsumoAttuale();		
+	}	
+	
+	$("#Consigli").css("display","none");	
+	$("#CostiConsumi").show();	
+	impostaAltezzeCons();
+	
+	
+	
 	if ((CostiConsumi.mode == CostiConsumi.COSTI) || (CostiConsumi.mode == CostiConsumi.FOTOVOLTAICO)) {
 
 		CostiConsumi.mode = CostiConsumi.CONSUMI;
 		$("#TitoloCostiConsumi").html(Msg.home["titoloConsumi"]);
 		$('#consigliTurnOn').hide();
+		
+		
 
 		if (Main.enablePV) {
 			$("#ProduzioneAttualeTitolo").hide();
@@ -88,10 +308,25 @@ CostiConsumi.GestConsumi = function() {
 		$("#ConsumoIndicatoreImg").show();
 
 		$("#CostoConsumoAttualeTitolo").text(Msg.home["titoloConsumi"]);
+		
+	
+		
+		//si potrebbe fare anche ponendo un nome di classe differente all'oggetto in base alla pagina in cui ci si trova
+		//successivamente si può gestire la situazione mediante le media queries.
+		gestisciCostoConsumoTitolo();
+		
+	
+		if ( (Modernizr.touch) && (window.innerHeight<=480) && (Menu.contentMenuSelected===1) ){
+			$("#CostoConsumoAttualeTitolo").css("font-size","16px");
+			$("#CostoConsumoAttualeTitolo").css("margin","8px");
+			$("#CostoConsumoAttualeTitolo").css("margin-bottom","0px");
+			
+		}
 		$("#CostoTConsumoMaxTitolo").text(Msg.home["consumoMaggiore"]);
 		$("#InfoTitolo").text(Msg.home["consumoMensile"]);
 	}
 	showSpinner();
+
 	
 	//dati da mostrare nel cruscotto
 	CostiConsumi.GetConsumoOdiernoCC();
@@ -158,7 +393,7 @@ CostiConsumi.GestConsumi = function() {
 		$("#DettaglioCostiMediaWeek").html(Msg.home["costoDayWeek"] + ": <b>" + Msg.home["datoNonDisponibile"] + "</b>");
 	}*/
 
-	if (InterfaceEnergyHome.mode == -1) {
+	if ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)) {
 		// per test
 		//InterfaceEnergyHome.objService.getPropConfiguration(CostiConsumi.getMoltForCost, "MoltForCost");
 		CostiConsumi.getMoltForCost(fakeValues.MoltForCost, null);
@@ -224,7 +459,7 @@ CostiConsumi.ExitConsumi = function() {
 
 CostiConsumi.GetElettrodomestici = function() {
 
-	if ((InterfaceEnergyHome.mode > 0) || (InterfaceEnergyHome.mode == -1)){
+	if ((InterfaceEnergyHome.mode > 0) || (InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)){
 		try {
 			InterfaceEnergyHome.objService.getAppliancesConfigurationsDemo(CostiConsumi.DatiElettrodomesticiCB);
 		} catch (err) {
@@ -345,10 +580,10 @@ CostiConsumi.VisConsumoMaggiore = function() {
 	if (CostiConsumi.maxConsumoElettr != null) {
 
 		if (CostiConsumi.maxConsumoElettr[InterfaceEnergyHome.ATTR_APP_VALUE].list[0].value.value == 0) {
-			$("#DettaglioConsumoMaggiore").html("<span id='MsgConsumoMaggiore'></span>");
+			$("#DettaglioConsumoMaggiore").html("<div id='MsgConsumoMaggiore'></div>");
 			$("#MsgConsumoMaggiore").text(Msg.home["maxDisp0"]);
 		} else {
-			$("#DettaglioConsumoMaggiore").html("<span id='TestoConsumoMaggiore'></span><img id='ConsumoMaggioreImg' src=''>");
+			$("#DettaglioConsumoMaggiore").html("<div id='TestoConsumoMaggiore'></div><img id='ConsumoMaggioreImg' src=''>");
 
 			// metto immagine del device che sta consumando di piu'
 			$("#ConsumoMaggioreImg").attr("src", DefinePath.imgDispPath + CostiConsumi.maxConsumoElettr[InterfaceEnergyHome.ATTR_APP_ICON]);
@@ -448,7 +683,7 @@ CostiConsumi.DatiConsumoOdiernoCbCC = function(result, err) {
 	}
 	CostiConsumi.consumoOdierno = 0;
 	if (result) {
-		if (InterfaceEnergyHome.mode == -1) {
+		if ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)) {
 			var ora = new Date();
 			$.each(result.list, function(index, element) {
 				element = Math.floor(element);
@@ -487,7 +722,7 @@ CostiConsumi.GetProduzioneOdiernoCC = function() {
 			InterfaceEnergyHome.GestErrorEH("GetConsumoOdiernoCC", err);
 		}
 	} else {
-		if (InterfaceEnergyHome.mode == -1) {
+		if ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)) {
 			//InterfaceEnergyHome.objService.getPropConfiguration(CostiConsumi.DatiProduzioneOdiernoCbCC, "EnergiaProdottaGiornalieroSimul");
 			CostiConsumi.DatiProduzioneOdiernoCbCC(fakeValues.energiaProdotta, null);
 		} else {
@@ -501,7 +736,7 @@ CostiConsumi.DatiProduzioneOdiernoCbCC = function(result, err) {
 	//solo se ho una produzione valida la sottraggo al consumo per ottenere il consumo finale
 	CostiConsumi.prodOdierno = 0;
 	if (result) {
-		if (InterfaceEnergyHome.mode == -1) {
+		if ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)) {
 			var ora = new Date();
 			$.each(result.list, function(index, element) {
 				element = Math.floor(element);
@@ -647,7 +882,7 @@ CostiConsumi.DatiConsumoPrevistoCbCC = function(result, err) {
 	}
 	
 	//test
-	if (InterfaceEnergyHome.mode == -1) {
+	if ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)) {
 		//result = result.list[0];
 		var tmpResult = 0;
 		$.each(result.list, function(index, element) {
@@ -785,7 +1020,7 @@ CostiConsumi.DatiSuddivisioneConsumiCb = function(result, err) {
 	} else {
 		if (result != null) {
 			//DT
-			if (InterfaceEnergyHome.mode == -1) {
+			if ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)) {
 				$.each(CostiConsumi.listaElettr, function(indexResult, element) {
 					if (!result.map[indexResult]) {
 						result.map[indexResult] = {'javaClass': "java.util.ArrayList", 'list': [0,10,0,10,0,10,10,10,56,80,45,1500,140,563,1200,2063,1052,58,800,400,0,10,1035,500,51]};
@@ -841,7 +1076,7 @@ CostiConsumi.DatiSuddivisioneConsumiCb = function(result, err) {
 				altriConsumi = ConsumiSmartinfo - consumiTotale;
 			}
 	
-			if ((altriConsumi == 0) && (InterfaceEnergyHome.mode == -1)) {
+			if ((altriConsumi == 0) && ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2))) {
 				altriConsumi = Math.floor(consumiTotale/6);
 				controlSumListaConsumi++;
 				listaConsumi.push(new Array(Msg.home["altro"], altriConsumi));
@@ -967,6 +1202,10 @@ CostiConsumi.GraphNoServerCustomDevice = function(res, err)
 								consumoMaxNome = nome;
 								consumoMaxValue = consumo;
 								consumoMaxIcon = icona + ".png";
+								//utilizzo temporaneo
+								if (nome==="Forno"){
+									consumoMaxIcon = icona+ "_acceso" + ".png";
+								}
 							}
 						}
 						
@@ -1038,22 +1277,14 @@ CostiConsumi.GraphNoServerCustomDevice = function(res, err)
 						allowPointSelect : true,
 						cursor : 'pointer',
 						dataLabels : {
-							enabled : true,
-							color : '#000',
-							connectorColor : '#000',
-							formatter : function() {
-								return '<b>' + this.point.name + '</b>:<br />' + Math.floor(this.percentage) + ' %';
+							enabled : false,							
 							},
-							overflow : 'justify',
-							distance : 9,
-							rotation : 0,
-							style : {
-								color : '#333333',
-								fontSize : '9pt',
-								padding : '5px'
-							}
+							showInLegend: true,
+						
+						
 						}
-					}
+					
+					
 				},
 				credits : false,
 				series : [{ type : 'pie',
@@ -1072,15 +1303,16 @@ CostiConsumi.GraphNoServerCustomDevice = function(res, err)
 //Visualizza l'elettrodomestico simulato con il maggiore consumo ...
 CostiConsumi.VisMaxConsumoNoServer = function() {
 		
-	$("#DettaglioConsumoMaggiore").html("<span id='TestoConsumoMaggiore'></span><img id='ConsumoMaggioreImg' src=''>");
+	$("#DettaglioConsumoMaggiore").html("<div id='ContenitoreConsumoMaggiore'><div id='contImgConsMag'><img id='ConsumoMaggioreImg' align='center' src=''></div><div id='TestoConsumoMaggiore'></div></div>");
 
 	// metto immagine del device che sta consumando di piu'
 	$("#ConsumoMaggioreImg").attr("src",
 					DefinePath.imgDispPath + consumoMaxIcon);
 	// il consumo e' in watt
 	$("#TestoConsumoMaggiore")
-			.text(consumoMaxNome + " (" + Math.round(consumoMaxValue) + " Wh)");
-	
+			//.text(consumoMaxNome + " (" + Math.round(consumoMaxValue) + " Wh)");
+			.html(consumoMaxNome + "<br/> (" + Math.round(consumoMaxValue/1000) + " kWh)");
+/*	
 	if (CostiConsumi.dimMaxDispImg == -1) {
 		wDiv = $("#ConsumoMaggioreImg").width();
 		hDiv = $("#ConsumoMaggioreImg").height();
@@ -1094,6 +1326,7 @@ CostiConsumi.VisMaxConsumoNoServer = function() {
 	}
 	$("#ConsumoMaggioreImg").width(CostiConsumi.dimMaxDispImg);
 	$("#ConsumoMaggioreImg").height(CostiConsumi.dimMaxDispImg);
+	*/
 }
 
 /** Funzione lanciata al caricamento dello script google per gli RSS * */
@@ -1408,7 +1641,7 @@ CostiConsumi.DatiConsumoMediaWeekCb = function(result, err) {
 	}
 
 	if (result != null) {
-		if (InterfaceEnergyHome.mode == -1) {
+		if ((InterfaceEnergyHome.mode == -1) || (InterfaceEnergyHome.mode == -2)) {
 			var tmpResult = 0;
 			$.each(result.list, function(index, element) {
 				element = Math.floor(element);
@@ -1507,46 +1740,29 @@ CostiConsumi.DatiProduzioneMediaWeekCb = function(result, err) {
 };
 
 var NotizieSimul = [
-{	description : "Sale al 20,3% la percentuale di elettricit&agrave; convertita da ogni singola cella fotovoltaica. E ora la primatista Suntech punta al",
-	link : "http://gogreen.virgilio.it/news/green-design/fotovoltaico-pannello-record-efficienza_6276.html?pmk=rss",
-	title : "Fotovoltaico: ecco il pannello con il record di efficienza"
+{	description : "Un breve video che fornisce pratici suggerimenti per l’uso e la scelta dei dispositivi elettronici al fine del risparmio energetico domestico.",
+	link : "https://energyhomenews.wordpress.com/2013/08/08/efficienza-energetica-domestica/",
+	title : "Efficienza Energetica Domestica"
 },
-{	description : "Un volumetto scaricabile online ricco di consigli utili per risparmiare dai 700 ai 1000 euro all'anno in bolletta con piccoli ...",
-	link : "http://gogreen.virgilio.it/news/green-trends/eco-risparmio-arriva-manuale-ridurre-costi-acqua-luce-gas_6274.html?pmk=rss",
-	title : "Eco risparmio: arriva il manuale per ridurre i costi di acqua, luce e gas"
+{	description : ".. aprire la finestra in un ambiente riscaldato ha lo stesso effetto di un buco in un secchio pieno d’acqua! Apri le finestre per brevi periodi! (Fonte: Progetto BECA – Balanced European Conservation Approach, Politecnico di Torino)",
+	link : "https://energyhomenews.wordpress.com/2013/06/20/usa-consapevolmente-le-finestre-per-ventilare-gli-ambienti/",
+	title : "Usa consapevolmente le finestre per ventilare gli ambienti …"
 },
-{	description : "In piazza le associazioni delle rinnovabili. hanno chiesto al governo, come un appello pubblicato sui giornali, di rivedere il ...",
-	link : "http://gogreen.virgilio.it/news/green-economy/rinnovabili-mobilitazione-durera_6273.html?pmk=rss",
-	title : "Rinnovabili, la mobilitazione partita da Roma e sui giornali durer&agrave;"
+{	description : "Impostare il termostato a 20°, invece che 22°, ti permette di risparmiare fino al 15% sulla tua bolletta termica annuale ...",
+	link : "https://energyhomenews.wordpress.com/2013/06/17/in-inverno-tenere-in-casa-una-temperatura-di-20-gradi/",
+	title : "In inverno tenere in casa una temperatura di 20 gradi"
 },
-{	description : "L'appuntamento &egrave; il 28 aprile alle 15 presso i Fori Imperiali. L'obiettivo finale &egrave; quello di ottenere pi&ugrave; sicurezza per i ...",
-	link : "http://gogreen.virgilio.it/eventi/salvaciclisti_6272.html?pmk=rss",
-	title : "Salvaciclisti"
+{	description : "Durante le ore notturne imposta il termostato a 16 gradi e abbassa le tapparelle appena fa buio...",
+	link : "https://energyhomenews.wordpress.com/2013/05/28/risparmia-sul-riscaldamento/",
+	title : "Risparmia sul riscaldamento…"
 },
-{	description : "A ridosso della decisione itaiana di prorogare o meno la sospensione dell'impiego di alcuni tipi di agrofarmaci, si pubblica la ...",
-	link : "http://gogreen.virgilio.it/news/ambiente-energia/pesticidi-api-governo-decide-sospensioni_6271.html?pmk=rss",
-	title : "Pesticidi e api: il governo decide sulla sospensione degli agrofarmaci"
+{	description : "… con una piccola spesa, pari a 10 € a cassonetto, puoi marginare i ponti termici, evitando inutili sprechi di energia...",
+	link : "https://energyhomenews.wordpress.com/2013/05/22/isolare-il-cassonetto-degli-avvolgibili/",
+	title : "Isolare il cassonetto degli avvolgibili …"
 },
-{	description : "Estrarre lo shale gas, grande alternativa al petrolio in questa fase in cui il prezzo del barile &egrave; caro, genera piccoli sismi ...",
-	link : "http://gogreen.virgilio.it/news/ambiente-energia/terremoti-locali-estrazione-scisto_6270.html?pmk=rss",
-	title : "Terremoti: a generare quelli locali &egrave; pure l'estrazione dello scisto"
-},
-{	description : "Confermato il taglio degli incentivi del 32-36% e il registro obbligatorio per gli impianti di potenza superiore ai 12 ...",
-	link : "http://gogreen.virgilio.it/news/ambiente-energia/quinto-conto-energia-testo-decreto.html?pmk=rss",
-	title : "Quinto conto energia, il testo del decreto"
-},
-{	description : "Lanciata dalla Philips Usa, fa luce per 60 watt consumando da 10 e tende a durare due decadi. Il prodotto rivoluzionario ...",
-	link : "http://gogreen.virgilio.it/news/green-design/lampadina-eco-rivoluzionaria-dura-20-anni-costa-46-euro_6267.html?pmk=rss",
-	title : "Lampadina eco: dura 20 anni e consuma poco, ma per ora costa 46 euro"
-},
-{
-	description : "A fronte di una sensibile contrazione del mercato dell'automotive - soprattutto nel comparto delle auto di lusso - aumentano ...",
-	link : "http://gogreen.virgilio.it/news/ambiente-energia/ferrari-maserati-garage-25mln-italiani-bici.html?pmk=rss",
-	title : "Ferrari e Maserati in garage e 25mln di italiani passano alla bici"
-},
-{
-	description : "Il ministro dell'ambiente ha presentato il piano nazionale antiemissioni di Co2. Carbon tax, 55%, smart grid e smart cities tra ...",
-	link : "http://gogreen.virgilio.it/news/green-economy/bonus-55-esteso-2020-piano-clini-presentato-cipe_6263.html?pmk=rss",
-	title : "Bonus 55% esteso al 2020. Ecco il piano di Clini presentato al Cipe"
-},
+{	description : "Usa la lavastoviglie a pieno carico e non utilizzare l’asciugatura con aria calda …",
+	link : "https://energyhomenews.wordpress.com/2013/05/20/usa-la-lavastoviglie-a-pieno-carico/",
+	title : "Usa la lavastoviglie a pieno carico …"
+}
+
 ];

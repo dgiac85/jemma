@@ -17,10 +17,19 @@
     vertical-align: top;
     float: left;
     
+    
+}
+
+#ifIndesitOven .col2 {
+  display: block;
+  position: relative;
+  height: 50%;
+  vertical-align: top;
+  float: left;
 }
 
 #ifIndesitOven .col.lborder{
-    border-left: 1px solid #000;
+    /*border-left: 1px solid #000;*/
 }
 #ifIndesitOven .left-box{
     position: relative;
@@ -62,12 +71,13 @@
     background-origin: content-box;
     
 }
-#ifIndesitOven .left-box .icona img{
-    margin-left: auto;
-    margin-right: auto;
-    height: 90%;
-    display: block;
-    width: auto;
+
+#ifIndesitOven .left-box .icona img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 180px;
+  display: block;
+  width: 180px;
 }
 
 #ifIndesitOven .left-box .maschera img{
@@ -79,16 +89,17 @@
     position: absolute;
 }
 
-#ifIndesitOven .StatoElettrodomestico{
-    display: block;
-    width: 100%;
-    height: 30%;           
-    filter: none;
-    background: none;
-    background-color: #000;
-    /*position: absolute;*/
-    top:70%;
-    /*display: none;*/
+#ifIndesitOven .StatoElettrodomestico {
+  display: block;
+  width: 70%;
+  height: 30%;
+  float: left;
+  filter: none;
+  background: none;
+ 
+  /* position: absolute; */
+  margin-left: 20px;
+  /* display: none; */
 }
 
 #ifIndesitOven  .inline{
@@ -119,7 +130,8 @@
 
 #ifIndesitOven  .label{
     display: block;
-    font-size: large;
+	font-size: 19px;
+    text-align: center;
 }
 
 #ifIndesitOven  .dato{
@@ -192,7 +204,7 @@
 #ifIndesitOven .green{
     font-size: 24px;
     color: #9cc31c;
-    /*margin-top: 20px;*/
+    margin-bottom: 20px;
     /*margin-bottom: 20px;*/
     
 }
@@ -204,3 +216,109 @@
  #ifIndesitOven .points{
     width: 5px;
  }
+ 
+ 
+
+/*MEDIA QUERIES*/
+ 
+@media only screen and (max-device-width:768px), (max-width: 768px){
+ 
+ #ifIndesitOven .label {
+  font-size: 16px;
+  }
+} 
+
+ @media only screen and (max-device-width:480px), (max-width: 480px){
+ #ifIndesitOven {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  color: #808080;
+  display: block;
+}
+
+
+
+#ifIndesitOven .col {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100% !important;
+  height: 45%;
+  vertical-align: top;
+  float: left;
+}
+
+
+#ifIndesitOven .col .label {
+  display: block;
+  width: 45% !important;
+  font-size: 5.5vw;
+  text-align: center;
+  margin-bottom: 3px;
+  margin-top: 0px !important;
+}
+
+
+#ifIndesitOven .col2 {
+ width:100% !important;
+}
+
+#ifIndesitOven .col.lborder {
+  border-left:none;
+}
+
+#ifIndesitOven .line {
+  height: 50%;
+}
+
+/* #Interfaccia .header {
+  margin:0px auto;
+  width:24%;
+} */
+
+#ifIndesitOven .col .icona_row {
+  /* text-align: center; */
+  width: 10% !important;
+}
+
+ #ifIndesitOven .StatoElettrodomestico {
+  display: block;
+  width: 100%;
+    height: 15%;
+    margin-left:0px;
+  }
+    
+#ifIndesitOven .green {
+  margin-bottom: 20px;
+}
+
+ }
+ 
+ @media only screen and (max-device-height: 480px) and (max-device-width: 854px){
+ #ifIndesitOven .label {
+  display: block;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#ifIndesitOven .left-box {
+  position: relative;
+  height: 100%;
+  width: 218px;
+  left: -30px;
+  background: none;
+}
+
+#ifIndesitOven .left-box .icona, #ifIndesitOven .left-box .icona.NP {
+  height: 51%;
+}
+
+ }
+ 
+ 
+ /*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+	
+}

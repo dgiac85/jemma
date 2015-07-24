@@ -1,6 +1,7 @@
 var NonDisponibile = {
 	MODULE : "NonDisponibile ",
-	htmlContent : "<div id='NonDisponibileContainer' class='Content'><div id='NonDisponibile'>" + Msg.home["nonDisponibile"] + "</div></div>"
+	htmlContentND : "<div id='NonDisponibileContainer' class='Content'><div id='NonDisponibile'>" + Msg.home["nonDisponibile"] + "</div></div>",
+	htmlContentNDUser : "<div id='NonDisponibileContainer' class='Content'><div id='NonDisponibile'>" + Msg.home["nonDisponibileUtente"] + "</div></div>"
 
 };
 
@@ -18,4 +19,13 @@ NonDisponibile.GestND = function() {
 	$("#ContentMain").append(NonDisponibile.htmlContent);}
 	$("#NonDisponibileContainer").show();
 }
+
+NonDisponibile.GestNDUser = function() {
+	Log.alert(80, NonDisponibile.MODULE, "NonDisponibile.GestNDUser");
+	var divNonDisp = $("#NonDisponibileContainer");
+	if (divNonDisp.length == 0){
+	$("#ContentMain").append(NonDisponibile .htmlContentNDUser );}
+	$("#NonDisponibileContainer").show();
+}
+
 

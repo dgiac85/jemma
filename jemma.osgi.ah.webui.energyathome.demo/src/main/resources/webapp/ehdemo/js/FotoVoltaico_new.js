@@ -89,6 +89,8 @@ var CostiConsumi = {
 /* Inizializza la schermata */
 CostiConsumi.Init = function() {
 	
+
+	
 	indicatoreTermometro = 'images/termometro_iac.png';
 	suffIndicatoreT = '_iac';
 
@@ -115,6 +117,7 @@ CostiConsumi.Init = function() {
 	$("#TariffaImgDiv").hide();
 	$("#TariffaImg").hide();
 	$("#TariffaPos").hide();
+	
 	var divFrecce = $("#FrecceFV");
 	if (divFrecce.length == 0) {
 		$(document.createElement('div')).addClass('divFrecce').attr('id', 'FrecceFV').appendTo($("#CostoConsumoSintesi")).show();
@@ -123,6 +126,7 @@ CostiConsumi.Init = function() {
 		$(document.createElement('div')).attr('id', 'divFrecceRete').appendTo($("#FrecceFV"));
 		$(document.createElement('div')).attr('id', 'divCentro').appendTo($("#FrecceFV"));
 		$(document.createElement('img')).attr('id', 'imgCentro').attr('src', "./Resources/Images/center.png").appendTo($("#divCentro"));
+		
 	} else {
 		$("#FrecceFV").show();
 		$("#divFrecceProd").show();
@@ -162,6 +166,7 @@ CostiConsumi.GestOnClickMainMenu = function() {
 
 CostiConsumi.GestFotoVoltaico = function() {
 
+	
 	$("#CostiConsumi").show();
 	if ((CostiConsumi.mode == CostiConsumi.CONSUMI) || (CostiConsumi.mode == CostiConsumi.COSTI)) {
 		CostiConsumi.mode = CostiConsumi.FOTOVOLTAICO;
@@ -177,6 +182,7 @@ CostiConsumi.GestFotoVoltaico = function() {
 		$("#IndicatorePV").show();
 		$("#ValConsumoAttuale").show();
 		$("#ValProduzioneAttuale").show();
+		
 		$("#ValReteAttuale").show();
 		$("#DettaglioSuddivisioneCosti").hide();
 		if (navigator.userAgent.indexOf('MSIE 7.0') > -1) {
@@ -1169,7 +1175,7 @@ CostiConsumi.SetConsumoImg = function() {
 
 	if (CostiConsumi.mode == CostiConsumi.FOTOVOLTAICO) {
 		if ($('#consigliTurnOn').length == 0) {
-			$(document.createElement('div')).attr('id', 'consigliTurnOn').appendTo($("#CostoConsumoSintesi")).show();
+			$(document.createElement('div')).attr('id', 'consigliTurnOn').appendTo($("#Consigli")).show();
 		}
 
 		if (valProd > val) {

@@ -11,9 +11,20 @@ var Menu = {
 	sfondoElImg : Define.menu["sfondoButton"],
 	MainMenu : null,
 	SubMenuHtml : null,
-	timercheckObjService: null
+	timercheckObjService: null,
+	mainMenuSelected:0,
+	contentMenuSelected:0
 }
 
+<<<<<<< HEAD
+=======
+var ctrl=false; //controllo per il primo accesso
+var theWidth=1220;
+var selected;
+var numButtons;
+var widthMenuButton;
+var heightMenuButton;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 
 /**
  * Inizializza il menu principale e i sottomenu I sottomenu vengono creati tutti
@@ -25,7 +36,12 @@ Menu.Init = function(mainDiv, contentDiv) {
 	
 	var dim;
 	var num = Menu.MainMenu.length;
+<<<<<<< HEAD
 	
+=======
+	numButtons=num;
+
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	Menu.MainW = $("#" + mainDiv).width();
 	Menu.MainH = $("#" + mainDiv).height();
 
@@ -57,6 +73,7 @@ Menu.Init = function(mainDiv, contentDiv) {
 	leftOffset = Math.round((Menu.MainW - MainMenuW) / 2) - (dim * 0.015); 
 
 	Menu.MainHtml = "";
+<<<<<<< HEAD
 	/*var mq = window.matchMedia('screen and (max-width: 500px)');
 	if(mq.matches) {
     // the width of browser is more then 1024px
@@ -87,48 +104,87 @@ Menu.Init = function(mainDiv, contentDiv) {
 		}
 	}*/
 	//else{
+=======
+	
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	for (i = 0; i < num; i++) {
+		
 		Menu.MainHtml = Menu.MainHtml + 
+<<<<<<< HEAD
 						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+ (topOffset + extraTopOffset)
 						"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
 						"  <img id='MainImg" + i+ "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>" +
 						"  <p id='NomeMain" + i+ "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
 						"</div>";
 
+=======
+						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'/>"+
+						"<div id='contMainEl"+ i +"' class='perCover'>" +							
+							"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
+								"<div class='contImg1'>"+
+									"  <img id='MainImg" + i + "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>"+
+								"</div>" +
+								"<p id='NomeMain" + i + "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
+							"</div>" +
+							//"<div id='CoverBis"+ i +"' class='CoverBis' style='position:relative; background:#202020;z-index:300'></div>" +
+						"</div>";		
+		
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		topOffset = topOffset + dim + dist;
+		
+		
 	}
+<<<<<<< HEAD
 	//}
 	$("#" + mainDiv).html(Menu.MainHtml);
 
 	// forzo dimensioni da css altrimenti il titolo ha dimensioni 0
 	//$(".MainMenuEl").css("width", dim + "px");
 	//$(".MainMenuEl").css("height", hDiv + "px");
+=======
+	
+	$("#" + mainDiv).html(Menu.MainHtml);
+	
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 
 	Menu.InitContentMenu(contentDiv);
 	//Menu.OnClickMainMenu(0);
 	if (Main.env == 0) console.log('CostiConsumi', CostiConsumi);
 	CostiConsumi.Init();  
+	
 }
 
+
+
+
 Menu.OnClickMainMenu = function(val) {
+	
 	// richiamo funzione di Exit per l'elemento che lascio
 	oldContent = $(".ContentMenuElSelected").attr("id");
+	selected=val;
 	
 	if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu oldContent = " + oldContent);
-
+	
 	if (oldContent != undefined) {
 		j = 2; // numero main dopo 'el', numero content dopo 'Content'
 		k = oldContent.indexOf('Content');
+		console.log("oldContent="+oldContent);
 		iMain = parseInt(oldContent.substring(j, k));
 		iContent = parseInt(oldContent.substring(k + 7));
-		exitFunc = Menu.MainMenu[iMain].SubMenu[iContent].FuncExit;
-		if ((exitFunc != undefined) && (exitFunc != null)) {
-			Tracing.Trace(Menu.MainMenu[iMain].SubMenu[iContent].Section,Tracing.OUT, null, null);
-			eval(exitFunc);
+	
+		  
+		if (window.innerWidth>=theWidth){
+			exitFunc = Menu.MainMenu[iMain].SubMenu[iContent].FuncExit;
+			if ((exitFunc != undefined) && (exitFunc != null)) {
+				Tracing.Trace(Menu.MainMenu[iMain].SubMenu[iContent].Section,Tracing.OUT, null, null);
+				eval(exitFunc);
+				
+			}
+			$("#img" + iMain + "Content" + iContent).attr("src",Menu.MainMenu[iMain].SubMenu[iContent].Image);
+			$("#el" + iMain + "Content" + iContent).removeClass("ContentMenuElSelected");
 		}
 		// tolgo selezione a elemento content menu: cambio icona a immagine, cambio classe al div
-		$("#img" + iMain + "Content" + iContent).attr("src",Menu.MainMenu[iMain].SubMenu[iContent].Image);
-		$("#el" + iMain + "Content" + iContent).removeClass("ContentMenuElSelected");
+		
 	}
 	// tolgo selezione a elemento main menu: cambio icona a immagine, cambio classe al div
 	mainElId = $(".MainMenuElSelected").attr("id");
@@ -139,30 +195,71 @@ Menu.OnClickMainMenu = function(val) {
 		
 		$("#MainImg" + ind).attr("src", Menu.MainMenu[ind].Image);
 		$("#" + mainElId).removeClass("MainMenuElSelected");
+		
+		
 	}
-
-	// seleziono nuovo elemento main e visualizzo nuova barra content menu
-	$("#MainEl" + val).addClass("MainMenuElSelected");
+	
+		// seleziono nuovo elemento main e visualizzo nuova barra content menu
+		$("#MainEl" + val).addClass("MainMenuElSelected");
+		
+	
 	$("#MainImg" + val).attr("src", Menu.MainMenu[val].ImageSelected);
+	Menu.mainMenuSelected=val;
+	Menu.contentMenuSelected=0;
 
 	$(".visibleDiv").addClass("invisibleDiv");
 	$(".visibleDiv").removeClass("visibleDiv");
 	$("#ContentMenu" + val).addClass("visibleDiv");
 	$("#ContentMenu" + val).removeClass("invisibleDiv");
 	// seleziono primo elemento del menu
-	$("#el" + val + "Content0").addClass("ContentMenuElSelected");
-	$("#img" + val + "Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);
-	var func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
-
-	if ((func != undefined) && (func != null)) {
-		
-		if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter = " + func);
-		Tracing.Trace(Menu.MainMenu[val].SubMenu[0].Section, Tracing.IN, null, null);
-		eval(func);
-	} else {
-		
-		if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter undefined");
+	if(window.innerWidth>=theWidth){
+		$("#el" + val + "Content0").addClass("ContentMenuElSelected");
+		$("#img" + val + "Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);		
 	}
+//	else{
+//		$("#el0Content0").addClass("ContentMenuElSelected");
+//		$("#img0Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);	
+//	}
+	var func;
+	
+	//è sempre fotovoltaico la prima pagina
+	if (!ctrl){		
+			func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
+			ctrl=true;	
+			$("#el0Content0").addClass("ContentMenuElSelected");
+			$("#img0Content0").attr("src", Menu.MainMenu[val].SubMenu[0].ImageSelected);
+		//	$("#Cover0").css("display","block");
+			
+	}
+	
+	 if (val===0){
+	    	$("#Consigli").css("display","block");
+	    	//$("#CostoConsumoSintesi").css("height","70%");
+	 }
+	 
+	 
+	if(window.innerWidth>=theWidth){
+			func = Menu.MainMenu[val].SubMenu[0].FuncEnter;
+			console.log("entra");		
+	}
+	
+		if ((func != undefined) && (func != null)) {
+			
+			if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter = " + func);
+			Tracing.Trace(Menu.MainMenu[val].SubMenu[0].Section, Tracing.IN, null, null);
+			if (val>=0) {
+		    	$("#ContentMain").css("display","block");
+		    }
+			
+			eval(func);
+			
+			
+			
+		} else {
+			if (Main.env == 0) console.log(80, "Menu", "OnClickMainMenu enter undefined");
+			}
+	//}
+	
 }
 
 /**
@@ -189,7 +286,11 @@ Menu.InitContentMenu = function(contentDiv) {
 			Menu.SubMenuHtml = Menu.SubMenuHtml
 					+ "<div tabindex='0' onClick='Menu.OnClickContentMenu(" + i + ", "
 					+ j + ")' class='ContentMenuEl' id='el" + i + "Content" + j
+<<<<<<< HEAD
 					+ "'><div id='contImg' style='float:left;'><img  id='img" + i + "Content" + j
+=======
+					+ "'><div id='contImg'><img  id='img" + i + "Content" + j
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 					+ "' class='ContentMenuImg' src='"
 					+ Menu.MainMenu[i].SubMenu[j].Image
 					+ "'></div><div id='NomeContent" + i + "_" + j
@@ -220,21 +321,46 @@ Menu.InitContentMenu = function(contentDiv) {
 
 }
 
+
+$(document).ready(function() {
+	//gestione dell'evento on resize per le pagine che hanno dei div in comune
+	$(window).resize( function(){
+
+	});
+	
+});
+
 Menu.OnClickContentMenu = function(valMain, valContent) {
+	//per capire se sono in consumi o in fotovoltaico
+
+	//imposto l'altezza dell'iframe relativo all'inserimento di username e password
+//	ctrlCostoConsumoSintesi();
+	$("#mobileElett").animate({"left":"200%"}, 600);	
+
 	// richiamo funzione di Exit per l'elemento che lascio
 	oldContent = $(".ContentMenuElSelected").attr("id");
 	if (Main.env == 0) console.log(80, "Menu", "OnClickContentMenu oldContent = " + oldContent);
-
+	
+	if(window.innerWidth<theWidth){
+	
+		if ($(".toggleMobile").hasClass("active")){
+			$(".toggleMobile").toggleClass("active");
+			$("#mobileMenu").animate({"left":"-250%"}, 600);
+		}
+	}
 	if (oldContent != undefined) {
 		j = 2; // numero main dopo 'el', numero content dopo 'Content'
 		k = oldContent.indexOf('Content');
 		iMain = parseInt(oldContent.substring(j, k));
 		iContent = parseInt(oldContent.substring(k + 7));
 		exitFunc = Menu.MainMenu[iMain].SubMenu[iContent].FuncExit;
+		
 		if ((exitFunc != undefined) && (exitFunc != null)) {
 			Tracing.Trace(Menu.MainMenu[iMain].SubMenu[iContent].Section,Tracing.OUT, null, null);
 			eval(exitFunc);
+			
 		}
+		
 		// tolgo selezione a elemento content menu: cambio icona a immagine,
 		// cambio classe al div
 		$("#img" + iMain + "Content" + iContent).attr("src",Menu.MainMenu[iMain].SubMenu[iContent].Image);
@@ -244,8 +370,23 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 	$("#el" + valMain + "Content" + valContent).addClass("ContentMenuElSelected");
 	$("#img" + valMain + "Content" + valContent).attr("src",Menu.MainMenu[valMain].SubMenu[valContent].ImageSelected);
 
-	func = Menu.MainMenu[valMain].SubMenu[valContent].FuncEnter;
+    func = Menu.MainMenu[valMain].SubMenu[valContent].FuncEnter;
+    
+    Menu.contentMenuSelected=valContent;
+    
+//    if ((valMain==0) && (valContent!=2)){
+//    	element=$("#RiepilogoConsumi").detach();
+//    	$("#RigaInterfaccia").append(element);
+//    }
 	
+    if ((valMain==0) && (valContent==3)){
+    	$("#ContentMain").css("display","none");
+    }
+    else{
+    	$("#ContentMain").css("display","block");
+    }
+      
+
 	if (Main.env == 0) console.log(80, "Menu", "valMain = " + valMain);
 	if (Main.env == 0) console.log(80, "Menu", "valContent = " + valContent);
 	if (Main.env == 0) console.log(80, "Menu", "Menu = ");
@@ -257,8 +398,20 @@ Menu.OnClickContentMenu = function(valMain, valContent) {
 		
 		Tracing.Trace(Menu.MainMenu[valMain].SubMenu[valContent].Section, Tracing.IN, null, null);
 		eval(func);
+		//per la pagina dei dispositivi
+		
+		
+		document.body.scrollTop = document.documentElement.scrollTop = 0;
+		
+		    
 	} else {
 		
 		if (Main.env == 0) console.log(80, "Menu", "OnClickContentMenu func undefined");
 	}
 }
+
+
+
+	
+	
+	

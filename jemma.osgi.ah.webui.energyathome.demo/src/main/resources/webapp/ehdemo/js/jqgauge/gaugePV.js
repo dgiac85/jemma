@@ -38,8 +38,8 @@
 			this.img1.style.position = 'absolute';
 			this.img1.style.width = '100%';
 			this.img1.style.height = '100%';
-			this.img1.style.left = '0px';
-			this.img1.style.top = '0px';
+			this.img1.style.left = '10px';
+			this.img1.style.top = '10px';
 			
 			this.img2 = document.createElement('img');
 			var imagename = '';
@@ -93,7 +93,7 @@
 			this.img1.src = srcPathGaugePV + 'images/termometro_base'+suffIndicatoreT+'.png';
 			this.img1.style.position = 'absolute';
 			this.img1.style.width = '100%';
-			this.img1.style.height = '80%';
+			this.img1.style.height = '100%';
 			this.img1.style.left = '10px';
 			this.img1.style.top = '10px';
 			
@@ -101,23 +101,25 @@
 			this.img2.src = srcPathGaugePV + 'images/gradient_grey'+suffIndicatoreT+'.png';
 			this.img2.style.position = 'absolute';
 			this.img2.style.width = '89.3%';
-			this.img2.style.height = '80%';
+			this.img2.style.height = '100%';
 			this.img2.style.left = '7.2%';	
+			this.img2.style.top='10px';
 			this.img2.style.bottom = '12%'; //'3.4%';
 			
 			this.img3 = document.createElement('img');
 			this.img3.src = srcPathGaugePV + 'images/gradient_verde'+suffIndicatoreT+'.png';
 			this.img3.style.position = 'absolute';
 			this.img3.style.width = '89.3%';
-			this.img3.style.height = '80%';
-			this.img3.style.left = '7.2%';	
+			this.img3.style.height = '100%';
+			this.img3.style.left = '7.2%';
+			this.img3.style.top = '10px';
 			this.img3.style.bottom = '12%'; //'3.4%';
 			
 			this.img4 = document.createElement('img');
 			this.img4.src = srcPathGaugePV + indicatoreTermometro;
 			this.img4.style.position = 'absolute';
 			this.img4.style.width = '100%';
-			this.img4.style.height = '80%';
+			this.img4.style.height = '100%';
 			this.img4.style.left = '0px';
 			this.img4.style.top = '10px';
 			

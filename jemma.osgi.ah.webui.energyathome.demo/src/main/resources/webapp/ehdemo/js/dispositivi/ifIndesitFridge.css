@@ -19,9 +19,17 @@
     
 }
 
-#ifIndesitFridge .col.lborder{
-    border-left: 1px solid #000;
+#ifIndesitFridge .col2 {
+  display: block;
+  position: relative;
+  height: 50%;
+  vertical-align: top;
+  float: left;
 }
+
+/* #ifIndesitFridge .col.lborder{
+    border-left: 1px solid #000;
+} */
 #ifIndesitFridge .left-box{
     position: relative;
     height: 100%;
@@ -80,15 +88,17 @@
 }
 
 #ifIndesitFridge .StatoElettrodomestico{
-    display: block;
-    width: 100%;
-    height: 30%;           
-    filter: none;
-    background: none;
-    background-color: #000;
-    /*position: absolute;*/
-    top:70%;
-    /*display: none;*/
+
+  display: block;
+  width: 70%;
+  height: 30%;
+  float: left;
+  filter: none;
+  background: none;
+  /* position: absolute; */
+  margin-left: 20px;
+  /* display: none; */
+
 }
 
 #ifIndesitFridge  .inline{
@@ -119,7 +129,8 @@
 
 #ifIndesitFridge  .label{
     display: block;
-    font-size: large;
+	font-size: 20px;
+    text-align: center;
     
 }
 
@@ -197,3 +208,110 @@
     /*margin-bottom: 20px;*/
     
 }
+
+/*MEDIA QUERIES*/
+ 
+@media only screen and (max-device-width:768px), (max-width: 768px){
+ 
+ #ifIndesitFridge .label {
+  font-size: 16px;
+  }
+} 
+
+ @media only screen and (max-device-width:480px), (max-width: 480px){
+ #ifIndesitFridge {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  color: #808080;
+  display: block;
+}
+
+
+
+#ifIndesitFridge .col {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100% !important;
+  height: 45%;
+  vertical-align: top;
+  float: left;
+}
+
+
+#ifIndesitFridge .col .label {
+  display: block;
+  width: 45% !important;
+  font-size: 5.5vw;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 0px !important;
+}
+
+#ifIndesitFridge .col2 {
+  top: -40px;
+  width: 100% !important;
+}
+
+#ifIndesitFridge .col.lborder {
+  border-left:none;
+}
+
+#ifIndesitFridge .line {
+  height: 50%;
+}
+
+/* #Interfaccia .header {
+  margin:0px auto;
+  width:24%;
+} */
+
+#ifIndesitFridge .col .icona_row {
+  /* text-align: center; */
+  width: 10% !important;
+}
+
+ #ifIndesitFridge .StatoElettrodomestico {
+    height: 15%;
+      width: 90%;
+}
+#ifIndesitFridge .left-box .icona, #ifIndesitOven .left-box .icona.NP {
+  height: 90%;
+}
+
+}
+ 
+ @media only screen and (max-device-height: 480px) and (max-device-width: 854px){
+ #ifIndesitFridge .label {
+  display: block;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#ifIndesitFridge .left-box {
+  position: relative;
+  height: 100%;
+  width: 218px;
+  left: -30px;
+  background: none;
+}
+
+
+
+ }
+ 
+
+#ifIndesitFridge .left-box .icona, #ifIndesitOven .left-box .icona.NP {
+  height: 90%;
+}
+
+ }
+ 
+ 
+ /*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+	
+}
+

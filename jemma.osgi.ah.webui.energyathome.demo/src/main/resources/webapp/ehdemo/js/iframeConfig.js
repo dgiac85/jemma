@@ -1,6 +1,8 @@
+altezza=window.innerHeight-$("#Header").height()+"px";
+		
 var iFrameConfig = {
 	MODULE : "Config",
-	htmlContent: $(document.createElement('div')).attr('id', 'iframeConfig').height('100%')
+	htmlContent: $(document.createElement('div')).attr('id', 'iframeConfig').height(altezza)
 }
 
 
@@ -22,3 +24,14 @@ iFrameConfig.Exit = function () {
 	$("#iframeConfig").html(null);
 	$("#iframeConfig").remove();
 }
+
+
+$(document).ready(function() {
+	
+	altezza=window.innerHeight-$("#Header").height()+"px";
+		
+	//gestisco anche l'evento on resize nel caso di utilizzo con desktop
+	$(window).resize( function(){
+		$("#iframeConfig").css("height",altezza);
+	});
+});

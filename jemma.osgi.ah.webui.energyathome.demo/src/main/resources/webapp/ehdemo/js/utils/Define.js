@@ -7,7 +7,11 @@ var Define = {
 	headerSep: "header_sep.png",
 	
 	// path images for menu
+<<<<<<< HEAD
 	menu: {	"sfondoButton": DefinePath.imgMenuPath + "",
+=======
+	menu: {	"sfondoButton": DefinePath.imgMenuPath + "sfondo_main_el_2.png",
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	       	"home": DefinePath.imgMenuPath + "home_bianco.png",
 	       	"homeSel": DefinePath.imgMenuPath + "home_verde.png",
 	       	"config": DefinePath.imgMenuPath + "configurazioni_bianco.png",
@@ -27,7 +31,7 @@ var Define = {
 	       	"storico": DefinePath.imgMenuPath + "storico_bianco.png",
 	       	"storicoSel": DefinePath.imgMenuPath + "storico_verde.png",
 	       	"forum": DefinePath.imgMenuPath + "community_bianco.png",
-	       	"forumSel": DefinePath.imgMenuPath + "community_verde.png",
+	       	"forumSel": DefinePath.imgMenuPath + "forum.png",
 	       	"tariffa": DefinePath.imgMenuPath + "tariffa_bianco.png",
 	       	"tariffaSel": DefinePath.imgMenuPath + "tariffa_verde.png",	       
 	       	"contatti": DefinePath.imgMenuPath + "contatti_bianco.png",

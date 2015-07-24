@@ -1,8 +1,11 @@
+/*GLOBAL*/
+
 body,html {
 	background-color: #202020;
 	position: relative;
 	margin : 0px;
 	font-family: Arial, Arial, sans-serif;
+<<<<<<< HEAD
 	/*G
 	min-height : 660px;*/
 	min-width : 250px;*/
@@ -10,6 +13,15 @@ body,html {
 	height:100%;
 	font-size: 90%;
 	
+=======
+	height:100%;
+	font-size: 15px;
+	
+}
+
+#menulabel{
+	display:none;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 img {
@@ -26,10 +38,12 @@ img {
 
 span {
 	color: black;
-	font-size: 1.0em;
+	font-size: 1.5vw;
 }
 
+
 #Header img {
+<<<<<<< HEAD
 	
 }
 
@@ -37,6 +51,14 @@ span {
 	top:10px; width:95%; height:100%; margin-left: auto; margin-right: auto; max-height:720px;
 }
 
+=======
+}
+
+#Container{
+	top:10px; width:95%; height:100%; margin-left: auto; margin-right: auto;
+}
+
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #Header {
 	
 	/*left: 2%;
@@ -44,7 +66,11 @@ span {
 	width:100%;
 	background-color:#202020;
 	/*right: 2%;*/
+<<<<<<< HEAD
 	/*height: 94px;*/
+=======
+	height: 94px;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	float: left;
 }
 
@@ -55,6 +81,7 @@ span {
 	float:left;
 }
 
+<<<<<<< HEAD
 /*@media screen and ( max-width : 700px) {
 	#Header {
 		height: 7%;
@@ -65,6 +92,8 @@ span {
 }*/
 
 
+=======
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #LogoImg {
 	height: 91px;
 	width:auto;
@@ -99,12 +128,33 @@ span {
 	/*position: absolute;*/
 	float: left;
 	left: 192px;
+<<<<<<< HEAD
 	width: calc(100% - 192px);
 	height: 730px;
 	background-color: #333333;
 	overflow:hidden;
 	max-height:1080px;
 	
+=======
+	width: -webkit-calc(100% - 192px);
+	width: -moz-calc(100% - 192px);
+	width: calc(100% - 192px);	
+	height: 768px;
+	min-height:0px;
+	  padding-bottom: 10px;
+	background-color: #333333;
+	overflow:hidden;
+	
+}
+
+
+
+#Consigli{
+  float: left;
+  position: relative;
+  width: 100%;
+  height: 15%;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 
@@ -119,6 +169,7 @@ span {
 	text-align : center;
 }
 
+<<<<<<< HEAD
 #ContainerMenu{
 	float:left;
 	width: 192px;
@@ -145,12 +196,28 @@ span {
 	text-align:right;
 	overflow: hidden;
 	float: right;
+=======
+#userID{
+  /* position: relative; */
+  margin-top: 5px;
+  color: #fff;
+  width: 100%;
+  font-size: 1.2vw;
+  text-align: right;
+  overflow: hidden;
+  float: right;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #ContentMenu {
 	background-color:#333333;
 	/*position: relative;*/
 	float:left;
+<<<<<<< HEAD
+=======
+	  height: 70px;
+	padding-top: 10px;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	/* left: 10%; */
 	/*top: 25px;*/
 	width: 100%;
@@ -165,11 +232,11 @@ span {
 }
 
 #Content {
-	position: absolute;
-	left: 15%;
-	top: 11%;
-	width: 83%;
-	height: 75%;
+	position:relative;
+	width: -webkit-calc(100% - 192px);
+  	width: -moz-calc(100% - 192px);
+  	width: calc(100% - 192px);
+	padding-bottom:10px;
 	overflow: hidden;
 	color: #202020;
 	background-color: #333;
@@ -212,7 +279,10 @@ span {
 }
 
 .Content {
+<<<<<<< HEAD
 	/*position:relative;*/
+=======
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	/*left: 1%;*/
 	/*top: 10%;*/
 	/*width: 100%;*/
@@ -223,16 +293,17 @@ span {
 }
 
 #NonDisponibile {
-	position: absolute;
-	color: #abd037;
-	font-size: 2.0em;
-	text-align:center;
-	overflow: hidden;
-	padding-top:20%;
-	left: 30%;
+	position: relative;
+  color: #abd037;
+  font-size: 2.0em;
+  text-align: center;
+  overflow: hidden;
+  /* padding-top: 20%; */
+  margin: 21% auto;
 }
 
 #Timestamp {
+<<<<<<< HEAD
 	/*position: absolute;*/
 	margin-top: 5px;
 	margin-right: 10px;
@@ -241,21 +312,45 @@ span {
 	width: 100%;
 	text-align:right;
 	font-size: 1.0em;
+=======
+
+  /* margin-top: 2px; */
+  /* margin-right: 10px; */
+  float: right;
+  text-align: right;
+  width: 100%;
+  text-align: right;
+  font-size: 1.2vw;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #Data {
 	margin-right: 12px;
 	color: #f0f0f0;
+<<<<<<< HEAD
+=======
+	font-size:1.2vw
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 }
 
 #Ora {
 	color: #f0f0f0;
+<<<<<<< HEAD
+=======
+	  font-size: 22px;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 }
 
 #ClockImg {
+<<<<<<< HEAD
 	margin-right: 12px;
+=======
+	  margin-right: 9px;
+  width: 1.3vw;
+  position: relative;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 }
 
@@ -263,7 +358,11 @@ span {
 	/*position: absolute;
 	top: 3%;
 	left: 2%;*/
+<<<<<<< HEAD
 	margin-top:15px;
+=======
+	/* margin-top:15px; */
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	width:100%;
 	text-align: left;
 	font-size: 1.4em;
@@ -363,10 +462,6 @@ height :2em;
 
 }
 
-
-
-
-
 #registraDiv{
 	text-align : left;
 }
@@ -463,10 +558,46 @@ label.error {
 	margin-top: 5%;
 }
 
+<<<<<<< HEAD
+=======
+#ContainerSX{
+  position: relative;
+  float: left;
+  width: 49%;
+  height: 98%;
+}
+
+#ContainerDX {
+  position: relative;
+  float: left;
+  width: 49%;
+  height: 98%;
+}
+
+#MainMenu {
+  width: 90%;
+  /* height: auto; */
+  margin: 14px auto;
+  overflow: hidden;
+  background-color: #333333;
+}
+
+#ContainerMenu{
+	float:left;
+	width: 192px;
+	  height: 768px;
+  padding-bottom: 10px;
+	overflow:hidden;
+	background-color:#333333;
+}
+
+
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 /**********************************************************************
 Media Queries
 ***********************************************************************/
 
+<<<<<<< HEAD
 /*WIDTH MANAGEMENT*/
 
 
@@ -489,24 +620,107 @@ background-color: #333;
 
 
 
+=======
+
+/*Per IPAD e tablet in landscape*/
+@media only screen and (max-width: 1220px){
+
+#ContainerSX {
+  position: relative;
+  margin-left: 5px;
+  float: left;
+  width: 49%;
+  height: 97%;
+}
+
+#Data {
+	margin-right: 12px;
+	color: #f0f0f0;
+	font-size:1.8vw;
+}
+
+#Ora {
+	color: #f0f0f0;
+	
+}
+
+
+#ContainerDX {
+  position: relative;
+  float: left;
+  left:2%;
+  width: 49%;
+  height: 97%;
+}
+
+
+#Content {
+  position: relative;
+  left: 0%;
+  top: 0%;
+  width: 100%;
+  height: 100% !important;
+}
+
+#ContainerLogo {
+margin: 0px auto;
+height:51px;
+width:200px;
+}
+
+
+#HeaderSepImg {
+  width: 100%;
+}
+
+#Consigli {
+  width: 100%;
+  height: 15%;
+}
+
+#ContentMenu{
+  background-color: #202020;
+  border: 2px solid #9ec200;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  height: 130px;
+  float: none;
+  position: absolute;
+  top: 180px;
+left: 1%;
+width: 98%;
+}
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 	#Container{
 		width:100%;		
 	}
 	
 	#Header{
+<<<<<<< HEAD
 		width:100%;			
 	}
 	
 	#HeaderSepImg{
 		/*min-width:851px;*/
+=======
+		width:100%;	
+		height:auto;
+		
+	}
+	
+	#HeaderSepImg{
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		margin-right:0px;
 		
 	}
 	
 	#ContainerMenu{
 	float:left;
+<<<<<<< HEAD
 	/*min-width:851px;*/
+=======
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 	width: 100%;
 	height: auto;
@@ -516,6 +730,7 @@ background-color: #333;
 	}
 	
 	#MainMenu {
+<<<<<<< HEAD
 		width: 100%;		
 		/*min-width:851px;*/
 		margin-left:10px;
@@ -945,3 +1160,728 @@ padding-bottom: 5px;
 }
 
 
+=======
+	  width: auto;
+  /* margin-left: 10px; */
+  height: 200px;
+		overflow:hidden;
+		z-index:1;
+		background-color:#333333;
+		
+	}
+	
+	 #ContentMain {
+	 position:absolute;
+		width: 100%;
+		height:calc(100% - 70px);
+		height:-moz-calc(100% - 70px);
+		height:-webkit-calc(100% - 70px);
+		  max-height: 1200px;
+  min-height: 768px;
+		left:0px;
+		padding-bottom:10px;
+		  margin-top: 59px;
+			
+	}
+	
+	#logo {  
+  width: 40%;
+	height:51px;
+}
+
+#LogoImg {
+  height: 51px;
+  width: auto;
+}
+
+#dataANDuser {
+  height: 51px;
+}
+	
+.Content {
+height: 100%;
+overflow: hidden;
+color: #202020;
+margin-left: 1px;
+}
+
+#ContainerMenu{
+float:left;
+width: 100%;
+height: auto;
+padding-top:10px;
+overflow:hidden;
+background-color:#333333;
+}
+
+#Container{
+width:100%
+}
+
+#menulabel {
+  display: block;
+}
+
+}/*chiusura media query 1200 766*/
+
+/* @media only screen and (max-width: 1220px) and (min-width:768px){
+	#menulabel {
+  display: block;
+}
+}
+ */
+
+@media only screen and (max-width: 951px) and (min-width:481px), (max-device-width:951px) and (min-device-width:481px){
+
+#Container{
+background: #202020;
+
+}
+
+
+#ContainerSX {
+   position: relative;
+  float: left;
+  width: 99%;
+  margin-left: 0px;
+
+}
+
+#ContainerDX {
+  position: relative;
+  float: left;
+  left: 0%;
+  width: 99%;
+  height: 925px;
+  margin-left: 0px;
+  top:2%;
+}
+
+
+#Consigli {
+  width: 100%;
+  height: 100px;
+  margin-top: 2px;
+}
+
+#menulabel{
+	display:none;
+}
+
+#ContainerLogo {
+margin: 0px auto;
+width:200px;
+}	
+	
+	
+#Content {
+  position: absolute;
+  /* left: 10%; */
+  top: 71px;
+  width: 100%;
+  height: 100% !important;
+  overflow: hidden;
+  color: #202020;
+  background-color: #333;
+}
+	
+	#HeaderSepImg{
+		min-width:900px;
+		margin-right:0px;		
+	}
+	
+#ContainerMenu {
+float: left;
+width: 100%;
+height: auto;
+margin-top: 145px;
+padding-top: 20px;
+overflow: hidden;
+background-color: #333333;
+}
+	
+	#MainMenu {
+  width: 100%;
+  margin: 0px;
+  height: 50%;
+  overflow: hidden;
+  z-index: 1;
+  background-color: #333333;
+	}
+	
+	#ContentMain {
+  left: 0;
+  float: left;
+  background-color: #333333;
+  overflow: hidden;
+  width:100%;
+  	   margin-top:71px;
+  min-height: 1560px;
+	}
+	
+	
+	#Timestamp{
+		margin:5px auto;
+	}
+	
+	#userID{
+		margin:5px auto;
+	}
+
+#Header{
+		  /* min-width: 426px; */
+  z-index: 11;	
+  height: auto !important;
+  width: 100%;
+  position:fixed;
+	}
+	
+	#HeaderSep {
+  margin-bottom: 0px;
+  clear: both;
+  }
+	
+#ContainerError{
+	  position: fixed;
+	  bottom:0;
+	   z-index: 100;
+	  
+}
+
+#wrapper{
+	top: 144px;
+}
+	
+#LogoImg {
+    /* margin: 0px auto; */
+  margin-left: 20px;
+  height: 59px !important;
+}
+	
+#logo{
+  width: calc(100% - 110px);
+  width: -moz-calc(100% - 110px);
+  width: -webkit-calc(100% - 110px);
+  margin: 0px auto;
+  height: 57px !important;
+  position: relative;
+  top: 0px;
+}
+
+
+#dataANDuser {
+  position: relative;
+  /* left: 5%; */
+margin: 0 auto;
+width: 200px;
+height: 58px;
+margin: 0 auto;
+float: none;
+display:block;
+/* padding-bottom: 5px; */
+}
+#userID{
+	font-size:12px;
+	text-align:center;
+}
+
+#Timestamp{
+	text-align:center;
+}
+
+.Content {
+  margin-left: 10px;
+}
+
+#ContentMenu {
+  top: 153px;
+}
+
+}/*chiusura media query 765
+
+
+/* /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX */
+@media only screen and (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1), (device-width:1232px) and (device-height:800px),(device-width: 1536px) and (device-height:864px){
+	#ContainerMenu {
+	  height: 768px;
+	}
+	
+}
+ */
+
+
+/* @media only screen and (device-height: 1280px) and (device-width:752px){
+	ContainerDX{
+		height:720px;
+	}
+} */
+
+ /*FIREFOX BROWSER
+@media (device-width: 1536px) and (device-height:864px){
+	#ContainerMenu {
+	  height: 125px;
+	}
+	
+}*/
+
+/**************************************************************************/
+/*MEDIA QUERIES SPECIFICHE*/
+
+/* SOLO PER DISPOSITIVI MOBILI */
+@media only screen and (max-device-width : 800px) and (max-device-height : 1280px){
+/* Styles */
+ 
+	#ContainerSX {
+	  width: 99%;
+	  height:auto;
+	}
+	
+	#ContainerDX {
+	  left:0%;
+	    height: 58%;
+	  width: 99%;
+	}
+	
+	#CostoConsumoInfo {
+	  width: 100%;
+	} 
+}
+
+@media only screen and (device-height: 1280px) and (device-width: 800px), (device-height: 1232px) and (device-width: 800px){
+	
+	#ContentMain {
+	
+  height: 1153px !important;
+  max-height: 1153px !important;
+  min-height: 1153px !important;
+    margin-top: 62px;
+  top: 0px;
+  padding-bottom: 18px;
+}
+
+	
+	
+#ContainerDX {
+  left: 0%;
+  height: 54%;
+  width: 99%;
+  top: 0%;
+}
+
+	#ContainerSX {
+	  width: 99%;
+	  height: 505px !important;
+	}
+
+	.contSXPaginaCons{
+		  width: 99%;
+  height: 460px !important;
+	}
+	
+	
+  
+}
+
+@media only screen and (device-height: 1280px) and (device-width: 800px){
+	#ContentMain {
+  height: 1196px !important;
+  max-height: 1196px !important;
+  min-height: 1196px !important;
+	}
+}
+
+
+
+/*TABLET TELECOM in LANDSCAPE*/
+@media only screen and (device-width: 1280px) and (device-height: 752px),(device-width:1280px) and (device-height:800px){
+#ContainerDX {
+  height: 500px;
+  top: 0%;
+}
+
+#ContainerSX {
+  height: 500px !important;
+}
+	
+		#ContentMain {
+  height: 525px !important;
+  max-height: 525px !important;
+  min-height: 525px !important;
+}
+
+#ContainerMenu {
+  height: 525px !important;
+}
+
+#Content {
+  height: 525px;
+}
+
+#MainMenu {
+
+  height: 98%;
+
+}
+
+
+
+	
+}
+
+@media only screen and (device-width: 1232px) and (device-height: 800px){
+#ContainerDX {
+  height: 96%;
+}
+}
+
+
+
+/*SMARTPHONE PORTRAIT*/
+@media only screen and (max-device-width: 480px), (max-width:480px){
+
+	#Container {
+  top:0px;
+  min-width:310px;
+}
+	
+#menulabel{
+	display:none;
+}
+
+#Data {
+  font-size: 15px;
+}
+
+#ClockImg {
+  width: 15px;
+}
+
+#Ora {
+
+  font-size: 15px;
+}
+
+#userID {
+
+  text-align: center;
+  font-size: 15px;
+    margin-right: -17px;
+}
+
+#ContainerSX {
+  width: 99%;
+  height: 56%;
+}
+
+#ContainerDX {
+  left: 0%;
+  height: auto;
+  width: 99%;
+}
+
+#ContentMain{
+   height: auto !important;
+  position: static;
+  left: 0px;
+  max-height: none !important;
+  min-height: 0px !important;
+  padding-bottom: 0px;
+}
+
+
+#Header {
+	min-width: 480px;
+  min-width: 321px;
+  position: fixed;
+  z-index: 100;
+}
+
+#logo {
+  width: calc(100% - 110px);
+  width: -moz-calc(100% - 110px);
+  width: -webkit-calc(100% - 110px);
+  
+  margin: 0px auto;
+  height: 51px;
+}	
+
+#LogoImg{
+	  height: 61px;
+}
+
+#dataANDuser {
+  height: 51px;
+  margin: 0px auto;
+  width: 200px;
+  float:none;
+    font-size: 16px !important;
+
+}
+	
+#MainMenu {
+  width: 50%;
+  height: 100%;
+	}
+	
+#ContentMenu {
+  left: 49%;
+  top: 4px;
+  width: 50%;
+  height: 95%;
+  position: relative;
+}
+
+#Content {
+  position: relative;
+  height: 1250px !important;
+}
+
+#Consigli {
+  height: 110px;
+    width: 98%;
+}
+
+}/*chiusura media query 480*/
+
+@media only screen and (max-device-width: 480px){
+
+	
+	#ContainerSX {
+ 	 width: 99%;
+  	margin-left:2px;
+	}
+}
+
+/*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+#ContentMain {
+  height: 943px !important;
+   max-height: 943px !important;
+   min-height:943px !important;
+}
+
+#ContainerDX {
+  left: 0% !important;
+  height: 44% !important;
+  width: 99% !important;
+  margin-top: 38px !important;
+}
+
+#ContainerSX {
+  width: 99% !important;
+  height: 45% !important;
+}
+
+.contImg1 {
+  width: 80%;
+  margin: 0px auto;
+}
+
+}
+
+
+@media only screen and (device-width: 1024px) and (device-height: 768px) and (-webkit-max-device-pixel-ratio: 2){
+#ContentMain {
+  max-height: none; 
+  min-height: 0px !important;
+}
+	
+	#ContainerSX {
+  height:100% !important;
+}
+
+.costConsSintFot {
+  height: 58%;
+}
+
+#Consigli {
+  width: 100%;
+  height: 22%;
+}
+
+#consigliTurnOn {
+  font-size: 2.4vw;
+}
+
+}
+
+@media only screen and (device-width: 640px) and (device-height: 360px) and (-webkit-device-pixel-ratio: 1){
+#ContentMenu {
+  top: 106px;
+  height: 95px;
+}
+	}
+	
+@media only screen and (device-width: 640px) and (device-height: 384px) and (-webkit-device-pixel-ratio: 1){
+#ContentMenu {
+  top: 153px;
+
+  height: 105px;
+	}
+}
+
+
+@media only screen and (max-width:854px) and (max-height:480px){
+	#ContainerSX {
+  		width: 100%;
+  		height:auto !important;
+	}
+	#ContentMain{
+		height:auto;
+		  margin-top: 62px;
+	}
+	#ContainerDX {
+  left: 0%;
+  height:auto;
+  width: 99%;
+	}
+	
+	.Content {
+  margin-left: 0px;/
+}
+	
+}
+
+@media only screen and (max-device-height: 480px) and (max-device-width: 854px){
+#ContentMain {
+  height: auto !important;
+      min-height: 0px !important;}
+    
+ #ContainerDX {
+  height: 545px;
+}
+
+#ContainerSX {
+  		width: 100%;
+  		height:auto !important;
+	}
+
+.Content {
+   margin-left: 0px;
+}
+}
+
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (device-width: 640px) and (device-height: 360px) and (-webkit-min-device-pixel-ratio: 2){
+/* Styles */
+#ContentMenu {
+top: 106px;
+  height: 100px;
+}
+
+.Content {
+  margin-left: 3px;
+}
+
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (device-width: 568px) and (device-height: 320px) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+	#ContentMenu {
+  height: 100px;
+}
+	
+}
+
+/* iPhone 3GS e 4 in LANDSCAPE ----------- */
+@media only screen and (max-device-width: 480px) and (max-device-height:320px){
+#ContentMenu {
+  top: 106px;
+  height: 79px;
+  left: 0%;
+  width: 98%;
+}	
+
+	}
+
+/* Galaxy Tab (landscape) ----------- */
+@media only screen and (device-height : 600px) and (device-width : 1024px) and (-webkit-device-pixel-ratio: 1) {
+/* Styles */
+#ContainerSX {
+  position: relative;
+  float: left;
+  width: 49%;
+  height: 97%;
+}
+
+#ContainerDX {
+  position: relative;
+  float: left;
+  left:2%;
+  width: 49%;
+  height: 97%;
+}
+
+#Consigli {
+  height: 13%;
+}
+	
+}
+
+/* Galaxy Tab (portrait) ----------- */
+@media only screen and (device-width : 600px) and (device-height : 1024px) and (-webkit-device-pixel-ratio: 1) {
+/* Styles */
+#Consigli {
+  height: 13%;
+}
+	
+}
+
+/* IPhone6 Plus (landscape) ----------- */
+@media only screen and (device-width: 736px) and (device-height:414px){
+	#dataANDuser {
+  position: relative;
+  /* left: 5%; */
+margin: 0 auto;
+width: 200px;
+height: 58px;
+margin: 0 auto;
+float: right;
+display:block;
+/* padding-bottom: 5px; */
+}
+
+#logo {
+  width: calc(100% - 141px);
+  width: -moz-calc(100% - 141px);
+  width: 20%;
+  margin: 0px auto;
+  height: 57px;
+  position: relative;
+  top: 0px;
+}
+
+
+
+}
+
+
+@media only screen and (device-width: 960px) and (device-height:600px) and (orientation:landscape){
+	#ContentMain{
+		height: 532px !important;
+		max-height:532px !important;
+		min-height:532px !important;
+	}
+	
+	#ContainerSX{
+		height: 529px !important;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b

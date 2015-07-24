@@ -31,6 +31,8 @@ var chartConsumi = null;
 var chartVenduto = null;
 var chartPie = null;
 
+
+
 Main.aggiornaTimestamp = function() {
 	Main.dataAttuale = GestDate.GetActualDate();
 	// se data inferiore 1-1-2010 segnalo errore
@@ -259,8 +261,14 @@ Main.onLoad = function() {
 	var level = qs.get("level", "20");
 	Log.setLevel(parseInt(level));
 
+
 	$(document).ready(function() {
+		
 		Main.userAgent = navigator.userAgent;
+<<<<<<< HEAD
+=======
+		var theWidth=540;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		
 		// Parse the current page's querystring
 		var qs = new Querystring();
@@ -282,6 +290,11 @@ Main.onLoad = function() {
 					GestDate.InitActualDate(Main.InitValue);
 				});
 				InterfaceEnergyHome.mode = -1;
+			} else if(mode == "noservernodev"){
+				LazyScript.load("js/DataSimulNoServer.js", function() {
+					GestDate.InitActualDate(Main.InitValue);
+				});
+				InterfaceEnergyHome.mode = -2;
 			} else {
 				InterfaceEnergyHome.mode = 2;
 			}
@@ -306,7 +319,7 @@ Main.onLoad = function() {
 
 		Main.dataMinima = new Date("January 1, 2010 00:00:00").getTime();
 
-		if ((mode != "simul") && (mode != "noserver")){
+		if ((mode != "simul") && (mode != "noserver") && (mode!="noservernodev")){
 			GestDate.InitActualDate(Main.InitValue);
 		}
 	});
@@ -319,6 +332,7 @@ Main.onUnload = function() {
 	// faccio out da sezione attuale
 	Tracing.Trace(null, Tracing.OUT, null, null);
 	Tracing.Trace(Tracing.HOME, Tracing.OUT, null, null);
+
 }
 
 MostraCostiConsumi = function() {

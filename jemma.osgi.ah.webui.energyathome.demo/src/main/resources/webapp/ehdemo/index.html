@@ -9,14 +9,21 @@
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		
+		<meta content='True' name='HandheldFriendly' />
+		<meta name='viewport' content='width=device-width, user-scalable=no'/>
+	
 		<link rel='shortcut icon' href='Resources/Images/eh_bianca.ico' />
 		<link rel='icon' href='Resources/Images/eh_bianca.ico' />
 		
 		<link rel='stylesheet' type='text/css' href='js/other/spinner.css' />
+<<<<<<< HEAD
 		<link rel='stylesheet' type='text/css' href='css/Main.css' />
 		
 		<link rel='stylesheet' type='text/css' href='css/Menu.css' />
+=======
+		<link rel='stylesheet' type='text/css' href='css/Main.css'  media='screen'/>
+		<link rel='stylesheet' type='text/css' href='css/Menu.css' media='screen'/>
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		<link rel='stylesheet' type='text/css' href='css/Storico.css' />
 		<link rel='stylesheet' type='text/css' href='css/Community.css' />
 		<link rel='stylesheet' type='text/css' href='css/Trial.css' />
@@ -44,10 +51,15 @@
 		<link rel="apple-touch-startup-image" sizes="1004x768" href="./startup-icon-ipod.png" />
 		<link rel="apple-touch-startup-image" href="./startup-icon-iphone.png" />
 		
+	
+	
+		
 		<script type="text/javascript">
 			var localDate = new Date();
 			var localTime = localDate.getTime();
 		</script>
+		
+			<script language="javascript" type="text/javascript" src="js/utils/modernizr.custom.js"></script>
 		<script language="javascript" type="text/javascript" src="js/jsonrpc.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/utils/hmac-sha256.js?201305315125"></script>
 		<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="js/jqplot/excanvas.min.js?201305315125"></script><![endif]-->
@@ -78,7 +90,16 @@
 		<script language="javascript" type="text/javascript" src="js/utils/Utils.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/utils/Tools.js?201305315125"></script>
 		
+<<<<<<< HEAD
 		<script language="javascript" type="text/javascript" src="js/utils/ToggleMenu.js"></script>
+=======
+		<script language="javascript" type="text/javascript" src="js/utils/client.js"></script>
+		
+		
+		
+
+		<!-- <script language="javascript" type="text/javascript" src="js/utils/headroom.js"></script> -->
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		
 		<script language="javascript" type="text/javascript" src="js/Main.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/tinycolor/tinycolor-min.js"></script>
@@ -92,6 +113,7 @@
 		<script language="javascript" type="text/javascript" src="js/dispositivi/ifIndesitFridge.js"></script>
 		<script language="javascript" type="text/javascript" src="js/dispositivi/ifIndesitOven.js"></script>
 		<script language="javascript" type="text/javascript" src="js/dispositivi/ifWindowCovering.js"></script>
+		<script language="javascript" type="text/javascript" src="js/plot/touch-tooltip-fix.js"></script>
 		
 		<script type="text/javascript">
 			var w = window.innerWidth;
@@ -131,13 +153,14 @@
 			}
 			var testTime = qs.get("testtime", "false");
 		</script>
-		
+	
 		<script language="javascript" type="text/javascript" src="js/FotoVoltaico.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/DefineMenu.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/InterfaceEnergyHome.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/NonDisponibile.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/utils/Menu.js?201305315125"></script>
 		
+<<<<<<< HEAD
 	</head>
 	<body onLoad="Main.onLoad()" onUnload="Main.onUnload()">
 		<div id="Container">
@@ -241,71 +264,211 @@
 						<div id='IndicatoreTitoloPV' class='TitoloDettaglio IndicatoreTitoloPV'></div>
 						<div id='PVConsumoIACIndicatoreImg' class='IndicatoreImg'></div>
 					</div>
+=======
+		<script language="javascript" type="text/javascript" src="js/utils/ToggleMenu.js"></script>
+		
+		
+		
+	</head>
+	<body onLoad="Main.onLoad()" onUnload="Main.onUnload()">
+		
+	<div id="Container">
+		<div id="mobileMenu" class="mMenu"></div>	
+		<div id="mobileElett"><div id ="chiudiElet" style="width:32px;height:32px;background-color:white; border-radius:20px; float:left;margin: 7px;"><img src="./Resources/Images/menu/close.png" style="z-index:30;width:32px;height: auto;"></div></div>		
+		<div id="Header">
+			<div id="containerToggle" class="cToggle">
+				<div class="toggleMobile" id="toggleMenu">	
+					<!-- <span style="color:white; font-size:0.5em">Options</span>	 -->			
+					<span class="menu1"></span>
+					<span class="menu2"></span>
+					<span class="menu3"></span>	
+					<div id="menulabel" style="margin-top:3px;margin-left:55px; color:#3A9948; font-size:2em; font-style: italic;"><p>Menù</p></div>				
 				</div>
-				<div id='CostoConsumoInfo' class='box'>
-					<span id='InfoTitolo' class='TitoloDettaglio'> </span>
-					<div id='Grafico' class='chartSingleBox'>
-						<div id='GraficoConsumoOdierno'>
-							<!-- <div id='LabelKWH'></div> -->
-							<!-- <div id='LabelOra'></div> -->
-							<div id='DettaglioGraficoConsumoOdierno'></div>
-						</div>
-						<div id='GraficoSuddivisioneCosti'>
-							<div id='TitoloSuddivisioneCosti'></div>
-							<div id='DettaglioSuddivisioneCosti'></div>
-						</div>
+			</div>	
+			<div id="logo">
+				<div id="ContainerLogo">
+					<img id="LogoImg" src="./Resources/Images/E@HLogo.png">
+				</div>
+			</div>				
+			<div id="datausersmartphoneToggle" style="float:right">
+				<div class="toggleMobile2" id="toggleUser">
+					<div id="ContainerUser">	
+						<img id="LogoImgUser" src="./Resources/Images/menu/utente_bianco.png" >
 					</div>
-					<div id='CostoTConsumoMax' class='chartSingleBox'>
-						<span id='CostoTConsumoMaxTitolo'> </span>
-						<div id='DettaglioConsumoMaggiore'></div>
-						<div id='TariffaImgDiv'>
-							<img id='TariffaImg'>
-						</div>
-						<div id='TariffaPos'></div>
-					</div>
-					<div id='InfoFeed'>
-						<div id='InfoFeedTitolo' style='display: none;'>
-							<button id='nextNews'>next</button>
-							<button id='backNews'>go back</button>
-						</div>
-						<div id='InfoFeedDettaglio'>
-							<div id='PrimaNews'>
-								<a target='_blank'>
-									<div class='titoloNews'>
-										<span class='ellipsis_text'> </span>
-									</div>
-								</a>
-								<div class='dettaglioNews'>
-									<span class='ellipsis_text'> </span>
+				</div>
+			</div>
+			<div id="dataANDuser">
+				<div id="Timestamp">
+					<span id="Data"></span>	
+					<img id="ClockImg" src="./Resources/Images/orologio.png"/>
+					<span id="Ora"> </span>											
+				</div>	
+				<div id="userID"></div>
+			</div>
+			<div id="HeaderSep" style="background-color:#9ec200">					
+			</div>						
+		</div>
+		<!--div style="float:left;margin-top:92px">  -->
+		<div id="ContainerError" style="float:left;width:100%;padding-bottom:5px;background-color:#333333;"><div style="width:80%; padding-left:5px;" id="ErrorMsgDIV"></div></div>
+		<!-- <div id="wrapper"> -->
+			<div id="ContainerMenu">
+				<div id="MainMenu">
+				 	
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
+				</div>
+				</div>
+				<div id="ContentMain">
+				<!-- <div id="ContainerPerScala"> -->
+					
+					<div id="CostiConsumi" class="Content">		
+					<div id='TitoloCostiConsumi' class='ContentTitle'></div>			
+					<div id='ContainerSX'>
+						<div id='CostoConsumoSintesi' class='box'>
+							<div id='CostoConsumoAttuale' class='pvSingleBox'>
+								<div id='CostoConsumoAttualeTitolo' class='boxTitles'></div>								
+								<div id='ConsumoAttualeMeter' class='meter'></div>
+								<div class="containerVal" id="containerValCons" ><div id='ValConsumoAttuale' class='values'></div></div>
+								<img id='CostoAttualeImg'> <span id='DettaglioCosto'></span>
+							</div>
+			
+							<div id='ProduzioneAttuale' class='pvSingleBox'>
+								<div id='ProduzioneAttualeTitolo' class='boxTitles'></div>								
+								<div id='ProduzioneAttualeMeter' class='meter'></div>
+								<div class="containerVal" id="containerValProd"><div id='ValProduzioneAttuale' class='values'></div></div>
+								<!-- id='ProduzioneAttualeImg' -->
+								<span id='DettaglioProduzione'></span>
+							</div>
+			
+							<div id='ReteAttuale' class='pvSingleBox'>
+								<div id='ReteAttualeTitolo' class='boxTitles'></div>								
+								<div id='ReteAttualeMeter' class='meter'></div>
+								<div class="containerVal" id="containerValProd"><div id='ValReteAttuale' class='values'></div></div>
+								<!-- id='ReteAttualeImg' -->
+								<span id='DettaglioRete'></span>
+							</div>
+							<div id='Indicatore' class='consSingleBox IndicatoreCONS'>
+								<div id='IndicatoreTitolo' class="boxTitles"></div>
+								<div id='ConsumoIndicatoreImg' class='IndicatoreImg'></div>
+								<div id='CostoIndicatoreImg' class='IndicatoreImg'></div>
+							</div>
+							<div id='DatiCostoConsumo' class='consSingleBox'>
+								<div id='DatiCostoConsumoHead'>
+									<img id="HouseImg" src="./Resources/Images/house_green.png">
+									<span id='DatiCostoConsumoTitolo'></span>
+								</div>
+								<div id='CostoConsumoOdierno'>
+									<div id='DettaglioCostoConsumoOdierno' class="Dettagli"></div>
+								</div>
+								<div id='CostoConsumoPrevisto'>
+									<div id='DettaglioCostoConsumoPrevisto' class="Dettagli"></div>
+								</div>
+								<div id='CostoConsumoMediaWeek'>
+									<div id='DettaglioCostoConsumoMediaWeek' class="Dettagli"></div>
 								</div>
 							</div>
-							<div id='SecondaNews'>
-								<a target='_blank'>
-									<div class='titoloNews'>
+							
+							<div id='DatiCosti' class='consSingleBox'>
+								<div id='DatiCostiHead'>
+									<img id="HouseImg" src="./Resources/Images/euro.png">
+									<span id='DatiCostiTitolo'></span>
+								</div>
+								<div id='CostiOdierno'>
+									<div id='DettaglioCostiOdierno' class="Dettagli"></div>
+								</div>
+								<div id='CostiPrevisto'>
+									<div id='DettaglioCostiPrevisto' class="Dettagli"></div>
+								</div>
+								<div id='CostiMediaWeek'>
+									<div id='DettaglioCostiMediaWeek' class="Dettagli"></div>
+								</div>
+							</div>				
+						</div>
+						<div id="Consigli" class='box'></div>
+						<div id='IndicatorePV' class='box'>
+								<div id='IndicatoreTitoloPV' class='TitoloDettaglio IndicatoreTitoloPV'></div>
+								<div id='PVConsumoIACIndicatoreImg' class='IndicatoreImg'></div>
+						</div>	
+					</div>	
+				<div id="ContainerDX">
+					<div id='CostoConsumoInfo' class='box'>
+						<span id='InfoTitolo' class='TitoloDettaglio'> </span>
+						<div id='Grafico' class='chartSingleBox'>
+							<div id='GraficoConsumoOdierno'>
+								<!-- <div id='LabelKWH'></div> -->
+								<!-- <div id='LabelOra'></div> -->
+								<div id='DettaglioGraficoConsumoOdierno'></div>
+							</div>
+							<div id='GraficoSuddivisioneCosti'>
+								<div id='TitoloSuddivisioneCosti'></div>
+								<div id='DettaglioSuddivisioneCosti'></div>
+							</div>
+						</div>
+						<div id='CostoTConsumoMax' class='chartSingleBox'>
+							<div id='CostoTConsumoMaxTitolo'> </div>
+							<div id='DettaglioConsumoMaggiore'></div>
+							<div id='TariffaImgDiv'>
+								<img id='TariffaImg'>
+							</div>
+							<div id='TariffaPos'></div>
+						</div>
+						<div id='InfoFeed'>
+							<div id='InfoFeedTitolo' style='display: none;'>
+								<button id='nextNews'>next</button>
+								<button id='backNews'>go back</button>
+							</div>
+							<div id='InfoFeedDettaglio'>
+								<div id='PrimaNews'>
+									<a target='_blank'>
+										<div class='titoloNews'>
+											<span class='ellipsis_text'> </span>
+										</div>
+									</a>
+									<div class='dettaglioNews'>
 										<span class='ellipsis_text'> </span>
 									</div>
-								</a>
-								<div class='dettaglioNews'>
-									<span class='ellipsis_text'> </span>
+								</div>
+								<div id='SecondaNews'>
+									<a target='_blank'>
+										<div class='titoloNews'>
+											<span class='ellipsis_text'> </span>
+										</div>
+									</a>
+									<div class='dettaglioNews'>
+										<span class='ellipsis_text'> </span>
+									</div>
 								</div>
 							</div>
 						</div>
+<<<<<<< HEAD
 					</div>
 				</div> <!-- chiusura costo consumo info -->
 				
 				
 				</div> <!-- chiusura costi consumi -->
 				
+=======
+				<!-- chiusura costo consumo info -->
+				
+				
+				</div> <!-- chiusura costi consumi -->
+				</div>
+				</div>
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 				<div id="Registra" style="display: none;"></div>
 				<div id="iframeReport" style="display: none;"></div>
 				<div id="iframeForum" style="display: none;"></div>
 				<div id="iframeOverload" style="display: none;"></div>
 				
 				</div>  <!-- chiusura content main -->
+<<<<<<< HEAD
 					
 			<!-- </div> --> <!-- chiusura wrapper -->
 			<div id="ContainerContentMenu" style="float:left;width:100%;height:auto;"> 
 				<div id="ContentMenu"></div>
+=======
+			<div id="ContainerContentMenu" style="float:left;width:100%;height:auto;"> 
+				<div id="ContentMenu"></div></div>
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 			 </div>
 			
 		</div> <!-- chiusura container -->

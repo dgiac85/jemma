@@ -1,13 +1,12 @@
 
 #Elettrodomestici{
-    width: 85%;
+	  background-color: #202020;
+    width: 95%;
     /*min-width: 800px;*/
-    height: 75%;
+    height: 768px;
     min-height: 300px;
-    padding: 10px;
-    background-color: #333;
     font-family: Arial, sans-serif;
-    font-size: 12px;
+    font-size: 1vw;
     position: relative;
     top: 4%;
     float: right;
@@ -15,22 +14,40 @@
     right: 2%;
     margin-left: auto;
     margin-right: auto;
-}    
+} 
 
-#RigaElettrodomestici{
-    background-color: #202020;
-    width: 100%;
-    /*min-width: 790px;*/
-    height: 40%;
-    margin:0;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display:block;
-    overflow: hidden;
+#mobileElett {
+display: block;
+background: #333333;
+position: fixed;
+top: 55px;
+width: 95%;
+height: 300px;
+z-index: 10;
+border: 4px solid rgb(158, 194, 0);
+/* border-top-left-radius: 0px; */
+padding: 10px 10px 0px;
+display: block;
+left: +200%;
+}   
+
+#RigaElettrodomestici {
+   background-color: #202020;
+  width: 99%;
+  margin: 0px auto;
+  /* min-width: 790px; */
+ height: 350px;
+  min-height: 350px;
+  /* margin: 0; */
+  padding-bottom: 25px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  display: block;
+  overflow: hidden;
 }
+
 #RigaPulsanti{
-    width: 100%;
+    width: 98%;
     /*min-width: 790px;*/
     height: 20px;
     margin:0;
@@ -85,29 +102,34 @@
 }
 #RigaInterfaccia{
     
-    width: 100%;
-    /*min-width: 790px;*/
-    height: 60%;
-    margin:0;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
+      width: 98%;
+  /* min-width: 790px; */
+    height: 45%;
+  margin: 0px auto;
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
     
 }
 
-.Elettrodomestico{
-    height: 100%;
-    /*width: 12.5%;*/
-    width: 15%;
-    float: left;
-    
+.Elettrodomestico {
+  height: 100%;
+  margin-right: 10px;
+  margin-left: 15px;
+  margin-bottom: 44px;
+  /* position: relative; */
+  /* width: 12.5%; */
+  width: 200px;
+  float: left;
 }
+
+
 
 .DatiElettrodomestico{
-    height: 90%;
-    width: 90%;
+    height: 100%;
+    width: 100%;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: 20px;
     margin-top: 5%;
 }
 
@@ -131,6 +153,7 @@
     vertical-align: middle;
     overflow: hidden;
     max-height: 1.1em;
+    font-size:18px;
 }
 
 .Elettrodomestico.ON .NomeElettrodomestico{
@@ -251,10 +274,12 @@
     display: block;
     width: 60%;
     height: 98%;
+    font-size: 16px;
     overflow: hidden;
 }
 .StatoElettrodomestico .row .right{
     float: left;
+      font-size: 16px;
     width: 40%;
     text-align: right;
     height: 98%;
@@ -281,7 +306,7 @@
 
 .StatoElettrodomestico .row.posizione .left .t{
     margin-left: 2px;
-
+	display:none;
 }
 
 .Elettrodomestico.OFF .StatoElettrodomestico .row .right.stato{
@@ -311,13 +336,12 @@
     background-color: #1a1a1a;
     position: relative;
     top: 5%;
-    margin-left: 1%;
-    height: 90%;
-    width: 70%;
+
+    height: 92%;
+    width: 76%;
     border-radius: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
-    
     background-image: url("bg_info.png");
     background-repeat: repeat-x;
     background-size: auto 100%;
@@ -348,12 +372,12 @@
     /*border-bottom: 2px solid #333;*/
 }
 
-#Interfaccia .content{
-    display: block;
-    width: 90%;
-    height: 85%;
-    margin-left: auto;
-    margin-right: auto;
+#Interfaccia .content {
+  display: block;
+  width: 100%;
+  height: 85%;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
 }
 
 #RiepilogoConsumi{
@@ -362,8 +386,9 @@
     background-color: #1a1a1a;
     position: relative;
     top: 5%;
-    height: 90%;
-    width: 29%;
+      margin-left: 1%;
+    height: 92%;
+    width: 23%;
     border-radius: 16px;
     -webkit-border-radius: 16px;
     -moz-border-radius: 16px;
@@ -380,7 +405,7 @@
 
 #RiepilogoConsumi .header{
     display: block;
-    height: 50%;
+    height: 35%;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
@@ -401,7 +426,7 @@
 #RiepilogoConsumi .content{
     display: table;
     width: 90%;
-    height: 50%;
+    height: 59%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -449,3 +474,401 @@
     font-size: large;
     color: #fff;
 }
+
+
+/**********************************************************************
+Media Queries
+***********************************************************************/
+
+
+@media only screen and (max-width:1220px) and (min-width:801px), (max-device-width:1220px) and (min-device-width:801px){
+	#Elettrodomestici {
+  		height: 100%;
+  		top:0%;
+	}
+#RigaInterfaccia {
+  height: 54%;
+  min-height: 54%;
+  max-height: 54%;
+}
+}
+
+
+@media only screen and (device-height : 768px) and (device-width : 1366px) {
+#RigaInterfaccia {
+  height: 30%;
+}
+	}
+	
+
+
+@media only screen and (max-device-width:800px) and (min-device-width:481px), (max-width: 800px) and (min-width:481px){
+	#Elettrodomestici {
+  	  height: 100%;
+  min-height: 100%;
+  top: 0%;
+  bottom: 0%;
+	}
+	
+	#RigaElettrodomestici {
+	 width: 96%;
+	  height: 365px;
+	  min-height: 365px;
+	  max-height: 408px;
+	    margin-left: 23px;
+	}
+	
+	
+	#Interfaccia {
+	  width: 100%;
+	  height: 78%;
+	}
+		
+	#RiepilogoConsumi {
+	  margin-top: 1%;
+	  height: 28%;
+	  width: 100%;
+	  margin-left: 0%;
+	}
+	
+	.Elettrodomestico {
+  height: 350px;
+  min-height: 350px;
+	}
+	
+#RigaInterfaccia {
+  height: 400px;
+}
+		
+}
+
+@media only screen and (min-device-width:480px), (min-width: 480px){
+	#chiudiElet{
+		display:none;
+	}
+}
+
+
+@media only screen and (max-device-width:480px), (max-width: 480px){
+	#RigaElettrodomestici {
+  width: 100%;
+  /* min-width: 790px; */
+  height: auto !important;
+}
+
+#chiudiElet{
+		display:block;
+	}
+
+#Elettrodomestici {
+margin-top: 5px;
+	width: 100%;
+  height: auto;
+  min-height:0px;
+right:0%;
+
+}
+
+#RiepilogoConsumi {
+	display:none;
+  margin-left: 0%;
+  width: calc(100% - 6px);
+  width: -moz-calc(100% - 6px);
+  width: -webkit-calc(100% - 6px);
+  height: 112px;
+  position: fixed;
+  bottom: 0px;
+  top: auto;
+  border-radius: 4px;
+  border: 3px solid #9cc31c;
+}
+
+.Elettrodomestico {
+   height: 150px;
+  margin-bottom: 35px;
+  min-height: 150px;
+  width: 100%;
+  margin-left: 0px;
+}
+
+.DatiElettrodomestico{
+	margin-top:0%;
+}
+
+.IconaElettrodomestico {
+  width: 35%;
+  float: left;
+  height:100%;
+}
+
+.StatoElettrodomestico {
+  width: 65%;
+  float: left;
+  height: 100%;
+}
+
+.StatoElettrodomestico .row .right {
+  font-size: 16px;
+}
+
+	 #mobileElett{
+  top:63px;
+  height: calc(100% - 81px);
+  height: -moz-calc(100% - 81px);
+  height: -webkit-calc(100% - 81px);
+  min-height: calc(100% - 81px);
+  min-height: -moz-calc(100% - 81px);
+  min-height: -webkit-calc(100% - 81px);
+  max-height: calc(100% - 81px);
+  max-height: -moz-calc(100% - 81px);
+  max-height: -webkit-calc(100% - 81px);
+	 }
+
+#Interfaccia {
+  top: 1%;
+  height: 98%;
+  width: 100%;
+}
+
+#RigaInterfaccia {
+  width: 100%;
+}
+
+#Interfaccia .header {
+  height: 7%;
+}
+
+}
+
+@media only screen and (max-device-width: 350px){
+#mobileElett {
+  top: 63px;
+  height: calc(100% - 81px);
+  height: -moz-calc(100% - 81px);
+  height: -webkit-calc(100% - 81px);
+  max-height: calc(100% - 81px);
+  max-height: -moz-calc(100% - 81px);
+  max-height: -webkit-calc(100% - 81px);
+  min-height: calc(100% - 81px);
+  min-height: -moz-calc(100% - 81px);
+  min-height: -webkit-calc(100% - 81px);
+  width: calc(100% - 28px);
+  width: -moz-calc(100% - 28px);
+  width: -webkit-calc(100% - 28px);
+  max-width: calc(100% - 28px);
+  max-width: -moz-calc(100% - 28px);
+  max-width: -webkit-calc(100% - 28px);
+  min-width: calc(100% - 28px);
+  min-width: -moz-calc(100% - 28px);
+  min-width: -webkit-calc(100% - 28px);
+}
+}
+
+
+
+@media only screen and (max-device-height: 480px) and (max-device-width: 854px){
+		#RigaElettrodomestici {
+  width: 100%;
+  /* min-width: 790px; */
+  min-height:none;
+  max-height:none !important;
+margin-left: 0px;
+  height: auto !important;
+}
+
+#Interfaccia {
+  width: 100%;
+  height: 273px;
+}
+
+
+#Elettrodomestici {
+  width: 100%;
+  height: auto;
+  min-height: 0px;
+  right: 0%;
+}
+
+#RiepilogoConsumi {
+  margin-left: 2%;
+  width: 98%;
+  height:135px;
+}
+
+.Elettrodomestico {
+  height: 150px;
+  margin-bottom: 6px;
+  margin-left: 0px;
+  margin-top: 10px;
+  min-height: 150px;
+  width: 100%;
+}
+
+.DatiElettrodomestico{
+	margin-top:0%;
+}
+
+.IconaElettrodomestico {
+  width: 35%;
+  float: left;
+  height:100%;
+}
+
+.StatoElettrodomestico {
+  width: 65%;
+  float: left;
+  height: 100%;
+}
+
+.StatoElettrodomestico .row .right {
+  font-size: 16px;
+}
+
+#mobileElett {
+  height: auto;	
+}  
+
+}
+
+
+/*Media queries specifiche*/
+
+@media only screen and (device-height : 900px) and (device-width : 1440px),(device-height : 900px) and (device-width : 1600px) {
+	#RigaInterfaccia {
+	  height: 40%;
+	}
+}
+
+@media only screen and (device-height : 720px) and (device-width : 1280px){
+#RigaInterfaccia {
+  width: 98%;
+  /* min-width: 790px; */
+  height: 25%;
+}
+}
+
+@media only screen and (device-height : 800px) and (device-width : 1280px) {
+#RigaInterfaccia {
+  height: 30%;
+}
+}
+
+@media only screen and (device-height : 768px) and (device-width : 1024px) {
+	#RigaElettrodomestici {
+  		  height: 42% !important;
+  min-height: 42% !important;
+  top: 0%;
+	}
+	
+#RigaInterfaccia {
+  height: 47%;
+  min-height:47%;
+  max-height:47%;
+}
+	}
+		
+
+/*TABLET TELECOM IN PORTRAIT*/
+@media only screen and (device-height: 1232px) and (device-width: 800px){
+.Elettrodomestico {
+  height: 491px;
+  min-height: 0px;
+  margin-left: 25px;
+}
+	
+#RigaElettrodomestici {
+  width: 96%;
+  height: 495px !important;
+  min-height: 0px;
+  max-height: none;
+  margin-left: 23px;
+}
+
+#RigaInterfaccia {
+  height: 625px;
+  min-height: 0px;
+  max-height: none;
+}
+
+#Interfaccia {
+  width: 100%;
+  height: 34%;
+  top:2%
+  }
+
+#RiepilogoConsumi {
+  margin-top: 1%;
+  height: 30%;
+  width: 100%;
+  margin-left: 0%;
+}
+
+#RigaPulsanti {
+  height: 45px;
+}
+	
+}
+
+
+@media only screen and (device-width: 1280px) and (device-height: 752px),(device-width: 1280px) and (device-height: 800px){
+#RigaElettrodomestici {
+    height: 262px !important;
+  min-height: 262px !important;
+}
+
+#RigaInterfaccia {
+  height: 26%;
+}
+
+#Interfaccia{
+	height:91%;
+}
+
+#RiepilogoConsumi {
+  width: 23%;
+  height:91%;
+}
+
+
+
+}
+
+/* gestione dell'altezza per gli schermi desktop*/
+
+@media only screen and (max-device-height: 800px) and (min-device-width:1024px){
+	#RigaElettrodomestici{
+		height:38%;
+		min-height:38%;
+	}
+	
+	.StatoElettrodomestico .row .left {
+  font-size: 14px;
+}
+}
+
+
+/* gestione dell'altezza per gli schermi desktop*/
+
+@media only screen and (max-height: 800px) and (min-width:1024px){
+
+.StatoElettrodomestico .row .left {
+  font-size: 14px;
+}
+
+}
+
+/*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+	#Interfaccia {
+	  width: 100%;
+	  height: 65%;
+	}
+	
+	#ifBase .StatoElettrodomestico {
+  display: block;
+  width: 149%;
+	}
+}
+
+
+

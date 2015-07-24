@@ -59,6 +59,71 @@ var Storico = {
 
 };
 
+
+$(document).ready(function() {
+	widthMeasured=window.innerWidth;
+	heightMeasured=window.innerHeight;
+	
+	(function ($) {
+	    var d = 1, t = null, e = null, h, r = false;
+
+	    h = function () {
+	        r = false;
+	        $(window).trigger('resizeend', e);
+	    };
+
+	    $(window).on('resize', function (event) {
+		    	
+	        e = event || e;
+	        clearTimeout(t);
+
+	        if (!r) {
+	            $(window).trigger('resizestart', e);
+	            r = true;
+	        }
+
+	        t = setTimeout(h, d);
+	        
+	   
+		
+	    });
+	}(jQuery));
+	
+	
+	
+		
+	$(window).on('resizestart', function(event){
+
+		
+	});
+	
+	$(window).on('resizeend', function(event){
+		gestisciFrecce();       
+
+	});
+		
+	
+});
+
+function gestisciFrecce(){
+    if (window.innerWidth<=596){
+    	//gestire qui la posizione delle freccette per smartphone
+	 var element1=$('#Prec').detach();
+	 var element2=$('#Succ').detach();
+	 element1.insertAfter("#StoricoGraphContainer");
+	 element2.insertAfter("#Prec");	    	 
+    }
+    else{
+    	//gestire qui la posizione delle freccette per tablet e desktop
+    	 var element1=$('#Prec').detach();
+    	 var element2=$('#Succ').detach();
+    	 element1.insertAfter("#LabelStoricoEuro");
+    	 element2.insertAfter("#Prec");
+    }
+}
+
+
+
 Storico.ExitStorico = function() {
 	//hideSpinner();
 	Main.ResetError();
@@ -478,9 +543,12 @@ Storico.VisStorico = function(tipo) {
 								 hideSpinner();
 							 }
 			             }, 
-						 type : 'column'},
+						 type : 'column',
+							 style : { color : 'blue'}	 },
 				title : {text : titolo,
-						 textAlign : 'left',
+						 textAlign : 'center',
+						 spacingBottom: '35px',
+						 style : { font : 'normal 10px Verdana, sans-serif'},  
 						 show : true},
 						 subtitle : {text : ''},
 				credits : false,
@@ -496,14 +564,15 @@ Storico.VisStorico = function(tipo) {
 							 	    offset : 45,
 							 	    style : { color : "black"}},
 						 categories : cat},
+						 
 				yAxis : [ { min : 0,
-							title : { text : titleX,
+							title : { text : null,
 									  style : { color : 'blue'}},
 							labels : { formatter : function() {return this.value + 'KWh';},
 							style : { color : 'blue'}}}, 
 						  { gridLineWidth: 1,
 							min: 0,
-							title : { text : titleY2,
+							title : { text : null,
 									  style : { color : '#21e700'}},
 							labels : { formatter : function() { return this.value + ' KWh';},
 							style : {color : 'green'}},
@@ -747,6 +816,7 @@ Storico.DatiProduzioneStorico = function(val) {
 Storico.GetStorico = function() {
 	Main.ResetError();
 	showSpinner();
+	gestisciFrecce();
 	if (Main.env == 0) console.log(20, Storico.MODULE, "Dispositivo= " + Storico.dispositivoScelto + " Periodo = " + Storico.periodoScelto);
 	if (Main.env == 0) console.log(20, Storico.MODULE, "============ GetStorico: inizio = " + Storico.dataInizio.toString() + " fine = " + Storico.dataFine.toString());
 
@@ -764,6 +834,42 @@ Storico.GetStorico = function() {
 	} else {
 		InterfaceEnergyHome.GetStorico('Costo', Storico.device, Storico.dataInizio, Storico.dataFine, Storico.periodoScelto, Storico.DatiCostoStorico);
 	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (window.innerWidth>1220) ){
+		$("#Content").css("height", "490px");
+		$("#Storico").css("height", "450px");
+	}
+	
+	/*per desktop 1024-768*/
+	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (Menu.contentMenuSelected===3) ){
+
+		$("#Content").css("min-height", "89%");
+		$("#Content").css("height", "89%");
+		$("#Storico").css("height", "85%");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=841) && (window.innerWidth===1280) ){
+		$("#Content").css("height", "668px");
+		$("#Storico").css("height", "546px");
+	}
+	
+	if ( ( (!Modernizr.touch) && (window.innerHeight>=781) && (window.innerWidth===1440) ) || ( ( (!Modernizr.touch) && (window.innerHeight>=781) && (window.innerWidth===1600) ) ) ){
+		$("#Content").css("height", "568px");
+		$("#Storico").css("height", "528px");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=601) && (window.innerWidth===1280) ){
+		$("#Content").css("height", "450px");
+		$("#Storico").css("height", "420px");
+	}
+	
+	
+	if ( (!Modernizr.touch) && (window.innerHeight>=905) && (window.innerWidth===1280) ){
+		$("#Content").css("height", "668px");
+		$("#Storico").css("height", "633px");
+	}
+	
+	
 }
 
 Storico.GetDispId = function(nomeElettr) {
@@ -954,11 +1060,13 @@ Storico.Precedente = function() {
 
 // imposta periodo successivo in base al tipo di periodo scelto ed esegue richiesta
 Storico.Successivo = function() {
+	
 	if (Main.env == 0) console.log(20, Storico.MODULE, "=========== Successivo: periodoScelto = " + Storico.periodoScelto);
 	switch (Storico.periodoScelto) {
 		case Storico.GIORNO:
 			Storico.dataInizio.setDate(Storico.dataInizio.getDate() + 1);
 			Storico.dataFine.setDate(Storico.dataFine.getDate() + 1);
+			
 			break;
 		case Storico.SETTIMANA:
 			Storico.dataInizio.setDate(Storico.dataInizio.getDate() + 7);
@@ -986,6 +1094,9 @@ Storico.Successivo = function() {
 	} else {
 		$("#Succ").show();
 	}
+	console.debug(Storico.periodoScelto)
+	console.debug(Storico.dataInizio);
+	console.debug(Storico.dataFine);
 	Storico.GetStorico();
 }
 

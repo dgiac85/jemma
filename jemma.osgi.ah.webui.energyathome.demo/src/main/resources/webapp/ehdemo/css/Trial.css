@@ -3,7 +3,11 @@
   top: 3%;
   left: 2%;
   width: 50%;
+<<<<<<< HEAD
   height: 8%;
+=======
+  height: auto;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
   text-align: left;
   valign: middle;
   background-color: transparent;
@@ -13,12 +17,12 @@
 }
 
 #TariffaTrial {
-	position: absolute;
-	top: 13%;
-	left: 2%;
-	width: 70%;
-	height: 80%;
-	background-color: transparent;
+  position: relative;
+  top: 4%;
+  left: 2%;
+  width: 95%;
+  height: 91%;
+  background-color: transparent;
 }
 
 #TariffaTrialBackground,#InfoTrialBackground,#ContattiTrialBackground {
@@ -157,32 +161,52 @@
 
 #Informazioni, #Contatti {
   position: relative;
+<<<<<<< HEAD
   top: 1%;
   left: 2%;
   width: 90%;
+=======
+  /* float: left; */
+  top: 4%;
+  left: 2%;
+  width: 96%;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
   height: 90%;
   background-color: transparent;
 }
 
 #InformazioniTestoTitolo, #ContattiTestoTitolo {
-	position: absolute;
-	top: 10%;
-	left: 5%;
-	width: 90%;
-	height: 8%;
-	text-align: center;
-	font-weight: bold;
-	//border-bottom: solid 1px #9EC200;
+  position: relative;
+  top: -98%;
+  left: 0%;
+  width: auto;
+  margin: 0px auto;
+  font-size: 1vw;
+  width: 27%;
+  /* height: auto; */
+  /* text-align: center; */
+  /* font-weight: bold; */
+}
+
+#MembersEH {
+  position: absolute;
+  margin-top: 10px;
+  left: 3%;
+  width: 76%;
+  margin: -12px auto;
+  /* height: 8%; */
+  /* text-align: left; */
+  font-weight: bold;
 }
 
 #InformazioniTesto {
-	position: absolute;
-	top: 25%;
-	left: 5%;
-	width: 90%;
-	height: 75%;
-	text-align: justify;
-	font-size: 0.9em;
+  position: absolute;
+  top: 11%;
+  left: 5%;
+  width: 90%;
+  height: 87%;
+  text-align: justify;
+  font-size: 0.9em;
 }
 
 #ContattiTel {

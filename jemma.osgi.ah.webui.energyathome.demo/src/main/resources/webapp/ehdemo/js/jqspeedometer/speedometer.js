@@ -64,35 +64,36 @@ function isNumber (o) {
 //			}
 			
 			img1.src = img;
-			img1.style.position = 'absolute';
-			img1.style.width = '100%';
+			img1.style.position = 'relative';
+			img1.style.display = 'block';
+			img1.style.width = '80%';
+			img1.style.margin = 'auto';
 			img1.style.height = '100%';
-			img1.style.left = '0px';
-			img1.style.top = '0px';
 			//img1.style.zIndex = -3;
 
 			var img2 = document.createElement('img');
 			img2.src = '';
-			img2.style.position = 'absolute';
-			img2.style.width = '100%';
-			img2.style.left = '0px';
+			img2.style.position = 'relative';
+			img2.style.display = 'block';
+			img2.style.margin = 'auto';
+			img2.style.width = '80%';
 			//img2.style.zIndex = -2;
 			
 			if (!opts.rotate) {
 				img2.style.height = '100%';
 			}
 			else {
-				img2.style.height = '80%';		
-				img2.style.top = '7%';
+				img2.style.height = '100%';		
+				//img2.style.top = '7%';
 			}
 
 			var img3 = document.createElement('img');
 			img3.src = srcPathSpeedometerAZXC + 'images/gauge_center.png';
-			img3.style.position = 'absolute';
-			img3.style.width = '100%';
+			img3.style.position = 'relative';
+			img3.style.width = '80%';
+			img3.style.display='block';
 			img3.style.height = '100%';
-			img3.style.left = '0px';
-			img3.style.top = '0px';
+			img3.style.margin = 'auto';
 			//img3.style.zIndex = -1;
 			
 			var textDiv = document.createElement('div');
@@ -180,35 +181,36 @@ function isNumber (o) {
 			
 			
 			img1.src = img;
-			img1.style.position = 'absolute';
-			img1.style.width = '100%';
+			img1.style.position = 'relative';
+			img1.style.display = 'block';
+			img1.style.width = '80%';
+			img1.style.margin = 'auto';
 			img1.style.height = '100%';
-			img1.style.left = '0px';
-			img1.style.top = '0px';
 			//img1.style.zIndex = -3;
 
 			var img2 = document.createElement('img');
 			img2.src = '';
-			img2.style.position = 'absolute';
-			img2.style.width = '100%';
-			img2.style.left = '0px';
+			img2.style.position = 'relative';
+			img2.style.display = 'block';
+			img2.style.margin = 'auto';
+			img2.style.width = '80%';
 			//img2.style.zIndex = -2;
 			
 			if (!opts.rotate) {
 				img2.style.height = '100%';
 			}
 			else {
-				img2.style.height = '80%';		
-				img2.style.top = '7%';
+				img2.style.height = '100%';		
+				//img2.style.top = '7%';
 			}
 
 			var img3 = document.createElement('img');
 			img3.src = srcPathSpeedometerAZXC + 'images/gauge_center.png';
-			img3.style.position = 'absolute';
-			img3.style.width = '100%';
+			img3.style.position = 'relative';
+			img3.style.width = '80%';
+			img3.style.display='block';
 			img3.style.height = '100%';
-			img3.style.left = '0px';
-			img3.style.top = '0px';
+			img3.style.margin = 'auto';
 			//img3.style.zIndex = -1;
 			
 			var textDiv = document.createElement('div');
@@ -279,35 +281,36 @@ function isNumber (o) {
 //			}
 			
 			img1.src = img;
-			img1.style.position = 'absolute';
-			img1.style.width = '100%';
+			img1.style.position = 'relative';
+			img1.style.display = 'block';
+			img1.style.width = '80%';
+			img1.style.margin = 'auto';
 			img1.style.height = '100%';
-			img1.style.left = '0px';
-			img1.style.top = '0px';
 			//img1.style.zIndex = -3;
 
 			var img2 = document.createElement('img');
 			img2.src = '';
-			img2.style.position = 'absolute';
-			img2.style.width = '100%';
-			img2.style.left = '0px';
+			img2.style.position = 'relative';
+			img2.style.display = 'block';
+			img2.style.margin = 'auto';
+			img2.style.width = '80%';
 			//img2.style.zIndex = -2;
 			
 			if (!opts.rotate) {
 				img2.style.height = '100%';
 			}
 			else {
-				img2.style.height = '80%';		
-				img2.style.top = '7%';
+				img2.style.height = '100%';		
+				//img2.style.top = '7%';
 			}
 
 			var img3 = document.createElement('img');
 			img3.src = srcPathSpeedometerAZXC + 'images/gauge_center.png';
-			img3.style.position = 'absolute';
-			img3.style.width = '100%';
+			img3.style.position = 'relative';
+			img3.style.width = '80%';
+			img3.style.display='block';
 			img3.style.height = '100%';
-			img3.style.left = '0px';
-			img3.style.top = '0px';
+			img3.style.margin = 'auto';
 			//img3.style.zIndex = -1;
 			
 			var textDiv = document.createElement('div');

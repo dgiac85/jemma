@@ -1,100 +1,141 @@
+<<<<<<< HEAD
 #CostiConsumi {
 }
+=======
+/*GLOBAL*/
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 
-/* 	z-index : 10;}*/
 
-/* Riquadro a sinistra */
 #CostoConsumoSintesi {
 position: relative;
 float: left;
+<<<<<<< HEAD
 width: 45%;
 height: 70%;
+=======
+width: 100%;
+height: 70%;
+}
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 
 }
 .TitoloDettaglio {
-	font-size: 1em;
-	font-weight: bold;
+font-size: 1em;
+font-weight: bold;
 }
 
 .CostoConsumoAttualePV {
-	position: relative;
-	top: 45%;
-	overflow: hidden;
-	margin-left: auto;
-	margin-right: auto;
+position: relative;
+top: 55%;
+overflow: hidden;
+margin-left: auto;
+margin-right: auto;
 }
 
 #ProduzioneAttuale {
-	position: absolute;
-	top: 3%;
-	left: 2%;
-	overflow: hidden;
+position: absolute;
+top: 6%;
+left: 2%;
+overflow: hidden;
 }
 
 #ReteAttuale {
-	position: absolute;
-	top: 3%;
-	right: 2%;
-	overflow: hidden;
+position: absolute;
+top: 6%;
+right: 2%;
+overflow: hidden;
 }
 
 /** 
 #CostoAttuale {
-	
-	left: 3%;
-	width: 54%;
-	
+
+left: 3%;
+width: 54%;
+
 }
 **/
 /**
 #CostoOdierno {
-	border-bottom: 1px solid #FFD800;
+border-bottom: 1px solid #FFD800;
 }
 **/
 .Dettagli {
+<<<<<<< HEAD
 	color: green;
 	font-size: 1em;
 	text-align: left;
 	padding: 15px;
 	border-bottom: thin solid grey;
 	font-weight: bold;
+=======
+  color: green;
+  font-size: 16px;
+  text-align: left;
+  padding: 13px;
+  border-bottom: thin solid grey;
+  font-weight: bold;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 .Dettagli b {
-	font-size: 1.0em;
-	font-weight: bold;
-	position: absolute;
-	right: 5%;
-	color: black;
+font-size: 1.0em;
+font-weight: bold;
+position: absolute;
+right: 5%;
+color: black;
 }
 
 #IndicatoreTitoloPV {
+<<<<<<< HEAD
 	position: absolute;
 top: 30%;
 width: 22%;
 font-size: 0.8em;
 left: 5%;
+=======
+  font-size: 0.9vw;
+  /* top: 20%; */
+  width:20%;
+  float: left;
+margin: 7px 0px 12px 21px;
+  /* margin-top: 13px; */
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #IndicatorePV {
-	display: block;
-	position: absolute;
-	bottom: 0%;
-	width: 100%;
-	height: 16%;
-	left: 0%;
-	position: absolute;
+display: block;
+/* position: absolute; */
+float: left;
+bottom: 0.5%;
+width: 100%;
+height: 11%;
+left: 0%;
+position: relative;
 }
 
 .IndicatoreTitoloCONS {
-	position: absolute;
-	top: 5%;
-	left: 55%;
-	width: 40%;
-	height: 10%;
+position: absolute;
+top: 5%;
+left: 55%;
+width: 40%;
+height: 10%;
 }
 
+/* #Indicatore {
+position: absolute;
+top: 5%;
+right: 3%;
+width: 40%;
+height: 35%;
+border: 10px solid #575757;
+background-color: #fff;
+border-radius: 16px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+} */
+
 #Indicatore {
+<<<<<<< HEAD
 	position: absolute;
 	top: 5%;
 	right: 3%;
@@ -118,54 +159,100 @@ left: 5%;
 	border-radius: 16px;
 	-webkit-border-radius: 16px;
 	-moz-border-radius: 16px;
+=======
+  position: relative;
+  float: left;
+  top: 3px;
+  /* right: 2%; */
+  /* left: 3%; */
+  margin-top: 6px;
+  margin-left: 3%;
+  width: 70%;
+  height: 36%;
+  border: 0.5vw solid #575757;
+  background-color: #fff;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+}
+
+/* #DatiCosti {
+position: absolute;
+top: 47%;
+right: 3%;
+width: 40%;
+height: 45%;
+border: 10px solid #575757;
+background-color: #fff;
+border-radius: 16px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+} */
+
+#DatiCosti {
+ position: relative;
+  float: left;
+  width: 94%;
+  height: 25%;
+  margin: 10px;
+  margin-top: 0px;
+  margin-left: 14px;
+  border: 0.5vw solid #575757;
+  background-color: #fff;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #PVConsumoIACIndicatoreImg {
-	width: 50%;
-	height: 100%;
-	position: absolute;
-	top: 0%;
-	left: 25%;
+  width: 64%;
+  height: 100%;
+  /* position: absolute; */
+  float: left;
+  /* bottom: 25%; */
+  /* margin-left: 21%; */
+  margin-top: -17px;
+  margin-left: -11px;
 }
 
 .IndicatoreTxt {
-	font-size: 0.9em;
-	font-weight: normal;
+font-size: 0.9em;
+font-weight: normal;
 }
 
 #IndicatoreSopra {
-	position: absolute;
-	top: 0%;
-	left: 50%;
-	width: 120%;
-	height: 10%;
+position: absolute;
+top: 0%;
+left: 50%;
+width: 120%;
+height: 10%;
 }
 
 #IndicatoreMedia {
-	position: absolute;
-	top: 25%;
-	left: 100%;
-	width: 70%;
-	height: 10%;
+position: absolute;
+top: 25%;
+left: 100%;
+width: 70%;
+height: 10%;
 }
 
 #IndicatoreSotto {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 120%;
-	height: 10%;
+position: absolute;
+top: 50%;
+left: 50%;
+width: 120%;
+height: 10%;
 }
 
 #IndicatorePaddingLeft {
-	position: absolute;
-	top: 0%;
-	left: -5%;
-	width: 20%;
-	height: 50%;
-	border-left: 1px solid #0B0B96;
+position: absolute;
+top: 0%;
+left: -5%;
+width: 20%;
+height: 50%;
+border-left: 1px solid #0B0B96;
 }
 
+<<<<<<< HEAD
 /* Riquadro a destra */
 #CostoConsumoInfo {
 position: relative;
@@ -174,203 +261,244 @@ margin-left: 10px;
 width: 53%;
 height: 90%;
 }
+=======
+
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #InfoTitolo {
-	position: absolute;
-	top: 2%;
-	left: 2%;
-	width: 96%;
-	height: 10%;
-	text-align: center;
-	background-color: transparent;
+	display:none;
+position: absolute;
+  top: 1%;
+  left: 2%;
+  width: 96%;
+  height: 20px;
+text-align: center;
+background-color: transparent;
+  color: white;
 }
 
 #Grafico {
+<<<<<<< HEAD
 	
 position: absolute;
 top: 2%;
 left: 2%;
 right: 2%;
+=======
+  position: absolute;
+  float: left;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 height: 44%;
 }
 
 #GraficoConsumoOdierno {
-	height: 100%;
-	width: 100%;
+height: 100%;
+width: 100%;
 }
 
 #Grafico2 {
+<<<<<<< HEAD
 	position: absolute;
 top: 51%;
 left: 2%;
 right: 2%;
+=======
+  position: relative;
+  float: left;
+  margin: 3% 2%;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #GraficoConsumoOdierno2 {
-	height: 100%;
-	width: 100%;
+height: 100%;
+width: 100%;
 }
+
 #DettaglioGraficoConsumoOdierno2 {
-	height: 100%;
-	width: 100%;
+height: 100%;
+width: 100%;
+}
+
+.highcharts-container{
+	position:absolute !important;
 }
 
 #CostoTConsumoMax {
-	position: absolute;
-	top: 50%;
-	left: 30%;
-	width: 40%;
-	height: 17%;
-	vertical-align: middle;
+  position: relative;
+  /* top: 2%; */
+  /* left: 4%; */
+    margin: 1% 0% 1% 1%;
+  width: 33%;
+  height: 60%;
+  float: left;
+  vertical-align: middle;
 }
 /*
 #ConsumoMaggiore {
-	
-	border-top: 1px solid #0B0B96;
+
+border-top: 1px solid #0B0B96;
 }
 */
 #CostoTConsumoMaxTitolo {
-	position: absolute;
-	top: 9%;
-	left: 0%;
-	width: 100%;
-	height: 8%;
-	font-size: 1.0em;
-	font-weight: bold;
-	color: green;
+  position: relative;
+  /* top: 9%; */
+  /* left: 0%; */
+  width: 80%;
+  margin: 5% auto;
+  height: 8%;
+  font-size: 1.0em;
+  font-weight: bold;
+  text-align: center;
+  color: green;
+}
+
+#ContenitoreConsumoMaggiore{
+	height:100%;
 }
 
 #MarqueeContainer {
-	position: absolute;
-	top: 80%;
-	left: 0%;
-	width: 100%;
-	height: 10%;
-	overflow: hidden;
-	background-image: linear-gradient(left, rgb(255, 255, 255) 7%,
-		rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
-	background-image: -o-linear-gradient(left, rgb(255, 255, 255) 7%,
-		rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
-	background-image: -moz-linear-gradient(left, rgb(255, 255, 255) 7%,
-		rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
-	background-image: -webkit-linear-gradient(left, rgb(255, 255, 255) 7%,
-		rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
-	background-image: -ms-linear-gradient(left, rgb(255, 255, 255) 7%,
-		rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
-	background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0.07,
-		rgb(255, 255, 255)), color-stop(0.35, rgb(122, 122, 122)),
-		color-stop(0.65, rgb(122, 122, 122)),
-		color-stop(0.93, rgb(255, 255, 255)));
+position: absolute;
+top: 80%;
+left: 0%;
+width: 100%;
+height: 10%;
+overflow: hidden;
+background-image: linear-gradient(left, rgb(255, 255, 255) 7%,
+rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
+background-image: -o-linear-gradient(left, rgb(255, 255, 255) 7%,
+rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
+background-image: -moz-linear-gradient(left, rgb(255, 255, 255) 7%,
+rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
+background-image: -webkit-linear-gradient(left, rgb(255, 255, 255) 7%,
+rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
+background-image: -ms-linear-gradient(left, rgb(255, 255, 255) 7%,
+rgb(122, 122, 122) 35%, rgb(122, 122, 122) 65%, rgb(255, 255, 255) 90%);
+background-image: -webkit-gradient(linear, left bottom, right bottom, color-stop(0.07,
+rgb(255, 255, 255)), color-stop(0.35, rgb(122, 122, 122)),
+color-stop(0.65, rgb(122, 122, 122)),
+color-stop(0.93, rgb(255, 255, 255)));
 }
 
 #Marquee {
-	float: left;
-	margin-top: 30%;
-	font: 15px Verdana;
-	width: 1000px;
-	color: #fff;
+float: left;
+margin-top: 30%;
+font: 15px Verdana;
+width: 1000px;
+color: #fff;
 }
 
 #ulMarquee {
-	margin: 0px;
-	position: relative;
-	list-style: none;
-	overflow: auto;
-	width: 100%;
+margin: 0px;
+position: relative;
+list-style: none;
+overflow: auto;
+width: 100%;
 }
 
 #ulMarquee>li {
-	float: left;
-	margin-top: 0px;
-	font: 15px Verdana;
-	width: auto;
-	color: #fff;
+float: left;
+margin-top: 0px;
+font: 15px Verdana;
+width: auto;
+color: #fff;
 }
 
 /*#Marquee {
-	
-	position: relative;
-	width: 2000px;
-	height: 100%;
-	padding-top: 5%;
-	color: white;
-	font-size: 1.5em;
-	
-	overflow: hidden;
+
+position: relative;
+width: 2000px;
+height: 100%;
+padding-top: 5%;
+color: white;
+font-size: 1.5em;
+
+overflow: hidden;
 }*/
 #CostoAttualeImg {
-	position: absolute;
-	top: 20%;
-	left: 25%;
-	height: 50%;
-	width: 50%;
+position: absolute;
+top: 20%;
+left: 25%;
+height: 50%;
+width: 50%;
 }
 
 #IndicatoreSotto {
-	z-index: 1;
+z-index: 1;
 }
 
 #IndicatoreCostiBarra,#IndicatoreConsumiBarra {
-	z-index: 2;
+z-index: 2;
 }
 
 #IndicatoreSopra {
-	z-index: 3;
+z-index: 3;
 }
 
 #DettaglioCosto {
-	position: absolute;
-	top: 72%;
-	left: 0%;
-	width: 100%;
-	height: 28%;
-	vertical-align: middle;
+position: absolute;
+top: 72%;
+left: 0%;
+width: 100%;
+height: 28%;
+vertical-align: middle;
 }
 
 #DettaglioSuddivisioneCosti {
-	width: 100%;
-	height: 80%;
-	vertical-align: middle;
-	display: block;
+  /* height: 80%; */
+  vertical-align: middle;
+  display: block;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 80%;
+  /* margin-top: 4%; */
+  margin: 4% auto;
+  margin-top:0px;
+  text-align: left;
+  line-height: normal;
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Arial, Helvetica, sans-serif;
+  /* font-size: 12px; */
+  cursor: auto;
 }
 
 #SuddivisioneCostiVuoto {
-	position: absolute;
-	top: 45%;
-	left: 20%;
-	width: 60%;
-	height: 10%;
-	font-size: 1.0em;
-	font-weight: bold;
-	text-align: center;
-	color: green; 
+position: absolute;
+top: 45%;
+left: 20%;
+width: 60%;
+height: 10%;
+font-size: 1.0em;
+font-weight: bold;
+text-align: center;
+color: green; 
 }
 
 #DettaglioGraficoConsumoOdierno {
-	height: 100%;
-	width: 100%;
+height: 100%;
+width: 100%;
 }
 
 #LabelKWH {
-	position: absolute;
-	top: 14%;
-	left: 5%;
-	width: 10%;
-	height: 10%;
-	font-size: 1.3em;
-	font-weight: bold;
+position: absolute;
+top: 14%;
+left: 5%;
+width: 10%;
+height: 10%;
+font-size: 1.3em;
+font-weight: bold;
 }
 
 #LabelOra {
-	position: absolute;
-	top: 81%;
-	left: 89%;
-	width: 10%;
-	height: 10%;
-	font-size: 1.3em;
-	font-weight: bold;
+position: absolute;
+top: 81%;
+left: 89%;
+width: 10%;
+height: 10%;
+font-size: 1.3em;
+font-weight: bold;
 }
 
 #TariffaPos {
+<<<<<<< HEAD
 	position: absolute;
 	top: 35%;
 	left: 5%;
@@ -380,70 +508,88 @@ right: 2%;
 	opacity: 0.4;
 	filter: alpha(opacity = 40);
 	z-index: 1;
+=======
+position: absolute;
+top: 35%;
+left: 5%;
+width: 3%;
+height: 40%;
+background-color: #666666;
+opacity: 0.4;
+filter: alpha(opacity = 40);
+z-index: 1;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #TariffaImgDiv {
-	position: absolute;
-	top: 40%;
-	left: 5%;
-	width: 90%;
-	height: 30%;
+position: absolute;
+top: 40%;
+left: 5%;
+width: 90%;
+height: 30%;
 }
 
 #DettaglioConsumoMaggiore {
-	position: absolute;
-	top: 20%;
-	left: 0%;
-	width: 100%;
-	height: 80%;
+position: relative;
+left: 0%;
+width: 100%;
+height: 80%;
 }
 
 #TestoConsumoMaggiore {
-	position: absolute;
-	top: 30%;
-	right: 0%;
-	width: 58%;
-	height: 30%;
-	text-align: center;
-	font-size: 0.7em;
-	font-weight: bold;
+position: relative;
+  color: black;
+  /* top: 30%; */
+  /* right: 0%; */
+  width: 90%;
+  height: 20%;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 1.5vw;
+  font-weight: bold;
 }
 
+#contImgConsMag{
+	position:relative;
+}
+
+
 #MsgConsumoMaggiore {
-	position: absolute;
-	top: 30%;
-	left: 00%;
-	width: 100%;
-	height: 30%;
-	text-align: center;
-	font-size: 0.9em;
-	font-weight: bold;
+position: absolute;
+top: 30%;
+left: 00%;
+width: 100%;
+height: 30%;
+text-align: center;
+font-size: 0.9em;
+font-weight: bold;
 }
 
 #ConsumoMaggioreImg {
-	position: absolute;
-	top: 10%;
-	left: 20%;
-	width: 80%;
-	height: 80%;
+  position: relative;
+  /* top: 10%; */
+  /* left: 20%; */
+  width: 100%;
+  height: 80%;
 }
 
 #ConsumoAttualeMeter>img {
-	position: absolute;
-	width: 100%;
-	top: 0px;
-	left: 0px;
+position: absolute;
+width: 100%;
+top: 0px;
+left: 0px;
 }
 
 #DivTestoGauge {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	width: 100%;
-	height: 20%;
+position: absolute;
+bottom: 0px;
+left: 0px;
+width: 100%;
+height: 20%;
 }
 
 .values {
+<<<<<<< HEAD
 	position: absolute;
 	top: 80%;
 	left: 20%;
@@ -477,42 +623,91 @@ right: 2%;
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
+=======
+    position: relative;
+  /* top: 76%; */
+  /* left: 20%; */
+  vertical-align: middle;
+  font-weight: bold;
+  text-align: center;
+  width: 90%;
+  margin: 0px auto;
+  padding-top: 1%;
+  background-color: transparent;
+  z-index: 2;
+  color: black;
+}
+
+#containerValCons1{
+	font-size: 1.8vw;
+}
+
+#containerValCons0{
+	font-size: 1.8vw;
+}
+
+.highlightbar {
+position: absolute;
+top: 5%;
+left: 40%;
+text-align: center;
+font-weight: bold;
+font-size: 0.8em;
+width: 24%;
+height: 8%;
+background-color: #a0a0a0;
+opacity: 0.8;
+filter: alpha(opacity = 80);
+z-index: 2;
+padding-top: 2%;
+color: black;
+border: solid 2px black;
+border-radius: 6px;
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #divFrecceProd {
-	position: absolute;
-	top: 20%;
-	left: 34%;
-	width: 16%;
+  position: absolute;
+  top: 22%;
+  left: 2%;
+  z-index: -1;
+  width: 100%;
 }
 
 #imgFrecceProd {
-	width: 100%;
+  width: 50%;
+  height: 25px;
 }
 
 #divFrecceRete {
-	position: absolute;
-	top: 20%;
-	left: 50%;
-	width: 16%;
+  position: absolute;
+  top: 22%;
+  left: 48%;
+  z-index: -1;
+  width: 100%;
 }
 
 #imgFrecceRete {
-	width: 100%;
+  width: 50%;
+  height: 25px;
 }
 
 #divFrecceConsumi {
-	position: absolute;
-	top: 20%;
-	left: 49%;
-	height: 25%;
+  position: absolute;
+  top: 25%;
+  left: 49%;
+  z-index:-1;
 }
 
 #imgFrecceConsumi {
-	height: 100%;
+  height: 220px;
+  width: 25px;
 }
 
 #divCentro {
+<<<<<<< HEAD
   position: absolute;
   top: 18.9%;
   left: 47%;
@@ -532,103 +727,143 @@ right: 2%;
 	right: 5%;
 	font-size: 1.8em;
 	font-weight: bold;
+=======
+  position: relative;
+  top: 18.5%;
+  left: 5px;
+  width: 60px;
+  height: 60px;
+  margin: 0px auto;
+}
+
+#FrecceFV{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  z-index:-50;
+}
+
+#imgCentro {
+  width: 100%;
+  height: auto;
+
+}
+
+#percIAC {
+position: absolute;
+top: 25%;
+right: 2%;
+font-size: 1.5vw;
+font-weight: bold;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #InfoFeed {
-	position: absolute;
-	top: 72%;
-	left: 3%;
-	width: 94%;
-	height: 25%;
-	background: #333;
-	border-radius: 7px;
-	-webkit-border-radius: 7px;
-	-moz-border-radius: 7px;
+  position: relative;
+  /* top: 72%; */
+  /* left: 3%; */
+  float: left;
+  margin-top: 0%;
+  margin-left: 2%;
+  width: 96%;
+  height: 35%;
+  background: #333;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
 }
 
 #InfoFeedTitolo {
-	position: absolute;
-	top: 2%;
-	left: 5%;
-	height: 16%;
-	width: 95%;
-	color: #3A9948;
-	font-size: 0.8em;
-	font-weight: bold;
-	vertical-align: middle;
-	margin-bottom: 8%;
-	text-align: left;
+position: absolute;
+top: 2%;
+left: 3%;
+height: 3vh;
+width: 95%;
+color: #3A9948;
+font-size: 0.8em;
+font-weight: bold;
+vertical-align: middle;
+margin-bottom: 8%;
+text-align: left;
 }
 
 #InfoFeedTitolo button {
-	height: 100%;
-	float: right;
+height: 100%;
+float: right;
 }
 
 #InfoFeedDettaglio {
-	position: absolute;
-	top: 15%;
-	left: 5%;
-	width: 90%;
-	height: 80%;
-	color: #ffffff;
-	font-weight: normal;
-	overflow: hidden;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 1.1vw;
+  overflow: hidden;
 }
 
 #InfoFeedDettaglio a {
-	text-decoration: none;
-	color: #9EC200;
+text-decoration: none;
+color: #9EC200;
 }
 
 #InfoFeedDettaglio a:hover {
-	text-decoration: underline;
+text-decoration: underline;
 }
 
 #PrimaNews {
-	border-bottom: solid 1px #9EC200;
-	padding-bottom: 2%;
-	width: 100%;
+border-bottom: solid 1px #9EC200;
+padding-bottom: 2%;
+width: 100%;
+  height: 80px !important;
 }
 
 #SecondaNews {
-	margin-top: 1%;
+margin-top: 1%;
 }
 
 #InfoFeedDettaglio .titoloNews,.dettaglioNews {
-	width: 100%;
-	text-align: left;
+width: 100%;
+text-align: left;
 }
 
 #InfoFeedDettaglio .titoloNews {
-	line-height: 0.9;
-	margin-bottom: 1%;
+line-height: 0.9;
+margin-bottom: 1%;
 }
 
 #InfoFeedDettaglio .dettaglioNews span {
-	color: white;
-	width: 100%;
-	font-size: 0.95em;
+color: white;
+width: 100%;
+font-size: 0.95em;
 }
 
 #InfoFeedDettaglio .titoloNews span {
-	color: #9EC200;
-	font-size: 1em;
+color: #9EC200;
+font-size: 1em;
 }
 
 .titoloInfoBox {
-	color: #3A9948;
-	font-size: 1em;
-	font-weight: bold;
+color: #3A9948;
+font-size: 1em;
+font-weight: bold;
 }
 
 #consigliTurnOn {
+<<<<<<< HEAD
   position: absolute;
   border: 5px solid #575757;
+=======
+  /* position: absolute; */
+  border: 3px solid #575757;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
   background-color: #9ec200;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
+<<<<<<< HEAD
   font-size: 1em;
   line-height: 1.0;
   padding: 5px;
@@ -636,32 +871,44 @@ right: 2%;
   left: 70%;
   width: 25%;
   color: #000;
+=======
+  font-size: 1.25vw;
+  line-height: 1.0;
+  padding: 5px;
+  margin: 2px auto;
+  margin-top: 8px;
+width: 95%;
+height:auto;
+color: #000;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 .box {
-	display: block;
-	background-color: #1a1a1a;
-	border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
-	background-repeat: repeat-x;
-	background-size: auto 100%;
-	background-origin: content-box;
-	color: #fff;
-	overflow: hidden;
+display: block;
+margin-top:8px;
+background-color: #1a1a1a;
+border-radius: 16px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+background-repeat: repeat-x;
+background-size: auto 100%;
+background-origin: content-box;
+color: #fff;
+overflow: hidden;
 }
 
 .pvSingleBox {
-	width: 30%;
-	height: 35%;
-	border: 10px solid #575757;
-	background-color: #fff;
-	border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
+width: 30%;
+height: 35%;
+border: 0.5vw solid #575757;
+background-color: #fff;
+border-radius: 16px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
 }
 
 .chartSingleBox {
+<<<<<<< HEAD
 	border: 1px solid #575757;
 	background-color: #fff;
 	width: 95%;
@@ -671,126 +918,203 @@ right: 2%;
 	border-radius: 16px;
 	-webkit-border-radius: 16px;
 	-moz-border-radius: 16px;
+=======
+border: 1px solid #575757;
+background-color: #fff;
+width: 95%;
+height: 44%;
+margin: auto;
+vertical-align: middle;
+border-radius: 16px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
+
+
 
 /* .consSingleBox {
-	width: 40%;
-	height: 19%;
-	border: 10px solid #575757;
-	background-color: #fff;
-	border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
+width: 40%;
+height: 19%;
+border: 10px solid #575757;
+background-color: #fff;
+border-radius: 16px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
 } */
+/* #DatiCostoConsumo {
+position: absolute;
+top: 47%;
+left: 3%;
+width: 44%;
+height: 45%;
+border: 10px solid #575757;
+background-color: #fff;
+border-radius: 16px;
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+}
+ */
 #DatiCostoConsumo {
-	position: absolute;
-	top: 47%;
-	left: 3%;
-	width: 44%;
-	height: 45%;
-	border: 10px solid #575757;
-	background-color: #fff;
-	border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
+  position: relative;
+  float:left;
+  width: 94%;
+  height: 26%;
+    margin: 10px;
+  margin-left: 15px;
+  border: 0.5vw solid #575757;
+  background-color: #fff;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
 }
 
+/* .boxTitles {
+z-index: 100;
+color: green;
+font-size: 1.2vw;
+text-align: center;
+font-weight: bold;
+margin-top: 7px;
+} */
+
+
 .boxTitles {
+<<<<<<< HEAD
 	z-index: 100;
 	color: green;
 	font-size: 1.3em;
 	text-align:center;
 	font-weight: bold;
 	margin-top: 10px;
+=======
+  position: relative;
+  float: left;
+  z-index: 100;
+  color: green;
+  font-size: 1.2vw;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 7px;
+  margin: 0px auto;
+  width: 100%;
+  height: 15%;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
+
 .meter {
+<<<<<<< HEAD
 	width: 120px;
 	height: 100px;
 	margin: auto;
+=======
+width: 85%;
+height: 100px;
+margin: auto;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #DatiCostoConsumoHead,#DatiCostiHead {
-	width: 100%;
-	height: 25%;
-	border-bottom: medium solid grey;
+width: 100%;
+height: 25%;
+border-bottom: medium solid grey;
 }
 
 #HouseImg {
+<<<<<<< HEAD
 	position: absolute;
 	top: 2%;
 	left: 5%;
 	height: 20%;
+=======
+position: absolute;
+top: 2%;
+left: 5%;
+height: 20%;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #DatiCostoConsumoTitolo,#DatiCostiTitolo {
-	color: green;
-	font-size: 1.3em;
-	font-weight: bold;
-	position: absolute;
-	top: 10%;
-	left: 35%;
+color: green;
+font-size: 1.3em;
+font-weight: bold;
+position: absolute;
+margin-left:50px;
+  top: 7%;
+  left: 12%;
 }
 
 #ConsumoIndicatoreImg {
-	position: absolute;
-	top: 58%;
-	left: 5%;
-	width: 90%;
-	height: 35%;
-	text-align: left;
+position: absolute;
+top: 58%;
+left: 5%;
+width: 90%;
+height: 35%;
+text-align: left;
 }
 
 #CostoIndicatoreImg {
-	position: absolute;
-	top: 17%;
-	left: 5%;
-	width: 90%;
-	height: 35%;
-	padding-bottom: 20px;
-	text-align: left;
+position: absolute;
+top: 17%;
+left: 5%;
+width: 90%;
+height: 35%;
+padding-bottom: 20px;
+text-align: left;
 }
 
 #CostoIndicatoreImg span,#ConsumoIndicatoreImg span {
-	color: green;
-	font-size: 1.2em;
-	text-align: left;
-	font-weight: bold;
+color: green;
+font-size: 1.2em;
+text-align: left;
+font-weight: bold;
 }
 
 #Costi {
-	width: 50%;
-	height: 100%;
-	position: absolute;
-	left: 50%;
-	top: 0%;
+width: 50%;
+height: 100%;
+position: absolute;
+left: 50%;
+top: 0%;
 }
 
+/* .CostoConsumoAttualeCONS {
+position: relative;
+top: 5%;
+left: 3%;
+overflow: hidden;
+width: 44%;
+height: 35%;
+} */
+
 .CostoConsumoAttualeCONS {
-	position: relative;
-	top: 5%;
-	left: 3%;
-	overflow: hidden;
-	width: 44%;
-	height: 35%;
+  position: relative; 
+  top: 1%;
+  float: left;
+  left: 2%;
+  overflow: hidden;
+  width: 32%;
+  height: 36%;
 }
 
 #GraficoSuddivisioneCosti {
-	width: 100%;
-	height: 100%;
+width: 100%;
+height: 100%;
 }
 
 #TitoloSuddivisioneCosti {
-	width: 100%;
-	height: 20%;
-	color: green;
-	font-size: 1.3em;
-	text-align: center;
-	font-weight: bold;
-	line-height: 2em;
+width: 100%;
+height: auto;
+color: green;
+font-size: 2.5vh;
+text-align: center;
+font-weight: bold;
+line-height: 2em;
 }
 
 #ConsumoOdiernoVuoto {
+<<<<<<< HEAD
 	position: absolute;
 	top: 40%;
 	left: 0%;
@@ -803,13 +1127,124 @@ right: 2%;
 	font-weight: bold;
 }
 
+=======
+position: absolute;
+top: 40%;
+left: 0%;
+width: 100%;
+height: 20%;
+text-align: center;
+vertical-align: middle;
+color: #3a8848;
+font-size: 1.0em;
+font-weight: bold;
+}
+
+
+
+.CostoConsumoAttualePV {
+top: 55%;
+z-index: 50;
+height:200px;
+}
+
+#CostoConsumoInfo{
+  position:relative;
+  float:left;
+  margin-top: 7px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+  width: 98%;
+  height: 98%;
+}
+
+
+.meter {
+  position: relative;
+  float: left;
+  width: 100% !important;
+  height: 50%;
+  margin: 17px auto;
+}
+
+.box{
+height:2px;
+}
+
+#CostoConsumoSintesi {
+position: relative;
+float: left;
+width: 100%;
+height: 70%;
+z-index:0;
+}
+
+#divFrecceConsumi {
+height: 35%;
+}
+
+.containerVal{
+  width: 100%;
+  height: 25%;
+  margin: 0px auto;
+  float: left;
+  position: relative;
+}
+
+#Indicatore {
+  width: 59%;
+}
+
+#ProduzioneAttuale {
+  width: 30%;
+  height: 200px;
+}
+
+#ReteAttuale {
+  width: 30%;
+  height: 200px;
+}
+
+
+
+
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 /**********************************************************************
 Media Queries
 ***********************************************************************/
 
+<<<<<<< HEAD
 /*WIDTH MANAGEMENT*/
 
 @media screen and (min-width:450px) and (max-width: 1275px){
+=======
+
+@media only screen and (max-width : 1220px) {
+	
+#DatiCosti{
+	height:28%;
+}
+
+#DatiCostoConsumo{
+	height:28%;
+}
+
+#percIAC {
+  right: 0.5%;
+  font-size: 2vw;
+  top: 20%;
+}
+
+#CostoConsumoInfo {
+height: 95%;
+}
+
+.ContentTitle {
+text-align: center;
+}
+
+
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #CostoConsumoSintesi {
 position: relative;
 float: left;
@@ -819,6 +1254,7 @@ z-index: 10;
 }
 
 
+<<<<<<< HEAD
 
 #CostoConsumoInfo{
 margin-top:5px;
@@ -1136,8 +1572,1535 @@ height: 50%;
 }
 
 
+=======
+.CostoConsumoAttualePV {
+top: 55%;
+}
+
+.pvSingleBox {
+width: 150px;
+}
+
+.boxTitles {
+  font-size: 1.4vw;
+}
+
+#divCentro {
+  position: relative;
+  top: 20%;
+  left: 0.5%;
+  width: 50px;
+  height: 50px;
+}
+
+#consigliTurnOn {
+    padding: 8px;
+  padding-bottom: 5px;
+  /* margin: -22px auto; */
+  width: 92%;
+  margin-top: 8px;
+  font-size: 1.5vw;
+}
+
+.meter {
+width: 100% !important;
+height: 55%;
+margin: auto;
+}
+
+.values {
+  top: 0%;
+  left: 0px;
+  /* left: 2px; */
+  width: 80%;
+  position: relative;
+  margin: auto auto;
+  /* text-align: center; */
+  height: auto;
+  
+  color: black;
+}
+
+#containerValCons1 {
+  font-size: 2.2vw;
+  width: 100% !important;
+}
+
+#containerValCons0 {
+  font-size: 30px;
+  width: 100%;
+  height: 31px;
+}
+
+#IndicatoreTitoloPV {
+   font-size: 1vw;
+  top: 22%;
+}
+
+#IndicatorePV {
+  height: 9.8%;
+}
+
+.box{
+height:2px;
+}
+
+#CostoConsumoSintesi {
+position: relative;
+float: left;
+width: 100%;
+height: 70%;
+}
+
+#CostoConsumoInfo {
+position: relative;
+float: left;
+margin-top: 8px;
+width: 100%;
+margin-left: 0px;
+height: 98%;
+}
+
+#divFrecceConsumi {
+height: 35%;
+left:48.5%
+}
+
+
+#IndicatoreTitoloPV {
+  margin: 17px 0px 12px 21px;
+}
+
+#PVConsumoIACIndicatoreImg {
+  width: 62%;
+  height:100%;
+}
+
+.consTitoloCons{
+	font-size:22px !important;
+}
+
+#IndicatoreTitolo{
+	font-size:21px;
+}
+
+#Indicatore{
+	  width: calc(100% - 197px);
+}
+
+#InfoFeedDettaglio {
+  font-size: 1.5vw;
+}
+
+}
+
+
+@media only screen and (max-device-height : 768px) and (device-width : 1366px) {
+
+	
+	#DatiCostoConsumo {
+	  width: 45%;
+	  height: 45%;
+	}
+	
+
+	
+	#DatiCosti {
+  width: 43%;
+  height: 45%;
+  margin: 10px;
+  margin-top: 12px;
+  margin-left: 0px;
+	}
+	
+	.Dettagli {
+  color: green;
+  font-size: 14px;
+	}
+	
+	#ConsumoIndicatoreImg {
+  height: 26%;
+	}
+	
+	#CostoIndicatoreImg {
+  height: 26%;
+  }
+  
+  #PrimaNews {
+  	height:54px !important;
+  }
+  
+  	#ProduzioneAttuale {
+  height: 126px !important;
+	}
+	
+	#ReteAttuale{
+		  height: 126px !important;
+	}
+	
+	.CostoConsumoAttualePV {
+  height: 126px !important;
+}
+
+#consigliTurnOn {
+  margin-top: 3px;
+}
+
+.meter {
+  position: relative;
+  float: left;
+  width: 100% !important;
+  height: 50%;
+  margin: 3px auto;
+}
+
+
+  
 }
 
 
 
+
+
+@media only screen and (max-width: 951px) and (min-width:481px), (max-device-width:951px) and  (min-device-width:481px){
+	#consigliTurnOn {
+  width: 96%;
+  height: 64%;
+    margin-top: 3px;
+}
+
+#IndicatorePV {
+  height: 11.6%;
+}
+
+.boxTitles {
+  font-size: 15px !important;
+}
+
+#Grafico {
+  height:45%;
+}
+
+#Grafico2 {
+  margin: 8% 2%;
+}
+
+.values {
+	font-size:30px;
+  top: 0%;
+  left: 0px;
+  /* left: 2px; */
+  width: 80%;
+  position: relative;
+  margin: auto auto;
+  /* text-align: center; */
+  height: auto;
+
+  color: black;
+}
+
+#containerValCons1 {
+  width: 98% !important;
+  font-size: 3vw !important;
+}
+
+#containerValCons0{
+	font-size:4vw !important;
+	  width: 100% !important;
+  height: 40px;
+}
+
+
+#imgFrecceConsumi {
+  margin-left: 5px;
+  height: 176px;
+  width: 19px;
+}
+
+#divCentro {
+  top: 19%;
+  left: 4px;
+  width: 56px;
+  height: 56px;
+}
+
+
+#CostoConsumoInfo {
+height: 100%;
+}
+
+.pvSingleBox{
+  width: 22%;
+}
+
+#Indicatore {
+  width: 70%;
+}
+
+#percIAC {
+  right: 0.5%;
+  font-size: 4vw;
+  top: 30%;
+}
+
+#IndicatoreTitoloPV {
+  font-size: 1.9vw;
+  margin: 8px 0px 12px 21px;
+}
+
+#ProduzioneAttuale{
+  width: 150px;
+  height: 42%;
+}
+
+#ReteAttuale{
+  width: 150px;
+  height: 42%;
+}
+
+.CostoConsumoAttualePV{
+	 width: 150px;
+  height: 42%;
+}
+
+.meter {
+  width: 56%;
+  height: 60%;
+  margin: 0 auto;
+}
+
+#consigliTurnOn {
+  font-size: 2.7vw;
+}
+
+.meterPagCons{
+	height:44% !important;
+}
+
+#InfoFeedDettaglio {
+  font-size: 2.5vw;
+}
+
+.Dettagli {
+   font-size: 16px !important;
+}
+
+#PVConsumoIACIndicatoreImg {
+  width: 62%;
+  /* height: 100%; */
+  margin-top: -15px;
+  width: 66%;
+}
+
+}
+
+
+
+/* SOLO PER DEVICE MOBILI*/
+@media only screen and (max-device-width : 800px) and (max-device-height : 1280px) and (-webkit-min-device-pixel-ratio : 1) {
+/* Styles */
+
+#divCentro {
+  top: 18%;
+  left: 1px;
+  width: 7%;
+}
+
+	#CostoConsumoInfo {
+  width: 100%;
+	}
+	
+	.meter {
+	position:relative;
+	top: -3%;
+  width: 64%;
+	}
+	
+
+.boxTitles {
+  font-size: 1.8vw;
+}
+	
+#Grafico {
+  position: relative;
+  width: 48%;
+  height: 373px;
+  float: left;
+  left: 1%;
+  margin-top: 13px;
+    margin-bottom: 13px;
+  font-size: 2vw;
+}
+	#Grafico2 {
+    position: relative;
+  width: 48%;
+  height:373px;
+  /* right: 1%; */
+  left: 17px;
+	margin-top:13px;
+	  margin-bottom: 13px;
+  float: left;
+  font-size: 2vw;
+}
+	
+#consigliTurnOn {
+  font-size: 2.0vw;
+  position: relative;
+  top: 0px;
+  padding: 5px;
+  padding-bottom: 17px;
+  width: 94%;
+  height: 43%;
+  margin: 8px auto;
+}
+
+#IndicatoreTitoloPV {
+  font-size: 1.2vw;
+  top: 14%;
+}
+
+
+#IndicatorePV {
+   height: 70px;
+  margin-top: 4px;
+  margin-bottom: -5px;
+  
+}
+
+
+
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
+}
+
+
+
+<<<<<<< HEAD
+=======
+/*SOLO PER SMARTPHONE*/
+@media only screen and (max-device-width:854px) and (max-device-height:480px){
+	#DatiCostoConsumo {
+  height: 188px;
+}
+
+#InfoFeedDettaglio {
+  font-size: 2vw;
+}
+
+#TitoloSuddivisioneCosti {
+  font-size: 4.5vh;
+}
+
+#DatiCosti {
+  height: 188px;
+}
+
+#CostoIndicatoreImg {
+  top: 11%;
+     font-size: 2vw;
+  left: 2%;
+}
+
+#ConsumoIndicatoreImg {
+  top: 55%;
+  font-size: 2vw;
+  left: 2%;
+}
+	
+
+	
+	
+	#Consigli {
+   margin-left: 4px;
+  margin-top: 8px;
+  width: 24%;
+  height: 215px;
+	}
+	
+	.meter {
+  position: relative;
+  display:block;
+  margin:auto;
+  width:56% !important;
+  /* top: -3%; */
+  height:60% !important;
+  float:none;
+}
+	
+	#contImgConsMag {
+  height: 77%;
+	}
+	
+	#ConsumoMaggioreImg {
+  width: 50%;
+  height: auto;
+  left:25%;
+  top:-20%;
+	}
+	
+	#InfoFeedTitolo {
+  height: 8vh;
+	}
+	
+	#TestoConsumoMaggiore {
+
+  top: -11%;
+  font-size: 2.5vw;
+	}
+	
+	#Grafico {
+   position: relative;
+  height: 225px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 2vw;
+	}
+	
+	#InfoFeed {
+  height: 50%;
+	}
+	
+		#InfoFeedDettaglio {
+  font-size:4vh;
+	}
+	
+	#CostoTConsumoMax {
+  width: 46%;
+  height:43%;
+	}
+	
+	
+#Grafico2 {
+  width: 98%;
+  height: 225px;
+  left: 0px;
+  top: 39px;
+  left: 2px;
+  position: relative;
+  margin-top: -15px;
+  margin-left: 4px;
+  margin-bottom: 0px;
+  font-size: 2vw;
+}
+	
+	
+#consigliTurnOn {
+  font-size: 5vh;
+  width: auto;
+  height: 78%;
+  overflow:scroll;
+}
+
+#IndicatorePV {
+  height: 50px;
+  margin-top:8px;
+}
+
+#PVConsumoIACIndicatoreImg {
+width: 67%;
+  margin-top: -2%;
+  left: 18px;
+}
+
+.values {
+  top: 27%;
+  left: 0px;
+  /* left: 2px; */
+  width: 80%;
+  position: relative;
+  margin: auto auto;
+  /* text-align: center; */
+  height: auto;
+  color: black;
+  font-size: 23px;
+}
+
+#ValConsumoAttuale{
+	top:-12%;
+}
+
+	#containerValCons0{
+	font-size:2vw !important;
+}
+
+#containerValCons1{
+	font-size: 3vw !important;
+}
+
+.boxTitles {
+  margin-bottom: 0px !important;
+}
+
+
+
+#imgFrecceConsumi {
+  height: 122px;
+  width: 14px;
+}
+
+#imgCentro {
+	  top: 16%;
+  width: 150%;
+  height: auto;
+}
+
+#percIAC {
+  font-size: 3vw;
+}
+
+#IndicatoreTitoloPV {
+  font-size: 1.8vw;
+}
+
+.pvSingleBox {
+  width: 32%;
+}
+
+
+#divFrecceProd {
+  top: 25%;
+}
+
+#imgFrecceProd {
+  width: 50%;
+  height: 14px;
+}
+
+#ReteAttuale {
+  right: 1%;
+}
+
+#divFrecceRete {
+  top: 25%;
+}
+
+#imgFrecceRete {
+  width: 50%;
+  height: 14px;
+}
+
+#Indicatore {
+  width: 60%;
+  height: 176px;
+}
+
+.boxPerConsumi{
+	  height: 174px;
+  margin-top: 6px;
+}
+
+#IndicatoreTitoloPV {
+  font-size: 1.8vw;
+  margin-top: 8px;
+}
+
+}
+
+
+
+@media only screen and (max-device-width:480px), (max-width: 480px){
+	
+	#PVConsumoIACIndicatoreImg {
+  width: 64%;
+	}
+
+	#ContenitoreConsumoMaggiore {
+  height: 80%;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+#contImgConsMag {
+  position: relative;
+  float: left;
+  width: 33%;
+  height: 100%;
+}
+
+#ConsumoMaggioreImg {
+  /* position: relative; */
+  /* top: 10%; */
+  left: 73%;
+  width: 102px;
+  height: 104px;
+}
+
+#InfoFeedDettaglio {
+  font-size: 4vw;
+}
+
+#PrimaNews {
+	height:100px !important;
+
+	}
+	
+#CostoConsumoInfo {
+  margin-top: 0px;
+}
+
+#CostoTConsumoMaxTitolo {
+  margin-bottom: 3px;
+}
+
+#TestoConsumoMaggiore {
+  position: relative;
+  float: left;
+  font-size: 16px;
+  top:36%;
+}
+
+
+	
+#CostoConsumoSintesi {
+  width: 98% !important;
+  left: 1px;
+}
+
+#TestoConsumoMaggiore {
+  position: relative;
+  float: left;
+  font-size: 16px;
+  width: 50%;
+  margin-left: 5%;
+}
+
+#divCentro {
+  top: 18%;
+  width: 11%;
+  left: 0px;
+}
+
+#consigliTurnOn {
+  width: 90%;
+}
+
+#PVConsumoIACIndicatoreImg {
+  margin-left: -7px;
+  margin-top: -13px;
+}
+
+.pvSingleBox {
+width: 34%;
+height:120px;
+  border: 4px solid #575757
+}
+
+#ReteAttuale {
+	top:4%;
+  right: 1px;
+    width: 115px !important;
+  height: 115px !important;
+}
+
+#imgFrecceRete {
+  width: 38%;
+  height: 14px;
+}
+
+#imgFrecceProd {
+  width: 38%;
+  height: 14px;
+}
+
+.CostoConsumoAttualePV {
+  bottom: 1px;
+  left: -2px;
+  top: 140px;
+  width: 35%;
+    width: 115px !important;
+  height: 115px !important;
+}
+
+#divFrecceProd {
+  left: 8%;
+}
+
+#ProduzioneAttuale {
+  left: 1px;
+  top: 4%;
+  width: 115px !important;
+  height: 115px !important;
+}
+
+#imgFrecceConsumi {
+  height: 128px;
+  width: 10px;
+}
+
+#divFrecceConsumi {
+  left: 48.5%;
+}
+
+.boxTitles {
+  font-size: 11px;
+}
+
+#IndicatoreTitolo{
+	font-size:5.8vw;
+}
+
+.values {
+  top: 0%;
+  left: 0px;
+  /* left: 2px; */
+  width: 100px !important;
+  position: relative;
+  margin: auto auto;
+  /* text-align: center; */
+  height: auto;
+  font-size: 23px;
+  color: black;
+
+}
+
+
+#consigliTurnOn {
+  font-size: 16px;
+    height: 68% !important;
+}
+
+.box {
+  margin-top: 5px;
+}
+
+.ContentTitle {
+  font-size: 4vw;
+  margin-top:8px;
+}
+
+.meter {
+  width: 100%;
+  height: 69px;
+}
+
+
+#IndicatorePV {
+  margin-top: 8px !important;
+  height: 50px;
+    width: 98%;
+}
+
+#Grafico{
+	  margin-left: 5px !important;
+  position: relative;
+  width: 95% !important;
+  height: 350px !important;
+  font-size: 4vw !important;
+}
+
+#Grafico2{
+	position:relative;
+width: 95%;
+  height: 350px;
+    margin: 6% 2%;
+   font-size: 4vw !important;
+}
+
+#IndicatoreTitoloPV {
+  font-size: 9px;
+  top: 20%;
+  margin: 4px 0px 12px 10px;
+}
+
+#percIAC {
+  font-size: 4vw;
+  top: 32%;
+  right: 5px;
+}
+
+
+ .CostoConsumoAttualeCONS {
+  position: relative;
+  width: 96%;
+  height: 9% !important;
+  top: 1%;
+  float: left;
+  /* width: 98%; */
+  height: 9%;
+  left: 3px;
+  overflow: hidden;
+}
+
+
+#DatiCostoConsumo {
+  position: relative;
+  float: left;
+  margin-top: 0px;
+  margin-left: 0px;
+  top: 0;
+  right: 0;
+  width: 96%;
+  height: 24%;
+  border: 4px solid #575757;
+  left: 3px;
+}
+
+#Indicatore {
+  position: relative;
+  float: left;
+  /* top: 1%; */
+  /* right: 2%; */
+  /* left: 3%; */
+  margin-top: 14px;
+  margin-left: 0px;
+  margin-bottom: 5px;
+  width: 96% !important;
+  height: 32% !important;
+  border: 4px solid #575757;
+  left: 3px;
+}
+
+#DatiCosti {
+position: relative;
+  float: left;
+  margin-left: 0px;
+  margin-top: 0px;
+  top: 0;
+  right: 0;
+  width: 96%;
+  height: 25%;
+  border: 4px solid #575757;
+  left: 3px;
+}
+
+#CostoTConsumoMax {
+  margin: 1% 0% 1% 1%;
+  width: 95% !important;
+  left: 4px;
+  height: 15%;
+}
+
+#InfoFeed {
+  margin-top: 2%;
+  margin-left: 9px;
+  width: 95% !important;
+  height: 300px;
+  margin-bottom: 10px;
+}
+
+#ConsumoAttualeMeter{
+	float:left;
+}
+
+#containerValCons0 {
+  font-size: 2.2vw;
+  width: 100% !important;
+  height: auto;
+}
+
+#containerValCons1 {
+  font-size: 2.2vw;
+  width: 69% !important;
+  float: left !important;
+  height:auto;
+}
+
+.meterPagCons{
+	float:left !important;
+	width:30% !important;
+	height:69px !important;
+	margin:0 !important;
+}
+
+.consTitoloCons{
+	float:left !important;
+	width:68% !important;
+	height:45% !important;
+	margin:0px !important;
+}
+
+.Dettagli {
+   font-size: 16px !important;
+}
+
+}
+
+/* @media only screen and (max-width: 480px){
+#Grafico2 {
+  top: 40px;
+}
+} */
+
+@media only screen and (max-device-width: 480px){
+	
+	#Grafico2 {
+		top:1px;
+	  left: 2px;
+	}
+	
+	#consigliTurnOn {
+  font-size: 16px;
+    height: 60% !important;
+}
+}
+
+
+
+
+
+
+/**************************************************************************/
+/*MEDIA QUERIES SPECIFICHE*/
+
+@media only screen and (device-width:1280px) and (min-device-height:752px){
+.Dettagli {
+	  font-size: 1vw;
+	  padding: 6px;
+	}
+	
+#DatiCostoConsumo {
+  border: 3px solid #575757;
+  width: 95%;
+  height: 26%;
+  margin: 10px;
+  margin-bottom: 0px;
+    margin-top: 4px;
+}	
+
+.pvSingleBox {
+  border: 3px solid #575757;
+  height: 41%;
+}
+
+.values {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#consigliTurnOn {
+  padding: 6px;
+  margin: 2px auto;
+}
+
+#Indicatore {
+  border: 3px solid #575757;
+  width: -webkit-calc(63% - 13px);
+  height: 41%;
+}
+
+#ConsumoIndicatoreImg {
+  height: 30%;
+}
+
+#CostoIndicatoreImg {
+  height: 30%;
+}
+
+#DatiCosti {
+  border: 3px solid #575757;
+  width: 95%;
+  height: 25%;
+  margin: 10px;
+  margin-top: 4px;
+}
+
+.meter {
+  margin: 3px auto;
+}
+
+#ProduzioneAttuale {
+  height: 150px;
+}
+
+#ReteAttuale{
+	height:150px;
+}
+
+#divCentro {
+  top: 18%;
+}
+
+#PrimaNews {
+  height: 61px !important;
+}
+
+
+}
+
+
+@media only screen and (device-height: 1280px) and (device-width:800px){
+	
+	#consigliTurnOn{
+		font-size:3.3vw;
+		margin-top: 5px;
+		
+	}
+	
+	#DatiCosti{
+		height:41%;
+		width:45%;
+		  margin: 10px;
+    
+	}
+	
+	#DatiCostoConsumo{
+		height:41%;
+		width:45%;
+	}
+
+	
+	#Grafico{
+		width:98%;
+		height:320px;
+	}
+	
+	#Grafico2{
+		width:98%;
+		  left: 7px;
+		height:320px;
+	}
+	
+	#Indicatore {
+  height: 50%;
+	}
+	
+	.CostoConsumoAttualeCONS {
+  height: 50%;
+	}
+	
+	
+}
+
+
+
+
+@media only screen and (device-height: 1280px) and (device-width: 800px), (device-height: 1232px) and (device-width: 800px){
+	
+/* #Grafico {
+  width: 98% !important;
+  height: 290px !important;
+  font-size: 2vw !important;
+  margin-top: 7px !important;
+  margin-left: 8px !important;
+  left: 0;
+} */
+
+#InfoFeed {
+  top: 2%;
+}
+
+#CostoTConsumoMax {
+  height: 375px;
+}
+
+#CostoTConsumoMaxTitolo {
+  margin-bottom: 0px;
+}
+	
+	#Grafico2{
+  width: 98%;
+  height: 314px;
+  font-size: 2vw;
+  position: relative;
+  float: left;
+  margin-top: 19px;
+  margin-left: 9px;
+  left:0;
+  margin-bottom: 0px;
+	}
+  
+
+
+#RigaInterfaccia {
+  height: 68%;
+  min-height: 0;
+  max-height: none;
+}
+}
+
+/*TABLET TELECOM*/
+@media only screen and (device-height: 1232px) and (device-width: 800px){
+	#Grafico {
+  height: 265px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+	}
+	
+	#Grafico2{
+  height: 280px;
+  position: relative;
+  /* left: 7px; */
+  margin-top: 0px;
+  margin-bottom: 0px;;
+	}
+	
+	
+		#DatiCosti{
+		height:41%;
+		width:45%;
+		  margin: 10px;
+    
+	}
+	
+	#DatiCostoConsumo{
+		height:41%;
+		width:45%;
+	}
+	
+	
+		#Indicatore {
+  height: 50%;
+	}
+	
+	#TestoConsumoMaggiore {
+  font-size: 2.5vw;
+	}
+	
+	.CostoConsumoAttualeCONS {
+  height: 50%;
+	}
+	
+	#Consigli {
+  height: 72px;
+    margin-bottom: 3px;
+}
+
+#consigliTurnOn {
+  height: 43% !important;
+}
+
+.costConsSintCons{
+		  height: 98% !important;
+	}
+	
+.costConsSintFot{
+	  height: 350px !important;
+}	
+
+#CostoConsumoInfo {
+  width: 100%;
+  height: 611px !important;
+}
+
+#InfoFeed {
+  height: 32%;
+}
+
+#PrimaNews {
+  height: 64px !important;
+}
+
+#InfoFeedDettaglio {
+  font-size: 2.2vw !important;
+}
+
+}
+
+
+@media only screen and (device-width: 1232px) and (device-height: 800px), (device-width:1280px) and (device-height:800){
+	#CostoConsumoSintesi {
+  height: 67% !important;
+	}
+}
+
+
+
+/* Galaxy Tab (portrait and landscape) ----------- */
+@media only screen and (device-height : 600px) and (device-width : 1024px) and (-webkit-device-pixel-ratio: 1) {
+/* Styles */
+.meter {
+  width: 60%;
+  height: 40%;
+}
+
+.values {
+  font-size: 1.5vw;
+}
+
+#consigliTurnOn {
+  margin: 3px auto;
+  font-size:1.5vw;
+}
+
+#CostoConsumoInfo {
+  height: 96%;
+}
+	
+}
+
+@media only screen and (device-height : 768px) and (device-width : 1024px) {
+#DatiCostoConsumo {
+  height: 26%;
+}
+
+#DatiCosti {
+  height: 26%;
+}
+
+.Dettagli {
+  font-size: 13px;
+  padding: 8px;
+}
+
+#ConsumoIndicatoreImg {
+  height: 30%;
+}
+
+#CostoIndicatoreImg {
+  height: 30%;
+}
+
+#InfoFeedDettaglio {
+  font-size: 2.2vh;
+}
+
+.CostoConsumoAttualePV {
+
+  height: 120px;
+}
+
+#ProduzioneAttuale{
+	height:120px;
+}
+
+#ReteAttuale{
+	height:120px;
+}
+
+.meterPagCons {
+  width: 100%;
+  height: 49%;
+  margin: 18px auto;
+}
+
+}
+	
+@media only screen and (device-height : 900px) and (device-width : 1440px), (device-height : 900px) and (device-width : 1600px) {
+	.Dettagli {
+  		padding: 6px;
+	}
+	
+	#CostoIndicatoreImg {
+  		height: 26%;
+	}
+	
+	#ConsumoIndicatoreImg {
+  		height: 26%
+	}
+	
+	#DatiCosti{	
+		margin-top: -7px;
+		height:24%;
+	}
+	
+	#DatiCostoConsumo {
+  		height: 24%;
+	}
+	
+	.CostoConsumoAttualePV {
+  height: 150px;
+	}
+	
+	#ReteAttuale{
+		height:150px;
+	}
+	
+	#ProduzioneAttuale{
+		height:150px;
+	}
+	
+	.meter {
+  		margin: 5px auto;
+	}
+	
+	#consigliTurnOn {
+  margin-top: 5px;
+
+	}
+	
+}
+
+@media only screen and (device-height : 900px) and (device-width : 1440px){
+.meter {
+  margin: 0px auto;
+}
+}
+
+
+@media only screen and (device-height : 720px) and (device-width : 1280px){
+	.Dettagli {
+	  padding: 2px;
+	}
+	
+	#DatiCostoConsumo {
+	  margin-top: 3px;
+  margin-left: 8px;
+	}
+	
+		#CostoIndicatoreImg {
+  		height: 26%;
+	}
+	
+	#ConsumoIndicatoreImg {
+  		height: 26%
+	}
+	
+#DatiCosti {
+  margin-top: -5px;
+  margin-left: 9px
+}
+
+#imgFrecceConsumi {
+  height: 164px;
+}
+
+#divFrecceConsumi {
+  left: 48.7%;
+}
+
+#divCentro {
+  top: 17%;
+  left: 10px;
+}
+
+#imgCentro {
+  width: 84%;
+  height: auto;
+}
+	
+}
+
+/*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+#IndicatorePV {
+margin-top: 6px;
+}
+
+#consigliTurnOn {
+  font-size: 3.0vw;
+  height: 52% !important;
+}
+
+#Grafico{
+  margin: 2% 2% 1% !important;
+  height: 46% !important;
+  width: 45% !important;
+  position: relative !important;
+  float: left !important;
+  height: 373px !important;	
+}
+
+#Grafico2 {
+  width: 46% !important;
+  left:0px !important;
+}
+
+#contSXPaginaCons{
+	  height: 36% !important;
+}
+
+.costConsSintCons{
+	height:470px !important;
+}  
+
+.costConsSintFot {
+  height: 70% !important;
+}
+
+.Dettagli {
+  padding: 5px;
+}
+
+#DatiCosti {
+  margin-top: -8px;
+}
+
+#DatiCostoConsumo {
+  margin-top: 4px;
+}
+
+#CostoTConsumoMax {
+  top: 1%;
+  width: 47%;
+  height:18%;
+}
+
+#contImgConsMag {
+  position: relative;
+  height: auto;
+  width: 50%;
+}
+
+#ConsumoMaggioreImg {
+  position: relative;
+  margin-top: -18px;
+  /* left: 20%; */
+  width: 51%;
+  height: 80%;
+  left: 48%;
+}
+
+#InfoFeed {
+  width: 47%;
+}
+
+#CostoIndicatoreImg {
+  top: 3%;
+}
+
+#ConsumoIndicatoreImg {
+  top: 50%;
+}
+
+#InfoFeed {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+#imgFrecceConsumi {
+  margin-left: 1px;
+  width: 23px;
+}
+
+#TestoConsumoMaggiore {
+  font-size: 2.5vw;
+  float: left;
+  width: 32%;
+}
+
+#contImgConsMag {
+  float: left;
+}
+
+}
+
+@media only screen and (device-width: 960px) and (device-height:600px) and (orientation:landscape){
+	.CostoConsumoAttualePV {
+  		height: 142px !important;
+	}
+	
+	#ReteAttuale {
+		height: 142px !important;
+	}
+	
+	#ProduzioneAttuale{
+		height: 142px !important;
+	}
+	
+	#IndicatoreTitoloPV {
+  		margin-top: 10px !important;
+	}
+	
+	.Dettagli {
+  		padding: 4px;
+	}
+	
+	#DatiCostoConsumo {
+  		height: 23%;
+	}
+	
+	#DatiCosti {
+  		height: 24%;
+	}
+	
+	#CostoIndicatoreImg {
+  		height: 26%;
+	}
+	
+	#ConsumoIndicatoreImg {
+  		height: 26%;
+	}
+}
+	
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
