@@ -336,7 +336,6 @@ left: +200%;
     background-color: #1a1a1a;
     position: relative;
     top: 5%;
-
     height: 92%;
     width: 76%;
     border-radius: 16px;
@@ -810,6 +809,20 @@ margin-left: 0px;
 }
 
 
+@media only screen and (device-width: 1280px){
+	#Interfaccia{
+	top:12%;
+	height:100%;
+}
+
+#RiepilogoConsumi {
+	top:12%;
+  height:100%;
+}
+	
+}
+
+
 @media only screen and (device-width: 1280px) and (device-height: 752px),(device-width: 1280px) and (device-height: 800px){
 #RigaElettrodomestici {
     height: 262px !important;
@@ -821,12 +834,12 @@ margin-left: 0px;
 }
 
 #Interfaccia{
-	height:91%;
+	height:190px;
 }
 
 #RiepilogoConsumi {
   width: 23%;
-  height:91%;
+  height:190px;
 }
 
 

@@ -82,7 +82,7 @@ function dimensionaSpaziDevice(){
 $(document).ready(function() {
 	widthMeasured=window.innerWidth;
 	heightMeasured=window.innerHeight;
-
+	
 	(function ($) {
 	    var d = 1, t = null, e = null, h, r = false;
 
@@ -207,9 +207,9 @@ function controllaPresenzaInterfaccia(){
 }
 
 function impostaAltezzeElettrodomestici(){
-	
+	var ciao=true;
 	if( (window.innerWidth<=theWidth) && (window.innerWidth>480) && (Menu.contentMenuSelected===2)){
-		$("#ContentMain").css("min-height", "854px");
+		$("#ContentMain").css("min-height", "800px");
 	}
 	
 	
@@ -218,7 +218,14 @@ function impostaAltezzeElettrodomestici(){
 		$("#ContentMain").css("min-height", "92%");
 		$("#ContentMain").css("height", "92%");
 	}
-
+	
+	if ( (ciao) && (window.innerHeight==1232) && (Menu.contentMenuSelected===2) ){
+		
+		$("#Elettrodomestici").css("height", "1151px");
+	}
+	else{
+		$("#Elettrodomestici").css("height", "100%");
+	}
 	
 	/*per desktop 1024-768*/
 	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (window.innerHeight>=649) && (Menu.contentMenuSelected===2) ){

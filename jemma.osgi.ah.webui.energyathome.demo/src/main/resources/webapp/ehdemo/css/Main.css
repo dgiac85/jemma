@@ -958,6 +958,13 @@ display:block;
 }
 
 
+@media only screen and (device-width: 800px) and (device-height: 1232px){
+#ContentMain {
+  height: 100% !important;
+}
+}
+
+
 
 /*SMARTPHONE PORTRAIT*/
 @media only screen and (max-device-width: 480px), (max-width:480px){
