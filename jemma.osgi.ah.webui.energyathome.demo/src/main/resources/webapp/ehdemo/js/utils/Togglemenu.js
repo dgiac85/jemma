@@ -1,6 +1,6 @@
 /**
  *The script manages the appearence of toggle menu and the relative content menu in the mobile visualization version.
-  Moreover, if the resolution of screen is greater than 500px, the toggle menu disappears and return the normal Content Menu  
+  Moreover, if the resolution width of screen is greater than 1275px and the height is > than 900px, the toggle menu disappears and return the normal Content Menu  
  */
 width=1275;
 height=900;
