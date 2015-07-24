@@ -3,11 +3,7 @@
   top: 3%;
   left: 2%;
   width: 50%;
-<<<<<<< HEAD
-  height: 8%;
-=======
   height: auto;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
   text-align: left;
   valign: middle;
   background-color: transparent;
@@ -161,16 +157,10 @@
 
 #Informazioni, #Contatti {
   position: relative;
-<<<<<<< HEAD
-  top: 1%;
-  left: 2%;
-  width: 90%;
-=======
   /* float: left; */
   top: 4%;
   left: 2%;
   width: 96%;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
   height: 90%;
   background-color: transparent;
 }

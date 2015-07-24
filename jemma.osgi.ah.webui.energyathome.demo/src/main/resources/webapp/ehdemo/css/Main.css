@@ -1,19 +1,10 @@
 /*GLOBAL*/
 
 body,html {
+	
 	background-color: #202020;
-	position: relative;
 	margin : 0px;
 	font-family: Arial, Arial, sans-serif;
-<<<<<<< HEAD
-	/*G
-	min-height : 660px;*/
-	min-width : 250px;*/
-	width:100%;
-	height:100%;
-	font-size: 90%;
-	
-=======
 	height:100%;
 	font-size: 15px;
 	
@@ -21,7 +12,6 @@ body,html {
 
 #menulabel{
 	display:none;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 img {
@@ -43,22 +33,12 @@ span {
 
 
 #Header img {
-<<<<<<< HEAD
-	
-}
-
-#Container{
-	top:10px; width:95%; height:100%; margin-left: auto; margin-right: auto; max-height:720px;
-}
-
-=======
 }
 
 #Container{
 	top:10px; width:95%; height:100%; margin-left: auto; margin-right: auto;
 }
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #Header {
 	
 	/*left: 2%;
@@ -66,11 +46,7 @@ span {
 	width:100%;
 	background-color:#202020;
 	/*right: 2%;*/
-<<<<<<< HEAD
-	/*height: 94px;*/
-=======
 	height: 94px;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	float: left;
 }
 
@@ -81,19 +57,6 @@ span {
 	float:left;
 }
 
-<<<<<<< HEAD
-/*@media screen and ( max-width : 700px) {
-	#Header {
-		height: 7%;
-	}
-	#HeaderSep {
-		top: 7%;
-	}
-}*/
-
-
-=======
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #LogoImg {
 	height: 91px;
 	width:auto;
@@ -128,14 +91,6 @@ span {
 	/*position: absolute;*/
 	float: left;
 	left: 192px;
-<<<<<<< HEAD
-	width: calc(100% - 192px);
-	height: 730px;
-	background-color: #333333;
-	overflow:hidden;
-	max-height:1080px;
-	
-=======
 	width: -webkit-calc(100% - 192px);
 	width: -moz-calc(100% - 192px);
 	width: calc(100% - 192px);	
@@ -154,9 +109,7 @@ span {
   position: relative;
   width: 100%;
   height: 15%;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
-
 
 #Login {
 	position: absolute;
@@ -169,34 +122,6 @@ span {
 	text-align : center;
 }
 
-<<<<<<< HEAD
-#ContainerMenu{
-	float:left;
-	width: 192px;
-	height: 730px;
-	overflow:hidden;
-	background-color:#333333;
-}
-
-#MainMenu {
-	width: 100%;
-	height: auto;
-	margin:auto;
-	overflow:hidden;
-	background-color:#333333;
-}
-
-#userID{
-	/*position: relative;*/
-	margin-top: 10px;
-	margin-right:10px;
-	color: #fff;
-	width:100%;
-	font-size: 1.0em;
-	text-align:right;
-	overflow: hidden;
-	float: right;
-=======
 #userID{
   /* position: relative; */
   margin-top: 5px;
@@ -206,18 +131,14 @@ span {
   text-align: right;
   overflow: hidden;
   float: right;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #ContentMenu {
 	background-color:#333333;
 	/*position: relative;*/
 	float:left;
-<<<<<<< HEAD
-=======
 	  height: 70px;
 	padding-top: 10px;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	/* left: 10%; */
 	/*top: 25px;*/
 	width: 100%;
@@ -279,10 +200,6 @@ span {
 }
 
 .Content {
-<<<<<<< HEAD
-	/*position:relative;*/
-=======
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	/*left: 1%;*/
 	/*top: 10%;*/
 	/*width: 100%;*/
@@ -303,16 +220,6 @@ span {
 }
 
 #Timestamp {
-<<<<<<< HEAD
-	/*position: absolute;*/
-	margin-top: 5px;
-	margin-right: 10px;
-	float:right;
-	text-align:right;
-	width: 100%;
-	text-align:right;
-	font-size: 1.0em;
-=======
 
   /* margin-top: 2px; */
   /* margin-right: 10px; */
@@ -321,36 +228,25 @@ span {
   width: 100%;
   text-align: right;
   font-size: 1.2vw;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #Data {
 	margin-right: 12px;
 	color: #f0f0f0;
-<<<<<<< HEAD
-=======
 	font-size:1.2vw
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 }
 
 #Ora {
 	color: #f0f0f0;
-<<<<<<< HEAD
-=======
 	  font-size: 22px;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 }
 
 #ClockImg {
-<<<<<<< HEAD
-	margin-right: 12px;
-=======
 	  margin-right: 9px;
   width: 1.3vw;
   position: relative;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 }
 
@@ -358,13 +254,10 @@ span {
 	/*position: absolute;
 	top: 3%;
 	left: 2%;*/
-<<<<<<< HEAD
-	margin-top:15px;
-=======
 	/* margin-top:15px; */
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	width:100%;
 	text-align: left;
+	valign: middle;
 	font-size: 1.4em;
 	font-weight: bold;
 	color: #ffffff;
@@ -383,6 +276,7 @@ span {
 	font-size: 1.0em;
 	font-weight: bold;
 	color: rgb(124, 124, 124);
+	z-index: 1000;
 }
 
 #TitoloAutenticazione {
@@ -558,8 +452,6 @@ label.error {
 	margin-top: 5%;
 }
 
-<<<<<<< HEAD
-=======
 #ContainerSX{
   position: relative;
   float: left;
@@ -592,35 +484,10 @@ label.error {
 }
 
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 /**********************************************************************
 Media Queries
 ***********************************************************************/
 
-<<<<<<< HEAD
-/*WIDTH MANAGEMENT*/
-
-
-
-@media screen and (min-width:880px) and (max-width: 1275px){
-	
-	
-	
-	#Content {
-position: absolute;
-left: 10%;
-top: 35%;
-width: 83%;
-height: 90%;
-overflow: hidden;
-color: #202020;
-background-color: #333;
-}
-
-
-
-
-=======
 
 /*Per IPAD e tablet in landscape*/
 @media only screen and (max-width: 1220px){
@@ -690,37 +557,24 @@ width:200px;
 left: 1%;
 width: 98%;
 }
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 	#Container{
 		width:100%;		
 	}
 	
 	#Header{
-<<<<<<< HEAD
-		width:100%;			
-	}
-	
-	#HeaderSepImg{
-		/*min-width:851px;*/
-=======
 		width:100%;	
 		height:auto;
 		
 	}
 	
 	#HeaderSepImg{
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		margin-right:0px;
 		
 	}
 	
 	#ContainerMenu{
 	float:left;
-<<<<<<< HEAD
-	/*min-width:851px;*/
-=======
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
 	width: 100%;
 	height: auto;
@@ -730,437 +584,6 @@ width: 98%;
 	}
 	
 	#MainMenu {
-<<<<<<< HEAD
-		width: 100%;		
-		/*min-width:851px;*/
-		margin-left:10px;
-		height: 100%;
-		overflow:hidden;
-		z-index:1;
-		background-color:#333333;
-	}
-	
-	 #ContentMain {
-	 	/*min-width:851px;*/
-		position: relative;
-		left: 0;
-		/* float: left; */
-		width: 100%;
-		height: 1200px;
-		background-color: #333333;
-		overflow:hidden;	
-	}
-	
-	#ErrorMsgDIV {
-	
-		/*min-width:851px;*/
-		
-	}
-	
-	
-	#ContentMenu {
-	background-color:#333333;
-	/*position: relative;*/
-	float:left;
-	/* left: 10%; */
-	/*top: 25px;*/
-	width: 100%;
-	padding-top:20px;
-	height:auto;
-	}
-	
-.Content {
-
-margin-left: 20px;
-margin-top: 20px;
-/* margin: 10px; */
-height: 100%;
-overflow: hidden;
-color: #202020;
-}
-	
-	
-
-}
-
-@media screen and (min-width:830px) and (max-width:879px){
-	#Container{
-		width:100%;		
-	}
-	
-		#Content {
-position: absolute;
-left: 10%;
-top: 35%;
-width: 83%;
-height: 90%;
-overflow: hidden;
-color: #202020;
-background-color: #333;
-}
-	
-	#Header{
-	width:100%;	
-	}
-	
-	#HeaderSepImg{
-		
-		margin-right:0px;		
-	}
-	
-	#ContainerMenu{
-	float:left;
-	
-	width: 100%;
-	height: auto;
-	padding-top:10px;
-	overflow:hidden;
-	background-color:#333333;
-	}
-	
-	#MainMenu {
-		width: 100%;		
-		/*min-width:851px;*/
-		margin-left:10px;
-		height: 100%;
-		overflow:hidden;
-		z-index:1;
-		background-color:#333333;
-	}
-	
-	 #ContentMain {
-	 	/*min-width:851px;*/
-		position: relative;
-		left: 0;
-		/* float: left; */
-		width: 100%;
-		height: 1200px;
-		background-color: #333333;
-		overflow:hidden;	
-	}	
-	
-	
-	#ErrorMsgDIV {
-	
-		
-		
-	}
-	
-	
-	#ContentMenu {
-	background-color:#333333;
-	/*position: relative;*/
-	float:left;
-	/* left: 10%; */
-	/*top: 25px;*/
-	width: 100%;
-	min-width:851px;
-	
-	
-}
-}
-
-@media screen and (min-width:606px) and (max-width: 829px){
-	#Container{
-	margin-right:0px;
-	width:100%;		
-	}
-	
-		#Content {
-position: absolute;
-left: 10%;
-top: 35%;
-width: 83%;
-height: 90%;
-overflow: hidden;
-color: #202020;
-background-color: #333;
-}
-	
-	#ContainerMenu{
-	float:left;
-	width: 100%;
-	height: auto;
-	padding-top:10px;
-	overflow:hidden;
-	background-color:#333333;
-	}
-	
-	#MainMenu {
-		width: 100%;		
-		/*min-width:900px;*/
-		margin-left:10px;
-		height: 100%;
-		overflow:hidden;
-		z-index:1;
-		background-color:#333333;
-	}
-	
-	#ContentMain {
-	 		/*min-width:851px;*/
-		position: relative;
-		left: 0;
-		/* float: left; */
-		width: 100%;
-		height: 1200px;
-		background-color: #333333;
-		overflow:hidden;	
-	}
-	
-
-	#ContentMenu {
-	background-color:#333333;
-	/*position: relative;*/
-	
-	/* left: 10%; */
-	/*top: 25px;*/
-	width: 100%;
-	/*min-width:477px;*/
-}
-
-}
-
-
-	
-
-
-
-@media screen and (min-width:450px) and (max-width: 605px){
-	#Container{
-	margin-right:0px;
-	width:100%;		
-	}
-	
-	#Header{
-		
-	}
-	
-		#Content {
-position: absolute;
-left: 10%;
-top: 35%;
-width: 83%;
-height: 90%;
-overflow: hidden;
-color: #202020;
-background-color: #333;
-}
-	
-	#HeaderSepImg{
-		/*min-width:900px;*/
-		margin-right:0px;		
-	}
-	
-	#ContainerMenu{
-	float:left;
-	width: 100%;
-	height: auto;
-	padding-top:10px;
-	overflow:hidden;
-	background-color:#333333;
-	}
-	
-	#MainMenu {
-		width: 100%;		
-		/*min-width:900px;*/
-		margin-left:10px;
-		height: 100%;
-		overflow:hidden;
-		z-index:1;
-		background-color:#333333;
-	}
-	
-	#ContentMain {
-		/*min-width:851px;*/
-		position: relative;
-		left: 0;
-		/* float: left; */
-		width: 100%;
-		height: 1200px;
-		background-color: #333333;
-		overflow:hidden;	
-	}
-	
-
-	#ContentMenu {
-	background-color:#333333;
-	/*position: relative;*/
-	
-	height:130px;
-	/* left: 10%; */
-	/*top: 25px;*/
-	width: 100%;
-	/*min-width:477px;*/
-}
-
-#Header{
-		/*min-width:426px;*/		
-	}
-	
-	#LogoImg {
-height: auto;
-width: 100%;
-
-}
-
-
-	
-#logo{
-	width:auto;
-	height:auto;
-}
-
-#dataANDuser{
-	width:100%;
-	height:auto;
-	padding-bottom:5px;
-}
-
-#userID{
-	font-size:12px;
-	text-align:center;
-}
-
-#Timestamp{
-	text-align:center;
-}
-	
-	
-}
-
-@media screen and (min-width:100px) and (max-width:449px){
-		#Container{
-	margin-right:0px;
-	width:100%;		
-	}
-	
-	
-		#Content {
-position: absolute;
-left: 10%;
-top: 35%;
-width: 83%;
-height: 90%;
-overflow: hidden;
-color: #202020;
-background-color: #333;
-}
-	
-	#HeaderSepImg{
-		/*min-width:900px;*/
-		margin-right:0px;		
-	}
-	
-	#ContainerMenu{
-	float: left;
-width: 100%;
-height: auto;
-margin-top: 145px;
-padding-top: 20px;
-overflow: hidden;
-background-color: #333333;
-	}
-	
-	#MainMenu {
-	width: auto;
-/* min-width: 900px; */
-height: 100%;
-overflow: hidden;
-z-index: 1;
-background-color: #333333;
-	}
-	
-	#ContentMain {
-  /* min-width: 851px; */
-  position: relative;
-  left: 0;
-  float: left;
-  width: 100%;
-  height: 1080px;
-  background-color: #333333;
-  overflow: hidden;	
-  max-height:1080px;
-	}
-	
-
-	#ContentMenu {
-/* padding-top: 20px; */
-background-color: #333333;
-/* position: relative; */
-/* height: auto; */
-/* left: 10%; */
-/* top: 25px; */
-width: 100%;
-/* min-width: 477px; */
-}
-
-#Header{
-		/*min-width:426px;*/
-		position: fixed;
-  		z-index: 11;		
-	}
-	
-#ContainerError{
-	  position: fixed;
-	  bottom:0;
-	   z-index: 100;
-	  
-}
-
-#wrapper{
-	top: 144px;
-}
-	
-#LogoImg {
-position: relative;
-height: auto;
-width: 80%;
-}
-
-
-	
-#logo{
-	  float: none;
-	width:auto;
-	height:auto;
-	position: relative;
-  top: 0px;
-}
-
-#dataANDuser {
-position: relative;
-left: 2%;
-width: 98%;
-height: auto;
-padding-bottom: 5px;
-}
-#userID{
-	font-size:12px;
-	text-align:center;
-}
-
-#Timestamp{
-	text-align:center;
-}
-
-.Content {
-  margin-left: 10px;
-}
-
-
-	
-}
-
-@media screen and (max-width: 400px){
-#LogoImg {
-  position: relative;
-  height: auto;
-  width: 80%;
-}
-}
-
-
-=======
 	  width: auto;
   /* margin-left: 10px; */
   height: 200px;
@@ -1891,4 +1314,3 @@ display:block;
 
 
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b

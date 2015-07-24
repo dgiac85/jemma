@@ -38,36 +38,11 @@
 	overflow: hidden;
 }
 
-<<<<<<< HEAD
-
-.MainMenuEl{
-		width:150px;height:180px;float:left;margin-left:25px;margin-right:25px;
-		
-	}
-
-
-.MainMenuImg{
-	width:100%;
-	height:auto;
-}
-
-.MainMenuImg {
-	/*position: absolute;
-	top: 0%;*/
-	border: none;
-}
-
-.MainMenuEl {
-	
-	/*position: absolute;*/
-	float:left;
-=======
 
 
 .MainMenuEl{
 	width: auto;
     height: 150px;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	color: white;
 	  padding-bottom: 10px;	
 	}
@@ -92,29 +67,16 @@
 }
 
 .MainMenuElSelected {
-<<<<<<< HEAD
-	/*position: absolute;*/
-=======
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	color: #9ec200;
 
 }
 
 .MainMenuTitle {
-<<<<<<< HEAD
-	left: 0%;
-text-align: center;
-
-font-size: 0.9em;
-font-weight: bold;
-padding-top: 2px;
-=======
 	top: 70%;
 	left: 0%;
 text-align: center;
 font-size: 16px;
 font-weight: bold;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 border: none;
 outline: none;
 }
@@ -124,16 +86,6 @@ outline: none;
 }
 
 .ContentMenuEl {
-<<<<<<< HEAD
-	/* top: 1%; */
-height: 40px;
-padding: 10px;
-width: 22%;
-float: left;
-color: white;
-outline: none;
-	/*border-left: solid 2px black;*/
-=======
   /* top: 1%; */
   height: 40px;
   padding: 7px;
@@ -144,7 +96,6 @@ outline: none;
   color: white;
   outline: none;
   /* border-left: solid 2px black; */
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 .ContentMenuElSelected {
@@ -168,34 +119,13 @@ outline: none;
 .ContentMenuRow {
 background-color: #333333;
 position: relative;
-<<<<<<< HEAD
-margin-left: 192px;
-margin-bottom: 30px;
-float: left;
-width: 60%;
-=======
 margin-left: 200px;
 float: left;
 width: 80%;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 overflow: hidden;
 }
 
-
 .ContentMenuTitle {
-<<<<<<< HEAD
-	/*position: absolute;*/
-	/*top: 0%;
-	left: 38%;
-	width: 55%;
-	height: 20%;*/
-	/*text-align: center;*/
-
-	float:left;
-	font-size: 0.9em;
-	font-weight: bold;
-	text-align: left;
-=======
   position: relative;
   left: 20px;
   margin: 11px auto;
@@ -203,7 +133,6 @@ overflow: hidden;
   font-size: 1vw;
   font-weight: bold;
   text-align: left;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 .ContentMenuImg {
@@ -217,21 +146,6 @@ overflow: hidden;
 	outline: none;
 }
 
-<<<<<<< HEAD
-
-/********************************************************************/
-/*Menu For Smaller Resolutions*/
-#mobileMenu
-{
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-display: none;}
-}
-
-=======
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #mobileMenu ul li
 {
 display:block;
@@ -243,13 +157,6 @@ text-align: center;
 text-transform: uppercase;
 border-bottom: 1px solid #CC5836;}
 
-<<<<<<< HEAD
-.toggleMobile
-{
-display:none;}
-
-
-=======
 
 #mobileMenu {
 display: none;
@@ -352,160 +259,10 @@ transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
 	display:none;
 }
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 /**********************************************************************
 Media Queries
 ***********************************************************************/
 
-<<<<<<< HEAD
-/*WIDTH MANAGEMENT*/
-@media screen and (min-width:880px) and (max-width: 1275px){
-.MainMenuEl{
-		width: 15%;
-height: 80%;float:left;margin-left:25px;margin-right:25px;
-		
-	}
-
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.MainMenuElSelected {
-	/*position: absolute;*/
-	color: #9ec200;
-}
-
-.MainMenuImg{
-	width:100%;
-	height:80%;
-}
-
-.ContentMenuRow {
-background-color: #333333;
-/* position: absolute; */
-margin-left: 20px;
-margin-bottom: 30px;
-float: left;
-width: calc(100% - 192px);
-overflow: hidden;
-}
-}
-
-@media screen and (min-width:830px) and (max-width:879px){
-.MainMenuEl{
-		width:15%;height:80%;float:left;margin-left:25px;margin-right:25px;
-		
-	}
-
-
-.MainMenuImg{
-	width:100%;
-	height:80%;
-}
-	
-	.ContentMenuRow{		
-		background-color:transparent;	
-		width: 880px;
-		padding-left: 15px;
-		padding-bottom:25px;
-		margin:0;	
-	}
-	
-		.MainMenuImg{
-		width:100%;
-		height:80%;
-	}
-}
-
-@media screen and (min-width:606px) and (max-width: 829px){
-	.MainMenuEl{
-		width:90px;height:120px;float:left;
-		
-	}
-
-.ContentMenuElSelected {
-	color: #9ec200;
-}
-
-.MainMenuElSelected {
-	/*position: absolute;*/
-	color: #9ec200;
-}
-
-.MainMenuImg{
-	width:100%;
-	height:80%;
-}
-	
-	.ContentMenuRow{		
-	background-color: transparent;
-width: 80%;
-padding-left: 15px;
-padding-bottom: 25px;
-margin-left: 55px;
-margin-top: 20px;
-	}
-	
-		
-	.ContentMenuEl{
-	width: 21%;
-margin-top: 20px;}
-	
-}
-
-@media screen and (min-width:450px) and (max-width:605px){
-	.MainMenuEl{
-		width: 15%;
-height: 80%;
-margin: 20px;
-float: left;
-	}
-.ContentMenuElSelected {
-	color: #9ec200;
-}	
-
-.MainMenuElSelected {
-	/*position: absolute;*/
-	color: #9ec200;
-}
-
-		.ContentMenuRow{		
-		background-color:transparent;	
-		width: 100%;
-		padding-left: 15px;
-		padding-bottom:25px;
-		margin:0;	
-	}
-	
-	.ContentMenuEl{
-	  width: 18%;
-	padding-bottom:25px;}
-	
-}
-
-@media screen and (min-width:100px) and (max-width:449px){
-	
-.MainMenuEl{
-		width: 21%;
-height: auto;
-margin:0px 5px 0px 5px;
-float: left;
-	}
-	
-.ContentMenuImg {
-/* position: absolute; */
-position: relative;
-left: 30%;
-float: left;
-/* margin-left: 20px; */
-border: none;
-outline: none;
-}
-
-.ContentMenuTitle {
-/* position: absolute; */
-/* text-align: center; */
-=======
 /* Media Query specifica per schermo 1280 X 752 ASUS TRANSFORMER PAD e per schermo 1280 X 800 GALAXY TAB e per DESKTOP CON FIREFOX   */
 @media only screen and (device-width: 1232px) and (device-height:800px), (device-width: 1280px) and (device-height:752px) and (-webkit-min-device-pixel-ratio : 1), (device-width: 1280px) and (device-height:800px) and (-webkit-min-device-pixel-ratio : 1),(device-width: 1536px) and (device-height:864px){
 .MainMenuImg {
@@ -811,7 +568,6 @@ height: auto;
 .ContentMenuTitle {
 position: absolute;
 text-align: center;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 position: relative;
 left: 15%;
 float: left;
@@ -820,56 +576,13 @@ font-weight: bold;
 text-align: left;
 }
 
-<<<<<<< HEAD
-	
-.ContentMenuElSelected {
-	color: #9ec200;
-=======
 
 .ContentMenuElSelected {
 color: #9ec200;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 .ContentMenuEl {
   position: relative;
-<<<<<<< HEAD
-  width: 45%;
-  left: 25%;
-  top: 10%;
-  /* margin-right: 20px; */
-  height: auto;
-}
-
-
-
-.MainMenuElSelected {
-	/*position: absolute;*/
-	color: #9ec200;
-}
-	
-	.MainMenuImg{
-width: 98%;
-height: 25%;
-/* height: 40%; */
-}
-	
-.ContentMenuRow {
-background-color: transparent;
-width: auto;
-margin-top: 15px;
-margin-left: 15px;
-/* padding-left: 15px; */
-/* padding-bottom: 15px; */
-/* margin: 0; */
-}
-
-	.MainMenuTitle {
-left: 0%;
-/* text-align: center; */
-/* width: 20%; */
-font-size: 0.6em;
-=======
   float: left;
   height: 67px;
   width: 22%;
@@ -934,120 +647,12 @@ left: 0%;
 /* text-align: center; */
 /* width: 20%; */
 font-size: 11px;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 font-weight: bold;
 padding-top: 2px;
 border: none;
 outline: none;
 }
 
-<<<<<<< HEAD
-.MainMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; /* firefox */
-	-webkit-border-radius: 2px; /* safari, chrome */
-}
-
-
-.ContentMenuEl:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; /* firefox */
-	-webkit-border-radius: 2px; /* safari, chrome */
-}
-
-.ContentMenuElSelected:hover {
-	border: solid 1px #9ec200;
-	border-radius: 2px;
-	-moz-border-radius: 2px; /* firefox */
-	-webkit-border-radius: 2px; /* safari, chrome */
-}
-}
-
-/* @media screen and (min-width:100px) and (max-width:1274px){ */
-
-#mobileMenu
-{
-display: block;
-z-index: 99;
-}
-
-.toggleMobile {
-  position: relative;
-  top: 10px;
-  /* left: 10px; */
-  /* display: block; */
-  float: right;
-  width: 40px;
-  height: 36px;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.toggleMobile span.menu1, .toggleMobile span.menu2, .toggleMobile span.menu3
-{
-display: block;
-position: absolute;
-width: 40px;
-height: 8px;
-left: 0;
-background: #3A8848;
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-}
-
-.toggleMobile span.menu2
-{
-	background: #ABD037;
-}
-
-.toggleMobile span.menu1
-{
-top: 0;}
-.toggleMobile span.menu2
-{
-top: 14px;}
-.toggleMobile span.menu3
-{
-top: 28px;}	
-
-.toggleMobile.active span.menu1
-{
-top: 14px;
--webkit-transform: rotate(45deg);
--moz-transform: rotate(45deg);
--o-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu2
-{
--webkit-transform: rotate(-45deg);
--moz-transform: rotate(-45deg);
--o-transform: rotate(-45deg);
--ms-transform: rotate(-45deg);
-transform: rotate(-45deg);
--webkit-transition: all 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: all 0.5s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-.toggleMobile.active span.menu3
-{
-opacity: 0;
--webkit-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);
-transition: opacity 0.35s cubic-bezier(0.75, 0.25, 0.10, 0.95);}
-	
-/* } */
-
-
-
-
-
-
-	
-
-	
-=======
 
 #toggleMenu{
 	  border-bottom-left-radius: 0px;
@@ -1994,4 +1599,3 @@ position: relative;
 
 
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b

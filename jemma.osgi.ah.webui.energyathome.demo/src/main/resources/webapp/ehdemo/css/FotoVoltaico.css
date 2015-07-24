@@ -1,24 +1,13 @@
-<<<<<<< HEAD
-#CostiConsumi {
-}
-=======
 /*GLOBAL*/
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 
 
 #CostoConsumoSintesi {
 position: relative;
 float: left;
-<<<<<<< HEAD
-width: 45%;
-height: 70%;
-=======
 width: 100%;
 height: 70%;
 }
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 
-}
 .TitoloDettaglio {
 font-size: 1em;
 font-weight: bold;
@@ -60,21 +49,12 @@ border-bottom: 1px solid #FFD800;
 }
 **/
 .Dettagli {
-<<<<<<< HEAD
-	color: green;
-	font-size: 1em;
-	text-align: left;
-	padding: 15px;
-	border-bottom: thin solid grey;
-	font-weight: bold;
-=======
   color: green;
   font-size: 16px;
   text-align: left;
   padding: 13px;
   border-bottom: thin solid grey;
   font-weight: bold;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 .Dettagli b {
@@ -86,20 +66,12 @@ color: black;
 }
 
 #IndicatoreTitoloPV {
-<<<<<<< HEAD
-	position: absolute;
-top: 30%;
-width: 22%;
-font-size: 0.8em;
-left: 5%;
-=======
   font-size: 0.9vw;
   /* top: 20%; */
   width:20%;
   float: left;
 margin: 7px 0px 12px 21px;
   /* margin-top: 13px; */
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #IndicatorePV {
@@ -135,31 +107,6 @@ border-radius: 16px;
 } */
 
 #Indicatore {
-<<<<<<< HEAD
-	position: absolute;
-	top: 5%;
-	right: 3%;
-	width: 40%;
-	height: 35%;
-	border: 10px solid #575757;
-	background-color: #fff;
-	border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
-}
-
-#DatiCosti {
-	position: absolute;
-	top: 47%;
-	right: 3%;
-	width: 40%;
-	height: 45%;
-	border: 10px solid #575757;
-	background-color: #fff;
-	border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
-=======
   position: relative;
   float: left;
   top: 3px;
@@ -200,7 +147,6 @@ border-radius: 16px;
   background-color: #fff;
   border-radius: 16px;
   -webkit-border-radius: 16px;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #PVConsumoIACIndicatoreImg {
@@ -252,18 +198,7 @@ height: 50%;
 border-left: 1px solid #0B0B96;
 }
 
-<<<<<<< HEAD
-/* Riquadro a destra */
-#CostoConsumoInfo {
-position: relative;
-float: left;
-margin-left: 10px;
-width: 53%;
-height: 90%;
-}
-=======
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #InfoTitolo {
 	display:none;
 position: absolute;
@@ -277,16 +212,8 @@ background-color: transparent;
 }
 
 #Grafico {
-<<<<<<< HEAD
-	
-position: absolute;
-top: 2%;
-left: 2%;
-right: 2%;
-=======
   position: absolute;
   float: left;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 height: 44%;
 }
 
@@ -296,16 +223,9 @@ width: 100%;
 }
 
 #Grafico2 {
-<<<<<<< HEAD
-	position: absolute;
-top: 51%;
-left: 2%;
-right: 2%;
-=======
   position: relative;
   float: left;
   margin: 3% 2%;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #GraficoConsumoOdierno2 {
@@ -498,17 +418,6 @@ font-weight: bold;
 }
 
 #TariffaPos {
-<<<<<<< HEAD
-	position: absolute;
-	top: 35%;
-	left: 5%;
-	width: 3%;
-	height: 40%;
-	background-color: #666666;
-	opacity: 0.4;
-	filter: alpha(opacity = 40);
-	z-index: 1;
-=======
 position: absolute;
 top: 35%;
 left: 5%;
@@ -518,7 +427,6 @@ background-color: #666666;
 opacity: 0.4;
 filter: alpha(opacity = 40);
 z-index: 1;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #TariffaImgDiv {
@@ -589,41 +497,6 @@ height: 20%;
 }
 
 .values {
-<<<<<<< HEAD
-	position: absolute;
-	top: 80%;
-	left: 20%;
-	vertical-align: middle;
-	font-weight: bold;
-	font-size: 1.2em;
-	text-align: center;
-	width: 60%;
-	height: 8%;
-	padding-top: 1%;
-	background-color: transparent;
-	z-index: 2;
-}
-
-.highlightbar {
-	position: absolute;
-	top: 5%;
-	left: 40%;
-	text-align: center;
-	font-weight: bold;
-	font-size: 0.8em;
-	width: 24%;
-	height: 8%;
-	background-color: #a0a0a0;
-	opacity: 0.8;
-	filter: alpha(opacity = 80);
-	z-index: 2;
-	padding-top: 2%;
-	color: black;
-	border: solid 2px black;
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-=======
     position: relative;
   /* top: 76%; */
   /* left: 20%; */
@@ -665,7 +538,6 @@ border: solid 2px black;
 border-radius: 6px;
 -webkit-border-radius: 6px;
 -moz-border-radius: 6px;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #divFrecceProd {
@@ -707,27 +579,6 @@ border-radius: 6px;
 }
 
 #divCentro {
-<<<<<<< HEAD
-  position: absolute;
-  top: 18.9%;
-  left: 47%;
-  width: 4%;
-  height: 5.7%;
-}
-
-#imgCentro {
-  width: 150%;
-  height: auto;
- 
-}
-
-#percIAC {
-	position: absolute;
-	top: 35%;
-	right: 5%;
-	font-size: 1.8em;
-	font-weight: bold;
-=======
   position: relative;
   top: 18.5%;
   left: 5px;
@@ -756,7 +607,6 @@ top: 25%;
 right: 2%;
 font-size: 1.5vw;
 font-weight: bold;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #InfoFeed {
@@ -852,26 +702,12 @@ font-weight: bold;
 }
 
 #consigliTurnOn {
-<<<<<<< HEAD
-  position: absolute;
-  border: 5px solid #575757;
-=======
   /* position: absolute; */
   border: 3px solid #575757;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
   background-color: #9ec200;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-<<<<<<< HEAD
-  font-size: 1em;
-  line-height: 1.0;
-  padding: 5px;
-  top: 45%;
-  left: 70%;
-  width: 25%;
-  color: #000;
-=======
   font-size: 1.25vw;
   line-height: 1.0;
   padding: 5px;
@@ -880,7 +716,6 @@ font-weight: bold;
 width: 95%;
 height:auto;
 color: #000;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 .box {
@@ -908,17 +743,6 @@ border-radius: 16px;
 }
 
 .chartSingleBox {
-<<<<<<< HEAD
-	border: 1px solid #575757;
-	background-color: #fff;
-	width: 95%;
-	height: 44%;
-	margin: auto;
-	vertical-align: middle;
-	border-radius: 16px;
-	-webkit-border-radius: 16px;
-	-moz-border-radius: 16px;
-=======
 border: 1px solid #575757;
 background-color: #fff;
 width: 95%;
@@ -928,7 +752,6 @@ vertical-align: middle;
 border-radius: 16px;
 -webkit-border-radius: 16px;
 -moz-border-radius: 16px;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 
@@ -980,14 +803,6 @@ margin-top: 7px;
 
 
 .boxTitles {
-<<<<<<< HEAD
-	z-index: 100;
-	color: green;
-	font-size: 1.3em;
-	text-align:center;
-	font-weight: bold;
-	margin-top: 10px;
-=======
   position: relative;
   float: left;
   z-index: 100;
@@ -999,20 +814,13 @@ margin-top: 7px;
   margin: 0px auto;
   width: 100%;
   height: 15%;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 
 .meter {
-<<<<<<< HEAD
-	width: 120px;
-	height: 100px;
-	margin: auto;
-=======
 width: 85%;
 height: 100px;
 margin: auto;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #DatiCostoConsumoHead,#DatiCostiHead {
@@ -1022,17 +830,10 @@ border-bottom: medium solid grey;
 }
 
 #HouseImg {
-<<<<<<< HEAD
-	position: absolute;
-	top: 2%;
-	left: 5%;
-	height: 20%;
-=======
 position: absolute;
 top: 2%;
 left: 5%;
 height: 20%;
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 #DatiCostoConsumoTitolo,#DatiCostiTitolo {
@@ -1114,20 +915,6 @@ line-height: 2em;
 }
 
 #ConsumoOdiernoVuoto {
-<<<<<<< HEAD
-	position: absolute;
-	top: 40%;
-	left: 0%;
-	width: 100%;
-	height: 20%;
-	text-align: center;
-	vertical-align: middle;
-	color: #3a8848;
-	font-size: 1.0em;
-	font-weight: bold;
-}
-
-=======
 position: absolute;
 top: 40%;
 left: 0%;
@@ -1208,16 +995,10 @@ height: 35%;
 
 
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 /**********************************************************************
 Media Queries
 ***********************************************************************/
 
-<<<<<<< HEAD
-/*WIDTH MANAGEMENT*/
-
-@media screen and (min-width:450px) and (max-width: 1275px){
-=======
 
 @media only screen and (max-width : 1220px) {
 	
@@ -1244,7 +1025,6 @@ text-align: center;
 }
 
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 #CostoConsumoSintesi {
 position: relative;
 float: left;
@@ -1254,325 +1034,6 @@ z-index: 10;
 }
 
 
-<<<<<<< HEAD
-
-#CostoConsumoInfo{
-margin-top:5px;
-margin-bottom:5px;
-margin-left:0;
-width: 98%;
-height: 50%;
-}
-
-#divCentro {
-    position: absolute;
-  top: 17%;
-  left: 46.5%;
-  width: 4%;
-  height: 5.7%;
-}
-.meter {
-  width: 120px;
-  height: 100px;
-  margin: auto;
-}
-
-
-}
-
-@media screen and (min-width:450px) and (max-width: 605px){
-#divCentro {
-  position: absolute;
-  top: 19%;
-  left: 46.5%;
-  width: 5%;
-  height: 5%;
-}
-
-
-
-#imgCentro {
-  width: 150%;
-  height: auto;
-  margin-top:0px;
-}
-
-
-	
-}
-
-@media screen and (min-width:140px) and (max-width:449px){
-#CostoConsumoSintesi {
-
-width: 98%;
-height: 50%;
-
-}
-
-.ContentTitle {
-  margin-top: 25px;
-  /* margin-bottom: 15px; */
-  width: 100%;
-  text-align: center;
-  font-size: 1.2em;
-  font-weight: bold;
-  color: #ffffff;
-}
-
-#CostoConsumoInfo {
-  position: relative;
-  float: left;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  width: 98%;
-  margin-left: 0px;
-  height: 48%;
-}
-	
-	.boxTitles {
-  z-index: 100;
-  color: green;
-  font-size: 0.8em;
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.values {
-	position: absolute;
-	top: 80%;
-	left: 20%;
-	vertical-align: middle;
-	font-weight: bold;
-	font-size: 0.9em;
-	text-align: center;
-	width: 60%;
-	height: 8%;
-	padding-top: 1%;
-	background-color: transparent;
-	z-index: 2;
-}
-
-.meter {
-  width: 75px;
-  height: 65px;
-  margin: auto;
-}
-
-.pvSingleBox {
-  width: 30%;
-  height: 25%;
-  border: 5px solid #575757;
-  background-color: #fff;
-  border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  z-index:2
-}
-
-#consigliTurnOn {
-  position: absolute;
-  border: 5px solid #575757;
-  background-color: #9ec200;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  font-size: 1.2em;
-  text-align: center;
-  line-height: 1.0;
-  padding: 5px;
-  height: 15%;
-  top: 80%;
-  left: 1%;
-  width: 90%;
-  color: #000;
-}
-
-#divFrecceConsumi {
-  position: absolute;
-  top: 20%;
-  left: 49%;
-  height: 25%;
-}
-
-#imgFrecceConsumi {
-  height: 50%;
-  width: 50%;
-  margin-top: 20px;
-}
-
-.CostoConsumoAttualePV {
-  position: relative;
-  top: 36%;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#divFrecceProd {
-  position: absolute;
-  top: 20%;
-  left: 20%;
-  height: 10px;
-  width: 32%;
-  z-index: 1;
-}
-
-#divFrecceRete {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 32%;
-  z-index: 1;
-}
-
-#divCentro {
-  position: absolute;
-  top: 19%;
-  left: 47%;
-  width: 4%;
-  height: 5.7%;
-  z-index: 3;
-}
-
-#imgCentro {
-  width: 200%;
-  height: 100%;
-}
-
-#IndicatorePV {
-  display: block;
-  position: absolute;
-  bottom: 23%;
-  width: 100%;
-  height: 16%;
-  left: 0%;
-  position: absolute;
-}
-
-#IndicatoreTitoloPV {
-  /* position: absolute; */
-  float: left;
-  width: 100%;
-  text-align: center;
-  font-size: 0.8em;
-  left: 0%;
-}
-
-#PVConsumoIACIndicatoreImg {
-  width: 75%;
-  height: 100%;
-  position: absolute;
-  top: 25%;
-  left: 0;
-}
-#percIAC {
-  position: absolute;
-  top: 60%;
-  right: 2%;
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-#DettaglioGraficoConsumoOdierno {
-  height: 100%;
-  width: 100%;
-  font-size: 0.9em;
-}
-
-#DettaglioGraficoConsumoOdierno2 {
-  height: 100%;
-  width: 100%;
-  font-size: 0.9em;
-}
-
-#Grafico2 {
-  position: absolute;
-  top: 51%;
-  left: 2%;
-  right: 2%;
-}
-
-.CostoConsumoAttualeCONS {
-  position: relative;
-  top: 2%;
-  left: 3%;
-  overflow: hidden;
-  width: 30%;
-  height: 25%;
-}
-
-#Indicatore {
-  position: absolute;
-  top: 2%;
-  right: 3%;
-  width: 56%;
-  height: 25%;
-  border: 5px solid #575757;
-  background-color: #fff;
-  border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-}
-
-#DatiCostoConsumo {
-  position: absolute;
-  top: 30%;
-  left: 3%;
-  width: 90%;
-  height: 32%;
-  border: 5px solid #575757;
-  background-color: #fff;
-  border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-  font-size: 0.85em;
-}
-
-#DatiCosti {
-  position: absolute;
-  top: 65%;
-  width: 90%;
-  left: 3%;
-  height: 32%;
-  font-size: 0.75em;
-  border: 5px solid #575757;
-  background-color: #fff;
-  border-radius: 16px;
-  -webkit-border-radius: 16px;
-  -moz-border-radius: 16px;
-}
-
-#InfoFeedDettaglio{
-	  height: 90%;
-  font-size: 0.8em;
-}
-
-#InfoFeed {
-  position: absolute;
-  top: 72%;
-  left: 3%;
-  width: 94%;
-  height: 25%;
-  background: #333;
-  border-radius: 7px;
-  -webkit-border-radius: 7px;
-  overflow-y: scroll;
-  -moz-border-radius: 7px;
-}
-
-#CostoTConsumoMax {
-  top: 50%;
-  left: 2%;
-  width: 95%;  
-}
-
-#GraficoSuddivisioneCosti {
-  padding: 0px;
-}
-
-
-=======
 .CostoConsumoAttualePV {
 top: 55%;
 }
@@ -1969,13 +1430,10 @@ height: 100%;
 
 
 
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 }
 
 
 
-<<<<<<< HEAD
-=======
 /*SOLO PER SMARTPHONE*/
 @media only screen and (max-device-width:854px) and (max-device-height:480px){
 	#DatiCostoConsumo {
@@ -3102,5 +2560,4 @@ margin-top: 6px;
 	}
 }
 	
->>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	
