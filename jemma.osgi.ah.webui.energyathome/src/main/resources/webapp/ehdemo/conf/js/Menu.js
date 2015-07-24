@@ -48,17 +48,15 @@ Menu.Init = function(mainDiv, contentDiv) {
 
 	topOffset = dist;
 	leftOffset = Math.round((Menu.MainW - MainMenuW) / 2) - (dim * 0.015); // per spostare fuori bordo sx
-
 	Menu.MainHtml = "";
-	for (i = 0; i < num; i++) {
-		Menu.MainHtml  += "<img id='MainElSfondo' src='" + Menu.sfondoElImg + "' style='position:absolute;top:" + topOffset + "px;left:" + leftOffset + "px' + width='" + dim + "px' + height='" + dim + "px'>"
-						+ "<div class='MainMenuEl' id='MainEl" + i + "' tabIndex='0' onClick='Menu.OnClickMainMenu(" + i + ")' width='" + dim + "px' height='" + hDiv + "px' style='position:absolute;top:" + (topOffset + extraTopOffset) + "px;left:" + leftOffset + "px' >"
-						+ "		<img id='MainImg" + i + "' class='MainMenuImg' width='" + dimImage + "px' height='" + dimImage + "px' src='" + Menu.MainMenu[i].Image + "' style='position:absolute;top:" + imgTopOffset + "px;left:" + imgLeftOffset + "px'>"
-						+ "		<p id='NomeMain" + i + "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome + "</p>"
-						+ "</div>";
+	
+	Menu.MainHtml  += "<img id='MainElSfondo' src='" + Menu.sfondoElImg + "' style='float:left;top:" + topOffset + "px;left:" + leftOffset + "px' + width='" + dim + "px' + height='" + dim + "px'>"
+	+ "<div class='MainMenuEl' id='MainEl" + i + "' tabIndex='0' onClick='Menu.OnClickMainMenu(" + i + ")' width='" + dim + "px' height='" + hDiv + "px' style='float:left;top:" + (topOffset + extraTopOffset) + "px;left:" + leftOffset + "px' >"
+	+ "		<img id='MainImg" + i + "' class='MainMenuImg' width='" + dimImage + "px' height='" + dimImage + "px' src='" + Menu.MainMenu[i].Image + "' style='position:absolute;top:" + imgTopOffset + "px;left:" + imgLeftOffset + "px'>"
+	+ "		<p id='NomeMain" + i + "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome + "</p>"
+	+ "</div>";
 
-		topOffset = topOffset + dim + dist;
-	}
+	topOffset = topOffset + dim + dist;
 	$("#" + mainDiv).html(Menu.MainHtml);
 
 	// forzo dimensioni da css altrimenti il titolo ha dimensioni 0
@@ -144,7 +142,7 @@ Menu.InitContentMenu = function(contentDiv) {
 
 		// calcolo distanza tra gli elementi
 		for (j = 0; j < num; j++) {
-			Menu.SubMenuHtml +=   "<div tabindex='0'style='position:absolute;left:" + leftOffset + "px;top:1%' onClick='Menu.OnClickContentMenu(" + i + ", " + j + ")' class='ContentMenuEl' id='el" + i + "Content" + j + "' height='" + hDiv + "px' width='" + wDiv + "px'>"
+			Menu.SubMenuHtml +=   "<div tabindex='0'style='float:left;left:" + leftOffset + "px;top:1%' onClick='Menu.OnClickContentMenu(" + i + ", " + j + ")' class='ContentMenuEl' id='el" + i + "Content" + j + "' height='" + "'auto' width='" + "'25%'">"
 								+ "		<img  id='img" + i + "Content" + j + "' class='ContentMenuImg' src='" + Menu.MainMenu[i].SubMenu[j].Image + "'>"
 								+ "		<div id='NomeContent" + i + "_" + j + "' class='ContentMenuTitle'>"
 								+ 			Menu.MainMenu[i].SubMenu[j].Nome

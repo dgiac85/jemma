@@ -16,12 +16,15 @@ var Menu = {
 	contentMenuSelected:0
 }
 
+<<<<<<< HEAD
+=======
 var ctrl=false; //controllo per il primo accesso
 var theWidth=1220;
 var selected;
 var numButtons;
 var widthMenuButton;
 var heightMenuButton;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 
 /**
  * Inizializza il menu principale e i sottomenu I sottomenu vengono creati tutti
@@ -33,8 +36,12 @@ Menu.Init = function(mainDiv, contentDiv) {
 	
 	var dim;
 	var num = Menu.MainMenu.length;
+<<<<<<< HEAD
+	
+=======
 	numButtons=num;
 
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	Menu.MainW = $("#" + mainDiv).width();
 	Menu.MainH = $("#" + mainDiv).height();
 
@@ -66,10 +73,51 @@ Menu.Init = function(mainDiv, contentDiv) {
 	leftOffset = Math.round((Menu.MainW - MainMenuW) / 2) - (dim * 0.015); 
 
 	Menu.MainHtml = "";
+<<<<<<< HEAD
+	/*var mq = window.matchMedia('screen and (max-width: 500px)');
+	if(mq.matches) {
+    // the width of browser is more then 1024px
+	//inserire la parte che sta sotto
+		for (i = 0; i < num; i++) {
+			Menu.MainHtml = Menu.MainHtml + 
+							//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+ (topOffset + extraTopOffset)
+							"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
+							"  <img id='MainImg" + i+ "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>" +
+							"  <p id='NomeMain" + i+ "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
+							"</div>";
 	
+			topOffset = topOffset + dim + dist;
+		}
+	}
+	/*else {
+		/*alert('meno');
+	    // the width of browser is less then 1024px
+		for (i = 0; i < num; i++) {
+			Menu.MainHtml = Menu.MainHtml + 
+							//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+ 
+							"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")' width='" + 150 + "px' height='" + 180+ "px' style='margin-left:25px;margin-right:25px;'>" + 
+							"  <img id='MainImg" + i+ "' class='MainMenuImg' width='" + 150 + "px' height='"+ 150 + "px' src='" + Menu.MainMenu[i].Image+ "'/>" +
+							"  <p id='NomeMain" + i+ "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
+							"</div>";
+
+			topOffset = topOffset + dim + dist;
+		}
+	}*/
+	//else{
+=======
+	
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 	for (i = 0; i < num; i++) {
 		
 		Menu.MainHtml = Menu.MainHtml + 
+<<<<<<< HEAD
+						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='position:absolute;top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'>"+ (topOffset + extraTopOffset)
+						"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
+						"  <img id='MainImg" + i+ "' class='MainMenuImg' src='" + Menu.MainMenu[i].Image+ "'/>" +
+						"  <p id='NomeMain" + i+ "' class='MainMenuTitle'>" + Menu.MainMenu[i].Nome+ "</p>"+
+						"</div>";
+
+=======
 						//"<img id='MainElSfondo' src='"+ Menu.sfondoElImg + "' style='top:"+ topOffset + "px;left:" + leftOffset + "px' + width='" + dim+ "px' + height='" + dim + "px'/>"+
 						"<div id='contMainEl"+ i +"' class='perCover'>" +							
 							"<div class='MainMenuEl' id='MainEl" + i+ "' tabIndex='0' onClick='Menu.OnClickMainMenu("+i+")'>" + 
@@ -81,13 +129,23 @@ Menu.Init = function(mainDiv, contentDiv) {
 							//"<div id='CoverBis"+ i +"' class='CoverBis' style='position:relative; background:#202020;z-index:300'></div>" +
 						"</div>";		
 		
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		topOffset = topOffset + dim + dist;
 		
 		
 	}
+<<<<<<< HEAD
+	//}
+	$("#" + mainDiv).html(Menu.MainHtml);
+
+	// forzo dimensioni da css altrimenti il titolo ha dimensioni 0
+	//$(".MainMenuEl").css("width", dim + "px");
+	//$(".MainMenuEl").css("height", hDiv + "px");
+=======
 	
 	$("#" + mainDiv).html(Menu.MainHtml);
 	
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 
 	Menu.InitContentMenu(contentDiv);
 	//Menu.OnClickMainMenu(0);
@@ -228,7 +286,11 @@ Menu.InitContentMenu = function(contentDiv) {
 			Menu.SubMenuHtml = Menu.SubMenuHtml
 					+ "<div tabindex='0' onClick='Menu.OnClickContentMenu(" + i + ", "
 					+ j + ")' class='ContentMenuEl' id='el" + i + "Content" + j
+<<<<<<< HEAD
+					+ "'><div id='contImg' style='float:left;'><img  id='img" + i + "Content" + j
+=======
 					+ "'><div id='contImg'><img  id='img" + i + "Content" + j
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 					+ "' class='ContentMenuImg' src='"
 					+ Menu.MainMenu[i].SubMenu[j].Image
 					+ "'></div><div id='NomeContent" + i + "_" + j
@@ -237,6 +299,7 @@ Menu.InitContentMenu = function(contentDiv) {
 			leftOffset += wDiv + 2;
 		}
 		Menu.SubMenuHtml = Menu.SubMenuHtml + "</div>";
+		
 	}
 
 	$("#" + contentDiv).html(Menu.SubMenuHtml);

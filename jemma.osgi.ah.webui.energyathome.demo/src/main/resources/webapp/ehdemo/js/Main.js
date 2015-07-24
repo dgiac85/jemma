@@ -265,7 +265,10 @@ Main.onLoad = function() {
 	$(document).ready(function() {
 		
 		Main.userAgent = navigator.userAgent;
+<<<<<<< HEAD
+=======
 		var theWidth=540;
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		
 		// Parse the current page's querystring
 		var qs = new Querystring();

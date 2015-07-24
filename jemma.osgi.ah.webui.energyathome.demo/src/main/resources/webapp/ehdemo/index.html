@@ -16,8 +16,14 @@
 		<link rel='icon' href='Resources/Images/eh_bianca.ico' />
 		
 		<link rel='stylesheet' type='text/css' href='js/other/spinner.css' />
+<<<<<<< HEAD
+		<link rel='stylesheet' type='text/css' href='css/Main.css' />
+		
+		<link rel='stylesheet' type='text/css' href='css/Menu.css' />
+=======
 		<link rel='stylesheet' type='text/css' href='css/Main.css'  media='screen'/>
 		<link rel='stylesheet' type='text/css' href='css/Menu.css' media='screen'/>
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		<link rel='stylesheet' type='text/css' href='css/Storico.css' />
 		<link rel='stylesheet' type='text/css' href='css/Community.css' />
 		<link rel='stylesheet' type='text/css' href='css/Trial.css' />
@@ -84,12 +90,16 @@
 		<script language="javascript" type="text/javascript" src="js/utils/Utils.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/utils/Tools.js?201305315125"></script>
 		
+<<<<<<< HEAD
+		<script language="javascript" type="text/javascript" src="js/utils/ToggleMenu.js"></script>
+=======
 		<script language="javascript" type="text/javascript" src="js/utils/client.js"></script>
 		
 		
 		
 
 		<!-- <script language="javascript" type="text/javascript" src="js/utils/headroom.js"></script> -->
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 		
 		<script language="javascript" type="text/javascript" src="js/Main.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/tinycolor/tinycolor-min.js"></script>
@@ -108,6 +118,9 @@
 		<script type="text/javascript">
 			var w = window.innerWidth;
 			var h = window.innerHeight;
+			
+			
+		
 		
 			if (!(w || h)) {
 				// IE
@@ -147,6 +160,111 @@
 		<script language="javascript" type="text/javascript" src="js/NonDisponibile.js?201305315125"></script>
 		<script language="javascript" type="text/javascript" src="js/utils/Menu.js?201305315125"></script>
 		
+<<<<<<< HEAD
+	</head>
+	<body onLoad="Main.onLoad()" onUnload="Main.onUnload()">
+		<div id="Container">
+			<div id="Header">
+				<div class="toggleMobile">	
+					<!-- <span style="color:white; font-size:0.5em">Options</span>	 -->			
+					<span class="menu1"></span>
+					<span class="menu2"></span>
+					<span class="menu3"></span>
+					
+				</div>
+				
+				<div id="mobileMenu">
+					
+				</div>
+			
+				<div id="logo">
+					<!--div id="ContainerLogo" style="width:300px; height:91px; float:left;"-->
+					<img id="LogoImg" src="./Resources/Images/E@HLogo.png" s>
+					<!--/div-->
+				</div>
+				<div id="dataANDuser">
+					<div id="Timestamp">
+						<span id="Data"></span>	
+						<img id="ClockImg" src="./Resources/Images/orologio.png"/>
+						<span id="Ora"> </span>											
+					</div>	
+					<div id="userID"></div>
+				</div>		
+			<div id="HeaderSep">
+				<img id="HeaderSepImg" src="./Resources/Images/header_sep.png">
+			</div>				
+			</div>
+		<!--div style="float:left;margin-top:92px">  -->
+		<div id="ContainerError" style="float:left;width:100%;padding-bottom:5px;background-color:#333333;"><div style="width:80%; padding-left:5px;" id="ErrorMsgDIV"></div></div>
+		<!-- <div id="wrapper"> -->
+			<div id="ContainerMenu"><div id="MainMenu"></div></div>
+			<div id="ContentMain">
+			
+			<div id="CostiConsumi" class="Content">
+				<div id='TitoloCostiConsumi' class='ContentTitle'></div>
+				<div id='CostoConsumoSintesi' class='box'>
+					<div id='CostoConsumoAttuale' class='pvSingleBox'>
+						<div id='CostoConsumoAttualeTitolo' class='boxTitles'></div>
+						<span id='ValConsumoAttuale' class='values'></span>
+						<div id='ConsumoAttualeMeter' class='meter'></div>
+						<img id='CostoAttualeImg'> <span id='DettaglioCosto'></span>
+					</div>
+					
+					<div id='ProduzioneAttuale' class='pvSingleBox'>
+						<div id='ProduzioneAttualeTitolo' class='boxTitles'></div>
+						<span id='ValProduzioneAttuale' class='values'></span>
+						<div id='ProduzioneAttualeMeter' class='meter'></div>
+						<!-- id='ProduzioneAttualeImg' -->
+						<span id='DettaglioProduzione'></span>
+					</div>
+	
+					<div id='ReteAttuale' class='pvSingleBox'>
+						<div id='ReteAttualeTitolo' class='boxTitles'></div>
+						<span id='ValReteAttuale' class='values'></span>
+						<div id='ReteAttualeMeter' class='meter'></div>
+						<!-- id='ReteAttualeImg' -->
+						<span id='DettaglioRete'></span>
+					</div>
+					<div id='DatiCostoConsumo' class='consSingleBox'>
+						<div id='DatiCostoConsumoHead'>
+							<img id="HouseImg" src="./Resources/Images/house_green.png">
+							<span id='DatiCostoConsumoTitolo'></span>
+						</div>
+						<div id='CostoConsumoOdierno'>
+							<div id='DettaglioCostoConsumoOdierno' class="Dettagli"></div>
+						</div>
+						<div id='CostoConsumoPrevisto'>
+							<div id='DettaglioCostoConsumoPrevisto' class="Dettagli"></div>
+						</div>
+						<div id='CostoConsumoMediaWeek'>
+							<div id='DettaglioCostoConsumoMediaWeek' class="Dettagli"></div>
+						</div>
+					</div>
+					<div id='Indicatore' class='consSingleBox IndicatoreCONS'>
+						<div id='IndicatoreTitolo' class="boxTitles"></div>
+						<div id='ConsumoIndicatoreImg' class='IndicatoreImg'></div>
+						<div id='CostoIndicatoreImg' class='IndicatoreImg'></div>
+					</div>
+					<div id='DatiCosti' class='consSingleBox'>
+						<div id='DatiCostiHead'>
+							<img id="HouseImg" src="./Resources/Images/euro.png">
+							<span id='DatiCostiTitolo'></span>
+						</div>
+						<div id='CostiOdierno'>
+							<div id='DettaglioCostiOdierno' class="Dettagli"></div>
+						</div>
+						<div id='CostiPrevisto'>
+							<div id='DettaglioCostiPrevisto' class="Dettagli"></div>
+						</div>
+						<div id='CostiMediaWeek'>
+							<div id='DettaglioCostiMediaWeek' class="Dettagli"></div>
+						</div>
+					</div>
+					<div id='IndicatorePV'>
+						<div id='IndicatoreTitoloPV' class='TitoloDettaglio IndicatoreTitoloPV'></div>
+						<div id='PVConsumoIACIndicatoreImg' class='IndicatoreImg'></div>
+					</div>
+=======
 		<script language="javascript" type="text/javascript" src="js/utils/ToggleMenu.js"></script>
 		
 		
@@ -196,6 +314,7 @@
 			<div id="ContainerMenu">
 				<div id="MainMenu">
 				 	
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 				</div>
 				</div>
 				<div id="ContentMain">
@@ -320,20 +439,36 @@
 								</div>
 							</div>
 						</div>
+<<<<<<< HEAD
+					</div>
+				</div> <!-- chiusura costo consumo info -->
+				
+				
+				</div> <!-- chiusura costi consumi -->
+				
+=======
 				<!-- chiusura costo consumo info -->
 				
 				
 				</div> <!-- chiusura costi consumi -->
 				</div>
 				</div>
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 				<div id="Registra" style="display: none;"></div>
 				<div id="iframeReport" style="display: none;"></div>
 				<div id="iframeForum" style="display: none;"></div>
 				<div id="iframeOverload" style="display: none;"></div>
 				
 				</div>  <!-- chiusura content main -->
+<<<<<<< HEAD
+					
+			<!-- </div> --> <!-- chiusura wrapper -->
+			<div id="ContainerContentMenu" style="float:left;width:100%;height:auto;"> 
+				<div id="ContentMenu"></div>
+=======
 			<div id="ContainerContentMenu" style="float:left;width:100%;height:auto;"> 
 				<div id="ContentMenu"></div></div>
+>>>>>>> 474a3d9fd37c94b5112bd77305bb2854c824481b
 			 </div>
 			
 		</div> <!-- chiusura container -->

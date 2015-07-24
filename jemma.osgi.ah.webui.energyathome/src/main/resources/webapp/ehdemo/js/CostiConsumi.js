@@ -1497,9 +1497,10 @@ CostiConsumi.caricafeed = function(){
 	
 	altezza_news = Math.floor(($("#DettaglioSuggerimentiConsumi").height() - 1 - (Math.floor($("#DettaglioSuggerimentiConsumi").width()*0.01)*2))/2);
 	
-	$("#PrimaNews").css("height",altezza_news);
+	$("#PrimaNews").css("height",altezza_news);	
 	$("#SecondaNews").css("height",altezza_news);
 	
+
 	
 	$("#PrimaNews .titoloNews .ellipsis_text").html(CostiConsumi.notizie[CostiConsumi.notizieid]["title"]);
     $("#PrimaNews a").attr("href",CostiConsumi.notizie[CostiConsumi.notizieid]["link"]);
