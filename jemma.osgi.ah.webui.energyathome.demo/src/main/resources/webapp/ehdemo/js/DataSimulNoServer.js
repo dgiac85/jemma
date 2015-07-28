@@ -607,6 +607,43 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
+	                   /*MIO 4
+	                   {
+	                       "map": {
+	                           "device_value": {
+	                               "javaClass": "java.util.LinkedList",
+	                               "list": [
+	                                   {
+	                                       "name": "IstantaneousDemands",
+	                                       "value": {
+	                                           "timestamp": 1426004605365,
+	                                           "value": 5,
+	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+	                                       },
+	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+	                                   }
+	                               ]
+	                           },
+	                           "category": {
+	                               "name": "LockDoor",
+	                               "iconName": "lockdoor.png",
+	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
+	                               "pid": "25"
+	                           },
+	                           "ah.category.pid": "25",
+	                           "appliance.pid": "ah.app.3521399293210525877-2",
+	                           "ah.location.pid": "4",
+	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.whitegood",
+	                           "ah.icon": "lockdoor.png",
+	                           "ah.app.name": "LockDoor",
+	                           "ah.app.eps.types": [
+	                               "ah.ep.common",
+	                               "ah.ep.zigbee.WhiteGoods"
+	                           ],
+	                           "availability": 2
+	                       },
+	                       "javaClass": "java.util.Hashtable"
+	                   },*/
 	                   
 	                    
 	                   
@@ -814,6 +851,8 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
+	                   
+	                   
 	                   
 	                   /*MIO 2*/
 	                   {
