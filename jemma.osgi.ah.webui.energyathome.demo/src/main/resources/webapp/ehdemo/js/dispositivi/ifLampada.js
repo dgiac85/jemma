@@ -21,7 +21,7 @@ ifLampada.init=function(_clusters, i){
 		console.debug(_clusters);
 	
         //$("#ifLampada #bg img").css("width","auto");
-        $("#ifLampada #bg").width($("#ifLampada #bg").height());
+        //$("#ifLampada #bg").width($("#ifLampada #bg").height());
         
         
         ifLampada.baseColor = tinycolor("#9cc31c");

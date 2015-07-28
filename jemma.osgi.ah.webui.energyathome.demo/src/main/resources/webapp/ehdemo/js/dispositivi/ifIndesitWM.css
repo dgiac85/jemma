@@ -19,6 +19,14 @@
     
 }
 
+#ifIndesitWM .col2 {
+  display: block;
+  position: relative;
+  height: 50%;
+  vertical-align: top;
+  float: left;
+}
+
 #ifIndesitWM .col.lborder{
     border-left: 1px solid #000;
 }
@@ -65,7 +73,7 @@
 #ifIndesitWM .left-box .icona img{
     margin-left: auto;
     margin-right: auto;
-    height: 90%;
+    height: 85%;
     display: block;
     width: auto;
 }
@@ -81,13 +89,14 @@
 
 #ifIndesitWM .StatoElettrodomestico{
     display: block;
-    width: 100%;
+    width: 70%;
     height: 30%;           
     filter: none;
     background: none;
-    background-color: #000;
+    background-color: transparent;
     /*position: absolute;*/
     top:70%;
+    float:left;
     /*display: none;*/
 }
 
@@ -194,7 +203,7 @@
     font-size: 24px;
     color: #9cc31c;
     /*margin-top: 20px;*/
-    /*margin-bottom: 20px;*/
+    margin-bottom: 20px;
     
 }
 
@@ -257,6 +266,10 @@
   margin:0px auto;
   width:24%;
 } */
+
+#ifIndesitWM .left-box .icona img {
+    height: 100%;
+}
 
 #ifIndesitWM .col .icona_row {
   /* text-align: center; */

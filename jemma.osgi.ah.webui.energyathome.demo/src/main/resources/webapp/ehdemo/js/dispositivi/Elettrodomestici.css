@@ -104,7 +104,7 @@ left: +200%;
     
       width: 98%;
   /* min-width: 790px; */
-    height: 45%;
+    height: 38%;
   margin: 0px auto;
   padding: 0;
   margin-left: auto;
@@ -486,12 +486,19 @@ Media Queries
   		top:0%;
 	}
 #RigaInterfaccia {
-  height: 54%;
-  min-height: 54%;
-  max-height: 54%;
+    height: 48%;
+    min-height: 48%;
+    max-height: 48%;
 }
 }
 
+@media only screen and (min-width:1221px) and (max-width:1280px){
+#RigaInterfaccia {
+    width: 98%;
+    /* min-width: 790px; */
+    height: 45%;
+}
+}
 
 @media only screen and (device-height : 768px) and (device-width : 1366px) {
 #RigaInterfaccia {
@@ -499,6 +506,23 @@ Media Queries
 }
 	}
 	
+	
+	
+@media only screen and (min-device-width: 1280px){
+	#Interfaccia{
+	top:12%;
+	height:100%;
+	
+	
+}
+
+#RiepilogoConsumi {
+	top:12%;
+	/*prova*/
+  height:100%;
+}
+	
+}
 
 
 @media only screen and (max-device-width:800px) and (min-device-width:481px), (max-width: 800px) and (min-width:481px){
@@ -566,6 +590,10 @@ margin-top: 5px;
   min-height:0px;
 right:0%;
 
+}
+
+#Interfaccia {
+  top: 0%;
 }
 
 #RiepilogoConsumi {
@@ -809,19 +837,6 @@ margin-left: 0px;
 }
 
 
-@media only screen and (device-width: 1280px){
-	#Interfaccia{
-	top:12%;
-	height:100%;
-}
-
-#RiepilogoConsumi {
-	top:12%;
-	/*prova*/
-  height:100%;
-}
-	
-}
 
 
 @media only screen and (device-width: 1280px) and (device-height: 752px),(device-width: 1280px) and (device-height: 800px){

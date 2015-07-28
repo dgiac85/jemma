@@ -207,9 +207,10 @@ function controllaPresenzaInterfaccia(){
 }
 
 function impostaAltezzeElettrodomestici(){
-	var ciao=true;
+	
 	if( (window.innerWidth<=theWidth) && (window.innerWidth>480) && (Menu.contentMenuSelected===2)){
-		$("#ContentMain").css("min-height", "800px");
+		$("#ContentMain").css("min-height", "900px");
+		$("#Elettrodomestici").css("height", "900px");
 	}
 	
 	
@@ -219,7 +220,7 @@ function impostaAltezzeElettrodomestici(){
 		$("#ContentMain").css("height", "92%");
 	}
 	
-	if ( (ciao) && (window.innerHeight==1232) && (Menu.contentMenuSelected===2) ){
+	if ( (Modernizr.touch) && (window.innerHeight==1232) && (Menu.contentMenuSelected===2) ){
 		
 		$("#Elettrodomestici").css("height", "1151px");
 	}
@@ -237,10 +238,16 @@ function impostaAltezzeElettrodomestici(){
 	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (window.innerWidth>1220) ){
 		$("#RigaElettrodomestici").css("height", "195px");
 		$("#RigaElettrodomestici").css("min-height", "195px");
+		
 	}
-	else if ((window.innerWidth<1220)){
+	else if ((!Modernizr.touch) && (window.innerWidth<1220)){
 		$("#RigaElettrodomestici").css("height", "350px");
 		$("#RigaElettrodomestici").css("min-height", "350px");
+		$("#Elettrodomestici").css("height", "900px");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerWidth<=480)){
+		$("#Elettrodomestici").css("height", "100%");
 	}
 	
 	/*per desktop 1280-1024*/

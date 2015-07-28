@@ -33,28 +33,33 @@
 #ifLampada .left-box .bg {
     margin-left: auto;
     margin-right: auto;
-    min-width: 50px;
-    min-height: 50px;
+    /* min-width: 50px; */
+    /* min-height: 50px; */
     z-index: 10;
     width: 100%;
-    height: 70%;
+    top: 10%;
+    height: auto;
     background-color: #FFD000;
-    /*position: absolute;*/
+    /* position: absolute; */
     z-index: 10;
-    top: 0px;
-    left:0px;
+    top: 40%;
+    left: 0px;
 }
+
 #ifLampada .left-box .maschera {
     margin-left: auto;
     margin-right: auto;
-    min-width: 50px;
-    min-height: 50px;
-    height: 100%;
-    width: 100%;
-    /*position: absolute;*/
-    z-index: 20;
-    top: 0px;
-    left:0px;
+    /* min-width: 50px; */
+    /* min-height: 50px; */
+    z-index: 10;
+    width: auto !important;
+    top: 10%;
+    height: auto;
+    background-color: #FFD000;
+    /* position: absolute; */
+    z-index: 10;
+    top: 40%;
+    left: 0px;
 }
 #ifLampada .left-box  img{
     display: block;
@@ -74,15 +79,17 @@
     /*position: absolute;*/
 }
 
-#ifLampada .StatoElettrodomestico{
-    display: block;
-    width: 100%;
-    height: 30%;           
-    filter: none;
-    background: none;
-    background-color: #000;
-    /*position: absolute;*/
-    top:70%;
+#ifLampada .StatoElettrodomestico {
+  display: block;
+  width: 70%;
+  height: 30%;
+  float: left;
+  filter: none;
+  background: none;
+ 
+  /* position: absolute; */
+  margin-left: 20px;
+  /* display: none; */
 }
 
 #ifLampada  .inline{
@@ -148,17 +155,17 @@
     
 }
 
-#ifLampada  #OnOffControl{
+#ifLampada  #OnOffControl {
     width: 90%;
-    height: 20%;
+    height: 30%;
     display: block;
     position: relative;
     margin-left: auto;
     margin-right: auto;
 }
-#ifLampada  #SyncControl{
+#ifLampada #SyncControl {
     width: 90%;
-    height: 20%;
+    height: 30%;
     display: block;
     position: relative;
     margin-left: auto;
@@ -193,3 +200,166 @@
     
 }
 .t{float:left}
+
+
+@media only screen and (max-device-width:768px), (max-width: 768px){
+	#ifLampada #picker {
+    width: 96px;
+    height: 100%;
+}
+}
+
+ @media only screen and (max-device-width:480px), (max-width: 480px){
+ #ifLampada {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  color: #808080;
+  display: block;
+}
+
+
+
+#ifLampada .col {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100% !important;
+  height: 25% !important;
+  vertical-align: top;
+  float: left;
+}
+
+
+#ifLampada .col .label {
+  display: block;
+  width: 45% !important;
+  font-size: 19px;
+  text-align: center;
+  margin-bottom: 3px;
+  margin-top: 0px !important;
+}
+
+#ifLampada #OnOffControl {
+    height: 33%;
+}
+
+#ifLampada #SyncControl{
+    height: 33%;
+}
+
+#ifLampada #LevelControl {
+    height: 50%;
+}
+
+#ifLampada .col2 {
+ width:100% !important;
+}
+
+#ifLampada .col.lborder {
+  border-left:none;
+}
+
+#ifLampada .line {
+  height: 50%;
+}
+
+/* #Interfaccia .header {
+  margin:0px auto;
+  width:24%;
+} */
+
+#ifLampada .left-box {
+    position: relative;
+    height: 100%;
+    width: 75%;
+    margin: auto;
+    background: none;
+}
+
+#ifLampada .left-box .icona img {
+    height: 100%;
+}
+
+#ifLampada .col .icona_row {
+  /* text-align: center; */
+  width: 10% !important;
+}
+
+ #ifLampada .StatoElettrodomestico {
+  display: block;
+  width: 100%;
+    height: 15%;
+    margin-left:0px;
+  }
+    
+#ifLampada .green {
+  margin-bottom: 0px;
+}
+
+#ifLampada .left-box .bg {
+    margin-left: auto;
+    margin-right: auto;
+    /* min-width: 50px; */
+    /* min-height: 50px; */
+    z-index: 10;
+    width: 50% !important;
+    top: 10%;
+    height: 95%;
+    margin-top: 18px;
+    background-color: #FFD000;
+    /* position: absolute; */
+    z-index: 10;
+    top: 40%;
+    left: 0px;
+}
+
+#ifLampada #picker {
+    width: 100%;
+    height: 100%;
+}
+
+#ifLampada #ColorControl {
+    display: block;
+    width: 36%;
+    height: 100%;
+    
+    
+ }
+
+#ifLampada #colorText {
+    margin-top: 35px !important;
+    margin-left: auto;
+    margin-right: auto;
+    width: 102% !important;
+}
+
+ }
+ 
+ @media only screen and (max-device-height: 480px) and (max-device-width: 854px){
+ #ifLampada .label {
+  display: block;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#ifLampada .left-box {
+  position: relative;
+  height: 100%;
+  width: 218px;
+  left: -30px;
+  background: none;
+}
+
+#ifLampada .left-box .icona, #ifLampada .left-box .icona.NP {
+  height: 51%;
+}
+
+ }
+ 
+ 
+ /*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+	
+}

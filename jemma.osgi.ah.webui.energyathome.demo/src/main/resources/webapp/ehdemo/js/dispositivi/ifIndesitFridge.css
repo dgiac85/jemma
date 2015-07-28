@@ -73,7 +73,7 @@
 #ifIndesitFridge .left-box .icona img{
     margin-left: auto;
     margin-right: auto;
-    height: 90%;
+    height: 65%;
     display: block;
     width: auto;
 }
@@ -302,6 +302,10 @@
 
  }
  
+#ifIndesitFridge .left-box .icona img {
+    height: 85%;
+}
+
 
 #ifIndesitFridge .left-box .icona, #ifIndesitOven .left-box .icona.NP {
   height: 90%;

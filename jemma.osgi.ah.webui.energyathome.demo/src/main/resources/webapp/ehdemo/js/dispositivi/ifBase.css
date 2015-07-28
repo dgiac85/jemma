@@ -19,6 +19,15 @@
     
 }
 
+#ifBase .col2 {
+  display: block;
+  position: relative;
+  height: 50%;
+  margin-left: 30px;
+  vertical-align: top;
+  float: left;
+}
+
 #ifBase .col.lborder{
     border-left: 1px solid #000;
 }
@@ -65,7 +74,7 @@
 #ifBase .left-box .icona img{
     margin-left: auto;
     margin-right: auto;
-    height: 90%;
+    height: 65%;
     display: block;
     width: auto;
 }
@@ -80,14 +89,17 @@
 }
 
 #ifBase .StatoElettrodomestico{
-    display: block;
-    width: 100%;
-    height: 30%;           
-    filter: none;
-    background: none;
-    background-color: #000;
-    /*position: absolute;*/
-    top:70%;
+
+  display: block;
+  width: 70%;
+  height: 30%;
+  float: left;
+  filter: none;
+  background: none;
+  /* position: absolute; */
+  margin-left: 20px;
+  /* display: none; */
+
 }
 
 #ifBase  .inline{
@@ -169,3 +181,107 @@
     width: 100%;
     
 }
+
+ @media only screen and (max-device-width:480px), (max-width: 480px){
+ #ifBase {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  color: #808080;
+  display: block;
+}
+
+
+
+#ifBase .col {
+  display: block;
+  position: relative;
+  float: left;
+  width: 100% !important;
+  height: 45%;
+  vertical-align: top;
+  float: left;
+}
+
+
+#ifBase .col .label {
+  display: block;
+  width: 45% !important;
+  font-size: 5.5vw;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-top: 0px !important;
+}
+
+#ifBase .col2 {
+  top: 0px;
+  margin-left: 0px;
+  width: 100% !important;
+}
+
+#ifBase .col.lborder {
+  border-left:none;
+}
+
+#ifBase .line {
+  height: 50%;
+}
+
+/* #Interfaccia .header {
+  margin:0px auto;
+  width:24%;
+} */
+
+#ifBase .col .icona_row {
+  /* text-align: center; */
+  width: 10% !important;
+}
+
+ #ifBase .StatoElettrodomestico {
+    height: 15%;
+      width: 90%;
+}
+
+#ifBase .left-box .icona img {
+    height: 80%;
+}
+
+#ifBase .left-box .icona, #ifIndesitOven .left-box .icona.NP {
+  height: 90%;
+}
+
+}
+ 
+ @media only screen and (max-device-height: 480px) and (max-device-width: 854px){
+ #ifBase .label {
+  display: block;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+#ifBase .left-box {
+  position: relative;
+  height: 100%;
+  width: 218px;
+  left: -30px;
+  background: none;
+}
+
+
+
+ }
+ 
+
+#ifBase .left-box .icona, #ifIndesitOven .left-box .icona.NP {
+  height: 90%;
+}
+
+ }
+ 
+ 
+ /*Per IPAD in portrait*/
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-max-device-pixel-ratio: 2){
+	
+}
+

@@ -75,9 +75,9 @@
 #ifIndesitOven .left-box .icona img {
   margin-left: auto;
   margin-right: auto;
-  height: 180px;
+  height: 75%;
   display: block;
-  width: 180px;
+  width: auto;
 }
 
 #ifIndesitOven .left-box .maschera img{
@@ -277,6 +277,10 @@
   margin:0px auto;
   width:24%;
 } */
+
+#ifIndesitOven .left-box .icona img {
+    height: 100%;
+}
 
 #ifIndesitOven .col .icona_row {
   /* text-align: center; */
