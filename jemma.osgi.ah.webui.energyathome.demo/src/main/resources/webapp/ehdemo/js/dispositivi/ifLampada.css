@@ -201,6 +201,20 @@
 }
 .t{float:left}
 
+@media only screen and (min-device-width : 1600px)  {
+	#ifLampada .left-box .bg {
+
+    height: 88%;
+	}
+}
+
+@media only screen and (max-device-height : 768px) and (device-width : 1366px) {
+	#ifLampada .left-box .bg {
+
+    height: 100%;
+	}
+}
+
 
 @media only screen and (max-device-width:768px), (max-width: 768px){
 	#ifLampada #picker {

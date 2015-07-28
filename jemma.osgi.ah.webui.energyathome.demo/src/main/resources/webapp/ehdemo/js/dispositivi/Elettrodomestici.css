@@ -500,9 +500,9 @@ Media Queries
 }
 }
 
-@media only screen and (device-height : 768px) and (device-width : 1366px) {
+@media only screen and (max-device-height : 768px) and (device-width : 1366px) {
 #RigaInterfaccia {
-  height: 30%;
+  height: 42%;
 }
 	}
 	
@@ -511,9 +511,7 @@ Media Queries
 @media only screen and (min-device-width: 1280px){
 	#Interfaccia{
 	top:12%;
-	height:100%;
-	
-	
+	height:100%;	
 }
 
 #RiepilogoConsumi {
