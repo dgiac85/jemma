@@ -163,6 +163,26 @@ span {
 	background-color: #333;
 }
 
+/*This will work for firefox*/
+@-moz-document url-prefix() {
+    #Content{
+     width:486px;
+     height: 668px !important;
+	display: block;
+	float: left;
+	left: 192px;
+	position:relative;
+	width: -webkit-calc(100% - 192px);
+  	width: -moz-calc(100% - 192px);
+  	width: calc(100% - 192px);
+	padding-bottom:10px;
+	overflow: hidden;
+	color: #202020;
+	background-color: #333;
+	top: -758px;
+    }
+}
+
 #Registra {
 	position: absolute;
 	left: 15%;

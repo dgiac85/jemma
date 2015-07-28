@@ -8,6 +8,13 @@
 
 }
 
+/*This will work for firefox*/
+@-moz-document url-prefix() {
+    #Storico{    
+     height: 620px !important;
+    }
+}
+
 #StoricoBg {
 	position: absolute;
 	top: 0%;
