@@ -42,12 +42,15 @@ function insert(){
 	var element=$('#Interfaccia').detach();
 	$('#mobileElett').append(element);
 	$("#RiepilogoConsumi").css("display","none");
-	if  ((Modernizr.touch)&&((window.innerHeight<widthSmartphone) || (window.innerWidth<widthSmartphone)))
+	$("#RigaInterfaccia").css("display","none");
+	if  ((Modernizr.touch)&&((window.innerHeight<widthSmartphone) || (window.innerWidth<widthSmartphone))){
 		$("#chiudiElett").css("display","block");
+	}
 }
 
 //funzione per la rimozione dell'interfaccia dal mobile menu ed il ritorno nel pannello normale
 function remove(){
+	$("#RigaInterfaccia").css("display","block");
 	var element=$('#Interfaccia').detach();	
 	$("#RigaInterfaccia").append(element);	
 	element=$('#RiepilogoConsumi').detach();
@@ -86,6 +89,7 @@ $(document).ready(function() {
 	widthMeasured=window.innerWidth;
 	heightMeasured=window.innerHeight;
 	
+
 	
 	
 	(function ($) {
@@ -278,6 +282,8 @@ function impostaAltezzeElettrodomestici(){
 		$("#RigaElettrodomestici").css("min-height", "250px");
 	}
 	
+
+	
 	
 }
 
@@ -370,6 +376,7 @@ Elettrodomestici.getCategoryIndex=function(name){
 //Funzione alternativa per la lista di elettrodomestici
 Elettrodomestici.GetDevicesInfos=function(callBack){
 	controllaPresenzaInterfaccia();	
+	
 	
 	if ((InterfaceEnergyHome.mode > 0) || (InterfaceEnergyHome.mode == -1)) {
 		try {
