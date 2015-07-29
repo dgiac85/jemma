@@ -42,6 +42,8 @@ function insert(){
 	var element=$('#Interfaccia').detach();
 	$('#mobileElett').append(element);
 	$("#RiepilogoConsumi").css("display","none");
+	if  ((Modernizr.touch)&&((window.innerHeight<widthSmartphone) || (window.innerWidth<widthSmartphone)))
+		$("#chiudiElett").css("display","block");
 }
 
 //funzione per la rimozione dell'interfaccia dal mobile menu ed il ritorno nel pannello normale
@@ -50,7 +52,8 @@ function remove(){
 	$("#RigaInterfaccia").append(element);	
 	element=$('#RiepilogoConsumi').detach();
 	$('#RigaInterfaccia').append(element);
-	$("#RiepilogoConsumi").css("display","block");	
+	$("#RiepilogoConsumi").css("display","block");
+	$("#chiudiElett").css("display","none");
 }
 
 var misura=0;
@@ -82,6 +85,8 @@ function dimensionaSpaziDevice(){
 $(document).ready(function() {
 	widthMeasured=window.innerWidth;
 	heightMeasured=window.innerHeight;
+	
+	
 	
 	(function ($) {
 	    var d = 1, t = null, e = null, h, r = false;
@@ -150,7 +155,8 @@ $(document).ready(function() {
 			}
 		}
 		else{
-			if ( (window.innerWidth<widthSmartphone) || (window.innerHeight<widthSmartphone)  )  {					
+			if ( (window.innerWidth<widthSmartphone) || (window.innerHeight<widthSmartphone)  )  {
+				
 				insert();			
 			}
 			else{									
@@ -196,11 +202,15 @@ function controllaPresenzaInterfaccia(){
 	}
 	
 	if (Modernizr.touch){
-		if ( (window.innerWidth>640) && (window.innerHeight<window.innerWidth) && (window.Height<752) && (window.innerHeight>600) ) {
+		if ( (window.innerWidth>640) && (window.innerHeight<window.innerWidth) && (window.Height<752) && (window.innerHeight>600)) {
 			$("#Interfaccia").css("display","none");
 			$("#RiepilogoConsumi").css("display","none");
 			$("#RigaInterfaccia").css("display","none");
 		}
+	}
+	
+	if  ((Modernizr.touch)&&((window.innerHeight<widthSmartphone) || (window.innerWidth<widthSmartphone))){
+		insert();
 	}
 	
 	

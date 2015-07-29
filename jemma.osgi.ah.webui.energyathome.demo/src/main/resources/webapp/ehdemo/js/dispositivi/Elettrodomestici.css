@@ -563,11 +563,11 @@ Media Queries
 		
 }
 
-@media only screen and (min-device-width:480px), (min-width: 480px){
+/* @media only screen and (min-device-width:480px), (min-width: 480px){
 	#chiudiElet{
 		display:none;
 	}
-}
+} */
 
 
 @media only screen and (max-device-width:480px), (max-width: 480px){
@@ -584,7 +584,7 @@ Media Queries
 #Elettrodomestici {
 margin-top: 5px;
 	width: 100%;
-  height: auto;
+  height: auto !important;
   min-height:0px;
 right:0%;
 
@@ -706,10 +706,14 @@ margin-left: 0px;
   height: 273px;
 }
 
+#RigaInterfaccia {
+    height:0px;
+}
+
 
 #Elettrodomestici {
   width: 100%;
-  height: auto;
+  height: auto !important;
   min-height: 0px;
   right: 0%;
 }
