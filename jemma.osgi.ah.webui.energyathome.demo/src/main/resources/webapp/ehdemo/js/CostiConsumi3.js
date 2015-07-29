@@ -132,14 +132,14 @@ function impostaAltezzeCons(){
 	}
 	
 	if ( (!Modernizr.touch) && (window.innerHeight<=900) ){
-		$("#CostoConsumoSintesi").css("height","99%");
+		$("#CostoConsumoSintesi").css("height","95%");
 	}
 	
 	
 	if ( (!Modernizr.touch) && (window.innerWidth===1024) && (Menu.contentMenuSelected===1)){
 		$("#ContentMain").css("max-height","580px");
-		$("#CostoConsumoSintesi").css("height","92%");
-		$("#CostoConsumoSintesi").css("max-height","92%");
+		$("#CostoConsumoSintesi").css("height","94%");
+		$("#CostoConsumoSintesi").css("max-height","94%");
 		$("#CostoConsumoAttualeTitolo").css("font-size","1.5vw");
 	}
 

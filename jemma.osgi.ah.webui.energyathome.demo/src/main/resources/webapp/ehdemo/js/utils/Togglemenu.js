@@ -56,7 +56,8 @@ function exitMobile(){
 }
 
 $(document).ready(function() {	
-
+	
+	
 	console.log(window.innerWidth);
 	if ( ($("#dataANDuser").css("display")==="block") && ($(".toggleMobile2").css("display")==="block") ) {	
 		$("#ContainerLogo").css("display","block");

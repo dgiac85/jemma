@@ -473,7 +473,7 @@ background: #202020;
 .ContentMenuEl {
   position: relative;
   float: left;
-  height: 50%;
+  height: 90px;
   width: 23%;
   margin: 0px;
 }

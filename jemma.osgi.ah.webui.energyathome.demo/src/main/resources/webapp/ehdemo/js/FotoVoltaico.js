@@ -334,7 +334,7 @@ function impostaAltezzeEAmpiezzeFV(){
 		$("#ContentMain").css("height", "768px");
 		$("#ContainerSX").css("height","98%");
 		$("#CostoConsumoSintesi").css("height","67%");
-		$("#CostoConsumoInfo").css("height","95%");
+		$("#CostoConsumoInfo").css("height","96%");
 		$("#ContainerMenu").css("height","768px");
 		$("#Consigli").css("margin-top","8px");
 		
@@ -600,8 +600,8 @@ function impostaAltezzeEAmpiezzeFV(){
 	
 	if ( (!Modernizr.touch) && (window.innerWidth===1024) ){
 		$("#ContentMain").css("max-height","580px");
-		$("#CostoConsumoSintesi").css("max-height","58%");
-		$("#consigliTurnOn").css("font-size","2.1vw");
+		$("#CostoConsumoSintesi").css("max-height","67%");
+		$("#consigliTurnOn").css("font-size","18px");
 		$("#IndicatoreTitoloPV").css("margin-top","6px");
 	}
 	
@@ -1654,7 +1654,7 @@ CostiConsumi.SetConsumoImg = function() {
 			$(document.createElement('div')).attr('id', 'consigliTurnOn').appendTo($("#Consigli")).show();
 		}
 		if ( (!Modernizr.touch) && (window.innerWidth===1024) ){
-			$("#consigliTurnOn").css("font-size","2.1vw");
+			$("#consigliTurnOn").css("font-size","18px");
 		}
 		$("#consigliTurnOn").css("height","70%");
 		if (valProd > val) {

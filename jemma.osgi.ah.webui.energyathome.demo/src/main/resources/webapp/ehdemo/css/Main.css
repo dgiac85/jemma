@@ -890,6 +890,17 @@ display:block;
 	} 
 }
 
+@media only screen and (min-device-width : 1530px) {
+/*This will work for firefox*/
+@-moz-document url-prefix() {
+    #Content{
+    	top: -859px;
+    	height: 769px !important;
+    }
+}
+
+}
+
 @media only screen and (device-height: 1280px) and (device-width: 800px), (device-height: 1232px) and (device-width: 800px){
 	
 	#ContentMain {

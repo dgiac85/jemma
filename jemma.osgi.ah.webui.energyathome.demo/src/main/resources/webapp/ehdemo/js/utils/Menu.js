@@ -28,7 +28,7 @@ var heightMenuButton;
  * all'inizio e poi ne viene visualizzato uno solo per volta
  */
 Menu.Init = function(mainDiv, contentDiv) {
-
+	alert("LARGHEZZA="+window.innerWidth+" ALTEZZA="+window.innerHeight);
 	Menu.MainMenu = DefineMenu;
 	
 	var dim;
