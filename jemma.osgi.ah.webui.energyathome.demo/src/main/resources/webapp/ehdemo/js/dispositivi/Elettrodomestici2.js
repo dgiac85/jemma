@@ -223,7 +223,7 @@ function controllaPresenzaInterfaccia(){
 function impostaAltezzeElettrodomestici(){
 	
 	if( (window.innerWidth<=theWidth) && (window.innerWidth>480) && (Menu.contentMenuSelected===2)){
-		$("#ContentMain").css("min-height", "900px");
+		//$("#ContentMain").css("min-height", "900px");
 		$("#Elettrodomestici").css("height", "900px");
 	}
 	
@@ -243,9 +243,9 @@ function impostaAltezzeElettrodomestici(){
 	}
 	
 	if ((!Modernizr.touch) && (window.innerWidth<1320)){
-		$("#RigaElettrodomestici").css("height", "280px");
-		$("#RigaElettrodomestici").css("min-height", "280px");
-		$("#Elettrodomestici").css("height", "700px");
+		$("#RigaElettrodomestici").css("height", "350px");
+		$("#RigaElettrodomestici").css("min-height", "350px");
+		//$("#Elettrodomestici").css("height", "auto");
 	}
 //	if ((!Modernizr.touch) && (window.innerWidth<1220)){
 //		$("#RigaElettrodomestici").css("height", "200px");

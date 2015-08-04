@@ -683,8 +683,7 @@ var AppliancesConfigurationFake={
 	                           "availability": 2
 	                       },
 	                       "javaClass": "java.util.Hashtable"
-	                   },
-	                   
+	                   },           
 	                 
 	                   
 	                  
@@ -724,58 +723,58 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
-//	                   {
-//	                       "map": {
-//	                           "device_value": {
-//	                               "javaClass": "java.util.LinkedList",
-//	                               "list": [
-//	                                        {
-//	 	                                       "name": "OnOffState",
-//	 	                                       "value": {
-//	 	                                           "timestamp": 1426004605466,
-//	 	                                           "value": true,
-//	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
-//	 	                                       },
-//	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
-//	 	                                   },
-//	 	                                  {
-//	 	                                       "name": "CurrentLevel",
-//	 	                                       "value": {
-//	 	                                           "timestamp": 1426004605466,
-//	 	                                           "value": 200,
-//	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
-//	 	                                       },
-//	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
-//	 	                                   }
-//	 	                                  
-//	                               ]
-//	                           },
-//	                           "category": {
-//	                               "name": "MAC lamp",
-//	                               "iconName": "lampada.png",
-//	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
-//	                               "pid": "34"
-//	                           },
-//	                           "ah.category.pid": "34",
-//	                           "appliance.pid": "ah.app.3521399290000526176-17",
-//	                           "ah.location.pid": "6",
-//	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.ColorLight",
-//	                           "ah.icon": "lampada.png",
-//	                           "ah.app.name": "MAC lamp",
-//	                           "ah.app.eps.types": [
-//	                               "ah.ep.common",
-//	                               "ah.ep.zigbee.MACLamp",
-//	                               "ah.ep.zigbee.OnOff"
-//	                           ],
-//	                           clusters: {
-//	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.LevelControlServer":true,
-//	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.dimmablelight":true,
-//	                        	   "org.energy_home.jemma.ah.cluster.zigbee.zll.ColorControlServer":true
-//	                           },
-//	                           "availability": 2
-//	                       },
-//	                       "javaClass": "java.util.Hashtable"
-//	                   },
+	                   /*{
+	                       "map": {
+	                           "device_value": {
+	                               "javaClass": "java.util.LinkedList",
+	                               "list": [
+	                                        {
+	 	                                       "name": "OnOffState",
+	 	                                       "value": {
+	 	                                           "timestamp": 1426004605166,
+	 	                                           "value": true,
+	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+	 	                                       },
+	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+	 	                                   },
+	 	                                  {
+	 	                                       "name": "CurrentLevel",
+	 	                                       "value": {
+	 	                                           "timestamp": 1426004605166,
+	 	                                           "value": 200,
+	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+	 	                                       },
+	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+	 	                                   }
+	 	                                  
+	                               ]
+	                           },
+	                           "category": {
+	                               "name": "MAC lamp",
+	                               "iconName": "lampada.png",
+	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
+	                               "pid": "34"
+	                           },
+	                           "ah.category.pid": "34",
+	                           "appliance.pid": "ah.app.3521399290000526172-17",
+	                           "ah.location.pid": "6",
+	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.MACLamp",
+	                           "ah.icon": "lampada.png",
+	                           "ah.app.name": "MAC lamp",
+	                           "ah.app.eps.types": [
+	                               "ah.ep.common",
+	                               "ah.ep.zigbee.MACLamp",
+	                               "ah.ep.zigbee.OnOff"
+	                           ],
+	                           clusters: {
+	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.LevelControlServer":true,
+	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.dimmablelight":true,
+	                        	   "org.energy_home.jemma.ah.cluster.zigbee.zll.ColorControlServer":true
+	                           },
+	                           "availability": 2
+	                       },
+	                       "javaClass": "java.util.Hashtable"
+	                   },*/
 	                   {
 	                       "map": {
 	                           "device_value": {

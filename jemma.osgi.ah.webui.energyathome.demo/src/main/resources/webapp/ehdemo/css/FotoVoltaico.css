@@ -1000,6 +1000,20 @@ Media Queries
 ***********************************************************************/
 
 
+@media only screen and (max-device-width : 1570px) and (max-device-height:949px) {
+	#ProduzioneAttuale{
+		height: 180px;	
+	}
+	
+	#ReteAttuale {
+		height:180px;
+	}
+	
+	.CostoConsumoAttualePV {
+		height:150px;
+	}
+}
+
 @media only screen and (max-width : 1220px) {
 	
 #DatiCosti{
@@ -1118,7 +1132,7 @@ position: relative;
 float: left;
 margin-top: 8px;
 width: 100%;
-margin-left: -11px;
+margin-left: -6px;
 height: 98%;
 }
 
@@ -1264,7 +1278,7 @@ left:48.5%
 }
 
 #Grafico2 {
-  margin: 8% 2%;
+  margin: 4% 2%;
 }
 
 .values {
