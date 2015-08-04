@@ -247,7 +247,7 @@
     height: 80%;
 }
 
-#ifBase .left-box .icona, #ifIndesitOven .left-box .icona.NP {
+#ifBase .left-box .icona, #ifBase .left-box .icona.NP {
   height: 90%;
 }
 
@@ -273,7 +273,7 @@
  }
  
 
-#ifBase .left-box .icona, #ifIndesitOven .left-box .icona.NP {
+#ifBase .left-box .icona, #ifBase .left-box .icona.NP {
   height: 90%;
 }
 
