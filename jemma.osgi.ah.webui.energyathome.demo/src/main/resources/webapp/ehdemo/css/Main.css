@@ -893,10 +893,10 @@ display:block;
 @media only screen and (min-device-width : 1530px) {
 /*This will work for firefox*/
 @-moz-document url-prefix() {
-    #Content{
-    	top: -859px;
-    	height: 769px !important;
-    }
+  #Content {
+    top: -659px;
+    height: 571px !important;
+}
 }
 
 }

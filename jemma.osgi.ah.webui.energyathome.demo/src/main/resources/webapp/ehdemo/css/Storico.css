@@ -320,7 +320,7 @@
 /*This will work for firefox*/
 @-moz-document url-prefix() {
     #Storico{    
-     height: 700px !important;
+     height: 500px !important;
     }
    
 }

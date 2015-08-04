@@ -60,7 +60,6 @@ function impostaAltezzeCons(){
 	
 	if( (window.innerWidth<=widthBreak1) && (Menu.contentMenuSelected===1) ){
 		$("#ContentMain").css("min-height","1460px");
-		$("#CostoConsumoSintesi").css("height","700px");
 		$("#ContainerSX").css("height","690px");
 		$("#CostoConsumoSintesi").css("width","98%");
 		$(".meter").css("width","20vw");

@@ -1016,7 +1016,7 @@ Elettrodomestici.init=function(){
 			});
 		});
 	});
-	impostaAltezzaElettrodomestici();
+	
 //	if (window.innerWidth<=widthSmartphone)
 //		$("#Interfaccia").css("display","none");
 }
@@ -1054,6 +1054,7 @@ Elettrodomestici.update=function(){
 			});
 		});
 	});
+	impostaAltezzaElettrodomestici();
 }
 
 Elettrodomestici.stopUpdate=function(){
