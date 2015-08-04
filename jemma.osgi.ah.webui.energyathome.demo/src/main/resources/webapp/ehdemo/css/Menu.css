@@ -275,16 +275,16 @@ Media Queries
   margin: 0 auto;
 }
 
-.MainMenuEl {
-
-    height: 110px !important;
-  width: 110px;
-  padding-bottom:5px;
-}
 
 }
 
+@media only screen and (max-device-width : 1570px) and (max-device-height:949px) {
+	.MainMenuImg {
+    margin-left: 10px;
+}
 
+
+	}
 
 
 @media only screen and (max-width: 1220px) and (min-width:952px){
@@ -409,6 +409,15 @@ background: #202020;
 #contMainEl1{top: 0.4px;  position: relative;left:1% !important;min-width:125px;max-width:125px}
 #contMainEl2{top: 0.4px; position: relative; left:2% !important;min-width:125px;max-width:125px}
 #contMainEl3{top: 0.4px; position: relative; left:3% !important;min-width:125px;max-width:125px}
+
+@-moz-document url-prefix() {
+	#contMainEl0{top: 30.5px;  position: relative;left:0% !important;min-width:125px;max-width:125px}
+#contMainEl1{top: 30.5px;  position: relative;left:1% !important;min-width:125px;max-width:125px}
+#contMainEl2{top: 30.5px; position: relative; left:2% !important;min-width:125px;max-width:125px}
+#contMainEl3{top: 30.5px; position: relative; left:3% !important;min-width:125px;max-width:125px}
+	
+}
+
 
 #datausercontent{
 float: left;

@@ -259,13 +259,13 @@ span {
 
 #Ora {
 	color: #f0f0f0;
-	  font-size: 22px;
+	  font-size: 16px;
 	
 }
 
 #ClockImg {
 	  margin-right: 9px;
-  width: 1.3vw;
+  width: 16px;
   position: relative;
 	
 }
@@ -523,7 +523,7 @@ Media Queries
 #Data {
 	margin-right: 12px;
 	color: #f0f0f0;
-	font-size:1.8vw;
+	font-size:16px;
 }
 
 #Ora {

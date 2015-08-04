@@ -104,7 +104,7 @@ left: +200%;
     
       width: 98%;
   /* min-width: 790px; */
-    height: 33%;
+    height: 38%;
   margin: 0px auto;
   padding: 0;
   margin-left: auto;
@@ -895,11 +895,24 @@ margin-left: 0px;
 	  height: 65%;
 	}
 	
-	#ifBase .StatoElettrodomestico {
-  display: block;
-  width: 149%;
-	}
+
 }
 
+@media only screen and (max-device-width : 1570px) and (max-device-height:949px) {
+#Interfaccia {
+    top: 12%;
+    height: 88%;
+}
+
+#RiepilogoConsumi {
+    top: 12%;
+    height: 88%;
+}
+
+#RigaInterfaccia {
+    width: 98%;
+    height: 52%;
+}
+}
 
 

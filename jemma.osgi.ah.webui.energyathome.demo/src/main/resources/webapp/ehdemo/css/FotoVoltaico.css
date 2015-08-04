@@ -1012,6 +1012,20 @@ Media Queries
 	.CostoConsumoAttualePV {
 		height:150px;
 	}
+	
+	.Dettagli {
+    padding: 5px;
+	}
+	
+	#CostoIndicatoreImg {
+    	height: 27%;
+	}
+	
+	#ConsumoIndicatoreImg {
+    	height: 30%;
+	}
+	
+	
 }
 
 @media only screen and (max-width : 1220px) {
