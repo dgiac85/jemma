@@ -607,7 +607,7 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
-	                   /*MIO 4
+	                   
 	                   {
 	                       "map": {
 	                           "device_value": {
@@ -628,12 +628,12 @@ var AppliancesConfigurationFake={
 	                               "name": "LockDoor",
 	                               "iconName": "lockdoor.png",
 	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
-	                               "pid": "25"
+	                               "pid": "40"
 	                           },
-	                           "ah.category.pid": "25",
+	                           "ah.category.pid": "40",
 	                           "appliance.pid": "ah.app.3521399293210525877-2",
 	                           "ah.location.pid": "4",
-	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.whitegood",
+	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.LockDoor",
 	                           "ah.icon": "lockdoor.png",
 	                           "ah.app.name": "LockDoor",
 	                           "ah.app.eps.types": [
@@ -643,7 +643,7 @@ var AppliancesConfigurationFake={
 	                           "availability": 2
 	                       },
 	                       "javaClass": "java.util.Hashtable"
-	                   },*/
+	                   },
 	                   
 	                    
 	                   
@@ -724,6 +724,58 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
+//	                   {
+//	                       "map": {
+//	                           "device_value": {
+//	                               "javaClass": "java.util.LinkedList",
+//	                               "list": [
+//	                                        {
+//	 	                                       "name": "OnOffState",
+//	 	                                       "value": {
+//	 	                                           "timestamp": 1426004605466,
+//	 	                                           "value": true,
+//	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+//	 	                                       },
+//	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+//	 	                                   },
+//	 	                                  {
+//	 	                                       "name": "CurrentLevel",
+//	 	                                       "value": {
+//	 	                                           "timestamp": 1426004605466,
+//	 	                                           "value": 200,
+//	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+//	 	                                       },
+//	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+//	 	                                   }
+//	 	                                  
+//	                               ]
+//	                           },
+//	                           "category": {
+//	                               "name": "MAC lamp",
+//	                               "iconName": "lampada.png",
+//	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
+//	                               "pid": "34"
+//	                           },
+//	                           "ah.category.pid": "34",
+//	                           "appliance.pid": "ah.app.3521399290000526176-17",
+//	                           "ah.location.pid": "6",
+//	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.ColorLight",
+//	                           "ah.icon": "lampada.png",
+//	                           "ah.app.name": "MAC lamp",
+//	                           "ah.app.eps.types": [
+//	                               "ah.ep.common",
+//	                               "ah.ep.zigbee.MACLamp",
+//	                               "ah.ep.zigbee.OnOff"
+//	                           ],
+//	                           clusters: {
+//	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.LevelControlServer":true,
+//	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.dimmablelight":true,
+//	                        	   "org.energy_home.jemma.ah.cluster.zigbee.zll.ColorControlServer":true
+//	                           },
+//	                           "availability": 2
+//	                       },
+//	                       "javaClass": "java.util.Hashtable"
+//	                   },
 	                   {
 	                       "map": {
 	                           "device_value": {
@@ -763,42 +815,43 @@ var AppliancesConfigurationFake={
 	                       },
 	                       "javaClass": "java.util.Hashtable"
 	                   },
-	                   {
-	                       "map": {
-	                           "device_value": {
-	                               "javaClass": "java.util.LinkedList",
-	                               "list": [
-	                                   {
-	                                       "name": "IstantaneousDemands",
-	                                       "value": {
-	                                           "timestamp": 1426004605417,
-	                                           "value": 153,
-	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
-	                                       },
-	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
-	                                   }
-	                               ]
-	                           },
-	                           "category": {
-	                               "name": "Meter",
-	                               "iconName": "meter.png",
-	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
-	                               "pid": "12"
-	                           },
-	                           "ah.category.pid": "12",
-	                           "appliance.pid": "ah.app.3521399293210526113-8",
-	                           "ah.location.pid": "7",
-	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.metering",
-	                           "ah.icon": "plug.png",
-	                           "ah.app.name": "Smart Info",
-	                           "ah.app.eps.types": [
-	                               "ah.ep.common",
-	                               "ah.ep.zigbee.MeteringDevice"
-	                           ],
-	                           "availability": 2
-	                       },
-	                       "javaClass": "java.util.Hashtable"
-	                   },
+	            
+//	                   {
+//	                       "map": {
+//	                           "device_value": {
+//	                               "javaClass": "java.util.LinkedList",
+//	                               "list": [
+//	                                   {
+//	                                       "name": "IstantaneousDemands",
+//	                                       "value": {
+//	                                           "timestamp": 1426004605417,
+//	                                           "value": 153,
+//	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
+//	                                       },
+//	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
+//	                                   }
+//	                               ]
+//	                           },
+//	                           "category": {
+//	                               "name": "Meter",
+//	                               "iconName": "meter.png",
+//	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
+//	                               "pid": "12"
+//	                           },
+//	                           "ah.category.pid": "12",
+//	                           "appliance.pid": "ah.app.3521399293210526113-8",
+//	                           "ah.location.pid": "7",
+//	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.metering",
+//	                           "ah.icon": "plug.png",
+//	                           "ah.app.name": "Smart Info",
+//	                           "ah.app.eps.types": [
+//	                               "ah.ep.common",
+//	                               "ah.ep.zigbee.MeteringDevice"
+//	                           ],
+//	                           "availability": 2
+//	                       },
+//	                       "javaClass": "java.util.Hashtable"
+//	                   },
 	                   {
 	                       "map": {
 	                           "device_value": {
@@ -850,63 +903,10 @@ var AppliancesConfigurationFake={
 	                           "availability": 2
 	                       },
 	                       "javaClass": "java.util.Hashtable"
-	                   },
+	                   },                
 	                   
-	                   
-	                   
-	                   /*MIO 2*/
-	                   {
-	                       "map": {
-	                           "device_value": {
-	                               "javaClass": "java.util.LinkedList",
-	                               "list": [
-	                                        {
-	 	                                       "name": "OnOffState",
-	 	                                       "value": {
-	 	                                           "timestamp": 1426004605466,
-	 	                                           "value": true,
-	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
-	 	                                       },
-	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
-	 	                                   },
-	 	                                  {
-	 	                                       "name": "CurrentLevel",
-	 	                                       "value": {
-	 	                                           "timestamp": 1426004605466,
-	 	                                           "value": 200,
-	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
-	 	                                       },
-	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
-	 	                                   }
-	 	                                  
-	                               ]
-	                           },
-	                           "category": {
-	                               "name": "Philps lamp",
-	                               "iconName": "lampada.png",
-	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
-	                               "pid": "35"
-	                           },
-	                           "ah.category.pid": "35",
-	                           "appliance.pid": "ah.app.3521399290000526176-15",
-	                           "ah.location.pid": "7",
-	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.ColorLight",
-	                           "ah.icon": "lampada.png",
-	                           "ah.app.name": "Philips HUE",
-	                           "ah.app.eps.types": [
-	                               "ah.ep.common",
-	                               "ah.ep.zigbee.ColorLight",
-	                               "ah.ep.zigbee.OnOff"
-	                           ],
-	                           clusters: {
-	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.LevelControlServer":true,
-	                        	   "org.energy_home.jemma.ah.cluster.zigbee.general.dimmablelight":true,
-	                        	   "org.energy_home.jemma.ah.cluster.zigbee.zll.ColorControlServer":true
-	                           },
-	                           "availability": 2
-	                       },
-	                       "javaClass": "java.util.Hashtable"
-	                   },
+	                 
+	              
 	                   
 	                   {
 	                       "map": {
@@ -932,43 +932,6 @@ var AppliancesConfigurationFake={
 	                           },
 	                           "ah.category.pid": "44",
 	                           "appliance.pid": "ah.app.3521399290000526178-8",
-	                           "ah.location.pid": "7",
-	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.WindowCovering",
-	                           "ah.icon": "windowc.png",
-	                           "ah.app.name": "Serranda",
-	                           "ah.app.eps.types": [
-	                               "ah.ep.common",
-	                               "ah.ep.zigbee.WindowCovering",
-	                           ],
-	                           "availability": 2
-	                       },
-	                       "javaClass": "java.util.Hashtable"
-	                   },
-	                   //MIO3
-	                   {
-	                       "map": {
-	                           "device_value": {
-	                               "javaClass": "java.util.LinkedList",
-	                               "list": [
-	                                        {
-	 	                                       "name": "CurrentPositionLiftPercentage",
-	 	                                       "value": {
-	 	                                           "timestamp": 1426004605466,
-	 	                                           "value": 200,
-	 	                                           "javaClass": "org.energy_home.jemma.ah.hac.lib.AttributeValue"
-	 	                                       },
-	 	                                       "javaClass": "org.energy_home.jemma.ah.internal.greenathome.AttributeValueExtended"
-	 	                                   }
-	                               ]
-	                           },
-	                           "category": {
-	                               "name": "Serranda",
-	                               "iconName": "windowc.png",
-	                               "javaClass": "org.energy_home.jemma.ah.hac.lib.ext.Category",
-	                               "pid": "44"
-	                           },
-	                           "ah.category.pid": "44",
-	                           "appliance.pid": "ah.app.3521399290000526178-256",
 	                           "ah.location.pid": "7",
 	                           "ah.app.type": "org.energy_home.jemma.ah.zigbee.WindowCovering",
 	                           "ah.icon": "windowc.png",

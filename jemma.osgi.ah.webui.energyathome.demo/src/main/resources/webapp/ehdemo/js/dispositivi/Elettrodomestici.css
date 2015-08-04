@@ -104,7 +104,7 @@ left: +200%;
     
       width: 98%;
   /* min-width: 790px; */
-    height: 38%;
+    height: 33%;
   margin: 0px auto;
   padding: 0;
   margin-left: auto;
@@ -511,13 +511,13 @@ Media Queries
 @media only screen and (min-device-width: 1280px){
 	#Interfaccia{
 	top:12%;
-	height:100%;	
+	height:98%;	
 }
 
 #RiepilogoConsumi {
 	top:12%;
 	/*prova*/
-  height:100%;
+  height:98%;
 }
 	
 }
