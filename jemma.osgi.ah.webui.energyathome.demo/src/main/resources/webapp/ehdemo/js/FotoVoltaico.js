@@ -328,7 +328,7 @@ function impostaAltezzeEAmpiezzeFV(){
 	
 	$("#consigliTurnOn").css("height","70%");
 	 
-	if ( (!Modernizr.touch) && (window.innerWidth>1570) && (window.innerHeight>800) ){
+	if ( (!Modernizr.touch) && (window.innerWidth>1570) && (window.innerHeight>799) ){
 		$("#ContentMain").css("min-height","768px");
 		$("#Content").css("height", "768px");
 		$("#ContentMain").css("height", "768px");
