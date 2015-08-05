@@ -898,7 +898,7 @@ margin-left: 0px;
 
 }
 
-@media only screen and (max-device-width : 1570px) and (max-device-height:949px) {
+@media only screen and (min-device-width:951) and (max-device-width : 1570px) and (max-device-height:949px) {
 #Interfaccia {
     top: 12%;
     height: 88%;

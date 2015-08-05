@@ -474,6 +474,9 @@ function impostaAltezzeEAmpiezzeFV(){
 		
 			
 	}
+	else{
+		$("#ContainerSX").css("height","98%");
+	}
 	
 	
 //	if ( (!Modernizr.touch) && (window.innerHeight<=800) && (window.innerWidth>1220) ){

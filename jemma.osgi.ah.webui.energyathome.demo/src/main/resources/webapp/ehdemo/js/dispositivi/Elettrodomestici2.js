@@ -224,6 +224,14 @@ function controllaPresenzaInterfaccia(){
 
 function impostaAltezzeElettrodomestici(){
 	
+	if ( (!Modernizr.touch) && (window.innerWidth<=1550) && (window.innerHeight<=799) ){
+		$("#RigaInterfaccia").css("height","47%");
+	}
+	
+	if ( (!Modernizr.touch) && (window.innerWidth>1551) && (window.innerHeight>799) ){
+		$("#RigaInterfaccia").css("height","38%");
+	}
+	
 	if( (window.innerWidth<=theWidth) && (window.innerWidth>480) && (Menu.contentMenuSelected===2)){
 		//$("#ContentMain").css("min-height", "900px");
 		$("#Elettrodomestici").css("height", "900px");
